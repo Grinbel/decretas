@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/css' href='ead.css'?><ead xmlns:xlink="http://www.w3.org/1999/xlink">
+  <!-- Jeu d'essai SYNTHÉTIQUE : personnes, noms et dossiers inventés ; seul le format des exports XML-EAD est reproduit. -->
+  <eadheader countryencoding="iso3166-1" dateencoding="iso8601" langencoding="iso639-2b">
+    <eadid xlink:type="simple" xlink:href="http://www.siv.archives-nationales.culture.gouv.fr/siv/IR/FRAN_IR_900001">FRAN_IR_900001</eadid>
+    <filedesc>
+      <titlestmt>
+        <titleproper>Décrets de naturalisation de l’année 1883</titleproper>
+        <subtitle>Répertoire numérique détaillé (BB/34/387)</subtitle>
+        <author>Jeu d'essai synthétique.</author>
+      </titlestmt>
+      <publicationstmt>
+        <publisher>Jeu d'essai</publisher>
+        <date calendar="gregorian" era="ce" normal="2018-07-13">13 juillet 2018</date>
+      </publicationstmt>
+    </filedesc>
+  </eadheader>
+  <frontmatter>
+    <div>
+      <p/>
+    </div>
+  </frontmatter>
+  <archdesc id="top" level="collection">
+    <did>
+      <unitid type="identifiant">BB/34/387</unitid>
+      <unittitle>Décrets de naturalisation de l’année 1883</unittitle>
+      <unitdate calendar="gregorian" era="ce" normal="1883-01-06/1883-12-24">6 janvier 1883 - 24 décembre 1883</unitdate>
+      <repository>Archives nationales de France</repository>
+      <physloc>Pierrefitte</physloc>
+    </did>
+    <accessrestrict>
+      <p>Librement communicable en application de l'article L213-2 du code du patrimoine.</p>
+    </accessrestrict>
+    <userestrict>
+      <p>Les documents peuvent être librement reproduits dans le cadre d’un usage privé (usage strictement personnel dans le cercle de la famille), sous réserve des contraintes liées à leur état matériel et dans le respect des textes relatifs à la réutilisation des informations publiques.</p>
+    </userestrict>
+    <dsc>
+      <c id="SB000001" xlink:type="simple" xlink:href="http://www.siv.archives-nationales.culture.gouv.fr/siv/UD/FRAN_IR_900001/SB000001">
+        <did>
+          <unitid type="identifiant">BB/34/387</unitid>
+          <unitid type="pieces">document 7</unitid>
+          <unittitle>Décret de naturalisations algériennes du 13 janvier 1883.</unittitle>
+          <unitdate calendar="gregorian" era="ce" normal="1883-01-13">13 janvier 1883</unitdate>
+        </did>
+        <daogrp>
+          <daoloc href="http://www.siv.archives-nationales.culture.gouv.fr/siv/media/FRAN_IR_900001/SB000001/"/>
+        </daogrp>
+        <controlaccess>
+          <persname/>
+          <geogname authfilenumber="d3ntxjxn5s-6kuyi0i46073" source="FRAN_RI_005">Algérie</geogname>
+        </controlaccess>
+        <c id="c-aaa1" xlink:type="simple" xlink:href="http://www.siv.archives-nationales.culture.gouv.fr/siv/UD/FRAN_IR_900001/c-aaa1">
+          <did>
+            <unitid type="cote-de-consultation">BB/11/90001</unitid>
+            <unitid type="pieces">90001 X 82</unitid>
+            <unittitle>
+              <persname>
+                Testaoui, Amar ben Exemple
+              </persname>
+            </unittitle>
+          </did>
+          <scopecontent>
+            <p>Naissance : 1 janvier 1852 (Alger, Algérie)</p>
+            <p>Lieu de résidence : Blida</p>
+            <p>Profession : garde champêtre</p>
+          </scopecontent>
+          <daogrp>
+            <daoloc href="http://www.siv.archives-nationales.culture.gouv.fr/siv/media/FRAN_IR_900001/c-aaa1/"/>
+          </daogrp>
+        </c>
+        <c id="c-aaa2" xlink:type="simple" xlink:href="http://www.siv.archives-nationales.culture.gouv.fr/siv/UD/FRAN_IR_900001/c-aaa2">
+          <did>
+            <unitid type="cote-de-consultation">BB/11/90002</unitid>
+            <unitid type="pieces">90002 X 82</unitid>
+            <unittitle>
+              <persname>Fictivo née Modèle, Rosa Lucie</persname>
+            </unittitle>
+          </did>
+          <scopecontent>
+            <p>Naissance : 5 mars 1841 (Naples, Italie)</p>
+            <p>Lieu de résidence : Oran</p>
+          </scopecontent>
+          <daogrp>
+            <daoloc href="http://www.siv.archives-nationales.culture.gouv.fr/siv/media/FRAN_IR_900001/c-aaa2/"/>
+          </daogrp>
+        </c>
+        <c id="c-aaa3" xlink:type="simple" xlink:href="http://www.siv.archives-nationales.culture.gouv.fr/siv/UD/FRAN_IR_900001/c-aaa3">
+          <did>
+            <unitid type="cote-de-consultation">BB/11/90003</unitid>
+            <unitid type="pieces">90003 X 82</unitid>
+            <unittitle>
+              <persname>Exempli, Jean</persname>
+            </unittitle>
+          </did>
+          <scopecontent>
+            <p>Naissance : 14 février 1851 (Strasbourg, Bas-Rhin)</p>
+            <p>Lieu de résidence : Bône ( Constantine )</p>
+            <p>Profession : tonnelier</p>
+            <p>Épouse : Specimen, Odile, née le 9 octobre 1857 (Strasbourg, Bas-Rhin)</p>
+            <p>Enfants : Paul ; Zohra né(e)(s) le 2 décembre 1879 ; 4 mai 1881</p>
+          </scopecontent>
+          <daogrp>
+            <daoloc href="http://www.siv.archives-nationales.culture.gouv.fr/siv/media/FRAN_IR_900001/c-aaa3/"/>
+          </daogrp>
+        </c>
+        <c id="c-aaa4" xlink:type="simple" xlink:href="http://www.siv.archives-nationales.culture.gouv.fr/siv/UD/FRAN_IR_900001/c-aaa4">
+          <did>
+            <unitid type="pieces">90004 X 82</unitid>
+            <unittitle>
+              <persname>Inventé, Louis</persname>
+            </unittitle>
+          </did>
+          <scopecontent>
+            <p>Naissance : 3 mars 1845 (Paris)</p>
+            <p>Enfants : Anne ; Luc ; Marc né(e)(s) le 1 mai 1870 ; 2 juin 1872</p>
+          </scopecontent>
+        </c>
+      </c>
+      <c id="SB000002" xlink:type="simple" xlink:href="http://www.siv.archives-nationales.culture.gouv.fr/siv/UD/FRAN_IR_900001/SB000002">
+        <did>
+          <unitid type="identifiant">BB/34/387</unitid>
+          <unitid type="pieces">document 8</unitid>
+          <unittitle>Décret d'admissions à domicile du 20 janvier 1883.</unittitle>
+          <unitdate calendar="gregorian" era="ce" normal="1883-01-20">20 janvier 1883</unitdate>
+        </did>
+        <daogrp>
+          <daoloc href="http://www.siv.archives-nationales.culture.gouv.fr/siv/media/FRAN_IR_900001/SB000002/"/>
+        </daogrp>
+        <c id="c-bbb1" xlink:type="simple" xlink:href="http://www.siv.archives-nationales.culture.gouv.fr/siv/UD/FRAN_IR_900001/c-bbb1">
+          <did>
+            <unitid type="cote-de-consultation">BB/11/90005</unitid>
+            <unitid type="pieces">90005 X 82</unitid>
+            <unittitle>
+              <persname>Factice, Pierre</persname>
+            </unittitle>
+          </did>
+          <scopecontent>
+            <p>Naissance : 9 janvier 1848 (Turin, Italie)</p>
+            <p>Lieu de résidence : Paris</p>
+          </scopecontent>
+        </c>
+        <c id="c-bbb2" xlink:type="simple" xlink:href="http://www.siv.archives-nationales.culture.gouv.fr/siv/UD/FRAN_IR_900001/c-bbb2">
+          <did>
+            <unitid type="cote-de-consultation">BB/11/90006,BB/11/90007</unitid>
+            <unitid type="pieces">90006 X 82</unitid>
+            <unittitle>
+              <persname>Postiche, Antoine</persname>
+            </unittitle>
+          </did>
+          <scopecontent>
+            <p>Naissance : 17 février 1846 (Mostaganem, Oran, Algérie)</p>
+            <p>Lieu de résidence : Marseille</p>
+          </scopecontent>
+        </c>
+      </c>
+      <c id="SB000003" xlink:type="simple" xlink:href="http://www.siv.archives-nationales.culture.gouv.fr/siv/UD/FRAN_IR_900001/SB000003">
+        <did>
+          <unitid type="identifiant">BB/34/387</unitid>
+          <unitid type="pieces">document 9</unitid>
+          <unittitle>Décret de naturalisations algériennes (légion étrangère) du 2 février 1883.</unittitle>
+          <unitdate calendar="gregorian" era="ce" normal="1883-02-02">2 février 1883</unitdate>
+        </did>
+        <daogrp>
+          <daoloc href="http://www.siv.archives-nationales.culture.gouv.fr/siv/media/FRAN_IR_900001/SB000003/DAFANCH94_NUMJ000001_D"/>
+        </daogrp>
+        <c id="c-ccc1" xlink:type="simple" xlink:href="http://www.siv.archives-nationales.culture.gouv.fr/siv/UD/FRAN_IR_900001/c-ccc1">
+          <did>
+            <unitid type="cote-de-consultation">BB/11/90008</unitid>
+            <unitid type="pieces">90008 X 82</unitid>
+            <unittitle>
+              <persname>Simulacre, Karl</persname>
+            </unittitle>
+          </did>
+          <scopecontent>
+            <p>Naissance : 4 avril 1855 (Berlin, Prusse)</p>
+            <p>Profession : soldat à la légion étrangère</p>
+          </scopecontent>
+        </c>
+      </c>
+    </dsc>
+  </archdesc>
+</ead>

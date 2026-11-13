@@ -1,0 +1,1080 @@
+{
+  "schema": "decretas.contenu.types-d-actes/1",
+  "langue": "fr",
+  "maj": "2026-11-11",
+  "titre": "Quels actes ont existé ?",
+  "chapeau": "De 1865 à 1962, plusieurs voies très différentes ont existé. Une seule produit un décret nominatif publié, que ce site peut chercher. Les autres passent par un jugement, par une déclaration, ou par une loi qui n'a nommé personne.",
+  "note_vocabulaire": "Le mot « indigène » est un terme du droit colonial. Il désignait, dans les textes de l'époque, les habitants de l'Algérie restés sous leur statut personnel (droit musulman, coutumes, ou droit mosaïque), tous de nationalité française depuis 1865. Ce site le cite, toujours entre guillemets, parce que c'est le mot des sources ; il ne l'emploie jamais à son compte.",
+  "natures": {
+    "decret": "Décret : décision du chef de l'État, nominative, publiée.",
+    "arrete": "Arrêté : décision d'un ministre ou du gouverneur général.",
+    "jugement": "Jugement : décision d'un tribunal ou d'un juge de paix, jamais publiée.",
+    "declaration": "Déclaration : démarche de la personne elle-même, enregistrée par l'administration.",
+    "effet-collectif": "Effet collectif d'un texte : une loi, un décret général ou une ordonnance qui s'applique à une catégorie de personnes sans nommer personne."
+  },
+  "valeurs_publie": {
+    "oui": "Publié dans un bulletin ou un journal officiel.",
+    "non": "Jamais publié.",
+    "partiel": "Publié pour une partie des cas seulement.",
+    "inconnu": "Nous ne savons pas.",
+    "sans-objet": "Il n'existe pas d'acte individuel."
+  },
+  "couvertures": {
+    "recherche-par-nom": "Pour les années où les noms ont été saisis : cherché par la recherche par nom de ce site (le bilan de recherche dit lesquelles).",
+    "recherche-guidee": "Pour les années en images seules : non cherché par nom, mais le site vous guide jusqu'aux pages à lire vous-même.",
+    "hors-site": "Hors de ce site : le site indique seulement la démarche.",
+    "aucun-acte-nominatif": "Il n'existe aucun acte au nom de la personne : aucune recherche par nom ne peut aboutir."
+  },
+  "types": [
+    {
+      "id": "T1",
+      "cle": "admission-par-decret",
+      "titre_court": "Admission par décret (sénatus-consulte de 1865)",
+      "periode": {
+        "debut": 1865,
+        "fin": 1944,
+        "texte": "De 1865 à 1944 au moins"
+      },
+      "qui": "Un Algérien musulman, homme ou femme, d'au moins 21 ans, qui en faisait la demande. Les textes de l'époque disent « l'indigène musulman ».",
+      "natures": [
+        "decret"
+      ],
+      "nature_texte": "Un décret, c'est-à-dire une décision du chef de l'État, qui nomme chaque personne admise.",
+      "fondement": "Sénatus-consulte du 14 juillet 1865, article 1er : « L'indigène musulman est français ; néanmoins il continuera à être régi par la loi musulmane. […] Il peut, sur sa demande, être admis à jouir des droits de citoyen français ; dans ce cas, il est régi par les lois civiles et politiques de la France. »",
+      "nominatif": true,
+      "publie": "oui",
+      "ou_publie": "Au Bulletin officiel du Gouvernement général de l'Algérie — nous l'avons lu pour 1869, 1873 et 1888. D'après les recherches antérieures du projet : dans ce bulletin jusqu'en 1926, puis au Journal officiel de l'Algérie et au Journal officiel de la République française. Cette répartition année par année n'a pas encore été contrôlée sur les pages.",
+      "ou_conserve": "L'original du décret est aux Archives nationales (site de Pierrefitte-sur-Seine, sous-série BB/34), pour les années 1883 à 1948, et il est numérisé. Avant 1883, il ne reste que la publication.",
+      "sur_ce_site": {
+        "couvertures": [
+          "recherche-par-nom",
+          "recherche-guidee"
+        ],
+        "texte": "Oui : c'est l'objet principal de ce site. La recherche par nom lit les années où les noms ont été saisis. Pour les autres années, le site vous donne la liste datée des décrets à lire vous-même sur les images. Le bilan de recherche dit toujours quelles années ont été lues.",
+        "voies": [
+          "recherche-par-nom",
+          "recherche-guidee-images",
+          "recherche-sur-le-site-des-an",
+          "bulletin-imprime"
+        ],
+        "guides": [
+          "an-annee-indexee",
+          "an-annee-en-images",
+          "an-noms-sur-le-site-des-an",
+          "bogga-internet-archive",
+          "gallica-a-la-main"
+        ]
+      },
+      "etablit": [
+        {
+          "texte": "Pour les tribunaux français, la sortie du statut civil de droit local ne peut « résulter que d'un décret ou d'un jugement pris en application du senatus consulte du 14 juillet 1865 et des lois des 4 février 1919 et 18 août 1929 ».",
+          "source": "Cour de cassation, 1re chambre civile, 8 juin 2004, n° 02-10250, reproduit dans le dossier documentaire de la décision n° 2012-259 QPC du Conseil constitutionnel",
+          "preuves": [
+            "data/samples/legal-types/cc-2012-259-qpc-dossier-documentaire.txt",
+            "docs/research/sources-2026-11/legal-types.md § 3 (T1)"
+          ],
+          "etat": "verifie"
+        },
+        {
+          "texte": "Le ministère de la Justice écrit que ces décrets « ont été régulièrement publiés et la preuve peut en être aisément rapportée ».",
+          "source": "Réponse du ministère de la Justice à la question écrite n° 16358, Journal officiel du Sénat du 24 octobre 1991, p. 2352",
+          "preuves": [
+            "data/samples/other-sources/senat/qSEQ910716358.html",
+            "data/samples/legal-types/senat-qe-16358-1991.txt"
+          ],
+          "etat": "verifie"
+        },
+        {
+          "texte": "Les Archives nationales écrivent, y compris pour « un ancêtre devenu français par décret pris en application du sénatus-consulte du 14 juillet 1865 » : « Les décrets publiés au Journal officiel sont les seuls à avoir valeur de preuve. »",
+          "source": "Archives nationales, page « Dossiers de demande de naturalisation », tableau « Preuves de nationalité », lue le 2026-11-11",
+          "preuves": [
+            "data/samples/an-remote/an-dossiers-naturalisation.body",
+            "docs/research/sources-2026-11/an-remote.md § 7"
+          ],
+          "etat": "verifie"
+        },
+        {
+          "texte": "Pour un décret pris en application du sénatus-consulte de 1865, « une attestation peut être délivrée par le ministère chargé des naturalisations ».",
+          "source": "Réponse du ministère de la Justice à la question écrite n° 17313, Journal officiel du Sénat du 9 mars 2006, p. 723",
+          "preuves": [
+            "data/samples/other-sources/senat/qSEQ050417313.html",
+            "data/samples/legal-types/senat-qe-17313-2005.txt"
+          ],
+          "etat": "verifie"
+        }
+      ],
+      "n_etablit_pas": [
+        {
+          "texte": "Le décret vaut pour la personne nommée. D'après la jurisprudence que citent les historiens, ses enfants encore mineurs suivaient ; son épouse et ses enfants majeurs, non, sauf demande de leur part.",
+          "source": "Patrick Weil, « Le statut des musulmans en Algérie coloniale », EUI Working Paper HEC n° 2003/3, note 77 (Cour de cassation, 30 décembre 1907) ; Florence Renucci, 2004, § 10 et 28",
+          "preuves": [
+            "data/samples/legal-types/weil-2003-HEC03-03.txt",
+            "data/samples/legal-types/renucci-2004-accession-indigenes.txt",
+            "docs/research/sources-2026-11/legal-types.md § 3 (T1)"
+          ],
+          "etat": "partiel"
+        },
+        {
+          "texte": "Le décret original vu aux Archives nationales n'est pas encore la citation : il manque la date et la page de sa publication.",
+          "source": "Archives nationales, page « Dossiers de demande de naturalisation », tableau « Preuves de nationalité », lue le 2026-11-11",
+          "preuves": [
+            "data/samples/an-remote/an-dossiers-naturalisation.body",
+            "docs/research/sources-2026-11/an-remote.md § 8"
+          ],
+          "etat": "verifie"
+        },
+        {
+          "texte": "Trouver cet acte ne dit rien, à lui seul, de la nationalité d'un descendant aujourd'hui. Il faudrait encore toute la chaîne des actes d'état civil entre l'ancêtre et le descendant, que ce site ne voit pas. Ce site ne conclut jamais sur ce point.",
+          "source": "Service-Public, fiche F1051 « Certificat de nationalité française (CNF) », vérifiée le 20 juin 2025 : pour la chaîne de filiation, elle demande « les actes de naissance de tous les ascendants », « en remontant jusqu'au 1er ascendant français inclus »",
+          "preuves": [
+            "data/samples/other-sources/servicepublic/F1051-cnf.html",
+            "data/samples/other-sources/servicepublic/notice-16237-02.pdf",
+            "docs/research/sources-2026-11/other-sources.md § 5.2"
+          ],
+          "etat": "verifie"
+        }
+      ],
+      "a_savoir": [
+        "L'ancêtre était déjà de nationalité française : le sénatus-consulte de 1865 le dit dès sa première phrase. Ce que le décret lui donnait, c'est la qualité de citoyen et le passage aux lois civiles françaises.",
+        "Jusqu'en 1930, les Archives nationales rangent ces décrets sous le titre « Décret de naturalisations algériennes », avec les étrangers d'Algérie visés par les mêmes décrets. À partir de 1931, le titre devient « Décret d'admission aux droits de citoyen français », avec ou sans la mention « (Algérie) ». C'est pourquoi vous rencontrerez le mot « naturalisation » dans les sources, alors qu'il ne s'agit pas d'un étranger.",
+        "Des décrets d'admission ont encore été signés en 1944 (30 mars, 14 avril, 19 juin). Pour 1946 et 1947, des décrets portant ce titre existent, mais nous ne savons pas s'ils concernent des Algériens.",
+        "Dans le bulletin imprimé de 1873, un Algérien musulman est désigné par son prénom et celui de son père, sans nom de famille ; en 1888, le nom de famille apparaît souvent.",
+        "L'admission était rare : voyez les chiffres dans le bilan de recherche."
+      ],
+      "verification": {
+        "etat": "partiel",
+        "preuves": [
+          "docs/research/sources-2026-11/legal-types.md § 3 (T1)",
+          "docs/research/sources-2026-11/legal-types.md § 4",
+          "docs/research/sources-2026-11/verification.md § legal-types",
+          "data/samples/legal-types/wikisource-sc-1865.txt",
+          "data/samples/legal-types/local-an-title-families.json",
+          "docs/research/sources-2026-11/internet-archive.md § 4"
+        ],
+        "note": "Vérifié : texte du sénatus-consulte, titres des inventaires, décrets de 1944, citations officielles. Non vérifié : le périodique de publication année par année après 1888 ; le texte du décret de procédure du 21 avril 1866 ; le rôle du Conseil d'État après 1870."
+      }
+    },
+    {
+      "id": "T2",
+      "cle": "admission-israelite-par-decret",
+      "titre_court": "Admission d'un Juif d'Algérie par décret (1865-1870)",
+      "periode": {
+        "debut": 1865,
+        "fin": 1870,
+        "texte": "De 1865 à 1870 dans le nord de l'Algérie ; plus tard pour le M'zab"
+      },
+      "qui": "Un Juif d'Algérie — « l'indigène israélite », dans les textes de l'époque — avant le décret Crémieux du 24 octobre 1870. Après cette date, seulement ceux des territoires annexés plus tard, comme le M'zab.",
+      "natures": [
+        "decret"
+      ],
+      "nature_texte": "Un décret nominatif, de la même forme que pour un Algérien musulman.",
+      "fondement": "Sénatus-consulte du 14 juillet 1865, article 2 : « L'indigène israélite est français, néanmoins il continue à être régi par son statut personnel. […] Il peut, sur sa demande, être admis à jouir des droits de citoyens français. »",
+      "nominatif": true,
+      "publie": "oui",
+      "ou_publie": "Au Bulletin officiel du Gouvernement général de l'Algérie (constaté par des extraits du volume de 1869). Un relevé associatif de ces admissions a été fait dans le Bulletin des lois : c'est un indice, de seconde main, qu'elles y figurent aussi.",
+      "ou_conserve": "La collection des décrets originaux des Archives nationales commence en 1883 : les décrets de 1865-1870 n'y sont pas.",
+      "sur_ce_site": {
+        "couvertures": [
+          "recherche-par-nom",
+          "recherche-guidee"
+        ],
+        "texte": "En partie. Ces décrets ne se trouvent que dans le bulletin imprimé. Le bilan de recherche dit si les volumes de 1865 à 1870 sont lus par la recherche par nom ; sinon, suivez le guide du bulletin imprimé.",
+        "voies": [
+          "bulletin-imprime"
+        ],
+        "guides": [
+          "bogga-internet-archive"
+        ]
+      },
+      "etablit": [
+        {
+          "texte": "De 1865 à 1870, 1 039 personnes ont été admises : 634 étrangers et 405 personnes comptées comme « indigènes », dont 116 musulmans et 289 israélites. L'auteur ajoute que plus d'un tiers de ces 405 venaient en réalité du Maroc ou de Tunisie.",
+          "source": "Roussel, « La condition et la naturalisation des indigènes en Algérie », Revue des Deux Mondes, 1875 (transcription Wikisource)",
+          "preuves": [
+            "data/samples/legal-types/wikisource-condition-naturalisation-indigenes.txt",
+            "docs/research/sources-2026-11/verification.md § legal-types"
+          ],
+          "etat": "verifie"
+        }
+      ],
+      "n_etablit_pas": [
+        {
+          "texte": "Trouver cet acte ne dit rien, à lui seul, de la nationalité d'un descendant aujourd'hui. Il faudrait encore toute la chaîne des actes d'état civil entre l'ancêtre et le descendant, que ce site ne voit pas. Ce site ne conclut jamais sur ce point.",
+          "source": "Service-Public, fiche F1051 « Certificat de nationalité française (CNF) », vérifiée le 20 juin 2025 : pour la chaîne de filiation, elle demande « les actes de naissance de tous les ascendants », « en remontant jusqu'au 1er ascendant français inclus »",
+          "preuves": [
+            "data/samples/other-sources/servicepublic/F1051-cnf.html",
+            "data/samples/other-sources/servicepublic/notice-16237-02.pdf",
+            "docs/research/sources-2026-11/other-sources.md § 5.2"
+          ],
+          "etat": "verifie"
+        }
+      ],
+      "a_savoir": [
+        "Pour une famille juive du nord de l'Algérie, le cas le plus fréquent n'est pas ce décret individuel mais le décret Crémieux de 1870, qui n'a nommé personne (voir la carte suivante).",
+        "L'association Cercle de généalogie juive a publié un relevé des admissions de 1865-1870 ; le détail est réservé à ses adhérents. C'est un indice pour orienter la recherche, pas une source primaire."
+      ],
+      "verification": {
+        "etat": "partiel",
+        "preuves": [
+          "docs/research/sources-2026-11/legal-types.md § 3 (T2)",
+          "docs/research/sources-2026-11/verification.md § legal-types",
+          "docs/research/sources-2026-11/other-sources.md § 4",
+          "docs/research/sources-2026-11/internet-archive.md § 4.3"
+        ],
+        "note": "Texte de l'article 2 et chiffres de Roussel vérifiés. Admissions du M'zab après 1883 : aucun exemple contrôlé."
+      }
+    },
+    {
+      "id": "T3",
+      "cle": "naturalisation-d-un-etranger",
+      "titre_court": "Naturalisation d'un étranger vivant en Algérie",
+      "periode": {
+        "debut": 1865,
+        "fin": 1940,
+        "texte": "À partir de 1865 ; dans les inventaires des Archives nationales, jusqu'en 1940"
+      },
+      "qui": "Une personne de nationalité étrangère installée en Algérie : Espagnols, Italiens, Maltais, Allemands, légionnaires, mais aussi Marocains et Tunisiens, musulmans ou juifs, qui étaient des étrangers.",
+      "natures": [
+        "decret"
+      ],
+      "nature_texte": "Un décret nominatif. Ici le mot naturalisation est exact : la personne était de nationalité étrangère.",
+      "fondement": "Sénatus-consulte du 14 juillet 1865, article 3 : « L'étranger qui justifie de trois années de résidence en Algérie peut être admis à jouir de tous les droits de citoyen français. »",
+      "nominatif": true,
+      "publie": "oui",
+      "ou_publie": "Dans les mêmes listes du Bulletin officiel que les admissions d'Algériens (constaté pour 1873 et 1888).",
+      "ou_conserve": "Aux Archives nationales, dans les mêmes décrets que les admissions jusqu'en 1930 (« Décret de naturalisations algériennes ») ; de 1931 à 1940 sous « Décret de naturalisations françaises (Algérie) ».",
+      "sur_ce_site": {
+        "couvertures": [
+          "recherche-par-nom",
+          "recherche-guidee"
+        ],
+        "texte": "Oui, par la même recherche : ces personnes figurent dans les mêmes décrets et les mêmes listes imprimées que les Algériens admis.",
+        "voies": [
+          "recherche-par-nom",
+          "recherche-guidee-images",
+          "bulletin-imprime"
+        ],
+        "guides": [
+          "an-annee-indexee",
+          "an-annee-en-images",
+          "bogga-internet-archive"
+        ]
+      },
+      "etablit": [
+        {
+          "texte": "De 1870 à 1919, sur 31 496 naturalisations prononcées en Algérie, un dépouillement du Bulletin officiel compte 1 453 « indigènes » algériens, 512 Marocains et 203 Tunisiens : la grande majorité des personnes nommées dans ces décrets n'étaient donc pas des Algériens musulmans.",
+          "source": "Laure Blévis, citée par Florence Renucci (2004, note 10)",
+          "preuves": [
+            "data/samples/legal-types/renucci-2004-accession-indigenes.txt",
+            "docs/research/sources-2026-11/legal-types.md § 3 (T3)"
+          ],
+          "etat": "partiel"
+        }
+      ],
+      "n_etablit_pas": [
+        {
+          "texte": "Trouver cet acte ne dit rien, à lui seul, de la nationalité d'un descendant aujourd'hui. Il faudrait encore toute la chaîne des actes d'état civil entre l'ancêtre et le descendant, que ce site ne voit pas. Ce site ne conclut jamais sur ce point.",
+          "source": "Service-Public, fiche F1051 « Certificat de nationalité française (CNF) », vérifiée le 20 juin 2025 : pour la chaîne de filiation, elle demande « les actes de naissance de tous les ascendants », « en remontant jusqu'au 1er ascendant français inclus »",
+          "preuves": [
+            "data/samples/other-sources/servicepublic/F1051-cnf.html",
+            "data/samples/other-sources/servicepublic/notice-16237-02.pdf",
+            "docs/research/sources-2026-11/other-sources.md § 5.2"
+          ],
+          "etat": "verifie"
+        }
+      ],
+      "a_savoir": [
+        "Conséquence pour votre recherche : une correspondance sur un prénom courant peut désigner un Marocain ou un Tunisien naturalisé, et non un Algérien admis. Lisez toujours le lieu de naissance."
+      ],
+      "verification": {
+        "etat": "partiel",
+        "preuves": [
+          "docs/research/sources-2026-11/legal-types.md § 3 (T3)",
+          "docs/research/sources-2026-11/legal-types.md § 4",
+          "docs/research/sources-2026-11/verification.md § legal-types"
+        ],
+        "note": "Titres et périodes vérifiés sur les inventaires locaux. Chiffres de Blévis connus par une citation."
+      }
+    },
+    {
+      "id": "T4",
+      "cle": "decret-cremieux",
+      "titre_court": "Décret Crémieux (24 octobre 1870)",
+      "periode": {
+        "debut": 1870,
+        "fin": 1870,
+        "texte": "1870"
+      },
+      "qui": "Les Juifs des départements d'Algérie de 1870, collectivement : près de 35 000 personnes. Pas ceux des territoires annexés ensuite, comme le M'zab.",
+      "natures": [
+        "effet-collectif"
+      ],
+      "nature_texte": "Un seul texte général, qui ne nomme personne.",
+      "fondement": "Décret n° 136 du 24 octobre 1870 : « Les israélites indigènes des départements de l'Algérie sont déclarés citoyens français ».",
+      "nominatif": false,
+      "publie": "sans-objet",
+      "ou_publie": "Le texte général a été publié ; il n'existe aucune liste de noms.",
+      "ou_conserve": "Sans objet.",
+      "sur_ce_site": {
+        "couvertures": [
+          "aucun-acte-nominatif"
+        ],
+        "texte": "Non, et aucune recherche par nom ne peut aboutir : il n'existe pas de décret au nom de l'ancêtre.",
+        "voies": [
+          "hors-perimetre"
+        ],
+        "guides": []
+      },
+      "etablit": [
+        {
+          "texte": "Les Archives nationales le disent ainsi : « Ce décret attribue d'office la citoyenneté française aux “Israélites indigènes” d'Algérie. »",
+          "source": "Archives nationales, page « Dossiers de demande de naturalisation », tableau « Preuves de nationalité », lue le 2026-11-11",
+          "preuves": [
+            "data/samples/an-remote/an-dossiers-naturalisation.body",
+            "docs/research/sources-2026-11/an-remote.md § 7"
+          ],
+          "etat": "verifie"
+        }
+      ],
+      "n_etablit_pas": [
+        {
+          "texte": "Il n'établit rien au nom d'une personne : la trace individuelle est ailleurs (état civil, décision du juge de paix de 1871, listes électorales).",
+          "source": "docs/research/sources-2026-11/legal-types.md § 3 (T4)",
+          "preuves": [
+            "data/samples/legal-types/mjp-decrets-1870-10-24.txt",
+            "docs/research/sources-2026-11/legal-types.md § 3 (T4)"
+          ],
+          "etat": "partiel"
+        }
+      ],
+      "a_savoir": [
+        "Sous le régime de Vichy, ce décret a été abrogé (1940) puis rétabli (1943) : voir la carte sur cette période."
+      ],
+      "verification": {
+        "etat": "verifie",
+        "preuves": [
+          "data/samples/legal-types/mjp-decrets-1870-10-24.txt",
+          "data/samples/legal-types/cc-2012-259-qpc-commentaire.txt",
+          "docs/research/sources-2026-11/legal-types.md § 3 (T4)"
+        ],
+        "note": ""
+      }
+    },
+    {
+      "id": "T5",
+      "cle": "decision-juge-de-paix-1871",
+      "titre_court": "Décision du juge de paix de 1871 (application du décret Crémieux)",
+      "periode": {
+        "debut": 1871,
+        "fin": 1871,
+        "texte": "1871 (complété par un décret de 1939)"
+      },
+      "qui": "Un Juif d'Algérie qui devait justifier, après le décret Crémieux, qu'il était né en Algérie avant la conquête française, ou de parents qui y étaient établis à ce moment-là.",
+      "natures": [
+        "jugement"
+      ],
+      "nature_texte": "Une décision du juge de paix, dont une copie était remise à l'intéressé.",
+      "fondement": "Décret du 7 octobre 1871, article 3 : « la décision du juge de paix vaudra titre à l'Israélite ; il lui en sera immédiatement délivré une copie ».",
+      "nominatif": true,
+      "publie": "non",
+      "ou_publie": "Nulle part.",
+      "ou_conserve": "À l'origine, à la justice de paix et à la mairie, en Algérie. Nous ne savons pas où ces décisions sont conservées aujourd'hui.",
+      "sur_ce_site": {
+        "couvertures": [
+          "hors-site"
+        ],
+        "texte": "Non. Ce site ne cherche que des décrets publiés.",
+        "voies": [
+          "hors-perimetre"
+        ],
+        "guides": []
+      },
+      "etablit": [],
+      "n_etablit_pas": [
+        {
+          "texte": "Trouver cet acte ne dit rien, à lui seul, de la nationalité d'un descendant aujourd'hui. Il faudrait encore toute la chaîne des actes d'état civil entre l'ancêtre et le descendant, que ce site ne voit pas. Ce site ne conclut jamais sur ce point.",
+          "source": "Service-Public, fiche F1051 « Certificat de nationalité française (CNF) », vérifiée le 20 juin 2025 : pour la chaîne de filiation, elle demande « les actes de naissance de tous les ascendants », « en remontant jusqu'au 1er ascendant français inclus »",
+          "preuves": [
+            "data/samples/other-sources/servicepublic/F1051-cnf.html",
+            "data/samples/other-sources/servicepublic/notice-16237-02.pdf",
+            "docs/research/sources-2026-11/other-sources.md § 5.2"
+          ],
+          "etat": "verifie"
+        }
+      ],
+      "a_savoir": [],
+      "verification": {
+        "etat": "partiel",
+        "preuves": [
+          "data/samples/legal-types/mjp-decrets-1870-10-24.txt",
+          "docs/research/sources-2026-11/legal-types.md § 3 (T5)"
+        ],
+        "note": "Texte vérifié. Lieu de conservation actuel : non vérifié."
+      }
+    },
+    {
+      "id": "T6",
+      "cle": "loi-de-1889",
+      "titre_court": "Loi du 26 juin 1889 : enfants d'étrangers nés en Algérie",
+      "periode": {
+        "debut": 1889,
+        "fin": 1927,
+        "texte": "De 1889 à 1927"
+      },
+      "qui": "Les enfants nés en Algérie de parents étrangers (espagnols, italiens, maltais…). La loi écartait expressément les Algériens musulmans.",
+      "natures": [
+        "effet-collectif"
+      ],
+      "nature_texte": "Un effet automatique de la loi, sans décret.",
+      "fondement": "Loi du 26 juin 1889 sur la nationalité, rendue applicable à l'Algérie.",
+      "nominatif": false,
+      "publie": "sans-objet",
+      "ou_publie": "Sans objet : il n'y a pas d'acte individuel.",
+      "ou_conserve": "Sans objet.",
+      "sur_ce_site": {
+        "couvertures": [
+          "aucun-acte-nominatif"
+        ],
+        "texte": "Non. Si l'ancêtre est né en Algérie de parents européens, il est très possible qu'aucun décret n'existe à son nom : cherchez plutôt celui de ses parents, s'ils étaient nés à l'étranger.",
+        "voies": [
+          "hors-perimetre"
+        ],
+        "guides": []
+      },
+      "etablit": [],
+      "n_etablit_pas": [],
+      "a_savoir": [
+        "C'est ce qui explique que les « naturalisations algériennes » des Archives nationales nomment surtout des personnes nées hors d'Algérie."
+      ],
+      "verification": {
+        "etat": "non-verifie",
+        "preuves": [
+          "data/samples/legal-types/weil-2003-HEC03-03.txt",
+          "docs/research/sources-2026-11/legal-types.md § 3 (T6)",
+          "docs/research/sources-2026-11/verification.md § legal-types"
+        ],
+        "note": "Connu par l'étude de Patrick Weil ; le texte de la loi n'a pas été relu."
+      }
+    },
+    {
+      "id": "T7",
+      "cle": "admission-par-jugement",
+      "titre_court": "Admission par jugement (loi du 4 février 1919)",
+      "periode": {
+        "debut": 1919,
+        "fin": 1962,
+        "texte": "De 1919 à 1962"
+      },
+      "qui": "Un Algérien musulman d'au moins 25 ans, monogame ou célibataire, sans condamnation entraînant la perte des droits politiques, résidant depuis deux ans dans la même commune, et remplissant l'une de sept conditions (avoir servi dans l'armée, savoir lire et écrire le français, être propriétaire, fermier ou commerçant patenté, fonctionnaire, élu, décoré, ou enfant d'un père admis quand le demandeur avait déjà 21 ans). La loi ne valait pas pour qui était né et domicilié dans les Territoires du Sud.",
+      "natures": [
+        "jugement"
+      ],
+      "nature_texte": "Un jugement du tribunal de première instance, rendu en audience publique, après une demande déposée devant le juge de paix.",
+      "fondement": "Loi du 4 février 1919, article 6 : « le tribunal de première instance, à la première audience publique, déclare que le postulant […] est admis à la qualité de citoyen français. Mention de cette déclaration sera faite en marge de l'acte de naissance et de l'acte de mariage du postulant. »",
+      "nominatif": true,
+      "publie": "non",
+      "ou_publie": "Nulle part : la loi ne prévoit aucune publication. La seule trace prévue est la mention en marge de l'acte de naissance et de l'acte de mariage.",
+      "ou_conserve": "En Algérie. Les Archives nationales écrivent : « Archives conservées en Algérie. » Les Archives nationales d'outre-mer : « les archives judiciaires civiles des anciennes colonies sont demeurées sur place sans copie aux ANOM ».",
+      "sur_ce_site": {
+        "couvertures": [
+          "hors-site"
+        ],
+        "texte": "Non, et aucun site ne le peut : ces jugements ne sont publiés nulle part. Le bilan de recherche le rappelle à chaque fois. Le guide indique la démarche, qui se fait en Algérie.",
+        "voies": [
+          "etat-civil-en-algerie"
+        ],
+        "guides": [
+          "jugement-etat-civil-algerie"
+        ]
+      },
+      "etablit": [
+        {
+          "texte": "« L'accession au statut de droit commun résultant de la loi du 4 février 1919 se prouve […] par la production du jugement d'admission à la qualité de citoyen français. »",
+          "source": "Réponse du ministère de la Justice à la question écrite n° 17313, Journal officiel du Sénat du 9 mars 2006, p. 723",
+          "preuves": [
+            "data/samples/other-sources/senat/qSEQ050417313.html",
+            "data/samples/legal-types/senat-qe-17313-2005.txt"
+          ],
+          "etat": "verifie"
+        }
+      ],
+      "n_etablit_pas": [
+        {
+          "texte": "La mention en marge ne remplace pas le jugement : « La production de ce titre est essentielle et la mention en marge apposée sur une copie d'acte d'état civil ne saurait s'y substituer. » La mention sert à savoir qu'un jugement a existé, quel tribunal l'a rendu et quand.",
+          "source": "Réponse du ministère de la Justice à la question écrite n° 17313, Journal officiel du Sénat du 9 mars 2006, p. 723",
+          "preuves": [
+            "data/samples/other-sources/senat/qSEQ050417313.html",
+            "data/samples/legal-types/senat-qe-17313-2005.txt"
+          ],
+          "etat": "verifie"
+        },
+        {
+          "texte": "« Les décisions des tribunaux n'ont pas fait l'objet de mesures particulières tendant à leur conservation. Il appartient aux personnes qui s'en prévalent d'en produire les expéditions. »",
+          "source": "Réponse du ministère de la Justice à la question écrite n° 16358, Journal officiel du Sénat du 24 octobre 1991, p. 2352",
+          "preuves": [
+            "data/samples/other-sources/senat/qSEQ910716358.html",
+            "data/samples/legal-types/senat-qe-16358-1991.txt"
+          ],
+          "etat": "verifie"
+        },
+        {
+          "texte": "Trouver cet acte ne dit rien, à lui seul, de la nationalité d'un descendant aujourd'hui. Il faudrait encore toute la chaîne des actes d'état civil entre l'ancêtre et le descendant, que ce site ne voit pas. Ce site ne conclut jamais sur ce point.",
+          "source": "Service-Public, fiche F1051 « Certificat de nationalité française (CNF) », vérifiée le 20 juin 2025 : pour la chaîne de filiation, elle demande « les actes de naissance de tous les ascendants », « en remontant jusqu'au 1er ascendant français inclus »",
+          "preuves": [
+            "data/samples/other-sources/servicepublic/F1051-cnf.html",
+            "data/samples/other-sources/servicepublic/notice-16237-02.pdf",
+            "docs/research/sources-2026-11/other-sources.md § 5.2"
+          ],
+          "etat": "verifie"
+        }
+      ],
+      "a_savoir": [
+        "De 1919 à 1930, il y a eu davantage d'admissions par jugement (1 204, pour 1 547 demandes) que par décret (760).",
+        "Les deux voies sont restées ouvertes en même temps : après 1919, un ancêtre a pu passer par le décret ou par le jugement. Ne rien trouver parmi les décrets ne dit donc rien du jugement."
+      ],
+      "verification": {
+        "etat": "verifie",
+        "preuves": [
+          "data/samples/legal-types/mjp-loi-1919-02-04.txt",
+          "docs/research/sources-2026-11/legal-types.md § 3 (T7)",
+          "data/samples/an-remote/an-dossiers-naturalisation.body",
+          "data/samples/other-sources/anom/site-ce-que-vous-ne-trouverez-pas.html",
+          "data/samples/legal-types/weil-2003-HEC03-03.txt"
+        ],
+        "note": "Texte de la loi lu en entier. Chiffres tirés de Patrick Weil (p. 12 et note 77)."
+      }
+    },
+    {
+      "id": "T8",
+      "cle": "femmes",
+      "titre_court": "Admission d'une femme",
+      "periode": {
+        "debut": 1883,
+        "fin": 1962,
+        "texte": "Par décret dès les années 1880 ; loi du 18 août 1929"
+      },
+      "qui": "Une Algérienne musulmane, pour elle-même ; ou l'épouse d'un homme admis après leur mariage.",
+      "natures": [
+        "decret",
+        "jugement"
+      ],
+      "nature_texte": "Un décret ou un jugement, comme pour un homme.",
+      "fondement": "Loi du 4 février 1919, article 2, dernier alinéa : « La femme d'un indigène devenu citoyen français postérieurement à son mariage pourra demander à suivre la nouvelle condition de son mari. » La loi du 18 août 1929 a étendu aux femmes les deux procédures.",
+      "nominatif": true,
+      "publie": "partiel",
+      "ou_publie": "Le décret est publié comme les autres ; le jugement ne l'est pas.",
+      "ou_conserve": "Comme pour les hommes : décrets aux Archives nationales, jugements en Algérie.",
+      "sur_ce_site": {
+        "couvertures": [
+          "recherche-par-nom",
+          "recherche-guidee",
+          "hors-site"
+        ],
+        "texte": "Oui pour les décrets, par la même recherche. Non pour les jugements.",
+        "voies": [
+          "recherche-par-nom",
+          "recherche-guidee-images",
+          "etat-civil-en-algerie"
+        ],
+        "guides": [
+          "an-annee-indexee",
+          "an-annee-en-images",
+          "jugement-etat-civil-algerie"
+        ]
+      },
+      "etablit": [],
+      "n_etablit_pas": [
+        {
+          "texte": "L'admission du mari ne valait pas d'office pour l'épouse : elle devait le demander.",
+          "source": "Loi du 4 février 1919, article 2, dernier alinéa",
+          "preuves": [
+            "data/samples/legal-types/mjp-loi-1919-02-04.txt"
+          ],
+          "etat": "verifie"
+        },
+        {
+          "texte": "Trouver cet acte ne dit rien, à lui seul, de la nationalité d'un descendant aujourd'hui. Il faudrait encore toute la chaîne des actes d'état civil entre l'ancêtre et le descendant, que ce site ne voit pas. Ce site ne conclut jamais sur ce point.",
+          "source": "Service-Public, fiche F1051 « Certificat de nationalité française (CNF) », vérifiée le 20 juin 2025 : pour la chaîne de filiation, elle demande « les actes de naissance de tous les ascendants », « en remontant jusqu'au 1er ascendant français inclus »",
+          "preuves": [
+            "data/samples/other-sources/servicepublic/F1051-cnf.html",
+            "data/samples/other-sources/servicepublic/notice-16237-02.pdf",
+            "docs/research/sources-2026-11/other-sources.md § 5.2"
+          ],
+          "etat": "verifie"
+        }
+      ],
+      "a_savoir": [
+        "N'écartez pas une femme au motif que la loi date de 1929 : l'index des Archives nationales contient, avant 1929, une cinquantaine de femmes nées en Algérie et désignées par « bent » (fille de), dès 1883.",
+        "Dans les notices des Archives nationales, l'épouse et les enfants sont souvent cités sous le nom du mari (lignes « Épouse » et « Enfants »)."
+      ],
+      "verification": {
+        "etat": "partiel",
+        "preuves": [
+          "data/samples/legal-types/mjp-loi-1919-02-04.txt",
+          "data/samples/legal-types/cc-2012-259-qpc-commentaire.txt",
+          "docs/research/sources-2026-11/legal-types.md § 3 (T8)",
+          "docs/research/sources-2026-11/verification.md § legal-types"
+        ],
+        "note": "Le texte de la loi du 18 août 1929 n'a pas été trouvé : seuls son existence et son objet sont établis."
+      }
+    },
+    {
+      "id": "T9",
+      "cle": "rejet",
+      "titre_court": "Demande rejetée, décret révoqué",
+      "periode": {
+        "debut": 1891,
+        "fin": 1934,
+        "texte": "Dans les inventaires des Archives nationales : de 1891 à 1934"
+      },
+      "qui": "Une personne dont la demande a été refusée, ou dont le décret a été retiré.",
+      "natures": [
+        "decret",
+        "arrete"
+      ],
+      "nature_texte": "Un décret ou un arrêté de rejet, qui nomme les personnes.",
+      "fondement": "Pas de texte unique.",
+      "nominatif": true,
+      "publie": "inconnu",
+      "ou_publie": "Nous ne savons pas si ces rejets étaient publiés.",
+      "ou_conserve": "Aux Archives nationales, dans la même collection que les décrets d'admission (307 décrets ou arrêtés de rejet nommant l'Algérie, de 1891 à 1934).",
+      "sur_ce_site": {
+        "couvertures": [
+          "recherche-par-nom",
+          "recherche-guidee"
+        ],
+        "texte": "Selon ce qu'indique le bilan de recherche. Quand une correspondance se trouve dans un décret de rejet, le site le dit clairement : ce n'est pas une admission.",
+        "voies": [
+          "recherche-par-nom",
+          "recherche-guidee-images"
+        ],
+        "guides": [
+          "an-annee-indexee",
+          "an-annee-en-images"
+        ]
+      },
+      "etablit": [
+        {
+          "texte": "Un rejet montre qu'une demande a été faite, et refusée à cette date. Il explique une absence de décret d'admission ; un dossier d'instruction peut exister aux Archives nationales.",
+          "source": "docs/research/sources-2026-11/legal-types.md § 3 (T9)",
+          "preuves": [
+            "data/samples/legal-types/local-an-title-families.json",
+            "docs/research/sources-2026-11/legal-types.md § 3 (T9)"
+          ],
+          "etat": "verifie"
+        }
+      ],
+      "n_etablit_pas": [
+        {
+          "texte": "Un rejet à une date n'exclut pas une admission plus tard : une nouvelle demande était possible.",
+          "source": "Loi du 4 février 1919, article 8 (nouvelle demande possible après cinq ans)",
+          "preuves": [
+            "data/samples/legal-types/mjp-loi-1919-02-04.txt"
+          ],
+          "etat": "partiel"
+        }
+      ],
+      "a_savoir": [
+        "Sur les images des décrets, une mention manuscrite en marge (« Retrait », « Rejet », « Ajournement ») change le sens de la ligne : regardez toujours la marge."
+      ],
+      "verification": {
+        "etat": "partiel",
+        "preuves": [
+          "docs/research/sources-2026-11/legal-types.md § 3 (T9)",
+          "docs/research/sources-2026-11/legal-types.md § 4",
+          "docs/research/sources-2026-11/verification.md § legal-types"
+        ],
+        "note": "Comptages vérifiés sur les inventaires locaux. Publication des rejets : inconnue."
+      }
+    },
+    {
+      "id": "T10",
+      "cle": "vichy",
+      "titre_court": "1940-1943 : abrogation du décret Crémieux",
+      "periode": {
+        "debut": 1940,
+        "fin": 1943,
+        "texte": "De 1940 à 1943"
+      },
+      "qui": "Les Juifs d'Algérie, à qui le régime de Vichy a retiré la citoyenneté ; quelques-uns l'ont gardée par une décision individuelle.",
+      "natures": [
+        "jugement"
+      ],
+      "nature_texte": "Des décisions individuelles de maintien (juge de paix, administration).",
+      "fondement": "Loi du 7 octobre 1940 ; le décret Crémieux est déclaré « maintenu en vigueur » le 21 octobre 1943.",
+      "nominatif": true,
+      "publie": "inconnu",
+      "ou_publie": "Non établi.",
+      "ou_conserve": "Non établi.",
+      "sur_ce_site": {
+        "couvertures": [
+          "hors-site"
+        ],
+        "texte": "Non. Cette carte est là pour qu'une famille comprenne un « jugement de 1940-1941 » retrouvé dans ses papiers.",
+        "voies": [
+          "hors-perimetre"
+        ],
+        "guides": []
+      },
+      "etablit": [],
+      "n_etablit_pas": [],
+      "a_savoir": [],
+      "verification": {
+        "etat": "non-verifie",
+        "preuves": [
+          "data/samples/legal-types/hal-00599296-decret-cremieux.txt",
+          "data/samples/legal-types/mjp-ordonnances-cfln-1944.txt",
+          "docs/research/sources-2026-11/legal-types.md § 3 (T10)",
+          "docs/research/sources-2026-11/verification.md § legal-types"
+        ],
+        "note": "Connu par une étude d'histoire du droit (Florence Renucci) ; le texte des lois de 1940 n'a pas été relu. Seul le rétablissement de 1943 est vérifié sur le texte."
+      }
+    },
+    {
+      "id": "T11",
+      "cle": "citoyen-a-titre-personnel-1944",
+      "titre_court": "Citoyen « à titre personnel » (ordonnance du 7 mars 1944)",
+      "periode": {
+        "debut": 1944,
+        "fin": 1946,
+        "texte": "De 1944 à 1946"
+      },
+      "qui": "Les hommes de 21 ans et plus appartenant à certaines catégories : anciens officiers, diplômés, fonctionnaires, élus, caïds, aghas et bachaghas, décorés… Environ 60 000 personnes.",
+      "natures": [
+        "effet-collectif"
+      ],
+      "nature_texte": "Un effet direct de l'ordonnance : pas de décret au nom de chacun. La trace individuelle est l'inscription sur la liste électorale du premier collège.",
+      "fondement": "Ordonnance du 7 mars 1944, article 3 : « Sont déclarés citoyens français, à titre personnel, et inscrits sur les mêmes listes électorales que les citoyens non musulmans » les hommes de ces catégories.",
+      "nominatif": false,
+      "publie": "sans-objet",
+      "ou_publie": "L'ordonnance ne prévoit pas d'acte individuel ; nous n'avons trouvé aucune liste publiée.",
+      "ou_conserve": "Sans objet.",
+      "sur_ce_site": {
+        "couvertures": [
+          "aucun-acte-nominatif"
+        ],
+        "texte": "Non : il n'y a pas de décret à chercher pour cette voie. Mais la même personne a pu, en plus, demander son admission par décret ou par jugement : la recherche par nom reste utile.",
+        "voies": [
+          "recherche-par-nom",
+          "etat-civil-en-algerie"
+        ],
+        "guides": []
+      },
+      "etablit": [],
+      "n_etablit_pas": [
+        {
+          "texte": "Cette citoyenneté donnait des droits politiques sans changer le statut civil. La Cour de cassation juge que l'ordonnance a décidé « que ces nouveaux citoyens resteraient soumis au statut civil de droit local, sauf manifestation expresse de leur volonté d'adopter le statut civil de droit commun », et que le vote au premier collège « ne valait pas renonciation au statut local ».",
+          "source": "Cour de cassation, 1re chambre civile, 8 juin 2004, n° 02-10250, reproduit dans le dossier documentaire de la décision n° 2012-259 QPC du Conseil constitutionnel",
+          "preuves": [
+            "data/samples/legal-types/cc-2012-259-qpc-dossier-documentaire.txt",
+            "docs/research/sources-2026-11/legal-types.md § 3 (T11)"
+          ],
+          "etat": "verifie"
+        }
+      ],
+      "a_savoir": [
+        "Avoir été caïd, décoré, instituteur ou ancien officier, avoir voté « avec les Européens » après 1944 : ce sont des souvenirs de famille fréquents. Ils renvoient le plus souvent à cette ordonnance, pas à un décret."
+      ],
+      "verification": {
+        "etat": "partiel",
+        "preuves": [
+          "data/samples/legal-types/mjp-ordonnances-cfln-1944.txt",
+          "data/samples/legal-types/cc-2012-259-qpc-dossier-documentaire.txt",
+          "data/samples/legal-types/weil-2003-HEC03-03.txt",
+          "docs/research/sources-2026-11/legal-types.md § 3 (T11)",
+          "docs/research/sources-2026-11/verification.md § legal-types"
+        ],
+        "note": "Texte et jurisprudence vérifiés. Qu'aucune liste n'ait été publiée est une déduction du texte, non un constat."
+      }
+    },
+    {
+      "id": "T12",
+      "cle": "citoyennete-de-1946",
+      "titre_court": "Citoyenneté de 1946 et statut de 1947",
+      "periode": {
+        "debut": 1946,
+        "fin": 1962,
+        "texte": "De 1946 à 1962"
+      },
+      "qui": "Tous les Algériens, collectivement.",
+      "natures": [
+        "effet-collectif"
+      ],
+      "nature_texte": "Un effet général de la loi, sans aucun acte individuel.",
+      "fondement": "Loi n° 46-940 du 7 mai 1946 : « À partir du 1er juin 1946, tous les ressortissants des territoires d'outre-mer (Algérie comprise) ont la qualité de citoyen. » Loi du 20 septembre 1947, article 3 : « Tous les citoyens qui n'ont pas expressément renoncé à leur statut personnel continuent à être régis par leurs droits et par leurs coutumes. »",
+      "nominatif": false,
+      "publie": "sans-objet",
+      "ou_publie": "Sans objet.",
+      "ou_conserve": "Sans objet.",
+      "sur_ce_site": {
+        "couvertures": [
+          "aucun-acte-nominatif"
+        ],
+        "texte": "Non : il n'y a rien à chercher au nom d'une personne.",
+        "voies": [
+          "hors-perimetre"
+        ],
+        "guides": []
+      },
+      "etablit": [],
+      "n_etablit_pas": [
+        {
+          "texte": "Cette citoyenneté générale laissait chacun sous son statut personnel, sauf renonciation expresse.",
+          "source": "Loi du 20 septembre 1947, article 3",
+          "preuves": [
+            "data/samples/legal-types/wikisource-statut-1947.txt",
+            "data/samples/legal-types/mjp-loi-1946-05-07.txt"
+          ],
+          "etat": "verifie"
+        }
+      ],
+      "a_savoir": [],
+      "verification": {
+        "etat": "verifie",
+        "preuves": [
+          "data/samples/legal-types/mjp-loi-1946-05-07.txt",
+          "data/samples/legal-types/wikisource-statut-1947.txt",
+          "docs/research/sources-2026-11/legal-types.md § 3 (T12)"
+        ],
+        "note": ""
+      }
+    },
+    {
+      "id": "T13",
+      "cle": "jugement-de-renonciation",
+      "titre_court": "Renonciation au statut personnel par jugement (1946-1962)",
+      "periode": {
+        "debut": 1946,
+        "fin": 1962,
+        "texte": "De 1946 à 1962"
+      },
+      "qui": "Un Algérien qui, après 1946, voulait passer sous le statut civil de droit commun.",
+      "natures": [
+        "jugement"
+      ],
+      "nature_texte": "Un jugement constatant la renonciation.",
+      "fondement": "« Depuis l'entrée en vigueur de la Constitution de 1946, la procédure a été celle du jugement constatant la renonciation au statut personnel. »",
+      "nominatif": true,
+      "publie": "non",
+      "ou_publie": "Nulle part.",
+      "ou_conserve": "Non établi. Les archives judiciaires civiles sont restées en Algérie.",
+      "sur_ce_site": {
+        "couvertures": [
+          "hors-site"
+        ],
+        "texte": "Non : c'est un jugement, il n'est pas publié. La démarche est la même que pour le jugement de 1919, sans que nous sachions si une mention était portée en marge de l'acte de naissance.",
+        "voies": [
+          "etat-civil-en-algerie"
+        ],
+        "guides": [
+          "jugement-etat-civil-algerie"
+        ]
+      },
+      "etablit": [
+        {
+          "texte": "Le ministère de la Justice range ce jugement, avec le décret de 1865 et le jugement de 1919, parmi les actes dont peut « résulter » la preuve du statut civil de droit commun.",
+          "source": "Réponse du ministère de la Justice à la question écrite n° 16358, Journal officiel du Sénat du 24 octobre 1991, p. 2352",
+          "preuves": [
+            "data/samples/other-sources/senat/qSEQ910716358.html",
+            "data/samples/legal-types/senat-qe-16358-1991.txt"
+          ],
+          "etat": "verifie"
+        }
+      ],
+      "n_etablit_pas": [
+        {
+          "texte": "Trouver cet acte ne dit rien, à lui seul, de la nationalité d'un descendant aujourd'hui. Il faudrait encore toute la chaîne des actes d'état civil entre l'ancêtre et le descendant, que ce site ne voit pas. Ce site ne conclut jamais sur ce point.",
+          "source": "Service-Public, fiche F1051 « Certificat de nationalité française (CNF) », vérifiée le 20 juin 2025 : pour la chaîne de filiation, elle demande « les actes de naissance de tous les ascendants », « en remontant jusqu'au 1er ascendant français inclus »",
+          "preuves": [
+            "data/samples/other-sources/servicepublic/F1051-cnf.html",
+            "data/samples/other-sources/servicepublic/notice-16237-02.pdf",
+            "docs/research/sources-2026-11/other-sources.md § 5.2"
+          ],
+          "etat": "verifie"
+        }
+      ],
+      "a_savoir": [],
+      "verification": {
+        "etat": "partiel",
+        "preuves": [
+          "data/samples/legal-types/senat-qe-16358-1991.txt",
+          "data/samples/legal-types/cc-2012-259-qpc-dossier-documentaire.txt",
+          "docs/research/sources-2026-11/legal-types.md § 3 (T13)",
+          "docs/research/sources-2026-11/verification.md § legal-types"
+        ],
+        "note": "Existence de la procédure vérifiée. Nombre, forme, mention en marge, lieu de conservation : non vérifiés. La renonciation entre 1944 et 1946 n'a pas été étudiée."
+      }
+    },
+    {
+      "id": "T14",
+      "cle": "mzab-1961",
+      "titre_court": "Juifs du M'zab : loi du 28 juillet 1961",
+      "periode": {
+        "debut": 1961,
+        "fin": 1962,
+        "texte": "1961-1962"
+      },
+      "qui": "Les Juifs du M'zab (Ghardaïa, Laghouat, Ouargla, Touggourt), restés hors du décret Crémieux : environ 8 000 personnes.",
+      "natures": [
+        "effet-collectif"
+      ],
+      "nature_texte": "Un effet collectif de la loi, avec inscription sur un registre d'état civil ; pas de décret.",
+      "fondement": "Loi n° 61-805 du 28 juillet 1961, article 9.",
+      "nominatif": false,
+      "publie": "sans-objet",
+      "ou_publie": "Sans objet.",
+      "ou_conserve": "Non établi.",
+      "sur_ce_site": {
+        "couvertures": [
+          "aucun-acte-nominatif"
+        ],
+        "texte": "Non.",
+        "voies": [
+          "hors-perimetre"
+        ],
+        "guides": []
+      },
+      "etablit": [],
+      "n_etablit_pas": [],
+      "a_savoir": [],
+      "verification": {
+        "etat": "partiel",
+        "preuves": [
+          "data/samples/legal-types/mjp-loi-1961-805.txt",
+          "data/samples/legal-types/senat-rapport-1960-1961-321.txt",
+          "data/samples/legal-types/openedition-remmm-9057.txt",
+          "docs/research/sources-2026-11/legal-types.md § 3 (T14)"
+        ],
+        "note": "Texte vérifié ; le nombre de personnes vient d'une source secondaire."
+      }
+    },
+    {
+      "id": "T15",
+      "cle": "declaration-recognitive",
+      "titre_court": "Déclaration de reconnaissance de la nationalité française (1962-1967)",
+      "periode": {
+        "debut": 1962,
+        "fin": 1967,
+        "texte": "Du 21 juillet 1962 à mars 1967"
+      },
+      "qui": "Une personne de statut civil de droit local, établie en France après l'indépendance, et ses enfants.",
+      "natures": [
+        "declaration"
+      ],
+      "nature_texte": "Une déclaration signée en France devant le tribunal d'instance du domicile, puis enregistrée.",
+      "fondement": "Ordonnance n° 62-825 du 21 juillet 1962, article 2 : les personnes de statut civil de droit local « peuvent, en France, se faire reconnaître la nationalité française ».",
+      "nominatif": true,
+      "publie": "non",
+      "ou_publie": "Nous n'avons trouvé aucune publication de ces déclarations.",
+      "ou_conserve": "D'après les Archives nationales, les dossiers de déclaration recognitive ouverts entre 1963 et 1971 sont conservés par la Sous-direction de l'accès à la nationalité française. D'après les Archives nationales d'outre-mer : aux « Archives départementales du lieu où cette déclaration a été faite ».",
+      "sur_ce_site": {
+        "couvertures": [
+          "hors-site"
+        ],
+        "texte": "Non. Le guide indique à qui écrire.",
+        "voies": [
+          "declaration-recognitive"
+        ],
+        "guides": [
+          "declaration-recognitive"
+        ]
+      },
+      "etablit": [],
+      "n_etablit_pas": [
+        {
+          "texte": "L'ordonnance réservait cette déclaration aux personnes de statut civil de droit local. Elle n'indique donc pas qu'un décret ou un jugement d'admission ait existé auparavant.",
+          "source": "Ordonnance n° 62-825 du 21 juillet 1962, articles 1er et 2, reproduits dans le dossier documentaire de la décision n° 2012-259 QPC",
+          "preuves": [
+            "data/samples/legal-types/cc-2012-259-qpc-dossier-documentaire.txt",
+            "docs/research/sources-2026-11/legal-types.md § 3 (T15)"
+          ],
+          "etat": "verifie"
+        },
+        {
+          "texte": "Trouver cet acte ne dit rien, à lui seul, de la nationalité d'un descendant aujourd'hui. Il faudrait encore toute la chaîne des actes d'état civil entre l'ancêtre et le descendant, que ce site ne voit pas. Ce site ne conclut jamais sur ce point.",
+          "source": "Service-Public, fiche F1051 « Certificat de nationalité française (CNF) », vérifiée le 20 juin 2025 : pour la chaîne de filiation, elle demande « les actes de naissance de tous les ascendants », « en remontant jusqu'au 1er ascendant français inclus »",
+          "preuves": [
+            "data/samples/other-sources/servicepublic/F1051-cnf.html",
+            "data/samples/other-sources/servicepublic/notice-16237-02.pdf",
+            "docs/research/sources-2026-11/other-sources.md § 5.2"
+          ],
+          "etat": "verifie"
+        }
+      ],
+      "a_savoir": [
+        "La date limite s'écrit de deux façons dans des textes officiels (« avant le 21 mars 1967 », « avant le 22 mars 1967 ») : nous écrivons « mars 1967 ».",
+        "Environ 60 000 demandes avaient été faites à la fin de 1966."
+      ],
+      "verification": {
+        "etat": "partiel",
+        "preuves": [
+          "data/samples/legal-types/cc-2012-259-qpc-dossier-documentaire.txt",
+          "data/samples/legal-types/senat-rapport-1966-1967-089.txt",
+          "data/samples/other-sources/an-questions/QANR5L15QE6380.html",
+          "data/samples/an-remote/an-dossiers-naturalisation.body",
+          "data/samples/other-sources/anom/site-ce-que-vous-ne-trouverez-pas.html",
+          "docs/research/sources-2026-11/other-sources.md § 6.1",
+          "docs/research/sources-2026-11/verification.md § other-sources",
+          "docs/research/sources-2026-11/verification.md § legal-types"
+        ],
+        "note": "Le texte du décret n° 62-1475 du 27 novembre 1962 n'a pas été lu. Le service qui enregistrait les déclarations n'est pas établi avec certitude."
+      }
+    },
+    {
+      "id": "T16",
+      "cle": "reintegration-apres-1962",
+      "titre_court": "Réintégration par décret (après 1962)",
+      "periode": {
+        "debut": 1963,
+        "fin": null,
+        "texte": "Après 1962"
+      },
+      "qui": "Une personne qui a perdu la nationalité française à l'indépendance et qui réside en France.",
+      "natures": [
+        "decret"
+      ],
+      "nature_texte": "Un décret nominatif, publié au Journal officiel de la République française.",
+      "fondement": "Article 24-1 du code civil, d'après la réponse ministérielle de 2018.",
+      "nominatif": true,
+      "publie": "oui",
+      "ou_publie": "Au Journal officiel de la République française, dont les fac-similés sont sur Légifrance.",
+      "ou_conserve": "Hors du champ de ce site.",
+      "sur_ce_site": {
+        "couvertures": [
+          "hors-site"
+        ],
+        "texte": "Non : ce site s'arrête en 1962. Le guide Légifrance explique comment ouvrir un Journal officiel quand on connaît sa date.",
+        "voies": [
+          "legifrance"
+        ],
+        "guides": [
+          "legifrance-jorf"
+        ]
+      },
+      "etablit": [],
+      "n_etablit_pas": [
+        {
+          "texte": "La réintégration suppose de résider en France : « les Algériens ayant perdu leur nationalité française le 1er janvier 1963 et ne justifiant pas de leur résidence en France depuis ne peuvent donc y prétendre ».",
+          "source": "Réponse du ministère de l'Intérieur à la question écrite n° 6380, Journal officiel du 18 septembre 2018, p. 8282",
+          "preuves": [
+            "data/samples/other-sources/an-questions/QANR5L15QE6380.html",
+            "docs/research/sources-2026-11/other-sources.md § 6.1"
+          ],
+          "etat": "verifie"
+        }
+      ],
+      "a_savoir": [
+        "Ne pas confondre avec les « décrets de réintégration » de 1883-1948 conservés aux Archives nationales : ceux-là concernent surtout des femmes ayant perdu la nationalité par mariage et des Alsaciens-Lorrains."
+      ],
+      "verification": {
+        "etat": "non-verifie",
+        "preuves": [
+          "data/samples/other-sources/an-questions/QANR5L15QE6380.html",
+          "docs/research/sources-2026-11/legal-types.md § 3 (T16)",
+          "docs/research/sources-2026-11/verification.md § legal-types"
+        ],
+        "note": "Seule la réponse ministérielle de 2018 a été lue ; l'article du code civil ne l'a pas été."
+      }
+    }
+  ]
+}

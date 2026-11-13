@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/css' href='ead.css'?><ead xmlns:xlink="http://www.w3.org/1999/xlink">
+  <!-- Jeu d'essai SYNTHÉTIQUE : personnes, noms et dossiers inventés ; seul le format des exports XML-EAD est reproduit. -->
+  <eadheader countryencoding="iso3166-1" dateencoding="iso8601" langencoding="iso639-2b">
+    <eadid xlink:type="simple" xlink:href="http://www.siv.archives-nationales.culture.gouv.fr/siv/IR/FRAN_IR_900005">FRAN_IR_900005</eadid>
+    <filedesc>
+      <titlestmt>
+        <titleproper>Décrets de naturalisation de l’année 1922</titleproper>
+        <subtitle>Répertoire numérique détaillé (BB/34/448-BB/34/449)</subtitle>
+        <author>Jeu d'essai synthétique.</author>
+      </titlestmt>
+      <publicationstmt>
+        <publisher>Jeu d'essai</publisher>
+        <date calendar="gregorian" era="ce" normal="2018-07-13">13 juillet 2018</date>
+      </publicationstmt>
+    </filedesc>
+  </eadheader>
+  <frontmatter>
+    <div>
+      <p/>
+    </div>
+  </frontmatter>
+  <archdesc id="top" level="collection">
+    <did>
+      <unitid type="identifiant">BB/34/448-BB/34/449</unitid>
+      <unittitle>Décrets de naturalisation de l’année 1922</unittitle>
+      <unitdate calendar="gregorian" era="ce" normal="1922-01-11/1922-12-21">11 janvier 1922 - 21 décembre 1922</unitdate>
+      <repository>Archives nationales de France</repository>
+      <physloc>Pierrefitte</physloc>
+    </did>
+    <accessrestrict>
+      <p>Librement communicable en application de l'article L213-2 du code du patrimoine.</p>
+    </accessrestrict>
+    <userestrict>
+      <p>Les documents peuvent être librement reproduits dans le cadre d’un usage privé (usage strictement personnel dans le cercle de la famille), sous réserve des contraintes liées à leur état matériel et dans le respect des textes relatifs à la réutilisation des informations publiques.</p>
+    </userestrict>
+    <dsc>
+      <c id="AP002984" xlink:type="simple" xlink:href="http://www.siv.archives-nationales.culture.gouv.fr/siv/UD/FRAN_IR_900005/AP002984">
+        <did>
+          <unitid type="identifiant">BB/34/448</unitid>
+          <unitid type="pieces">document 101</unitid>
+          <unittitle>Décret d'admissions à domicile du 12 octobre 1922.</unittitle>
+          <unitdate calendar="gregorian" era="ce" normal="1922-10-12">12 octobre 1922</unitdate>
+        </did>
+        <daogrp>
+          <daoloc href="http://www.siv.archives-nationales.culture.gouv.fr/siv/media/FRAN_IR_900005/AP002984/"/>
+        </daogrp>
+        <c id="c-n1" xlink:type="simple" xlink:href="http://www.siv.archives-nationales.culture.gouv.fr/siv/UD/FRAN_IR_900005/c-n1">
+          <did>
+            <unitid type="pieces">90040 X 22</unitid>
+            <unittitle>
+              <persname>Factice, Odette Jeanne</persname>
+            </unittitle>
+          </did>
+          <scopecontent>
+            <p>Naissance : 25 novembre 1851 (Strasbourg, Bas-Rhin, France)</p>
+            <p>Lieu de résidence : Sidi-bel-Abbès</p>
+          </scopecontent>
+        </c>
+        <c id="AP002985" xlink:type="simple" xlink:href="http://www.siv.archives-nationales.culture.gouv.fr/siv/UD/FRAN_IR_900005/AP002985">
+          <did>
+            <unitid type="identifiant">BB/34/448</unitid>
+            <unitid type="pieces">document 102</unitid>
+            <unittitle>Décret de réintégrations d'Alsaciens-Lorrains du 12 octobre 1922.</unittitle>
+            <unitdate calendar="gregorian" era="ce" normal="1922-10-12">12 octobre 1922</unitdate>
+          </did>
+          <daogrp>
+            <daoloc href="http://www.siv.archives-nationales.culture.gouv.fr/siv/media/FRAN_IR_900005/AP002985/"/>
+          </daogrp>
+          <c id="c-n2" xlink:type="simple" xlink:href="http://www.siv.archives-nationales.culture.gouv.fr/siv/UD/FRAN_IR_900005/c-n2">
+            <did>
+              <unitid type="pieces">90041 X 22</unitid>
+              <unittitle>
+                <persname>Simulacre, Lucien Paul</persname>
+              </unittitle>
+            </did>
+            <scopecontent>
+              <p>Naissance : 10 février 1858 (Metz, Moselle, France)</p>
+              <p>Lieu de résidence : Lyon</p>
+              <p>Profession : Maçon</p>
+              <p>Épouse</p>
+              <p>Postiche, Anne</p>
+              <p>Née le 27 août 1862 (Strasbourg, Bas-Rhin)</p>
+            </scopecontent>
+          </c>
+        </c>
+      </c>
+      <c id="YI003349" xlink:type="simple" xlink:href="http://www.siv.archives-nationales.culture.gouv.fr/siv/UD/FRAN_IR_900005/YI003349">
+        <did>
+          <unitid type="identifiant">BB/34/448</unitid>
+          <unitid type="pieces">document 30</unitid>
+          <unittitle>Décret de naturalisation algérienne du 15 février 1922.</unittitle>
+          <unitdate calendar="gregorian" era="ce" normal="1922-02-15">15 février 1922</unitdate>
+        </did>
+        <daogrp>
+          <daoloc href="http://www.siv.archives-nationales.culture.gouv.fr/siv/media/FRAN_IR_900005/YI003349/"/>
+        </daogrp>
+        <c id="c-arm1" xlink:type="simple" xlink:href="http://www.siv.archives-nationales.culture.gouv.fr/siv/UD/FRAN_IR_900005/c-arm1">
+          <did>
+            <unitid type="cote-de-consultation">BB/11/90042</unitid>
+            <unitid type="pieces">90042 X 01</unitid>
+            <unittitle>Décret de règlement d'armoiries de la ville de Fictiveville du 15 février 1922</unittitle>
+          </did>
+        </c>
+        <c id="c-n3" xlink:type="simple" xlink:href="http://www.siv.archives-nationales.culture.gouv.fr/siv/UD/FRAN_IR_900005/c-n3">
+          <did>
+            <unitid type="cote-de-consultation">BB/11/90043</unitid>
+            <unitid type="pieces">90043 X 19</unitid>
+            <unittitle>
+              <persname>Testaoui, Tahar ould Miloud</persname>
+            </unittitle>
+          </did>
+          <scopecontent>
+            <p>Naissance : 20 mars 1875 (Sidi-bel-Abbès, Algérie)</p>
+          </scopecontent>
+          <daogrp>
+            <daoloc href="http://www.siv.archives-nationales.culture.gouv.fr/siv/media/FRAN_IR_900005/c-n3/"/>
+          </daogrp>
+        </c>
+      </c>
+      <c id="YI003451" xlink:type="simple" xlink:href="http://www.siv.archives-nationales.culture.gouv.fr/siv/UD/FRAN_IR_900005/YI003451">
+        <did>
+          <unitid type="identifiant">BB/34/449</unitid>
+          <unitid type="pieces">document 132</unitid>
+          <unittitle>(concerne aussi des rejets de changements de noms et de dispense pour mariage).</unittitle>
+          <unitdate calendar="gregorian" era="ce" normal="1922-11-04">4 novembre 1922</unitdate>
+        </did>
+        <daogrp>
+          <daoloc href="http://www.siv.archives-nationales.culture.gouv.fr/siv/media/FRAN_IR_900005/YI003451/"/>
+        </daogrp>
+      </c>
+    </dsc>
+  </archdesc>
+</ead>

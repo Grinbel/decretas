@@ -1,0 +1,2 @@
+# False positive: an Archives nationales place-authority identifier (Algérie) in a test fixture, not a secret.
+tests/an/fixtures/FRAN_IR_900001.xml:generic-api-key:49

@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/css' href='ead.css'?><ead xmlns:xlink="http://www.w3.org/1999/xlink">
+  <!-- Jeu d'essai SYNTHÉTIQUE : personnes, noms et dossiers inventés ; seul le format des exports XML-EAD est reproduit. -->
+  <eadheader countryencoding="iso3166-1" dateencoding="iso8601" langencoding="iso639-2b">
+    <eadid xlink:type="simple" xlink:href="http://www.siv.archives-nationales.culture.gouv.fr/siv/IR/FRAN_IR_900002">FRAN_IR_900002</eadid>
+    <filedesc>
+      <titlestmt>
+        <titleproper>Décrets de naturalisation de l’année 1892</titleproper>
+        <subtitle>Répertoire numérique détaillé (BB/34/402-BB/34/403)</subtitle>
+        <author>Jeu d'essai synthétique.</author>
+      </titlestmt>
+      <publicationstmt>
+        <publisher>Jeu d'essai</publisher>
+        <date calendar="gregorian" era="ce" normal="2018-07-13">13 juillet 2018</date>
+      </publicationstmt>
+    </filedesc>
+  </eadheader>
+  <frontmatter>
+    <div>
+      <p/>
+    </div>
+  </frontmatter>
+  <archdesc id="top" level="collection">
+    <did>
+      <unitid type="identifiant">BB/34/402-BB/34/403</unitid>
+      <unittitle>Décrets de naturalisation de l’année 1892</unittitle>
+      <unitdate calendar="gregorian" era="ce" normal="1892-01-12/1892-12-31">12 janvier 1892 - 31 décembre 1892</unitdate>
+      <repository>Archives nationales de France</repository>
+      <physloc>Pierrefitte</physloc>
+    </did>
+    <accessrestrict>
+      <p>Librement communicable en application de l'article L213-2 du code du patrimoine.</p>
+    </accessrestrict>
+    <userestrict>
+      <p>Les documents peuvent être librement reproduits dans le cadre d’un usage privé (usage strictement personnel dans le cercle de la famille), sous réserve des contraintes liées à leur état matériel et dans le respect des textes relatifs à la réutilisation des informations publiques.</p>
+    </userestrict>
+    <dsc>
+      <c id="idd_1892_05_03" xlink:type="simple" xlink:href="http://www.siv.archives-nationales.culture.gouv.fr/siv/UD/FRAN_IR_900002/idd_1892_05_03">
+        <did>
+          <unitid type="cote-de-consultation">BB/34/402</unitid>
+          <unittitle>Décret de naturalisations algériennes et tunisiennes du 2 mai 1892</unittitle>
+          <unitdate calendar="gregorian" era="ce" normal="1892-05-02">2 mai 1892</unitdate>
+        </did>
+        <daogrp>
+          <daoloc href="http://www.siv.archives-nationales.culture.gouv.fr/siv/media/FRAN_IR_900002/idd_1892_05_03/"/>
+        </daogrp>
+        <c id="id_1892_05_0060" xlink:type="simple" xlink:href="http://www.siv.archives-nationales.culture.gouv.fr/siv/UD/FRAN_IR_900002/id_1892_05_0060">
+          <did>
+            <unitid type="cote-de-consultation">BB/11/90010</unitid>
+            <unitid type="pieces">90010 X 92</unitid>
+            <unittitle>
+              <persname>TESTAOUI, Mohamed ben Fictif</persname>
+            </unittitle>
+          </did>
+          <scopecontent>
+            <p>Naissance : journalier, 7 mai 1865, Alger, Alger, Algérie.</p>
+            <p>Lieu de résidence : Akbou, département de Constantine, Algérie.</p>
+          </scopecontent>
+        </c>
+        <c id="id_1892_05_0061" xlink:type="simple" xlink:href="http://www.siv.archives-nationales.culture.gouv.fr/siv/UD/FRAN_IR_900002/id_1892_05_0061">
+          <did>
+            <unitid type="cote-de-consultation">BB/11/90011</unitid>
+            <unitid type="pieces">90011 x 92</unitid>
+            <unittitle>
+              <persname>EXEMPLI née MODELE, Lucie Jeanne</persname>
+            </unittitle>
+          </did>
+          <scopecontent>
+            <p>Naissance : 9 juin 1849, Gênes, Italie.</p>
+            <p>Profession : couturière.</p>
+            <p>Lieu de résidence : Lyon, Rhône, France.</p>
+          </scopecontent>
+        </c>
+        <c id="id_1892_05_0062" xlink:type="simple" xlink:href="http://www.siv.archives-nationales.culture.gouv.fr/siv/UD/FRAN_IR_900002/id_1892_05_0062">
+          <did>
+            <unitid type="cote-de-consultation">BB/11/90012</unitid>
+            <unitid type="pieces">90012X92</unitid>
+            <unittitle>
+              <persname>FICTIVO, Jean</persname>
+            </unittitle>
+          </did>
+          <scopecontent>
+            <p>Naissance : en 1859, Fictiveville, département d'Alger, Algérie, de parents italiens.</p>
+            <p>Profession : non précisé.</p>
+            <p>Épouse : FICTIVO née SPECIMEN, Marie, née le 17 mars 1853 à Gênes, Italie.</p>
+            <p>Enfants : Lucette (8 novembre 1883), Odile (2 février 1886)</p>
+          </scopecontent>
+        </c>
+        <c id="id_1892_05_0063" xlink:type="simple" xlink:href="http://www.siv.archives-nationales.culture.gouv.fr/siv/UD/FRAN_IR_900002/id_1892_05_0063">
+          <did>
+            <unitid type="pieces">90 013 X 92</unitid>
+            <unittitle>
+              <persname>INVENTE, Paul</persname>
+            </unittitle>
+          </did>
+          <scopecontent>
+            <p>Naissance : présumé né en 1862 (Fictiveville Maroc)</p>
+          </scopecontent>
+        </c>
+        <c id="id_1892_05_0064" xlink:type="simple" xlink:href="http://www.siv.archives-nationales.culture.gouv.fr/siv/UD/FRAN_IR_900002/id_1892_05_0064">
+          <did>
+            <unitid type="pieces">90014 X 92</unitid>
+            <unittitle>
+              <persname>Modèle [Modelski], Luc</persname>
+            </unittitle>
+          </did>
+          <scopecontent>
+            <p>Naissance : 18 octobre 1842 [8 octobre 1842] (Lodz, Pologne)</p>
+          </scopecontent>
+        </c>
+        <c id="id_1892_05_0065" xlink:type="simple" xlink:href="http://www.siv.archives-nationales.culture.gouv.fr/siv/UD/FRAN_IR_900002/id_1892_05_0065">
+          <did>
+            <unitid type="pieces">90015 X 92</unitid>
+            <unittitle>
+              <persname>SPECIMEN, Ali</persname>
+            </unittitle>
+          </did>
+          <scopecontent>
+            <p>Naissance : 21 juin1846, Tunis, Tunisie.</p>
+          </scopecontent>
+        </c>
+        <c id="id_1892_05_0066" xlink:type="simple" xlink:href="http://www.siv.archives-nationales.culture.gouv.fr/siv/UD/FRAN_IR_900002/id_1892_05_0066">
+          <did>
+            <unitid type="pieces">90016 X 92</unitid>
+            <unittitle>
+              <persname>POSTICHE, Rose</persname>
+            </unittitle>
+          </did>
+          <scopecontent>
+            <p>Naissance : 3 mars 1964, Alger, Algérie.</p>
+            <p>Texte que l'analyseur ne comprend pas</p>
+          </scopecontent>
+        </c>
+      </c>
+      <c id="idd_1892_08_01" xlink:type="simple" xlink:href="http://www.siv.archives-nationales.culture.gouv.fr/siv/UD/FRAN_IR_900002/idd_1892_08_01">
+        <did>
+          <unitid type="identifiant">BB/34/403</unitid>
+          <unittitle>Décret de naturalisations du 2 août 1892</unittitle>
+          <unitdate calendar="gregorian" era="ce" normal="1897-08-02">2 août 1892</unitdate>
+        </did>
+        <daogrp>
+          <daoloc href="http://www.siv.archives-nationales.culture.gouv.fr/siv/media/FRAN_IR_900002/idd_1892_08_01/"/>
+        </daogrp>
+      </c>
+      <c id="idd_1892_04_96" xlink:type="simple" xlink:href="http://www.siv.archives-nationales.culture.gouv.fr/siv/UD/FRAN_IR_900002/idd_1892_04_96">
+        <did>
+          <unitid type="identifiant">BB/34/402</unitid>
+          <unittitle>Décret de naturalisations algériennes du 30 avril 1892</unittitle>
+          <unitdate calendar="gregorian" era="ce" normal="1892-04-23">23 avril 1892</unitdate>
+        </did>
+        <daogrp>
+          <daoloc href="http://www.siv.archives-nationales.culture.gouv.fr/siv/media/FRAN_IR_900002/idd_1892_04_96/"/>
+        </daogrp>
+      </c>
+      <c id="idd_1892_07_08" xlink:type="simple" xlink:href="http://www.siv.archives-nationales.culture.gouv.fr/siv/UD/FRAN_IR_900002/idd_1892_07_08">
+        <did>
+          <unitid type="identifiant">BB/34/403</unitid>
+          <unittitle>Décret de réintégrations de femmes d'étrangers du 4 juillet 1892</unittitle>
+          <unitdate calendar="gregorian" era="ce" normal="1892-01-04">4 juillet 1892</unitdate>
+        </did>
+        <daogrp>
+          <daoloc href="http://www.siv.archives-nationales.culture.gouv.fr/siv/media/FRAN_IR_900002/idd_1892_07_08/"/>
+        </daogrp>
+      </c>
+      <c id="idd_1892_09_01" xlink:type="simple" xlink:href="http://www.siv.archives-nationales.culture.gouv.fr/siv/UD/FRAN_IR_900002/idd_1892_09_01">
+        <did>
+          <unitid type="identifiant">BB/34/403</unitid>
+          <unittitle>écret de naturalisations algériennes du 5 septembre 1892</unittitle>
+          <unitdate calendar="gregorian" era="ce" normal="1892-09-05">5 septembre 1892</unitdate>
+        </did>
+        <daogrp>
+          <daoloc href="http://www.siv.archives-nationales.culture.gouv.fr/siv/media/FRAN_IR_900002/idd_1892_09_01/"/>
+        </daogrp>
+      </c>
+      <c id="idd_1892_D_04_80" xlink:type="simple" xlink:href="http://www.siv.archives-nationales.culture.gouv.fr/siv/UD/FRAN_IR_900002/idd_1892_D_04_80">
+        <did>
+          <unitid type="identifiant">BB/34/402</unitid>
+          <unittitle>Décret d’admissions à domicile du 7 avril 1892</unittitle>
+        </did>
+        <daogrp>
+          <daoloc href="http://www.siv.archives-nationales.culture.gouv.fr/siv/media/FRAN_IR_900002/idd_1892_D_04_80/"/>
+        </daogrp>
+        <c id="id_1892_04_0282" xlink:type="simple" xlink:href="http://www.siv.archives-nationales.culture.gouv.fr/siv/UD/FRAN_IR_900002/id_1892_04_0282">
+          <did>
+            <unitid type="identifiant">Numéro de dossier manquant</unitid>
+            <unittitle>Décret de naturalisations du 14 avril 1892</unittitle>
+          </did>
+          <scopecontent>
+            <p>Naissance : 12 octobre 1829, Hambourg, Allemagne.</p>
+            <p>Profession : tonnelier.</p>
+            <p>Lieu de résidence : Nantes, Loire-Inférieure, France.</p>
+          </scopecontent>
+        </c>
+      </c>
+      <c id="idd_1892_10_10" xlink:type="simple" xlink:href="http://www.siv.archives-nationales.culture.gouv.fr/siv/UD/FRAN_IR_900002/idd_1892_10_10">
+        <did>
+          <unitid type="identifiant">BB/34/403</unitid>
+          <unittitle>Décret de réintégrations de femmes d'étrangers du 12 octobre 189</unittitle>
+          <unitdate calendar="gregorian" era="ce" normal="1892-10-12">12 octobre 1892</unitdate>
+        </did>
+        <daogrp>
+          <daoloc href="http://www.siv.archives-nationales.culture.gouv.fr/siv/media/FRAN_IR_900002/idd_1892_10_10/"/>
+        </daogrp>
+      </c>
+      <c id="idd_1892_11_01" xlink:type="simple" xlink:href="http://www.siv.archives-nationales.culture.gouv.fr/siv/UD/FRAN_IR_900002/idd_1892_11_01">
+        <did>
+          <unittitle>
+            <persname>Décret de rejet de naturalisations en France et en Algérie du 3 novembre 1892</persname>
+          </unittitle>
+          <unitdate calendar="gregorian" era="ce" normal="1892-11-03">3 novembre 1892</unitdate>
+        </did>
+        <daogrp>
+          <daoloc href="http://www.siv.archives-nationales.culture.gouv.fr/siv/media/FRAN_IR_900002/idd_1892_11_01/"/>
+        </daogrp>
+      </c>
+    </dsc>
+  </archdesc>
+</ead>

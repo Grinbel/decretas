@@ -1,0 +1,1445 @@
+/*
+ * Decretas — the pages: home/search, results, bilan de recherche, notice, guides.
+ */
+
+/* ----- home ----------------------------------------------------------------------------------- */
+
+.vue--accueil {
+  max-inline-size: 38rem;
+  padding-block-start: clamp(0rem, 5vh, 3.5rem);
+}
+
+.vue--accueil > * + * { margin-block-start: var(--e6); }
+
+.accueil__titre {
+  font-size: clamp(1.9rem, 1.2rem + 3.2vw, 2.9rem);
+  line-height: 1.1;
+  letter-spacing: -0.015em;
+}
+
+.accueil__promesse {
+  margin-block-start: var(--e4);
+  font-family: var(--serif);
+  font-size: var(--t-l);
+  line-height: 1.5;
+}
+
+.recherche {
+  display: grid;
+  gap: var(--e4);
+  container-type: inline-size;
+}
+
+
+.recherche__bas {
+  /* label / year field + button side by side / help / error: the year field and the button
+     share one row at every width, so the button never drifts away from what it submits */
+  display: grid;
+  grid-template-columns: 7.5rem minmax(0, 1fr);
+  grid-template-areas:
+    "libelle libelle"
+    "annee   bouton"
+    "aide    aide"
+    "erreur  erreur";
+  gap: var(--e1) var(--e3);
+  align-items: stretch;
+}
+
+.champ--annee { display: contents; }
+.champ--annee .champ__libelle { grid-area: libelle; }
+.champ--annee .champ__aide { grid-area: aide; }
+.champ--annee .champ__erreur { grid-area: erreur; }
+
+.champ__saisie--annee {
+  grid-area: annee;
+  font-variant-numeric: tabular-nums;
+}
+
+.recherche__bouton {
+  grid-area: bouton;
+  min-block-size: 3rem;
+  font-size: var(--t-l);
+}
+
+@media (min-width: 34rem) {
+  .recherche__bas { grid-template-columns: 8rem minmax(9rem, max-content) minmax(0, 1fr); grid-template-areas: "libelle libelle libelle" "annee bouton ." "aide aide aide" "erreur erreur erreur"; }
+  .recherche__bouton { padding-inline: var(--e6); }
+}
+
+/* Large text (zoom, 200 % fonts): when the form is narrower than about fifteen of its own
+   letters, the year field and the button stack instead of the button running off the page. */
+@container (max-width: 17em) {
+  .recherche__bas {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-areas: "libelle" "annee" "bouton" "aide" "erreur";
+  }
+}
+
+.vue--accueil .champ--nom .champ__libelle {
+  font-family: var(--serif);
+  font-size: var(--t-xl);
+  font-weight: 600;
+}
+
+.vue--accueil .champ__saisie--nom {
+  min-block-size: 3.75rem;
+  font-size: 1.35rem;
+  border-width: 2px;
+  border-color: var(--encre);
+}
+
+.vue--accueil .chargement { margin-block-start: var(--e4); }
+
+.engagements {
+  display: grid;
+  padding: 0;
+  list-style: none;
+  border-block-start: 1px solid var(--filet);
+}
+
+.engagements li {
+  display: grid;
+  gap: 0 var(--e4);
+  padding-block: var(--e3);
+  border-block-end: 1px solid var(--filet);
+}
+
+.engagements span {
+  font-size: var(--t-s);
+  color: var(--encre-douce);
+}
+
+@media (min-width: 40rem) {
+  .engagements li {
+    grid-template-columns: 15.5rem minmax(0, 1fr);
+    align-items: baseline;
+  }
+}
+
+.entrees { display: grid; gap: var(--e3); }
+
+.entree {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--e4);
+  min-block-size: 4rem;
+  padding: var(--e3) var(--e4);
+  border: 1px solid var(--bord-champ);
+  border-radius: var(--rayon-carte);
+  color: var(--encre);
+  text-decoration: none;
+}
+
+.entree:hover {
+  border-color: var(--accent);
+  background: var(--accent-doux);
+  color: var(--encre);
+}
+
+.entree .icone { color: var(--accent); }
+
+.entree__texte { display: grid; gap: 0.1rem; }
+
+.entree__titre {
+  font-weight: 650;
+  color: var(--accent);
+}
+
+.entree__detail {
+  font-size: var(--t-s);
+  color: var(--encre-douce);
+}
+
+.accueil__independance {
+  font-size: var(--t-s);
+  color: var(--encre-douce);
+}
+
+/* ----- results: header ---------------------------------------------------------------------- */
+
+.vue--recherche > * + * { margin-block-start: var(--e6); }
+
+.recherche-tete {
+  display: grid;
+  gap: var(--e4);
+  padding-block-end: var(--e5);
+  border-block-end: 1px solid var(--filet);
+}
+
+.recherche-tete > :empty { display: none; }
+
+/* The form above the results: one tight block, so that the answer starts high on the page. */
+.recherche--compacte { gap: var(--e3); }
+
+.recherche--compacte .champ__libelle {
+  font-size: var(--t-s);
+  color: var(--encre-douce);
+}
+
+@media (min-width: 40rem) {
+  .recherche--compacte {
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: start;
+    column-gap: var(--e3);
+  }
+}
+
+/* « Aussi écrit dans les sources »: one line when closed, the toggles when open. */
+.variantes > summary {
+  align-items: start;
+  padding-block: var(--e2);
+  color: var(--encre);
+  font-weight: 400;
+}
+
+.variantes > summary::before {
+  margin-block-start: 0.5rem;
+  color: var(--accent);
+}
+
+.variantes__entete {
+  display: grid;
+  gap: 0.1rem;
+  min-inline-size: 0;
+}
+
+.variantes__titre {
+  font-family: var(--sans);
+  font-size: var(--t-m);
+  font-weight: 650;
+  color: var(--accent);
+}
+
+.variantes__apercu {
+  font-size: var(--t-s);
+  color: var(--encre-douce);
+}
+
+.variantes__apercu .nom { color: var(--encre); font-size: var(--t-m); }
+
+.variantes[open] .variantes__apercu { display: none; }
+
+.variantes__ecartees { font-weight: 650; color: var(--encre); }
+
+.variantes__corps {
+  display: grid;
+  gap: var(--e4);
+  padding-block: var(--e1) var(--e3);
+}
+
+.variantes__aide,
+.variantes__note {
+  font-size: var(--t-s);
+  color: var(--encre-douce);
+  max-inline-size: 40rem;
+}
+
+.variantes__aide + .variantes__aide { margin-block-start: calc(var(--e3) * -1); }
+
+.variantes__terme { display: grid; gap: var(--e2); }
+
+.variantes__libelle { font-size: var(--t-s); }
+
+.variantes__saisie {
+  font-family: var(--serif);
+  font-size: var(--t-m);
+  font-weight: 600;
+}
+
+.variantes__libelle--apparentes { color: var(--encre-douce); }
+
+.graphies {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--e2);
+  padding: 0;
+  list-style: none;
+}
+
+.graphie {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--e2);
+  min-block-size: var(--cible);
+  padding: var(--e1) var(--e3);
+  background: var(--accent-doux);
+  border: 1px solid var(--accent);
+  border-radius: 999px;
+  color: var(--encre);
+  font: inherit;
+  font-size: var(--t-s);
+  cursor: pointer;
+}
+
+.graphie__nom {
+  font-family: var(--serif);
+  font-size: var(--t-m);
+}
+
+.graphie__n {
+  font-size: var(--t-xs);
+  font-variant-numeric: tabular-nums;
+  color: var(--encre-douce);
+}
+
+.graphie:hover { border-color: var(--encre); }
+
+/* set aside: not a matter of colour only — struck through, dashed outline */
+.graphie[aria-pressed="false"] {
+  background: transparent;
+  border-style: dashed;
+  border-color: var(--bord-champ);
+}
+
+.graphie[aria-pressed="false"]:not(.graphie--apparentee) .graphie__nom {
+  text-decoration: line-through;
+  color: var(--encre-douce);
+}
+
+.graphie--approchante .graphie__nom { font-style: italic; }
+.graphie-apercu--approchante { font-style: italic; }
+
+.graphie--apparentee[aria-pressed="false"] .graphie__nom::before { content: "+ "; }
+
+.graphie--plus {
+  background: transparent;
+  border-color: var(--bord-champ);
+  color: var(--accent);
+  font-weight: 650;
+}
+
+/* ----- results: list ------------------------------------------------------------------------ */
+
+.resultats > * + * { margin-block-start: var(--e4); }
+
+.resultats__titre { font-size: var(--t-2xl); }
+
+.resultats__saisie { color: var(--encre-douce); }
+
+.resultats__saisie .nom {
+  color: var(--encre);
+  font-size: var(--t-l);
+}
+
+.resultats__resume {
+  font-family: var(--serif);
+  font-size: var(--t-l);
+  line-height: 1.5;
+  max-inline-size: 40rem;
+}
+
+/* Nothing found: the first sentence stands, the rest explains — never a bare "no result". */
+.resultats__resume--aucune > * + * { margin-block-start: var(--e3); }
+
+.resultats__suite {
+  font-family: var(--sans);
+  font-size: var(--t-m);
+  line-height: 1.55;
+  color: var(--encre-douce);
+}
+
+.filtre-annee {
+  display: grid;
+  gap: var(--e1);
+  font-size: var(--t-s);
+}
+
+.filtre-annee__choix {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: var(--e5);
+  padding: 0;
+  list-style: none;
+}
+
+.filtre-annee__choix a {
+  display: inline-flex;
+  align-items: center;
+  min-block-size: var(--cible);
+}
+
+.resultats__vers-bilan {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--e2) var(--e5);
+}
+
+.resultats__vers-bilan .bouton { gap: var(--e2); }
+
+.groupe { margin-block-start: var(--e7); }
+.resultats > .groupe { margin-block-start: var(--e7); }
+
+.groupe > * + * { margin-block-start: var(--e3); }
+
+.groupe__compte {
+  font-family: var(--sans);
+  font-size: var(--t-s);
+  font-weight: 400;
+  color: var(--encre-douce);
+  white-space: nowrap;
+}
+
+.groupe__explication {
+  color: var(--encre-douce);
+  max-inline-size: 38rem;
+}
+
+.cartes {
+  display: grid;
+  gap: var(--e4);
+  padding: 0;
+  list-style: none;
+}
+
+.groupe > .cartes { margin-block-start: var(--e4); }
+
+.carte__lien-menage {
+  font-size: var(--t-s);
+  color: var(--encre-douce);
+}
+
+.carte__lien-menage .nom {
+  font-size: var(--t-m);
+  color: var(--encre);
+}
+
+.carte__sous-titre {
+  font-size: var(--t-s);
+  font-weight: 650;
+  color: var(--encre-douce);
+}
+
+.carte__sous-titre + * { margin-block-start: var(--e1); }
+
+.pourquoi,
+.menage {
+  padding: 0;
+  list-style: none;
+}
+
+.pourquoi { display: grid; gap: 0.15rem; }
+
+.pourquoi--identique { font-size: var(--t-s); }
+
+.pourquoi__court { font-weight: 600; }
+
+/* values of a card: the datum, then what the source writes, then our plain word for it */
+.carte__valeur,
+.carte__titre-epoque,
+.carte__note { display: block; }
+
+.carte__valeur--decret {
+  font-family: var(--serif);
+  font-size: var(--t-l);
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.pourquoi__detail {
+  font-size: var(--t-s);
+  color: var(--encre-douce);
+}
+
+
+.pourquoi__terme--absent .pourquoi__court {
+  font-weight: 650;
+  color: var(--alerte-encre);
+  background: var(--alerte-fond);
+  padding-inline: 0.3em;
+  border-radius: 3px;
+}
+
+.menage { display: grid; gap: var(--e1); }
+
+.menage__membre--touche {
+  padding: var(--e2) var(--e3);
+  background: var(--creux);
+  border-radius: var(--rayon);
+}
+
+.menage__role {
+  font-size: var(--t-s);
+  color: var(--encre-douce);
+}
+
+.menage__role::after { content: " :"; }
+
+.menage .pourquoi { margin-block-start: var(--e1); padding-inline-start: var(--e4); }
+
+.carte__detail {
+  margin-block-start: var(--e3);
+  padding-block-start: var(--e1);
+  border-block-start: 1px solid var(--filet);
+}
+
+.carte__detail-corps { padding-block: var(--e3) var(--e2); }
+
+.carte__permalien {
+  margin-block-start: var(--e5);
+  font-size: var(--t-s);
+}
+
+.carte__permalien a {
+  display: inline-flex;
+  align-items: center;
+  min-block-size: var(--cible);
+}
+
+/* ----- the full notice ------------------------------------------------------------------------ */
+
+.detail { display: grid; gap: var(--e6); }
+
+.detail__bloc > * + * { margin-block-start: var(--e3); }
+
+.detail__titre {
+  font-family: var(--serif);
+  font-size: var(--t-l);
+  font-weight: 600;
+  padding-block-end: var(--e1);
+  border-block-end: 1px solid var(--filet);
+}
+
+.detail__chapeau { color: var(--encre-douce); }
+
+.detail__franchise {
+  font-size: var(--t-s);
+  color: var(--encre-douce);
+}
+
+.detail__duree { white-space: normal; }
+
+.personne { display: grid; gap: var(--e2); }
+
+.personne + .personne,
+.champs--references {
+  padding-block-start: var(--e3);
+  border-block-start: 1px dotted var(--bord-champ);
+}
+
+.personne__nom .nom { font-size: var(--t-l); }
+
+.personne__role {
+  font-size: var(--t-s);
+  color: var(--encre-douce);
+}
+
+.personne__nom .personne__role::after { content: " :"; }
+
+.enfants {
+  display: grid;
+  gap: var(--e1);
+  padding: 0;
+  list-style: none;
+}
+
+.personne__absents { margin-block-start: var(--e3); }
+
+.publications {
+  display: grid;
+  gap: var(--e4);
+  padding: 0;
+  list-style: none;
+}
+
+.publication > * + * { margin-block-start: var(--e1); }
+
+.publication__ref {
+  font-family: var(--serif);
+  font-size: var(--t-l);
+}
+
+.publication__reserve {
+  font-size: var(--t-s);
+  color: var(--encre-douce);
+}
+
+.citation {
+  padding: var(--e4);
+  background: var(--creux);
+  border-radius: var(--rayon-carte);
+}
+
+.citation > * + * { margin-block-start: var(--e2); }
+
+.citation__sous-titre { font-weight: 650; }
+
+.citation__reference {
+  margin-block-start: var(--e4);
+  padding-block-start: var(--e3);
+  border-block-start: 1px solid var(--bord-champ);
+  font-family: var(--serif);
+  font-size: var(--t-l);
+  line-height: 1.4;
+}
+
+.citation__etiquette {
+  display: block;
+  font-family: var(--sans);
+  font-size: var(--t-s);
+  font-weight: 650;
+  color: var(--encre-douce);
+}
+
+.page-imprimee > * + * { margin-block-start: var(--e3); }
+
+.page-imprimee__avant {
+  font-size: var(--t-s);
+  color: var(--encre-douce);
+}
+
+.page-imprimee__etat:empty { display: none; }
+
+.page-imprimee__figure { margin: 0; }
+
+.page-imprimee__cadre {
+  overflow: auto;
+  border: 1px solid var(--filet);
+  background: #fff; /* the scanned paper, in both themes */
+}
+
+.page-imprimee__image {
+  display: block;
+  inline-size: 100%;
+  block-size: auto;
+}
+
+.page-imprimee__image--grande { inline-size: 220%; max-inline-size: none; }
+
+/* enlarged: the frame scrolls in both directions and stays within the screen */
+.page-imprimee__cadre:has(.page-imprimee__image--grande) { max-block-size: 85vh; }
+
+.page-imprimee__loupe { margin-block-start: var(--e2); }
+
+.page-imprimee__figure figcaption {
+  margin-block-start: var(--e2);
+  font-size: var(--t-s);
+  color: var(--encre-douce);
+}
+
+.vue--notice .notice__corps > * + * { margin-block-start: var(--e4); }
+
+.notice__titre { font-size: var(--t-3xl); }
+
+.notice__source { color: var(--encre-douce); }
+
+.vue--notice .detail { margin-block-start: var(--e6); }
+
+.vue--notice .detail__titre { font-size: var(--t-xl); }
+
+/* ----- bilan de recherche -------------------------------------------------------------------- */
+
+.bilan {
+  padding: var(--e5) var(--e4);
+  background: var(--feuille);
+  border: 1px solid var(--filet);
+  border-radius: var(--rayon-carte);
+}
+
+@media (min-width: 40rem) {
+  .bilan { padding: var(--e6); }
+}
+
+.bilan > * + * { margin-block-start: var(--e4); }
+
+.bilan__tete {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--e3);
+}
+
+.bilan__titre { font-size: var(--t-2xl); }
+
+.bilan__principe {
+  font-family: var(--serif);
+  font-size: var(--t-l);
+  line-height: 1.45;
+}
+
+.bilan__objet {
+  padding-block-end: var(--e4);
+  border-block-end: 1px solid var(--filet);
+  color: var(--encre-douce);
+}
+
+.bilan__objet .nom {
+  color: var(--encre);
+  font-size: var(--t-l);
+}
+
+.bilan > .bilan__bloc { margin-block-start: var(--e6); }
+
+.bilan__bloc > * + * { margin-block-start: var(--e3); }
+
+.bilan__bloc h4 { margin-block-start: var(--e5); }
+
+.bilan__liste { display: grid; gap: var(--e2); }
+
+.non-couvert,
+.a-faire-liste,
+.demarches {
+  display: grid;
+  padding: 0;
+  list-style: none;
+}
+
+.a-faire-liste,
+.demarches { gap: var(--e4); }
+
+.a-faire-liste > li > * + *,
+.demarches > li > * + * { margin-block-start: var(--e1); }
+
+.a-faire-liste > li,
+.demarches > li {
+  padding-block-start: var(--e4);
+  border-block-start: 1px solid var(--filet);
+}
+
+/* What is not covered: a list of titles; each opens on why, and what to do. */
+.non-couvert { border-block-end: 1px solid var(--filet); }
+
+.non-couvert__ligne { border-block-start: 1px solid var(--filet); }
+
+.non-couvert__titre {
+  align-items: start;
+  padding-block: var(--e3);
+  color: var(--encre);
+  font-family: var(--serif);
+  font-size: var(--t-l);
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.non-couvert__titre::before {
+  margin-block-start: 0.45rem;
+  color: var(--accent);
+}
+
+.non-couvert__titre:hover { color: var(--accent); }
+
+.non-couvert__corps { padding-block-end: var(--e4); }
+
+.non-couvert__corps > * + * { margin-block-start: var(--e2); }
+
+.non-couvert__corps .liens .note { display: block; }
+
+.a-faire--principal .bouton { margin-block: var(--e2); }
+
+.bilan__pied {
+  padding-block-start: var(--e4);
+  border-block-start: 1px solid var(--filet);
+  font-size: var(--t-s);
+  color: var(--encre-douce);
+}
+
+/* ----- guides, placeholders -------------------------------------------------------------------- */
+
+.vue--guide .etapes { margin-block-start: var(--e5); }
+
+/* ----- « Quel acte chercher ? » ----------------------------------------------------------------- */
+
+.vue--quel-acte > * + * { margin-block-start: var(--e5); }
+
+.question__titre,
+.issue__titre {
+  font-size: clamp(1.6rem, 1.15rem + 2.2vw, 2.25rem);
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+}
+
+.question__aide { color: var(--encre-douce); }
+
+.question__rang {
+  display: block;
+  margin-block-start: var(--e1);
+  font-size: var(--t-s);
+}
+
+.reponses {
+  display: grid;
+  gap: var(--e3);
+  padding: 0;
+  list-style: none;
+}
+
+.reponse {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--e4);
+  min-block-size: 3.5rem;
+  padding: var(--e3) var(--e4);
+  background: var(--feuille);
+  border: 1px solid var(--bord-champ);
+  border-radius: var(--rayon-carte);
+  color: var(--encre);
+  font-family: var(--serif);
+  font-size: var(--t-l);
+  line-height: 1.35;
+  text-decoration: none;
+}
+
+.reponse .icone { color: var(--accent); }
+
+.reponse:hover {
+  border-color: var(--accent);
+  background: var(--accent-doux);
+  color: var(--encre);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .reponse { transition: background-color 140ms ease-out, border-color 140ms ease-out; }
+  .reponse .icone { transition: transform 180ms cubic-bezier(0.2, 0.8, 0.2, 1); }
+  .reponse:hover .icone { transform: translateX(3px); }
+  [dir="rtl"] .reponse:hover .icone { transform: scaleX(-1) translateX(3px); }
+}
+
+/* The trail of the answers: what was said, each one can be changed. */
+.fil {
+  padding: var(--e3) var(--e4);
+  background: var(--creux);
+  border-radius: var(--rayon-carte);
+  font-size: var(--t-s);
+}
+
+.fil__titre { font-weight: 650; }
+
+.fil__liste {
+  display: grid;
+  gap: var(--e2);
+  margin-block-start: var(--e2);
+  padding-inline-start: 1.25rem;
+}
+
+.fil__pas > span { display: block; }
+
+.fil__question { color: var(--encre-douce); }
+
+.fil__reponse {
+  font-family: var(--serif);
+  font-size: var(--t-m);
+}
+
+.fil__precision { color: var(--encre-douce); font-style: italic; }
+
+.fil__changer {
+  display: inline-flex;
+  align-items: center;
+  min-block-size: var(--cible);
+}
+
+.issue__points { display: grid; gap: var(--e2); }
+
+.quel-acte__bloc > * + * { margin-block-start: var(--e3); }
+
+.vue--quel-acte > .quel-acte__bloc {
+  margin-block-start: var(--e6);
+  padding-block-start: var(--e4);
+  border-block-start: 1px solid var(--filet);
+}
+
+.voie--principale .voie__libelle {
+  font-family: var(--serif);
+  font-size: var(--t-l);
+  font-weight: 600;
+}
+
+.pistes,
+.actes-brefs,
+.epoques,
+.echelle {
+  display: grid;
+  gap: var(--e4);
+  padding: 0;
+  list-style: none;
+}
+
+.piste > * + *,
+.acte-bref > * + *,
+.epoque > * + * { margin-block-start: var(--e1); }
+
+.piste__titre,
+.acte-bref__titre { font-weight: 650; }
+
+.piste__lieu {
+  font-size: var(--t-xs);
+  font-weight: 400;
+  color: var(--encre-douce);
+}
+
+.epoque {
+  padding-inline-start: var(--e4);
+  border-inline-start: 1px solid var(--filet);
+}
+
+.epoque__titre { font-size: var(--t-m); }
+
+.epoque__voie {
+  font-size: var(--t-s);
+  color: var(--accent);
+  font-weight: 650;
+}
+
+.filtre-epoques { display: grid; gap: var(--e1); }
+
+.filtre-epoques__ligne {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--e2);
+}
+
+.filtre-epoques .champ__saisie--annee { inline-size: 7.5rem; }
+
+.quel-acte__navigation {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: var(--e5);
+}
+
+/* ----- guides ----------------------------------------------------------------------------------- */
+
+.vue--guide > h2 { margin-block-start: var(--e6); }
+
+.guides-liste a span {
+  font-family: var(--serif);
+  font-size: var(--t-l);
+  font-weight: 600;
+}
+
+.liens-internes--guides { display: grid; gap: var(--e1); }
+
+.liens-internes--guides a .icone { color: var(--accent); }
+
+.guide__decret {
+  padding: var(--e4);
+  background: var(--feuille);
+  border: 1px solid var(--filet);
+  border-radius: var(--rayon-carte);
+}
+
+.guide__decret > * + * { margin-block-start: var(--e3); }
+
+.guide__decret h2 { font-size: var(--t-l); }
+
+.guide__avancement { font-weight: 650; }
+
+.guide__cases { margin-block-start: var(--e1); }
+
+.etape__fait {
+  font-size: var(--t-s);
+  color: var(--encre-douce);
+}
+
+.etape--faite .etape__titre { color: var(--encre-douce); }
+
+.etape--faite .etape__fait { color: var(--accent); font-weight: 650; }
+
+/* The links under a notice block are whole rows, like the other internal links: the target is
+   the full box (44 px), not only the letters of a wrapped line. */
+.detail__renvoi a {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--e2);
+  min-block-size: var(--cible);
+}
+
+.detail__page-guide a .icone { color: var(--accent); flex: none; }
+
+/* ----- decree browser --------------------------------------------------------------------------- */
+
+.vue--decrets { max-inline-size: 48rem; }
+
+.vue--decrets > * + * { margin-block-start: var(--e5); }
+
+.filtres-decrets {
+  display: grid;
+  gap: var(--e4);
+  padding: var(--e4);
+  background: var(--feuille);
+  border: 1px solid var(--filet);
+  border-radius: var(--rayon-carte);
+}
+
+.filtres-decrets__annees {
+  display: grid;
+  gap: var(--e4);
+}
+
+.filtres-decrets .champ__saisie--annee,
+.filtre-epoques .champ__saisie--annee { grid-area: auto; inline-size: 7.5rem; }
+
+.liste-cases .note { white-space: nowrap; }
+
+.filtres-decrets__plage {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--e2);
+}
+
+.filtres-decrets__plage .champ__libelle { font-weight: 650; }
+
+.filtres-decrets__groupes legend { margin-block-end: var(--e2); }
+
+.filtres-decrets > .bouton { justify-self: start; }
+
+@media (min-width: 40rem) {
+  .filtres-decrets__annees { grid-template-columns: minmax(0, 1fr) auto; align-items: start; }
+  .filtres-decrets__plage { padding-block-start: 1.9rem; }
+}
+
+.decrets__resume {
+  padding-inline-start: var(--e4);
+  border-inline-start: 1px solid var(--accent);
+}
+
+.decrets__resume > * + * { margin-block-start: var(--e2); }
+
+.decrets__total {
+  font-family: var(--serif);
+  font-size: var(--t-l);
+  line-height: 1.4;
+}
+
+.carnet {
+  padding: var(--e4);
+  background: var(--creux);
+  border-radius: var(--rayon-carte);
+}
+
+.carnet > * + * { margin-block-start: var(--e2); }
+
+.carnet h2 { font-size: var(--t-l); }
+
+.carnet__compte { font-weight: 650; }
+
+.carnet__actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--e2) var(--e5);
+}
+
+.carnet__imprimer {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--e2);
+  min-block-size: var(--cible);
+  font-weight: 650;
+}
+
+.carnet .bouton--lien:disabled { opacity: 0.55; cursor: default; }
+
+.annees-choix > * + * { margin-block-start: var(--e2); }
+
+.annees-choix__titre { font-weight: 650; }
+
+.pastilles--annees { gap: var(--e2); }
+
+.pastille--annee {
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  min-inline-size: 5.5rem;
+  padding: var(--e1) var(--e3);
+  border-radius: var(--rayon);
+  line-height: 1.2;
+}
+
+.pastille__annee {
+  font-family: var(--serif);
+  font-size: var(--t-m);
+  font-weight: 600;
+}
+
+.pastille__compte,
+.pastille__lus { font-size: var(--t-xs); color: var(--encre-douce); }
+
+.pastille__lus:empty { display: none; }
+
+.pastille--annee[aria-current="true"] .pastille__compte,
+.pastille--annee[aria-current="true"] .pastille__lus { color: var(--accent-contraste); }
+
+.annee > * + * { margin-block-start: var(--e4); }
+
+.annee__titre {
+  padding-block-start: var(--e5);
+  border-block-start: 2px solid var(--encre);
+  font-size: var(--t-2xl);
+}
+
+.annee__remarque {
+  padding: var(--e2) var(--e3);
+  background: var(--creux);
+  border-radius: var(--rayon);
+  font-size: var(--t-xs);
+  color: var(--encre-douce);
+}
+
+.groupe-decrets > * + * { margin-block-start: var(--e2); }
+
+.vue--decrets .groupe-decrets { margin-block-start: var(--e6); }
+
+.groupe-decrets__titre { font-size: var(--t-l); }
+
+.decrets {
+  display: grid;
+  padding: 0;
+  list-style: none;
+  border-block-start: 1px solid var(--filet);
+}
+
+.decret {
+  display: grid;
+  gap: var(--e1);
+  padding-block: var(--e3);
+  border-block-end: 1px solid var(--filet);
+}
+
+.decret__tete {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0 var(--e4);
+}
+
+.decret__date strong {
+  font-family: var(--serif);
+  font-size: var(--t-l);
+  font-weight: 600;
+}
+
+.decret__lu {
+  font-size: var(--t-s);
+  font-weight: 650;
+}
+
+.decret--lu { background: var(--accent-doux); }
+
+.decret--lu .decret__date strong,
+.decret--lu .decret__titre { color: var(--encre-douce); }
+
+.vue--decrets .decret { padding-inline: var(--e2); }
+
+.decret__titre { font-size: var(--t-s); }
+
+.decret__references,
+.decret__guide,
+.decret__retenu { font-size: var(--t-s); }
+
+.decret__references { color: var(--encre-douce); }
+
+.decret__alerte {
+  display: block;
+  color: var(--alerte-encre);
+  background: var(--alerte-fond);
+  padding-inline: var(--e2);
+  border-radius: 3px;
+}
+
+.decret__retenu {
+  padding: var(--e1) var(--e2);
+  background: var(--alerte-fond);
+  color: var(--alerte-encre);
+  border-radius: var(--rayon);
+}
+
+.decret__liens {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 var(--e5);
+}
+
+.decret__note-liens {
+  font-size: var(--t-xs);
+  color: var(--encre-douce);
+}
+
+.decret__liens .lien-externe__hote { display: none; }
+
+.decret__guide a {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--e2);
+  min-block-size: var(--cible);
+}
+
+.groupe-decrets--rejets {
+  padding-block-start: var(--e3);
+  border-block-start: 1px solid var(--filet);
+}
+
+.annees-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: var(--e3);
+}
+
+.annees-nav a {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--e2);
+  min-block-size: var(--cible);
+  font-weight: 650;
+}
+
+.tableau--lus td,
+.tableau--lus th { text-align: start; }
+
+.lus-annee { margin-block-start: var(--e6); }
+
+/* ----- « On m'a donné un numéro » ------------------------------------------------------------------ */
+
+.vue--numero > section + section { margin-block-start: var(--e6); }
+
+.vue--numero section > * + * { margin-block-start: var(--e3); }
+
+.numero__exemple {
+  padding: var(--e3) var(--e4);
+  background: var(--creux);
+  border-radius: var(--rayon);
+  font-family: var(--serif);
+}
+
+.numero__formulaire { display: grid; gap: var(--e1); }
+
+.numero__boutons {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--e2) var(--e5);
+  margin-block-start: var(--e2);
+}
+
+.formes {
+  display: grid;
+  gap: var(--e4);
+  padding: 0;
+  list-style: none;
+}
+
+.forme {
+  padding: var(--e3) var(--e4);
+  background: var(--feuille);
+  border: 1px solid var(--filet);
+  border-radius: var(--rayon-carte);
+}
+
+.forme > * + * { margin-block-start: var(--e2); }
+
+.forme__extrait {
+  font-family: var(--mono);
+  font-size: var(--t-m);
+  font-weight: 650;
+}
+
+.forme__nom {
+  display: block;
+  font-family: var(--serif);
+  font-size: var(--t-l);
+  font-weight: 600;
+}
+
+.elements {
+  display: grid;
+  gap: var(--e2);
+  padding: 0;
+  list-style: none;
+}
+
+.element {
+  display: flex;
+  align-items: start;
+  gap: var(--e2);
+}
+
+.element .icone { margin-block-start: 0.15em; }
+
+.element--present .icone { color: var(--accent); }
+
+.element--absent { color: var(--encre-douce); }
+
+.element__nom { font-weight: 650; color: var(--encre); }
+
+.decrets-brefs {
+  display: grid;
+  gap: var(--e3);
+  padding: 0;
+  list-style: none;
+}
+
+.decret-bref {
+  padding-block: var(--e2);
+  border-block-start: 1px solid var(--filet);
+}
+
+.decret-bref a {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--e2);
+  min-block-size: var(--cible);
+}
+
+/* ----- the sorts of acts ------------------------------------------------------------------------ */
+
+.vue--actes > * + * { margin-block-start: var(--e4); }
+
+.filtre-epoque__titre { font-weight: 650; }
+
+.filtre-epoque > * + * { margin-block-start: var(--e2); }
+
+.actes {
+  display: grid;
+  gap: var(--e6);
+}
+
+.acte {
+  padding-block-start: var(--e4);
+  border-block-start: 2px solid var(--encre);
+}
+
+.acte > * + * { margin-block-start: var(--e3); }
+
+.acte--cible { border-block-start-color: var(--accent); }
+
+.acte--cible .acte__titre { color: var(--accent); }
+
+.acte__titre { font-size: var(--t-xl); }
+
+.acte__periode {
+  font-family: var(--serif);
+  font-size: var(--t-l);
+  color: var(--encre-douce);
+}
+
+.acte__site {
+  padding: var(--e3) var(--e4);
+  background: var(--creux);
+  border-radius: var(--rayon-carte);
+}
+
+.acte__site > * + * { margin-block-start: var(--e2); }
+
+.acte__site-titre { font-weight: 650; }
+
+.acte__couvertures li { font-weight: 600; }
+
+/* ----- vocabulary ------------------------------------------------------------------------------- */
+
+.vue--vocabulaire > * + * { margin-block-start: var(--e4); }
+
+.famille { margin-block-start: var(--e7); }
+
+.famille > * + * { margin-block-start: var(--e3); }
+
+.termes { display: grid; gap: var(--e4); }
+
+.terme {
+  padding-block-start: var(--e3);
+  border-block-start: 1px solid var(--filet);
+}
+
+.terme dd { margin: 0; }
+
+.terme dd > * + * { margin-block-start: var(--e1); }
+
+.terme__nom {
+  font-family: var(--serif);
+  font-size: var(--t-l);
+  font-weight: 600;
+}
+
+.terme--cible {
+  padding: var(--e3) var(--e4);
+  background: var(--accent-doux);
+  border-radius: var(--rayon-carte);
+  border-block-start-color: transparent;
+}
+
+.formulations {
+  display: grid;
+  gap: var(--e4);
+  padding: 0;
+  list-style: none;
+}
+
+.formulation > * + * { margin-block-start: var(--e1); }
+
+.formulation__etiquette { font-size: var(--t-s); color: var(--encre-douce); }
+
+/* ----- method ----------------------------------------------------------------------------------- */
+
+.methode__section > * + * { margin-block-start: var(--e3); }
+
+.vue--methode > .methode__section { margin-block-start: var(--e6); }
+
+.methode__points { display: grid; gap: var(--e2); }
+
+.methode__donnees > * + * { margin-block-start: var(--e5); }
+
+.methode__couverture > * + * { margin-block-start: var(--e3); }
+
+.ligne-lecture--image th,
+.ligne-lecture--image td,
+.ligne-lecture--absente th,
+.ligne-lecture--absente td { color: var(--encre-douce); }
+
+.ligne-lecture--lue th { font-weight: 650; }
+
+/* ----- about ------------------------------------------------------------------------------------ */
+
+.source { margin-block-start: var(--e5); }
+
+.source > * + * { margin-block-start: var(--e3); }
+
+.points-ouverts {
+  display: grid;
+  gap: var(--e4);
+  padding: 0;
+  list-style: none;
+}
+
+.point-ouvert > * + * { margin-block-start: var(--e1); }
+
+.point-ouvert h3 { font-size: var(--t-m); font-family: var(--sans); font-weight: 650; }
+
+.etat {
+  display: inline-block;
+  padding: 0 var(--e2);
+  border: 1px solid var(--bord-champ);
+  border-radius: 999px;
+  font-size: var(--t-xs);
+  font-weight: 400;
+  color: var(--encre-douce);
+}
+
+.ne-fait-pas { display: grid; gap: var(--e2); }
+
+.numero__corps > * + *,
+.numero__date > * + *,
+.numero__mesure > * + * { margin-block-start: var(--e3); }
+
+.numero__corps > h3,
+.numero__date,
+.numero__mesure { margin-block-start: var(--e6); }
+
+.numero__date > h3 {
+  padding-block-start: var(--e3);
+  border-block-start: 1px solid var(--filet);
+}
+
+/* ----- first screen of index.html, until the modules have run (js/demarrage.js) ---------------- */
+
+.demarrage__etat { display: none; }
+[data-js] .demarrage__etat { display: block; color: var(--encre-douce); }
+.demarrage__etat[data-alerte] {
+  padding: var(--e3) var(--e4);
+  border-inline-start: 4px solid var(--alerte-bord);
+  background: var(--alerte-fond);
+  color: var(--alerte-encre);
+}

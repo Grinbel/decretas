@@ -1,0 +1,2542 @@
+{
+  "schema": "decretas.contenu.guides/1",
+  "langue": "fr",
+  "maj": "2026-11-11",
+  "titre": "Guides pas à pas",
+  "chapeau": "Chaque guide avance une étape à la fois. Pour chaque étape : ce qu'il faut faire, ce que l'écran doit montrer, ce qui peut se passer d'autre, et quoi faire alors.",
+  "franchise": "Certaines étapes n'ont pas encore pu être vues sur un vrai écran, parce que le site concerné était en panne ou refuse les programmes. Elles sont signalées par la mention « à confirmer ». Si l'écran ne ressemble pas à ce que nous décrivons, c'est notre description qui est en cause, pas vous.",
+  "legende": {
+    "verifie": "true : l'écran ou le document décrit par l'étape a été vu (page enregistrée, image regardée, texte officiel lu) ; false : personne ne l'a encore vu en entier pour ce projet.",
+    "appuis": {
+      "ecran-vu": "La page ou l'image a été reçue et lue.",
+      "page-officielle-lue": "L'étape est décrite par une page officielle que nous avons lue ; l'écran lui-même n'a pas été vu.",
+      "donnees-locales": "L'étape s'appuie sur les inventaires ou les textes que nous avons analysés, pas sur un écran.",
+      "non-vu": "Rien n'a été vu : l'étape est une déduction."
+    },
+    "mention_a_confirmer": "Quand « verifie » vaut false, le texte du champ « a_confirmer » s'affiche discrètement sous l'étape.",
+    "libelle_a_confirmer": "À confirmer",
+    "libelle_verifie": "Vu"
+  },
+  "ecrans_communs": [
+    {
+      "id": "an-erreur-503",
+      "titre": "Archives nationales : « Erreur 503 »",
+      "ce_que_vous_voyez": "Une page presque vide : « Erreur 503 — Une erreur est survenue. — Retour à la page précédente ». Le titre de l'onglet est « SIA - Erreur 503 ».",
+      "ce_que_cela_veut_dire": "Le site des Archives nationales est momentanément indisponible. Le lien n'est pas faux, et vous n'avez rien fait de travers.",
+      "que_faire": "N'insistez pas. Réessayez dans une demi-heure, ou le lendemain. Notez le lien pour le retrouver.",
+      "verifie": true,
+      "preuves": [
+        "data/samples/an-remote/A-ud-https.body",
+        "data/samples/an-remote/A-ud-https.hdr",
+        "data/samples/an-remote/requests.jsonl",
+        "docs/research/sources-2026-11/an-remote.md § 2"
+      ],
+      "a_confirmer": null
+    },
+    {
+      "id": "an-attente-sans-fin",
+      "titre": "Archives nationales : la page ne s'affiche pas",
+      "ce_que_vous_voyez": "Le navigateur tourne longtemps, une minute ou plus, sans rien afficher ; ou bien une page « Erreur 502 ».",
+      "ce_que_cela_veut_dire": "C'est la même indisponibilité du site que l'« Erreur 503 ».",
+      "que_faire": "Fermez l'onglet et réessayez plus tard. Recharger la page plusieurs fois de suite n'aide pas.",
+      "verifie": true,
+      "preuves": [
+        "data/samples/an-remote/requests.jsonl",
+        "docs/research/sources-2026-11/an-remote.md § 2.1",
+        "docs/research/sources-2026-11/verification.md § an-remote"
+      ],
+      "a_confirmer": null
+    },
+    {
+      "id": "an-ecran-de-connexion",
+      "titre": "Archives nationales : un écran de connexion",
+      "ce_que_vous_voyez": "Un bloc « Accès sécurisé - Me connecter », avec un bouton FranceConnect, ou « Espace personnel » avec identifiant et mot de passe.",
+      "ce_que_cela_veut_dire": "Vous avez ouvert le bloc de connexion. Aucun compte n'est nécessaire pour lire un inventaire. Un espace personnel ne sert que pour commander un dossier.",
+      "que_faire": "Refermez ce bloc ou revenez en arrière. Nous n'avons pas constaté que le site exige un compte pour afficher les images des décrets ; si c'était le cas, la création d'un espace personnel est ouverte à tous.",
+      "verifie": true,
+      "preuves": [
+        "data/samples/an-remote/IR-057268-consultation.body",
+        "docs/research/sources-2026-11/an-remote.md § 3.2",
+        "docs/research/sources-2026-11/verification.md § an-remote"
+      ],
+      "a_confirmer": null
+    },
+    {
+      "id": "gallica-case-a-cocher",
+      "titre": "Gallica : une case à cocher « je ne suis pas un robot »",
+      "ce_que_vous_voyez": "Une simple case à cocher, à la première recherche de la journée.",
+      "ce_que_cela_veut_dire": "C'est le contrôle que la Bibliothèque nationale de France a mis en place le 18 décembre 2025.",
+      "que_faire": "Cochez la case et continuez. Elle ne revient en principe qu'une fois par jour.",
+      "verifie": false,
+      "preuves": [
+        "data/samples/gallica/bnf-www-captcha-gallica.html",
+        "docs/research/sources-2026-11/gallica.md § 3.3"
+      ],
+      "a_confirmer": "Annoncée par la BnF ; l'écran lui-même n'a pas été vu, et nous ne savons pas s'il apparaît aussi quand on ouvre directement une page de document."
+    },
+    {
+      "id": "gallica-acces-refuse",
+      "titre": "Gallica : « Sorry, you have been blocked »",
+      "ce_que_vous_voyez": "Une page en anglais, « Attention Required! », puis « Sorry, you have been blocked — You are unable to access gallica.bnf.fr ».",
+      "ce_que_cela_veut_dire": "Le système de protection de Gallica a refusé la connexion. C'est la page que reçoivent les programmes ; un navigateur ordinaire ne devrait pas la voir.",
+      "que_faire": "Réessayez plus tard, sans VPN ni outil qui modifie votre connexion, ou depuis un autre réseau. N'essayez pas de contourner ce blocage.",
+      "verifie": false,
+      "preuves": [
+        "data/samples/gallica/10-human-date-page.html",
+        "docs/research/sources-2026-11/gallica.md § 2",
+        "docs/research/sources-2026-11/verification.md § gallica"
+      ],
+      "a_confirmer": "Page reçue par notre programme. Nous ne savons pas dans quels cas un humain la rencontre."
+    },
+    {
+      "id": "legifrance-verification",
+      "titre": "Légifrance : « Just a moment... »",
+      "ce_que_vous_voyez": "Une page d'attente, en anglais ou en français, qui dit vérifier votre navigateur.",
+      "ce_que_cela_veut_dire": "Un contrôle automatique contre les robots.",
+      "que_faire": "Patientez quelques secondes sans recharger : la page demandée s'affiche ensuite d'elle-même.",
+      "verifie": false,
+      "preuves": [
+        "data/samples/other-sources/legifrance/jo-1955-01-01.html",
+        "data/samples/other-sources/legifrance/jo-1955-01-01.html.headers",
+        "docs/research/sources-2026-11/other-sources.md § 1"
+      ],
+      "a_confirmer": "Page reçue par notre programme, qui a été refusé. Le déroulement dans un navigateur n'a pas été vu."
+    },
+    {
+      "id": "legifrance-petit-calcul",
+      "titre": "Légifrance : un petit calcul à résoudre",
+      "ce_que_vous_voyez": "Avant d'ouvrir le fichier, le site demande le résultat d'une opération simple.",
+      "ce_que_cela_veut_dire": "C'est un contrôle prévu par le site pour protéger le téléchargement des journaux officiels.",
+      "que_faire": "Tapez le résultat du calcul, puis validez.",
+      "verifie": false,
+      "preuves": [
+        "data/samples/other-sources/servicepublic/F33626-trouver-decret.html",
+        "docs/research/sources-2026-11/other-sources.md § 1.1"
+      ],
+      "a_confirmer": "Décrit par la fiche officielle F33626 (« un petit calcul simple ») ; écran non vu."
+    },
+    {
+      "id": "verification-automatique",
+      "titre": "Une page « Just a moment... » ou « Vérification en cours »",
+      "ce_que_vous_voyez": "Une page d'attente qui dit contrôler que vous n'êtes pas un robot.",
+      "ce_que_cela_veut_dire": "Un contrôle automatique, fréquent sur les bibliothèques numériques.",
+      "que_faire": "Patientez quelques secondes. Si rien ne se passe, rechargez une fois ; sinon revenez plus tard.",
+      "verifie": false,
+      "preuves": [
+        "data/samples/internet-archive/raw/hathitrust/babel-pt-hvd.hl11eu-seq530.html",
+        "docs/research/sources-2026-11/internet-archive.md § 3.1"
+      ],
+      "a_confirmer": "Page reçue par notre programme sur HathiTrust ; déroulement dans un navigateur non vu."
+    },
+    {
+      "id": "document-non-numerise",
+      "titre": "« Consultable sur place », « non numérisé », « intra muros »",
+      "ce_que_vous_voyez": "La notice du document existe, mais aucune image ne s'affiche ; une mention renvoie à une salle de lecture.",
+      "ce_que_cela_veut_dire": "Le document n'est pas en ligne. Il se consulte sur place, ou se commande en reproduction.",
+      "que_faire": "Ne cherchez pas d'autre lien : il n'y en a pas. Voyez la démarche indiquée par le guide (commande, courrier, ou autre source).",
+      "verifie": false,
+      "preuves": [
+        "data/samples/gallica/cat-cb339100205.html",
+        "docs/research/sources-2026-11/gallica.md § 6.3",
+        "docs/research/sources-2026-11/an-remote.md § 7"
+      ],
+      "a_confirmer": "Mention lue dans le catalogue de la BnF pour la « Liste alphabétique » ; nous n'avons pas vu l'écran correspondant sur le site des Archives nationales."
+    },
+    {
+      "id": "page-introuvable",
+      "titre": "« Page introuvable », erreur 404",
+      "ce_que_vous_voyez": "Le site répond que la page n'existe pas.",
+      "ce_que_cela_veut_dire": "L'adresse a changé, ou notre gabarit de lien est faux pour ce document.",
+      "que_faire": "Revenez au lien de repli proposé à côté (la page du titre, ou l'inventaire de l'année).",
+      "verifie": false,
+      "preuves": [
+        "docs/research/sources-2026-11/gallica.md § 5",
+        "docs/research/sources-2026-11/an-remote.md § 11"
+      ],
+      "a_confirmer": "Cas prévu par prudence : plusieurs gabarits de liens n'ont jamais été ouverts avec succès."
+    }
+  ],
+  "guides": [
+    {
+      "id": "an-annee-indexee",
+      "cas": "a",
+      "titre": "Vous avez une correspondance dans une année dont les noms sont saisis",
+      "pour_qui": "La recherche par nom a trouvé une personne dans l'index des Archives nationales.",
+      "voie": "recherche-par-nom",
+      "duree": "Une demi-heure si le site des Archives nationales répond.",
+      "ce_qu_il_vous_faut": [
+        "La fiche de la correspondance affichée par ce site : nom, date et titre du décret, cote, numéro de document, numéro de dossier."
+      ],
+      "etapes": [
+        {
+          "id": "a1",
+          "titre": "Relire la correspondance avant de partir",
+          "instruction": "Vérifiez que la fiche décrit bien votre ancêtre : prénom, nom du père, date et lieu de naissance, profession, domicile. Lisez le titre du décret : s'il contient le mot « rejet », ce n'est pas une admission.",
+          "ce_que_l_ecran_montre": "La fiche reprend ce que les Archives nationales ont saisi : le nom, puis des lignes « Naissance », « Profession », « Lieu de résidence », parfois « Épouse » et « Enfants », le numéro du dossier et sa cote.",
+          "issues_possibles": [
+            {
+              "si": "Plusieurs personnes portent le même nom.",
+              "signifie": "C'est fréquent pour les prénoms courants.",
+              "faire": "Départagez par la date et le lieu de naissance, puis par le nom du père."
+            },
+            {
+              "si": "La personne est née au Maroc ou en Tunisie.",
+              "signifie": "Il s'agit d'un étranger naturalisé, pas d'un Algérien admis.",
+              "faire": "Ce n'est probablement pas votre ancêtre, sauf si la famille venait de là."
+            },
+            {
+              "si": "Le nom n'apparaît qu'à la ligne « Épouse » ou « Enfants ».",
+              "signifie": "Votre ancêtre est cité dans le décret de son mari ou de son père.",
+              "faire": "Continuez avec ce décret : c'est le bon document."
+            },
+            {
+              "si": "L'année de naissance diffère de quelques années.",
+              "signifie": "Les âges étaient souvent estimés ; « 1 janvier » est une date de convention.",
+              "faire": "Ne l'écartez pas pour ce seul motif ; comparez le reste."
+            }
+          ],
+          "ecrans_communs": [],
+          "liens": [],
+          "verifie": true,
+          "appui": "donnees-locales",
+          "preuves": [
+            "docs/research/sources-2026-11/an-local.md § 2.2",
+            "docs/research/sources-2026-11/verification.md § an-local",
+            "docs/research/sources-2026-11/legal-types.md § 4"
+          ],
+          "a_confirmer": null
+        },
+        {
+          "id": "a2",
+          "titre": "Ouvrir la notice du décret sur le site des Archives nationales",
+          "instruction": "Cliquez sur le lien de la notice du décret (pas celui de la personne : c'est le décret qui porte toujours les images). Le lien s'ouvre dans un nouvel onglet. S'il ne mène à rien, prenez le lien de l'inventaire de l'année.",
+          "ce_que_l_ecran_montre": "Nous ne savons pas encore ce que montre exactement cette page. Elle devrait porter le titre du décret, sa date, sa cote (« BB/34/… ») et donner accès aux images.",
+          "issues_possibles": [
+            {
+              "si": "Une page « Salle de lecture virtuelle » avec le titre du décret.",
+              "signifie": "Vous êtes sur la notice du décret.",
+              "faire": "Passez à l'étape des images."
+            },
+            {
+              "si": "Une page « Salle de lecture virtuelle » avec un titre du type « Décrets de naturalisation de l'année 1913 » et trois onglets.",
+              "signifie": "Vous êtes sur l'inventaire de toute l'année, pas encore sur le décret.",
+              "faire": "Passez à l'étape suivante, qui explique comment retrouver le décret dans l'inventaire."
+            },
+            {
+              "si": "« Erreur 503 », ou une page qui ne s'affiche pas.",
+              "signifie": "Le site est momentanément indisponible.",
+              "faire": "Réessayez plus tard ; le lien n'est pas faux.",
+              "ecran": "an-erreur-503"
+            },
+            {
+              "si": "Un écran de connexion.",
+              "signifie": "Aucun compte n'est nécessaire pour lire un inventaire.",
+              "faire": "Revenez en arrière.",
+              "ecran": "an-ecran-de-connexion"
+            },
+            {
+              "si": "« Page introuvable ».",
+              "signifie": "Le lien direct vers la notice ne fonctionne pas comme nous le pensions.",
+              "faire": "Utilisez le lien de l'inventaire de l'année, puis l'étape suivante.",
+              "ecran": "page-introuvable"
+            }
+          ],
+          "ecrans_communs": [
+            "an-erreur-503",
+            "an-attente-sans-fin",
+            "an-ecran-de-connexion",
+            "page-introuvable"
+          ],
+          "liens": [
+            "an-notice",
+            "an-inventaire"
+          ],
+          "verifie": false,
+          "appui": "non-vu",
+          "preuves": [
+            "docs/research/sources-2026-11/an-remote.md § 8",
+            "docs/research/sources-2026-11/an-remote.md § 4",
+            "docs/research/sources-2026-11/verification.md § an-remote",
+            "data/samples/an-remote/requests.jsonl"
+          ],
+          "a_confirmer": "Le site des Archives nationales était en panne le jour de nos essais (2026-11-11) : cet écran n'a pas pu être vu. Le lien a la forme écrite par les Archives nationales dans leurs propres inventaires."
+        },
+        {
+          "id": "a3",
+          "titre": "Si vous êtes sur l'inventaire de l'année : repérer le champ de recherche",
+          "instruction": "En haut, sous le titre, trois onglets : « Présentation générale », « Détail du contenu », « Archives numérisées ». Dans la colonne de gauche, le champ « Rechercher dans l'inventaire », avec trois options : « Tous les mots saisis », « Au moins un des mots saisis », « Expression exacte ».",
+          "ce_que_l_ecran_montre": "Le titre de la page est du type « Décrets de naturalisation de l'année 1913 ». Un encart donne les cotes (par exemple « BB/34/438-BB/34/439 »), les dates, « Pierrefitte », et la mention « Librement communicable ». Un bandeau d'information peut apparaître tout en haut.",
+          "issues_possibles": [
+            {
+              "si": "La page ressemble à cette description.",
+              "signifie": "Vous êtes au bon endroit.",
+              "faire": "Passez à l'étape suivante."
+            },
+            {
+              "si": "L'année affichée n'est pas celle du décret.",
+              "signifie": "Le lien d'inventaire ne correspond pas.",
+              "faire": "Revenez à la fiche de ce site et vérifiez l'année."
+            },
+            {
+              "si": "« Erreur 503 ».",
+              "signifie": "Site indisponible.",
+              "faire": "Réessayez plus tard.",
+              "ecran": "an-erreur-503"
+            }
+          ],
+          "ecrans_communs": [],
+          "liens": [
+            "an-inventaire"
+          ],
+          "verifie": true,
+          "appui": "ecran-vu",
+          "preuves": [
+            "data/samples/an-remote/IR-057268-consultation.body",
+            "docs/research/sources-2026-11/an-remote.md § 3.2",
+            "docs/research/sources-2026-11/verification.md § an-remote"
+          ],
+          "a_confirmer": null
+        },
+        {
+          "id": "a4",
+          "titre": "Retrouver le décret dans l'inventaire",
+          "instruction": "Tapez le nom de famille dans « Rechercher dans l'inventaire », laissez « Tous les mots saisis », et cliquez sur la loupe. Si rien ne sort, choisissez « Expression exacte » et tapez la date comme dans le titre, par exemple « 21 mars 1913 ». Parmi les réponses, prenez le décret dont le titre et, quand la fiche en donne un, le numéro de document sont exactement ceux de la fiche de ce site (les inventaires ne donnent pas de numéro de document pour 1892 à 1897, ni à partir de 1931).",
+          "ce_que_l_ecran_montre": "Nous n'avons pas vu la liste des réponses. Elle devrait montrer les notices de l'inventaire qui contiennent les mots saisis.",
+          "issues_possibles": [
+            {
+              "si": "Une liste de notices, dont celle de votre ancêtre ou de son décret.",
+              "signifie": "La recherche a fonctionné.",
+              "faire": "Ouvrez la notice du décret."
+            },
+            {
+              "si": "Aucune réponse pour le nom.",
+              "signifie": "Le nom est peut-être écrit autrement dans l'inventaire.",
+              "faire": "Recopiez la graphie exacte de la fiche de ce site, ou cherchez par la date."
+            },
+            {
+              "si": "Plusieurs décrets portent la même date.",
+              "signifie": "C'est courant : plusieurs décrets étaient signés le même jour.",
+              "faire": "Fiez-vous au titre exact et, s'il existe, au numéro de document (« document 69 »). Si rien ne les distingue, ouvrez-les l'un après l'autre."
+            },
+            {
+              "si": "« Erreur 503 » après avoir cliqué.",
+              "signifie": "Site indisponible.",
+              "faire": "Réessayez plus tard.",
+              "ecran": "an-erreur-503"
+            }
+          ],
+          "ecrans_communs": [
+            "an-erreur-503",
+            "an-attente-sans-fin"
+          ],
+          "liens": [],
+          "verifie": false,
+          "appui": "non-vu",
+          "preuves": [
+            "data/samples/an-remote/IR-057268-consultation.body",
+            "docs/research/sources-2026-11/an-remote.md § 3.2",
+            "docs/research/sources-2026-11/verification.md § an-remote",
+            "docs/research/sources-2026-11/an-remote.md § 3.4",
+            "docs/research/sources-2026-11/an-remote.md § 8"
+          ],
+          "a_confirmer": "Le formulaire de recherche a été vu ; la page de réponses, non. Le site des Archives nationales était en panne le jour de nos essais (2026-11-11) : cet écran n'a pas pu être vu."
+        },
+        {
+          "id": "a5",
+          "titre": "Ouvrir les images du décret",
+          "instruction": "Sur la notice du décret, cherchez les vignettes des pages ou un bouton qui ouvre les images, et cliquez dessus. À défaut, revenez à l'inventaire et ouvrez l'onglet « Archives numérisées ».",
+          "ce_que_l_ecran_montre": "Nous ne savons pas encore où les images apparaissent ni comment la visionneuse se présente.",
+          "issues_possibles": [
+            {
+              "si": "Les pages du décret s'affichent.",
+              "signifie": "Vous pouvez lire.",
+              "faire": "Passez à l'étape suivante."
+            },
+            {
+              "si": "Aucune image, ou une mention « non numérisé ».",
+              "signifie": "D'après les inventaires, tous les décrets de 1883 à 1948 ont un lien d'images ; il peut s'agir d'une panne.",
+              "faire": "Réessayez un autre jour avant de conclure.",
+              "ecran": "document-non-numerise"
+            },
+            {
+              "si": "Le site demande de se connecter pour voir les images.",
+              "signifie": "Nous ne l'avons pas constaté, mais ce n'est pas exclu.",
+              "faire": "Créez un espace personnel sur le site des Archives nationales.",
+              "ecran": "an-ecran-de-connexion"
+            },
+            {
+              "si": "« Erreur 503 ».",
+              "signifie": "Site indisponible.",
+              "faire": "Réessayez plus tard.",
+              "ecran": "an-erreur-503"
+            }
+          ],
+          "ecrans_communs": [
+            "an-erreur-503",
+            "an-ecran-de-connexion",
+            "document-non-numerise"
+          ],
+          "liens": [
+            "an-images-notice"
+          ],
+          "verifie": false,
+          "appui": "non-vu",
+          "preuves": [
+            "docs/research/sources-2026-11/an-remote.md § 8",
+            "docs/research/sources-2026-11/an-remote.md § 3.5",
+            "docs/research/sources-2026-11/verification.md § an-remote",
+            "docs/research/sources-2026-11/verification.md § an-local"
+          ],
+          "a_confirmer": "Le site des Archives nationales était en panne le jour de nos essais (2026-11-11) : cet écran n'a pas pu être vu. L'emplacement des images sur la notice n'est connu que par une note de travail, pas par un écran."
+        },
+        {
+          "id": "a6",
+          "titre": "Lire le décret et retrouver la ligne",
+          "instruction": "Commencez par la première page : vérifiez la date. Puis parcourez toutes les pages jusqu'aux signatures : les noms ne sont pas rangés par ordre alphabétique. Quand vous trouvez la ligne, regardez la marge : une mention manuscrite (« Retrait », « Rejet », « Ajournement ») change le sens de la ligne.",
+          "ce_que_l_ecran_montre": "Sur un décret tapé à la machine, tel que nous l'avons vu pour janvier et février 1932 : la première page porte un en-tête imprimé (« Ministère de la Justice », « République Française »), et la date du décret au tampon, en haut à droite. Chaque personne occupe un paragraphe : le nom de famille en capitales, les prénoms entre parenthèses, puis la profession, la date et le lieu de naissance, le domicile. Exemple inventé pour montrer la forme : « TESTAOUI (Amar ben Exemple), cultivateur, né le 3 mars 1890 à Exempleville (Alger), y demeurant. » Dans la marge de gauche, en face du nom, un numéro de la forme « 0000 X 31 » (numéro inventé) : c'est le numéro du dossier. La dernière page porte les signatures.",
+          "issues_possibles": [
+            {
+              "si": "Vous trouvez la ligne, sans mention en marge.",
+              "signifie": "C'est le décret original de votre ancêtre.",
+              "faire": "Passez à l'étape suivante."
+            },
+            {
+              "si": "Vous trouvez la ligne, avec une mention manuscrite en marge.",
+              "signifie": "Le décret a été modifié ensuite pour cette personne (retrait, rejet, ajournement).",
+              "faire": "Recopiez la mention mot pour mot, avec ses dates : elle renvoie à un autre décret."
+            },
+            {
+              "si": "Les pages sont manuscrites, ou disposées autrement.",
+              "signifie": "Nous n'avons vu que des décrets de 1932 ; les autres années peuvent se présenter autrement.",
+              "faire": "Lisez ligne à ligne ; cherchez aussi le prénom du père et le lieu de naissance."
+            },
+            {
+              "si": "Vous ne retrouvez pas le nom.",
+              "signifie": "Il peut être sur une autre page, ou écrit autrement.",
+              "faire": "Relisez en cherchant le lieu de naissance ; vérifiez que vous êtes dans le bon décret (date, numéro de document)."
+            }
+          ],
+          "ecrans_communs": [],
+          "liens": [],
+          "verifie": false,
+          "appui": "ecran-vu",
+          "preuves": [
+            "data/samples/an-remote/giro-tutoriel-654.pdf",
+            "docs/research/sources-2026-11/an-remote.md § 5",
+            "docs/research/sources-2026-11/verification.md § an-remote",
+            "docs/research/sources-2026-11/an-remote.md § 5.2"
+          ],
+          "a_confirmer": "Disposition vue uniquement sur des captures de décrets de janvier-février 1932 (tutoriel officiel des Archives nationales). Aucune page d'une autre année, ni d'un décret d'admission d'Algériens, n'a encore été vue."
+        },
+        {
+          "id": "a7",
+          "titre": "Noter ce que vous tenez",
+          "instruction": "Recopiez : la date du décret ; son titre exact ; sa cote (« BB/34/… ») et, s'il existe, son numéro de document ; le numéro du dossier lu dans la marge ; l'adresse de la page. Ajoutez la mention de source : « Archives nationales de France ; cote ; Pierrefitte-sur-Seine ; date ».",
+          "ce_que_l_ecran_montre": "Rien de nouveau à l'écran : c'est votre relevé.",
+          "issues_possibles": [
+            {
+              "si": "Vous avez la date, la cote et le numéro de dossier.",
+              "signifie": "Vous tenez l'original, pas encore la citation.",
+              "faire": "Passez à l'étape suivante pour trouver la publication."
+            },
+            {
+              "si": "La cote affichée pour le décret commence par « BB/11 ».",
+              "signifie": "C'est une erreur de saisie relevée sur 260 décrets de la fin de 1927 et de 1931 : un décret est toujours en « BB/34 » ; « BB/11 » désigne les dossiers.",
+              "faire": "Il s'agit vraisemblablement de « BB/34 » suivi du même numéro : vérifiez-le sur la notice des Archives nationales avant de commander quoi que ce soit."
+            }
+          ],
+          "ecrans_communs": [],
+          "liens": [],
+          "verifie": true,
+          "appui": "donnees-locales",
+          "preuves": [
+            "data/samples/an-remote/an-reutilisation.body",
+            "docs/research/sources-2026-11/an-remote.md § 6.1",
+            "docs/research/sources-2026-11/verification.md § an-local"
+          ],
+          "a_confirmer": null
+        },
+        {
+          "id": "a8",
+          "titre": "Trouver la publication du décret",
+          "instruction": "L'original ne suffit pas pour la citation : il faut la page où le décret a été publié. Selon l'année du décret : jusqu'en 1888, le bulletin imprimé est sur Internet Archive (sauf 1862 et 1887) ; de 1889 à 1926, sur Gallica, sauf 1907 que le catalogue signale comme manquante ; à partir de 1927, voyez le Journal officiel de l'Algérie et le Journal officiel de la République française. Cherchez après la date du décret : de quelques jours à plusieurs mois.",
+          "ce_que_l_ecran_montre": "Ce site vous propose le guide adapté à l'année.",
+          "issues_possibles": [
+            {
+              "si": "Décret de 1888 ou avant.",
+              "signifie": "Le bulletin de ces années est lisible sur Internet Archive.",
+              "faire": "Suivez le guide « bulletin imprimé sur Internet Archive »."
+            },
+            {
+              "si": "Décret de 1889 à 1926.",
+              "signifie": "Le Bulletin officiel de ces années est sur Gallica, sauf 1907, que le catalogue de la Bibliothèque nationale de France signale comme manquante.",
+              "faire": "Suivez le guide « chercher à la main sur Gallica »."
+            },
+            {
+              "si": "Décret de 1927 ou après.",
+              "signifie": "Deux journaux officiels sont à consulter.",
+              "faire": "Suivez le guide Gallica, et pour le Journal officiel de la République française le guide Légifrance."
+            }
+          ],
+          "ecrans_communs": [],
+          "liens": [],
+          "verifie": false,
+          "appui": "donnees-locales",
+          "preuves": [
+            "docs/research/sources-2026-11/internet-archive.md § 4.3",
+            "docs/research/sources-2026-11/verification.md § internet-archive",
+            "docs/research/sources-2026-11/verification.md § gallica",
+            "docs/research/sources-2026-11/verification.md § legal-types"
+          ],
+          "a_confirmer": "Délais mesurés sur deux volumes seulement (1873 : 28 à 195 jours ; 1888 : environ 40 à 116 jours) et sur deux numéros du Journal officiel (1927 : 11 jours ; 1936 : 10 jours). Le périodique de publication après 1888 vient des recherches antérieures et n'a pas été contrôlé sur les pages."
+        }
+      ],
+      "resultat": "La date du décret, sa cote aux Archives nationales, le numéro de dossier — et, une fois la publication trouvée, une citation complète.",
+      "limites": [
+        "L'index des Archives nationales a été saisi à la main : il contient des fautes de lecture et de frappe.",
+        "Une personne peut figurer sous plusieurs décrets (rejet, puis admission ; décret rectifié)."
+      ],
+      "suite": [
+        "bogga-internet-archive",
+        "gallica-a-la-main",
+        "legifrance-jorf",
+        "dossier-pierrefitte",
+        "attestation-ministere"
+      ]
+    },
+    {
+      "id": "an-annee-en-images",
+      "cas": "b",
+      "titre": "Années en images seules : lire les décrets vous-même",
+      "pour_qui": "L'acte a pu être pris entre 1899 et 1912, entre avril et décembre 1928, ou entre 1933 et 1948. Pour ces années, les décrets sont numérisés mais les noms n'ont pas été saisis.",
+      "voie": "recherche-guidee-images",
+      "duree": "Plusieurs heures par année : de 1899 à 1912, environ 46 décrets par an, le plus souvent d'une douzaine de personnes (18 en moyenne, mesuré sur les années dont les noms sont saisis).",
+      "ce_qu_il_vous_faut": [
+        "L'année de naissance approximative de l'ancêtre.",
+        "La liste datée des décrets que ce site vous donne pour chaque année.",
+        "De la patience : c'est une lecture, pas une recherche."
+      ],
+      "etapes": [
+        {
+          "id": "b1",
+          "titre": "Choisir les années à parcourir",
+          "instruction": "Partez de l'année où l'ancêtre a eu 21 ans : avant, il ne pouvait pas demander l'admission par décret. Commencez par les années où vous avez un indice (un mariage, un engagement, un emploi public).",
+          "ce_que_l_ecran_montre": "Ce site affiche, pour chaque année, la liste des décrets concernés avec leur date, leur titre, leur cote et, de 1899 à 1912 et en 1928, leur numéro de document (les inventaires n'en donnent pas de 1933 à 1948).",
+          "issues_possibles": [
+            {
+              "si": "Vous ne savez pas du tout quand.",
+              "signifie": "Toutes les années depuis ses 21 ans sont possibles.",
+              "faire": "Commencez par les années en images seules les plus proches de ses 21 à 40 ans, puis élargissez."
+            },
+            {
+              "si": "L'année qui vous intéresse est 1900, 1905 ou 1909.",
+              "signifie": "Quelques noms de ces années ont été saisis sur le site des Archives nationales.",
+              "faire": "Essayez d'abord le guide de recherche sur le site des Archives nationales."
+            }
+          ],
+          "ecrans_communs": [],
+          "liens": [],
+          "verifie": true,
+          "appui": "donnees-locales",
+          "preuves": [
+            "data/samples/legal-types/mjp-decrets-1870-10-24.txt",
+            "docs/research/sources-2026-11/an-local.md § 5.1",
+            "docs/research/sources-2026-11/verification.md § an-local"
+          ],
+          "a_confirmer": null
+        },
+        {
+          "id": "b2",
+          "titre": "Savoir dans quel ordre lire les décrets",
+          "instruction": "De 1899 à 1912 et en 1928 : lisez les « Décret de naturalisations algériennes », par ordre de date ; les Algériens admis y sont mêlés aux étrangers. De 1933 à 1940 : d'abord les « Décret d'admission aux droits de citoyen français (Algérie) » ou « (indigènes algériens) », ensuite ceux du même titre sans nom de territoire, et en dernier les « naturalisations françaises (Algérie) », qui visent des étrangers. De 1941 à 1948 : les décrets au titre composé « naturalisations, réintégrations françaises et admission aux droits de citoyen français » ; en 1944, quatre décrets sont titrés « d'un indigène musulman algérien ». Laissez de côté les titres « (colonies) », « (Madagascar) », « (Cochinchine) », « (Tonkin) ».",
+          "ce_que_l_ecran_montre": "La liste de ce site est déjà triée dans cet ordre. Les décrets de rejet sont listés à part.",
+          "issues_possibles": [
+            {
+              "si": "Un décret sans nom de territoire ne contient aucun Algérien.",
+              "signifie": "C'est normal : ces décrets mêlent plusieurs territoires.",
+              "faire": "Passez au suivant."
+            },
+            {
+              "si": "Le titre contient « rejet ».",
+              "signifie": "Ce décret refuse des demandes.",
+              "faire": "Lisez-le quand même si vous n'avez rien trouvé ailleurs : une demande rejetée explique une absence d'admission."
+            }
+          ],
+          "ecrans_communs": [],
+          "liens": [],
+          "verifie": true,
+          "appui": "donnees-locales",
+          "preuves": [
+            "docs/research/sources-2026-11/an-local.md § 5.2",
+            "docs/research/sources-2026-11/an-local.md § 5.3",
+            "docs/research/sources-2026-11/an-local.md § 3",
+            "docs/research/sources-2026-11/verification.md § an-local",
+            "docs/research/sources-2026-11/verification.md § legal-types",
+            "data/samples/an-local/decrets_tous.csv"
+          ],
+          "a_confirmer": null
+        },
+        {
+          "id": "b3",
+          "titre": "Ouvrir un décret de la liste",
+          "instruction": "Cliquez sur le lien du décret donné par ce site. Ne vous fiez pas à la seule date : plusieurs décrets portent souvent la même date, et parfois le même titre. C'est le lien de ce site qui désigne le bon, avec la cote et, de 1899 à 1912 et en 1928, le numéro de document.",
+          "ce_que_l_ecran_montre": "Nous ne savons pas encore ce que montre exactement cette page ; elle devrait porter le titre et la date du décret.",
+          "issues_possibles": [
+            {
+              "si": "Une page « Salle de lecture virtuelle » avec le titre du décret.",
+              "signifie": "Vous êtes sur la notice du décret.",
+              "faire": "Passez à l'étape des images."
+            },
+            {
+              "si": "Une page « Salle de lecture virtuelle » avec un titre du type « Décrets de naturalisation de l'année 1913 » et trois onglets.",
+              "signifie": "Vous êtes sur l'inventaire de toute l'année, pas encore sur le décret.",
+              "faire": "Passez à l'étape suivante, qui explique comment retrouver le décret dans l'inventaire."
+            },
+            {
+              "si": "« Erreur 503 », ou une page qui ne s'affiche pas.",
+              "signifie": "Le site est momentanément indisponible.",
+              "faire": "Réessayez plus tard ; le lien n'est pas faux.",
+              "ecran": "an-erreur-503"
+            },
+            {
+              "si": "Un écran de connexion.",
+              "signifie": "Aucun compte n'est nécessaire pour lire un inventaire.",
+              "faire": "Revenez en arrière.",
+              "ecran": "an-ecran-de-connexion"
+            },
+            {
+              "si": "« Page introuvable ».",
+              "signifie": "Le lien direct vers la notice ne fonctionne pas comme nous le pensions.",
+              "faire": "Utilisez le lien de l'inventaire de l'année, puis l'étape suivante.",
+              "ecran": "page-introuvable"
+            }
+          ],
+          "ecrans_communs": [
+            "an-erreur-503",
+            "an-attente-sans-fin",
+            "an-ecran-de-connexion",
+            "page-introuvable"
+          ],
+          "liens": [
+            "an-notice",
+            "an-inventaire"
+          ],
+          "verifie": false,
+          "appui": "non-vu",
+          "preuves": [
+            "docs/research/sources-2026-11/an-remote.md § 8",
+            "docs/research/sources-2026-11/an-remote.md § 4",
+            "docs/research/sources-2026-11/verification.md § an-remote"
+          ],
+          "a_confirmer": "Le site des Archives nationales était en panne le jour de nos essais (2026-11-11) : cet écran n'a pas pu être vu. Le lien a la forme écrite par les Archives nationales dans leurs propres inventaires."
+        },
+        {
+          "id": "b4",
+          "titre": "Si vous êtes sur l'inventaire de l'année : retrouver le décret par sa date",
+          "instruction": "Dans la colonne de gauche, champ « Rechercher dans l'inventaire » : choisissez « Expression exacte », tapez la date comme elle est écrite dans le titre (par exemple « 5 février 1905 »), cliquez sur la loupe. Prenez le décret dont le titre est exactement celui de la liste de ce site, et vérifiez son numéro de document quand la liste en donne un.",
+          "ce_que_l_ecran_montre": "La page d'inventaire, ses trois onglets et son champ de recherche sont ceux décrits dans le guide précédent. Nous n'avons pas vu la page de réponses.",
+          "issues_possibles": [
+            {
+              "si": "Le décret apparaît dans les réponses.",
+              "signifie": "Vous l'avez retrouvé.",
+              "faire": "Ouvrez sa notice."
+            },
+            {
+              "si": "Plusieurs décrets ont la même date.",
+              "signifie": "Entre 1933 et 1948, plus d'un décret sur trois partage sa date et son titre avec un autre.",
+              "faire": "Comparez le titre mot pour mot ; de 1899 à 1912 et en 1928, comparez aussi le numéro de document. De 1933 à 1948, il n'y a pas de numéro de document : si la date et le titre sont identiques, rien d'autre que le lien de ce site ne distingue les deux décrets ; lisez-les tous les deux."
+            },
+            {
+              "si": "Aucune réponse.",
+              "signifie": "La date n'est peut-être pas écrite ainsi dans le titre.",
+              "faire": "Essayez l'onglet « Détail du contenu », qui devrait lister les décrets de l'année."
+            },
+            {
+              "si": "« Erreur 503 ».",
+              "signifie": "Site indisponible.",
+              "faire": "Réessayez plus tard.",
+              "ecran": "an-erreur-503"
+            }
+          ],
+          "ecrans_communs": [
+            "an-erreur-503",
+            "an-attente-sans-fin"
+          ],
+          "liens": [
+            "an-inventaire"
+          ],
+          "verifie": false,
+          "appui": "non-vu",
+          "preuves": [
+            "data/samples/an-remote/IR-057268-consultation.body",
+            "docs/research/sources-2026-11/an-remote.md § 3.2",
+            "docs/research/sources-2026-11/verification.md § an-remote",
+            "docs/research/sources-2026-11/an-remote.md § 8",
+            "docs/research/sources-2026-11/an-local.md § 5.1",
+            "docs/research/sources-2026-11/verification.md § an-remote"
+          ],
+          "a_confirmer": "Le champ et ses options ont été vus ; la page de réponses et l'onglet « Détail du contenu », non. Le site des Archives nationales était en panne le jour de nos essais (2026-11-11) : cet écran n'a pas pu être vu."
+        },
+        {
+          "id": "b5",
+          "titre": "Ouvrir les images du décret",
+          "instruction": "Sur la notice du décret, ouvrez les images des pages. À défaut, l'onglet « Archives numérisées » de l'inventaire devrait rassembler les images de l'année.",
+          "ce_que_l_ecran_montre": "Nous ne savons pas encore comment les images se présentent.",
+          "issues_possibles": [
+            {
+              "si": "Les pages s'affichent.",
+              "signifie": "Vous pouvez lire.",
+              "faire": "Passez à l'étape suivante."
+            },
+            {
+              "si": "Aucune image.",
+              "signifie": "Panne, ou accès différent de ce que nous pensons.",
+              "faire": "Réessayez un autre jour avant de conclure.",
+              "ecran": "document-non-numerise"
+            },
+            {
+              "si": "« Erreur 503 ».",
+              "signifie": "Site indisponible.",
+              "faire": "Réessayez plus tard.",
+              "ecran": "an-erreur-503"
+            }
+          ],
+          "ecrans_communs": [
+            "an-erreur-503",
+            "an-ecran-de-connexion",
+            "document-non-numerise"
+          ],
+          "liens": [
+            "an-images-notice"
+          ],
+          "verifie": false,
+          "appui": "non-vu",
+          "preuves": [
+            "docs/research/sources-2026-11/an-remote.md § 8",
+            "docs/research/sources-2026-11/verification.md § an-remote"
+          ],
+          "a_confirmer": "Le site des Archives nationales était en panne le jour de nos essais (2026-11-11) : cet écran n'a pas pu être vu."
+        },
+        {
+          "id": "b6",
+          "titre": "Lire toutes les pages du décret",
+          "instruction": "Lisez chaque page jusqu'aux signatures : les noms ne sont pas par ordre alphabétique, on ne peut pas sauter à la bonne page. Cherchez le nom, mais aussi le prénom du père et le lieu de naissance : la graphie peut différer de celle de la famille. Sur les pages tapées à la machine, le chiffre 1 est souvent tapé comme la lettre I (« I88I » pour 1881).",
+          "ce_que_l_ecran_montre": "Sur un décret tapé à la machine, tel que nous l'avons vu pour janvier et février 1932 : la première page porte un en-tête imprimé (« Ministère de la Justice », « République Française »), et la date du décret au tampon, en haut à droite. Chaque personne occupe un paragraphe : le nom de famille en capitales, les prénoms entre parenthèses, puis la profession, la date et le lieu de naissance, le domicile. Exemple inventé pour montrer la forme : « TESTAOUI (Amar ben Exemple), cultivateur, né le 3 mars 1890 à Exempleville (Alger), y demeurant. » Dans la marge de gauche, en face du nom, un numéro de la forme « 0000 X 31 » (numéro inventé) : c'est le numéro du dossier. La dernière page porte les signatures. Pour 1899-1912, nous ne savons pas si les pages sont manuscrites ou tapées.",
+          "issues_possibles": [
+            {
+              "si": "Vous trouvez votre ancêtre.",
+              "signifie": "C'est son décret original.",
+              "faire": "Notez la date, la cote, le numéro de document s'il existe et le numéro en marge ; passez à l'étape suivante."
+            },
+            {
+              "si": "Vous ne le trouvez pas dans ce décret.",
+              "signifie": "Il n'est pas dans celui-ci.",
+              "faire": "Passez au décret suivant de la liste. Cochez ceux que vous avez lus."
+            },
+            {
+              "si": "Une page est illisible ou manque.",
+              "signifie": "Numérisation ou encre défaillante.",
+              "faire": "Notez le décret et la page : le dossier ou la publication imprimée pourront la remplacer."
+            },
+            {
+              "si": "L'écriture est manuscrite et difficile.",
+              "signifie": "Possible pour les années anciennes.",
+              "faire": "Repérez d'abord les mots qui reviennent (« né à », « demeurant à ») pour vous habituer à la main."
+            }
+          ],
+          "ecrans_communs": [],
+          "liens": [],
+          "verifie": false,
+          "appui": "ecran-vu",
+          "preuves": [
+            "data/samples/an-remote/giro-tutoriel-654.pdf",
+            "docs/research/sources-2026-11/an-remote.md § 5",
+            "docs/research/sources-2026-11/verification.md § an-remote",
+            "docs/research/sources-2026-11/an-remote.md § 5.3",
+            "docs/research/sources-2026-11/an-local.md § 5.2"
+          ],
+          "a_confirmer": "Disposition vue uniquement sur des captures de janvier-février 1932. Aucune page de 1899-1912, de 1928 ni de 1933-1948 n'a encore été vue ; l'ordre des noms sur la page est une déduction de l'ordre des notices."
+        },
+        {
+          "id": "b7",
+          "titre": "Conclure pour chaque année, sans aller trop loin",
+          "instruction": "Quand vous avez lu tous les décrets d'une année, notez-le. Si vous avez trouvé : continuez comme dans le guide précédent (noter, puis trouver la publication). Si vous n'avez rien trouvé dans aucune année : cela ne dit pas que votre ancêtre a été écarté. L'admission a pu se faire par jugement, ou ne jamais avoir été demandée.",
+          "ce_que_l_ecran_montre": "Rien de nouveau à l'écran.",
+          "issues_possibles": [
+            {
+              "si": "Trouvé.",
+              "signifie": "Vous tenez l'original.",
+              "faire": "Suivez les deux dernières étapes du guide précédent."
+            },
+            {
+              "si": "Rien dans les décrets d'admission, mais un nom dans un décret de rejet.",
+              "signifie": "Une demande a été faite et refusée à cette date.",
+              "faire": "Notez-le ; cherchez aussi les années suivantes, une nouvelle demande était possible."
+            },
+            {
+              "si": "Rien du tout.",
+              "signifie": "Aucun décret trouvé dans les années lues.",
+              "faire": "Voyez le rappel sur les jugements dans le bilan de recherche, et le guide de l'état civil en Algérie."
+            }
+          ],
+          "ecrans_communs": [],
+          "liens": [],
+          "verifie": true,
+          "appui": "donnees-locales",
+          "preuves": [
+            "docs/research/sources-2026-11/an-local.md § 5.3",
+            "docs/research/sources-2026-11/an-remote.md § 8",
+            "data/samples/legal-types/mjp-loi-1919-02-04.txt"
+          ],
+          "a_confirmer": null
+        }
+      ],
+      "resultat": "Soit le décret original de l'ancêtre, soit la liste précise des décrets que vous avez lus sans le trouver.",
+      "limites": [
+        "Nombre de décrets à lire, d'après les inventaires : 636 « naturalisations algériennes » pour 1899-1912 (environ 46 par an), 53 pour avril-décembre 1928 ; pour 1933-1948, 103 décrets d'admission nommant l'Algérie, 150 sans nom de territoire et 80 décrets composés.",
+        "Taille d'un décret, mesurée sur les années saisies : 12 personnes en général, jusqu'à 299.",
+        "Les Archives nationales indexent 1932-1948 avec des bénévoles (projet « Devenir français », avancé à 99 % ; une interruption provisoire a été annoncée le 23 septembre 2026) : ces années pourraient devenir cherchables par nom."
+      ],
+      "suite": [
+        "an-annee-indexee",
+        "jugement-etat-civil-algerie"
+      ]
+    },
+    {
+      "id": "an-noms-sur-le-site-des-an",
+      "cas": "b-bis",
+      "titre": "Années dont les noms sont aux Archives nationales mais pas ici",
+      "pour_qui": "L'acte a pu être pris en 1898 ou de janvier à mars 1928 ; ou bien en 1900, 1905, 1909 ou d'avril à juin 1928, années dont une petite partie des noms a été saisie.",
+      "voie": "recherche-sur-le-site-des-an",
+      "duree": "Quelques minutes par année et par graphie, si le site répond.",
+      "ce_qu_il_vous_faut": [
+        "Les graphies possibles du nom de famille et du prénom."
+      ],
+      "etapes": [
+        {
+          "id": "n1",
+          "titre": "Comprendre pourquoi ces noms ne sont pas ici",
+          "instruction": "L'inventaire général de cette collection indique que l'indexation des années 1898 à 1912 et 1928 a été engagée avec la société Filae, et que, pour les années qu'elle a indexées, une publication en ligne de plus de 1 000 personnes à des fins de recherche par nom demande son autorisation. Nous ne savons pas avec certitude qui a saisi chaque année. Dans le doute, nous ne reprenons pas ces noms sans une réponse écrite des Archives nationales. Ils restent consultables sur leur site.",
+          "ce_que_l_ecran_montre": "Rien à l'écran.",
+          "issues_possibles": [
+            {
+              "si": "Vous voulez chercher ces années.",
+              "signifie": "Il faut le faire sur le site des Archives nationales.",
+              "faire": "Passez à l'étape suivante."
+            },
+            {
+              "si": "Vous aviez déjà une correspondance ici pour une autre année.",
+              "signifie": "La même personne peut figurer dans plusieurs décrets.",
+              "faire": "Cherchez tout de même : un décret de ces années peut compléter ou corriger le premier."
+            }
+          ],
+          "ecrans_communs": [],
+          "liens": [],
+          "verifie": true,
+          "appui": "donnees-locales",
+          "preuves": [
+            "docs/research/sources-2026-11/an-remote.md § 6.4",
+            "docs/research/sources-2026-11/verification.md § an-remote",
+            "docs/research/sources-2026-11/verification.md § an-local",
+            "data/raw/an/FRAN_IR_057397.xml"
+          ],
+          "a_confirmer": null
+        },
+        {
+          "id": "n2",
+          "titre": "Ouvrir l'inventaire de l'année",
+          "instruction": "Cliquez sur le lien de l'inventaire de l'année. Pour 1928, il y a un inventaire par trimestre.",
+          "ce_que_l_ecran_montre": "Une page « Salle de lecture virtuelle » dont le titre est du type « Décrets de naturalisation de l'année 1898 », avec trois onglets et, à gauche, le champ « Rechercher dans l'inventaire ».",
+          "issues_possibles": [
+            {
+              "si": "La page d'inventaire s'affiche.",
+              "signifie": "Vous êtes au bon endroit.",
+              "faire": "Passez à l'étape suivante."
+            },
+            {
+              "si": "« Erreur 503 », ou rien ne s'affiche.",
+              "signifie": "Site indisponible.",
+              "faire": "Réessayez plus tard.",
+              "ecran": "an-erreur-503"
+            },
+            {
+              "si": "Un écran de connexion.",
+              "signifie": "Aucun compte n'est nécessaire.",
+              "faire": "Revenez en arrière.",
+              "ecran": "an-ecran-de-connexion"
+            }
+          ],
+          "ecrans_communs": [
+            "an-erreur-503",
+            "an-attente-sans-fin",
+            "an-ecran-de-connexion"
+          ],
+          "liens": [
+            "an-inventaire"
+          ],
+          "verifie": true,
+          "appui": "ecran-vu",
+          "preuves": [
+            "data/samples/an-remote/IR-057268-consultation.body",
+            "docs/research/sources-2026-11/an-remote.md § 3.2",
+            "docs/research/sources-2026-11/verification.md § an-remote"
+          ],
+          "a_confirmer": null
+        },
+        {
+          "id": "n3",
+          "titre": "Chercher le nom dans l'inventaire",
+          "instruction": "Dans « Rechercher dans l'inventaire », tapez le nom de famille seul, laissez « Tous les mots saisis », cliquez sur la loupe. Recommencez pour chaque graphie, puis avec le prénom et le nom du père.",
+          "ce_que_l_ecran_montre": "Nous n'avons pas vu la page de réponses.",
+          "issues_possibles": [
+            {
+              "si": "Une ou plusieurs notices de personnes.",
+              "signifie": "Le nom figure dans l'inventaire.",
+              "faire": "Ouvrez chaque notice ; comparez la naissance et la filiation ; puis suivez le guide des années saisies à partir de l'ouverture des images."
+            },
+            {
+              "si": "Aucune réponse.",
+              "signifie": "Le nom n'est pas saisi sous cette graphie — ou pas saisi du tout pour 1900, 1905, 1909 et le printemps 1928, où la saisie est très partielle.",
+              "faire": "Essayez les autres graphies ; pour ces années partielles, passez ensuite au guide des années en images seules."
+            },
+            {
+              "si": "« Erreur 503 ».",
+              "signifie": "Site indisponible.",
+              "faire": "Réessayez plus tard.",
+              "ecran": "an-erreur-503"
+            }
+          ],
+          "ecrans_communs": [
+            "an-erreur-503",
+            "an-attente-sans-fin"
+          ],
+          "liens": [],
+          "verifie": false,
+          "appui": "non-vu",
+          "preuves": [
+            "data/samples/an-remote/IR-057268-consultation.body",
+            "docs/research/sources-2026-11/an-remote.md § 3.2",
+            "docs/research/sources-2026-11/verification.md § an-remote",
+            "docs/research/sources-2026-11/an-remote.md § 3.4",
+            "docs/research/sources-2026-11/verification.md § an-remote"
+          ],
+          "a_confirmer": "Le formulaire de recherche a été vu ; la page de réponses, non. Nous ne savons pas si la recherche ignore les accents et les majuscules."
+        }
+      ],
+      "resultat": "Une notice de personne sur le site des Archives nationales, ou la certitude d'avoir essayé chaque graphie.",
+      "limites": [
+        "Pour 1900, 1905, 1909 et avril-juin 1928, seule une petite partie des personnes est saisie : ne rien trouver ne dispense pas de lire les images."
+      ],
+      "suite": [
+        "an-annee-indexee",
+        "an-annee-en-images"
+      ]
+    },
+    {
+      "id": "bogga-internet-archive",
+      "cas": "c",
+      "titre": "Bulletin officiel imprimé, 1861-1888 : lire la page sur Internet Archive",
+      "pour_qui": "La recherche a trouvé un nom dans le Bulletin officiel du Gouvernement général de l'Algérie, ou vous cherchez la publication d'un décret antérieur à 1889.",
+      "voie": "bulletin-imprime",
+      "duree": "Quelques minutes pour vérifier une page ; plus long pour feuilleter un volume.",
+      "ce_qu_il_vous_faut": [
+        "La fiche de la correspondance : année du volume, page imprimée, date du décret.",
+        "Ou, à défaut, la date du décret."
+      ],
+      "etapes": [
+        {
+          "id": "c1",
+          "titre": "Ouvrir la page scannée",
+          "instruction": "Cliquez sur le lien de la page. Il ouvre la liseuse d'Internet Archive directement sur la bonne image.",
+          "ce_que_l_ecran_montre": "La photographie d'une page imprimée, avec son numéro en haut, entre deux tirets (par exemple « — 495 — »).",
+          "issues_possibles": [
+            {
+              "si": "La page porte le numéro attendu.",
+              "signifie": "Vous êtes sur la bonne page.",
+              "faire": "Passez à l'étape suivante."
+            },
+            {
+              "si": "Le numéro en haut de page est voisin, mais pas le bon.",
+              "signifie": "Le rang de l'image et le numéro imprimé ne coïncident pas toujours exactement.",
+              "faire": "Tournez une ou deux pages, en avant ou en arrière, jusqu'au bon numéro."
+            },
+            {
+              "si": "La liseuse s'ouvre au début du volume.",
+              "signifie": "Le lien vers la page n'a pas été pris en compte.",
+              "faire": "Feuilletez jusqu'au numéro de page indiqué sur la fiche."
+            },
+            {
+              "si": "La page ne se charge pas.",
+              "signifie": "Internet Archive est parfois lent ou indisponible.",
+              "faire": "Réessayez un peu plus tard."
+            },
+            {
+              "si": "Une page d'attente « vérification ».",
+              "signifie": "Contrôle automatique.",
+              "faire": "Patientez.",
+              "ecran": "verification-automatique"
+            }
+          ],
+          "ecrans_communs": [
+            "verification-automatique"
+          ],
+          "liens": [
+            "ia-page",
+            "ia-page-volume"
+          ],
+          "verifie": false,
+          "appui": "ecran-vu",
+          "preuves": [
+            "data/samples/internet-archive/raw/tests/details-1873-n530.html",
+            "data/samples/internet-archive/raw/tests/1873-n530_w1000.jpg",
+            "data/samples/internet-archive/raw/tests/details-1888-T28-n116.html",
+            "data/samples/internet-archive/raw/tests/1888-T28-n116_w1000.jpg",
+            "docs/research/sources-2026-11/internet-archive.md § 6",
+            "docs/research/sources-2026-11/verification.md § internet-archive"
+          ],
+          "a_confirmer": "Les deux formes de lien ont répondu normalement à notre programme et l'image servie est bien la page attendue (regardée pour 1873 et 1888). La liseuse elle-même n'a pas été regardée dans un navigateur."
+        },
+        {
+          "id": "c2",
+          "titre": "Retrouver la ligne sur la page",
+          "instruction": "Les admissions sont publiées en listes, sous une rubrique « NATURALISATION ». La phrase d'en-tête dit « admis à jouir des droits de citoyen français » et cite le sénatus-consulte du 14 juillet 1865. Les listes sont rangées par département (Alger, Oran, Constantine). Cherchez la ligne de votre ancêtre.",
+          "ce_que_l_ecran_montre": "En 1873, une ligne est très courte : le prénom, « ben », le prénom du père, puis « indigène musulman » et le domicile — par exemple, pour montrer la forme : « Amar ben Exemple, indigène musulman, demeurant à Exempleville. » En 1888, elle est plus longue, souvent avec un nom de famille en tête : « Testaoui (Amar ben Exemple), indigène monogame, cultivateur, né en 1850 à Exempleville (Alger), y demeurant. » Ces deux exemples sont inventés.",
+          "issues_possibles": [
+            {
+              "si": "Vous lisez le nom sur l'image.",
+              "signifie": "La correspondance est confirmée par vos yeux.",
+              "faire": "Passez à l'étape suivante."
+            },
+            {
+              "si": "Le nom n'est pas sur cette page.",
+              "signifie": "La machine a pu se tromper de page ou mal lire un nom.",
+              "faire": "Regardez la page précédente et la suivante ; relisez la liste entière du décret."
+            },
+            {
+              "si": "L'en-tête parle d'« étrangers ».",
+              "signifie": "En 1888, cet en-tête couvre aussi des Algériens musulmans.",
+              "faire": "Lisez la ligne elle-même : c'est elle qui dit « indigène »."
+            },
+            {
+              "si": "La ligne ne donne ni date ni lieu de naissance.",
+              "signifie": "C'est la règle en 1873 : aucune naissance n'est indiquée.",
+              "faire": "Appuyez-vous sur le nom du père et sur le domicile."
+            }
+          ],
+          "ecrans_communs": [],
+          "liens": [],
+          "verifie": true,
+          "appui": "ecran-vu",
+          "preuves": [
+            "data/samples/internet-archive/raw/tests/1873-n530_w1000.jpg",
+            "data/samples/internet-archive/raw/tests/1888-T28-n116_w1000.jpg",
+            "docs/research/sources-2026-11/internet-archive.md § 4",
+            "docs/research/sources-2026-11/verification.md § internet-archive"
+          ],
+          "a_confirmer": null
+        },
+        {
+          "id": "c3",
+          "titre": "Faire confiance à l'image, pas au texte de la machine",
+          "instruction": "Le texte que ce site a cherché a été lu par une machine sur l'image, et elle se trompe. Le chiffre 1 est souvent lu 4 (« 4873 » pour 1873). Le mot « ben » devient « bon » ou « ban ». Des noms sont déformés ou collés. Seule l'image de la page fait foi : recopiez ce que vous y lisez.",
+          "ce_que_l_ecran_montre": "À côté de l'image, ce site montre le texte lu par la machine, signalé comme tel.",
+          "issues_possibles": [
+            {
+              "si": "Le texte de la machine et l'image disent la même chose.",
+              "signifie": "Tant mieux.",
+              "faire": "Continuez."
+            },
+            {
+              "si": "Ils diffèrent.",
+              "signifie": "C'est l'image qui a raison.",
+              "faire": "Recopiez l'image ; ne corrigez pas « de tête »."
+            },
+            {
+              "si": "L'image elle-même est illisible à cet endroit.",
+              "signifie": "Défaut d'impression ou de numérisation.",
+              "faire": "Cherchez un autre exemplaire du même volume (voir la dernière étape)."
+            }
+          ],
+          "ecrans_communs": [],
+          "liens": [],
+          "verifie": true,
+          "appui": "donnees-locales",
+          "preuves": [
+            "docs/research/sources-2026-11/internet-archive.md § 4.4",
+            "docs/research/sources-2026-11/verification.md § internet-archive"
+          ],
+          "a_confirmer": null
+        },
+        {
+          "id": "c4",
+          "titre": "Relever la citation",
+          "instruction": "Notez : la date du décret (dans la phrase « Par décret du… ») ; le titre du bulletin et l'année du volume ; le numéro de l'article (« N° 350 ») ; la page imprimée. Pour la date de publication, allez à la fin de la livraison : une ligne « CERTIFIÉ CONFORME : Alger, le… » donne la date de ce numéro du bulletin.",
+          "ce_que_l_ecran_montre": "La date du décret est dans la phrase qui précède la liste, parfois plusieurs pages avant la ligne de l'ancêtre. La ligne « CERTIFIÉ CONFORME » est à la dernière page de chaque livraison.",
+          "issues_possibles": [
+            {
+              "si": "Vous avez la date du décret, l'année, la page et la date de la livraison.",
+              "signifie": "Votre citation est complète.",
+              "faire": "Conservez aussi l'adresse de la page."
+            },
+            {
+              "si": "La date proposée par ce site vous semble impossible (par exemple une année en 4…).",
+              "signifie": "La machine a mal lu un chiffre.",
+              "faire": "Lisez la date sur l'image et retenez celle-là."
+            },
+            {
+              "si": "Le décret est daté de la fin d'une année et vous êtes dans le volume de l'année suivante.",
+              "signifie": "C'est normal : le bulletin publiait un décret un à quatre mois plus tard, parfois davantage.",
+              "faire": "La citation porte l'année du volume où la page se trouve."
+            },
+            {
+              "si": "Le même décret apparaît deux fois dans le volume.",
+              "signifie": "Certains décrets ont été republiés ou rectifiés.",
+              "faire": "Notez les deux pages."
+            }
+          ],
+          "ecrans_communs": [],
+          "liens": [],
+          "verifie": true,
+          "appui": "donnees-locales",
+          "preuves": [
+            "docs/research/sources-2026-11/internet-archive.md § 4.1",
+            "docs/research/sources-2026-11/internet-archive.md § 6.3",
+            "docs/research/sources-2026-11/verification.md § internet-archive"
+          ],
+          "a_confirmer": null
+        },
+        {
+          "id": "c5",
+          "titre": "Chercher vous-même dans un volume : la table en fin de volume",
+          "instruction": "Si la recherche de ce site n'a rien donné, ou pour vérifier une année entière : les volumes que ce site a lus sont listés dans le bilan de recherche et sur la page « Comment marche la recherche ». Pour un autre volume, ou pour vérifier : la plupart des volumes se terminent par une table alphabétique. À l'entrée « NATURALISATION », elle donne les pages des décrets de l'année. Ouvrez ces pages une à une et lisez les listes.",
+          "ce_que_l_ecran_montre": "Une table sur plusieurs pages, à la fin du volume ; à la lettre N : « NATURALISATION », suivi d'une série de numéros de pages. Il existe aussi une table chronologique en tête de volume.",
+          "issues_possibles": [
+            {
+              "si": "Vous trouvez l'entrée et ses numéros de pages.",
+              "signifie": "Vous avez la liste complète des décrets de l'année.",
+              "faire": "Lisez chaque page indiquée."
+            },
+            {
+              "si": "Vous ne trouvez pas la table.",
+              "signifie": "Vous n'êtes pas à la fin du volume, ou l'exemplaire est incomplet.",
+              "faire": "Allez aux toutes dernières pages ; sinon utilisez la table chronologique du début."
+            }
+          ],
+          "ecrans_communs": [],
+          "liens": [
+            "ia-volume"
+          ],
+          "verifie": false,
+          "appui": "donnees-locales",
+          "preuves": [
+            "data/samples/internet-archive/raw/bogga-1873/1873_hocr_searchtext.txt.gz",
+            "data/samples/internet-archive/raw/bogga-1888/1888_hocr_searchtext.txt.gz",
+            "docs/research/sources-2026-11/internet-archive.md § 4.1",
+            "docs/research/sources-2026-11/verification.md § internet-archive"
+          ],
+          "a_confirmer": "La table alphabétique a été lue dans le texte tiré par la machine des volumes de 1873 et de 1888 ; elle n'a pas été regardée en image, et les autres années n'ont pas été contrôlées. Le lien qui ouvre un volume à sa première page n'a pas été essayé tel quel."
+        },
+        {
+          "id": "c6",
+          "titre": "Chercher un mot dans la liseuse",
+          "instruction": "La liseuse d'Internet Archive a une loupe pour chercher un mot dans le volume. Tapez le nom, puis chaque variante. La recherche ignore les accents, mais pas les fautes de lecture de la machine.",
+          "ce_que_l_ecran_montre": "Nous n'avons pas vu cette recherche dans un navigateur.",
+          "issues_possibles": [
+            {
+              "si": "Des pages sont proposées.",
+              "signifie": "Le mot a été lu par la machine à ces endroits.",
+              "faire": "Ouvrez chacune."
+            },
+            {
+              "si": "Aucune occurrence.",
+              "signifie": "Le nom n'est pas dans le volume, ou la machine l'a mal lu.",
+              "faire": "Ne concluez pas : passez par la table alphabétique (étape précédente)."
+            }
+          ],
+          "ecrans_communs": [],
+          "liens": [],
+          "verifie": false,
+          "appui": "non-vu",
+          "preuves": [
+            "docs/research/sources-2026-11/internet-archive.md § 6.2",
+            "docs/research/sources-2026-11/verification.md § internet-archive"
+          ],
+          "a_confirmer": "La recherche dans un volume est vérifiée pour un programme, pas pour un humain dans la liseuse."
+        },
+        {
+          "id": "c7",
+          "titre": "Années absentes d'Internet Archive",
+          "instruction": "Nous n'avons trouvé sur Internet Archive ni le volume de 1862, ni celui de 1887, ni rien après 1888. Pour 1862, la bibliothèque numérique HathiTrust a un exemplaire. Pour 1887 et pour 1889-1926, c'est Gallica (le catalogue de la Bibliothèque nationale de France y signale 1907 comme manquante et 1890 comme incomplète).",
+          "ce_que_l_ecran_montre": "Sur HathiTrust : une liseuse du même genre, page par page.",
+          "issues_possibles": [
+            {
+              "si": "Année 1862.",
+              "signifie": "Volume disponible sur HathiTrust.",
+              "faire": "Ouvrez le lien HathiTrust et feuilletez depuis le début.",
+              "ecran": "verification-automatique"
+            },
+            {
+              "si": "Année 1887, ou 1889 et après.",
+              "signifie": "Pas sur Internet Archive.",
+              "faire": "Suivez le guide Gallica."
+            }
+          ],
+          "ecrans_communs": [
+            "verification-automatique"
+          ],
+          "liens": [
+            "hathitrust-page"
+          ],
+          "verifie": false,
+          "appui": "non-vu",
+          "preuves": [
+            "data/samples/internet-archive/raw/hathitrust/api-full-oclc-236226172.json",
+            "docs/research/sources-2026-11/internet-archive.md § 2",
+            "docs/research/sources-2026-11/internet-archive.md § 3.1",
+            "docs/research/sources-2026-11/verification.md § internet-archive"
+          ],
+          "a_confirmer": "La liste des volumes est vérifiée ; la liseuse de HathiTrust a refusé notre programme et n'a pas été vue."
+        }
+      ],
+      "resultat": "Une citation complète : date du décret, bulletin, année, page, date de la livraison — et l'adresse de la page.",
+      "limites": [
+        "Seuls deux volumes (1873 et 1888) ont été lus en entier par nos outils ; la forme des autres années peut différer.",
+        "La machine oublie des personnes : sur la plus mauvaise liste contrôlée, un quart des noms lui échappaient."
+      ],
+      "suite": [
+        "attestation-ministere",
+        "gallica-a-la-main"
+      ]
+    },
+    {
+      "id": "gallica-a-la-main",
+      "cas": "d",
+      "titre": "Chercher à la main sur Gallica (1889-1954)",
+      "pour_qui": "Vous avez la date d'un décret postérieur à 1888 et vous cherchez la page où il a été publié.",
+      "voie": "bulletin-imprime",
+      "duree": "D'une demi-heure à plusieurs heures.",
+      "ce_qu_il_vous_faut": [
+        "La date du décret, ou au moins l'année.",
+        "Les graphies possibles du nom."
+      ],
+      "etapes": [
+        {
+          "id": "d1",
+          "titre": "Choisir le bon périodique",
+          "instruction": "Jusqu'en 1926 : le Bulletin officiel du Gouvernement général de l'Algérie. À partir de 1927 : le Journal officiel de l'Algérie, et le Journal officiel de la République française. Cherchez après la date du décret, pas à sa date.",
+          "ce_que_l_ecran_montre": "Ce site vous propose les liens des périodiques qui correspondent à l'année.",
+          "issues_possibles": [
+            {
+              "si": "Décret de 1889 à 1926.",
+              "signifie": "Bulletin officiel.",
+              "faire": "Ouvrez sa page sur Gallica."
+            },
+            {
+              "si": "Décret de 1927 ou après.",
+              "signifie": "Deux journaux à consulter.",
+              "faire": "Commencez par le Journal officiel de la République française si vous avez une date précise."
+            },
+            {
+              "si": "Décret de 1907.",
+              "signifie": "Le catalogue de la BnF signale l'année 1907 du Bulletin officiel comme manquante.",
+              "faire": "Voyez la dernière étape (autres pistes)."
+            }
+          ],
+          "ecrans_communs": [],
+          "liens": [],
+          "verifie": false,
+          "appui": "donnees-locales",
+          "preuves": [
+            "data/samples/gallica/cat-bogga-notice.html",
+            "data/samples/gallica/cat-cb328020266.html",
+            "data/samples/gallica/cat-cb34378481r.html",
+            "data/samples/other-sources/anom/site-ce-que-vous-ne-trouverez-pas.html",
+            "docs/research/sources-2026-11/gallica.md § 6",
+            "docs/research/sources-2026-11/verification.md § gallica",
+            "docs/research/sources-2026-11/verification.md § legal-types"
+          ],
+          "a_confirmer": "Les titres et leurs dates de parution sont vérifiés dans le catalogue de la BnF. Que les admissions y paraissent année par année vient des recherches antérieures et d'indices (un numéro de 1927, un de 1936), pas d'un contrôle sur les pages."
+        },
+        {
+          "id": "d2",
+          "titre": "Ouvrir la page du périodique",
+          "instruction": "Cliquez sur le lien du périodique. Gallica s'ouvre dans un nouvel onglet.",
+          "ce_que_l_ecran_montre": "Nous n'avons pas vu cette page. Elle devrait présenter les années disponibles.",
+          "issues_possibles": [
+            {
+              "si": "La liste des années s'affiche.",
+              "signifie": "Vous êtes sur la page du périodique.",
+              "faire": "Passez à l'étape suivante."
+            },
+            {
+              "si": "Une case à cocher « je ne suis pas un robot ».",
+              "signifie": "Contrôle quotidien de Gallica.",
+              "faire": "Cochez-la.",
+              "ecran": "gallica-case-a-cocher"
+            },
+            {
+              "si": "« Sorry, you have been blocked ».",
+              "signifie": "La protection de Gallica a refusé la connexion.",
+              "faire": "Réessayez plus tard, sans VPN.",
+              "ecran": "gallica-acces-refuse"
+            },
+            {
+              "si": "« Page introuvable ».",
+              "signifie": "Le lien ne convient pas.",
+              "faire": "Cherchez le titre du périodique depuis l'accueil de Gallica.",
+              "ecran": "page-introuvable"
+            }
+          ],
+          "ecrans_communs": [
+            "gallica-case-a-cocher",
+            "gallica-acces-refuse",
+            "page-introuvable"
+          ],
+          "liens": [
+            "gallica-titre"
+          ],
+          "verifie": false,
+          "appui": "non-vu",
+          "preuves": [
+            "data/samples/gallica/10-human-date-page.html",
+            "data/samples/other-sources/anom/site-ce-que-vous-ne-trouverez-pas.html",
+            "docs/research/sources-2026-11/gallica.md § 5",
+            "docs/research/sources-2026-11/verification.md § gallica"
+          ],
+          "a_confirmer": "Gallica refuse les programmes : aucun de ses écrans n'a pu être vu par nous. À faire contrôler par un humain. Un lien de cette forme est donné par le site officiel des Archives nationales d'outre-mer."
+        },
+        {
+          "id": "d3",
+          "titre": "Choisir l'année, puis le numéro",
+          "instruction": "Choisissez l'année. Pour le Bulletin officiel, d'après les deux seules notices que nous ayons pu lire (un numéro de 1861, un de 1890), chaque numéro est un fichier à part, daté de l'année seulement : il y en aurait alors plusieurs dizaines par an, sans lien vers un jour précis. Pour les deux journaux officiels, les numéros sont datés : prenez ceux des jours et des semaines qui suivent le décret.",
+          "ce_que_l_ecran_montre": "Nous n'avons pas vu cette page : en principe un calendrier ou une liste de numéros.",
+          "issues_possibles": [
+            {
+              "si": "Les numéros de l'année s'affichent.",
+              "signifie": "Vous pouvez les ouvrir un à un.",
+              "faire": "Passez à l'étape suivante."
+            },
+            {
+              "si": "L'année n'est pas proposée.",
+              "signifie": "Elle manque dans la collection numérisée.",
+              "faire": "Voyez la dernière étape (autres pistes)."
+            },
+            {
+              "si": "Un fichier couvre plusieurs numéros, voire six mois.",
+              "signifie": "Certains fichiers regroupent plusieurs numéros.",
+              "faire": "Utilisez la recherche dans le document, à l'étape suivante."
+            }
+          ],
+          "ecrans_communs": [
+            "gallica-case-a-cocher",
+            "gallica-acces-refuse"
+          ],
+          "liens": [
+            "gallica-annee"
+          ],
+          "verifie": false,
+          "appui": "non-vu",
+          "preuves": [
+            "docs/research/sources-2026-11/gallica.md § 6.2",
+            "docs/research/sources-2026-11/gallica.md § 5.1",
+            "docs/research/sources-2026-11/verification.md § gallica"
+          ],
+          "a_confirmer": "Gallica refuse les programmes : aucun de ses écrans n'a pu être vu par nous. À faire contrôler par un humain. La façon dont les numéros sont découpés est vérifiée par les notices de la BnF, sur un échantillon."
+        },
+        {
+          "id": "d4",
+          "titre": "Trouver la page dans le numéro",
+          "instruction": "Dans le numéro ouvert, utilisez la recherche dans le document (une loupe). Tapez le nom de famille, puis chaque variante ; essayez aussi « citoyen français » et « naturalisation », qui mènent aux listes. Dans un journal officiel, regardez le sommaire de la première page, à la rubrique du ministère de la Justice.",
+          "ce_que_l_ecran_montre": "Nous n'avons pas vu cet écran ; le nom exact du bouton de recherche n'est pas contrôlé.",
+          "issues_possibles": [
+            {
+              "si": "La recherche propose des pages.",
+              "signifie": "Le mot a été lu à ces endroits.",
+              "faire": "Ouvrez-les."
+            },
+            {
+              "si": "La recherche ne propose aucune page.",
+              "signifie": "Le nom peut être mal lu par la machine, ou le texte de ce numéro n'est pas cherchable.",
+              "faire": "Feuilletez le numéro à la main ; ne concluez pas."
+            },
+            {
+              "si": "Le numéro n'a pas de texte, seulement des images.",
+              "signifie": "La reconnaissance du texte n'a pas été faite ou est trop mauvaise.",
+              "faire": "Feuilletez."
+            }
+          ],
+          "ecrans_communs": [],
+          "liens": [
+            "gallica-vue"
+          ],
+          "verifie": false,
+          "appui": "non-vu",
+          "preuves": [
+            "docs/research/sources-2026-11/gallica.md § 5.2",
+            "docs/research/sources-2026-11/gallica.md § 5.3",
+            "docs/research/sources-2026-11/verification.md § gallica"
+          ],
+          "a_confirmer": "Gallica refuse les programmes : aucun de ses écrans n'a pu être vu par nous. À faire contrôler par un humain."
+        },
+        {
+          "id": "d5",
+          "titre": "Lire la liste et retrouver le nom",
+          "instruction": "Lisez la liste entière du décret. D'après un seul exemple connu de seconde main (Journal officiel de 1927), la ligne aurait cette forme : le nom de famille en capitales, puis le prénom et le nom du père entre parenthèses, la qualité, la date et le lieu de naissance. Cherchez aussi le lieu de naissance.",
+          "ce_que_l_ecran_montre": "Nous n'avons vu aucune page de ces périodiques sur Gallica.",
+          "issues_possibles": [
+            {
+              "si": "Vous lisez le nom sur l'image.",
+              "signifie": "Vous avez trouvé la publication.",
+              "faire": "Passez à l'étape suivante."
+            },
+            {
+              "si": "Le texte de la machine déforme le nom.",
+              "signifie": "Fréquent (une lettre pour une autre).",
+              "faire": "Fiez-vous à l'image."
+            },
+            {
+              "si": "Vous ne trouvez pas le décret dans les semaines qui suivent sa date.",
+              "signifie": "Il a pu paraître plus tard, ou dans l'autre journal.",
+              "faire": "Élargissez à trois ou quatre mois, puis essayez l'autre périodique."
+            }
+          ],
+          "ecrans_communs": [],
+          "liens": [],
+          "verifie": false,
+          "appui": "non-vu",
+          "preuves": [
+            "docs/research/sources-2026-11/gallica.md § 7",
+            "docs/research/sources-2026-11/verification.md § gallica"
+          ],
+          "a_confirmer": "Aucun décret n'a été vu sur Gallica : forme des listes, ordre des noms et qualité du texte restent à constater."
+        },
+        {
+          "id": "d6",
+          "titre": "Relever la citation et l'adresse de la page",
+          "instruction": "Notez : la date du décret ; le titre du périodique ; la date du numéro (ou, pour le Bulletin officiel, l'année et le numéro) ; la page imprimée ; l'adresse de la page affichée. Ajoutez la mention « Source gallica.bnf.fr / BnF ». Attention : le « f » suivi d'un nombre dans l'adresse est le rang de l'image, pas le numéro de page imprimé.",
+          "ce_que_l_ecran_montre": "L'adresse de la page est dans la barre du navigateur.",
+          "issues_possibles": [
+            {
+              "si": "Vous avez tous les éléments.",
+              "signifie": "Votre citation est complète.",
+              "faire": "Conservez-la."
+            },
+            {
+              "si": "Vous n'êtes pas sûr du numéro de page.",
+              "signifie": "Le numéro imprimé est en haut de la page, sur l'image.",
+              "faire": "Recopiez celui de l'image."
+            }
+          ],
+          "ecrans_communs": [],
+          "liens": [],
+          "verifie": false,
+          "appui": "non-vu",
+          "preuves": [
+            "docs/research/sources-2026-11/gallica.md § 7",
+            "docs/research/sources-2026-11/gallica.md § 8",
+            "docs/research/sources-2026-11/verification.md § gallica"
+          ],
+          "a_confirmer": "Forme des adresses de page non contrôlée ; la mention de source est celle que la BnF demandait d'après une copie de ses conditions datée du 2026-01-10, non relue ce jour."
+        },
+        {
+          "id": "d7",
+          "titre": "Si l'année manque, ou si vous ne trouvez rien",
+          "instruction": "Autres pistes officielles : pour le Journal officiel de la République française à partir de 1924, Légifrance (guide suivant). La Bibliothèque nationale de France publie une page d'aide, « Trouver un décret de naturalisation », vers laquelle renvoient les Archives nationales. Il existe aussi une « Liste alphabétique des personnes ayant acquis ou perdu la nationalité française par décret » (à partir de 1900) : elle est numérisée mais se consulte seulement sur place, à la BnF et, pour 1900-1969, sur les ordinateurs de la salle des inventaires des Archives nationales à Pierrefitte-sur-Seine. Nous ne savons pas si elle recense les admissions d'Algériens.",
+          "ce_que_l_ecran_montre": "Selon la piste choisie.",
+          "issues_possibles": [
+            {
+              "si": "Vous avez la date de parution d'un Journal officiel de la République française.",
+              "signifie": "Légifrance peut l'afficher.",
+              "faire": "Suivez le guide Légifrance."
+            },
+            {
+              "si": "Vous pouvez vous rendre à Pierrefitte-sur-Seine ou à la BnF.",
+              "signifie": "La Liste alphabétique y est consultable.",
+              "faire": "Demandez-la en salle.",
+              "ecran": "document-non-numerise"
+            }
+          ],
+          "ecrans_communs": [
+            "document-non-numerise"
+          ],
+          "liens": [
+            "bnf-trouver-decret",
+            "bnf-guide-avant-1924"
+          ],
+          "verifie": true,
+          "appui": "page-officielle-lue",
+          "preuves": [
+            "data/samples/gallica/cat-cb339100205.html",
+            "data/samples/other-sources/presse/rfg-algeriens-en-quete.html",
+            "data/samples/other-sources/oups/an-trouver-decret.html",
+            "docs/research/sources-2026-11/gallica.md § 6.3",
+            "docs/research/sources-2026-11/other-sources.md § 6.2",
+            "docs/research/sources-2026-11/verification.md § other-sources"
+          ],
+          "a_confirmer": null
+        }
+      ],
+      "resultat": "La page de publication, avec son adresse, pour compléter la citation.",
+      "limites": [
+        "Gallica refuse aujourd'hui tous les programmes : ce site ne peut rien y lire à votre place, et aucun de nos liens Gallica n'a pu être essayé.",
+        "La recherche de Gallica ne voit que les textes dont la lecture par la machine est jugée assez bonne : un nom absent des résultats n'est pas un nom absent du volume.",
+        "Catalogue de la BnF : Bulletin officiel de 1861 à 1926, 1907 manquante et 1890 incomplète ; Journal officiel de la République française annoncé en ligne de 1880 à 1946, peut-être davantage."
+      ],
+      "suite": [
+        "legifrance-jorf",
+        "attestation-ministere"
+      ]
+    },
+    {
+      "id": "legifrance-jorf",
+      "cas": "e",
+      "titre": "Ouvrir un Journal officiel sur Légifrance (à partir de 1924)",
+      "pour_qui": "Vous connaissez la date de parution d'un numéro du Journal officiel de la République française.",
+      "voie": "legifrance",
+      "duree": "Quelques minutes.",
+      "ce_qu_il_vous_faut": [
+        "La date de parution du Journal officiel — pas la date du décret : la parution suit le décret de quelques jours à quelques semaines."
+      ],
+      "etapes": [
+        {
+          "id": "e1",
+          "titre": "Ouvrir Légifrance",
+          "instruction": "Ouvrez le site Légifrance.",
+          "ce_que_l_ecran_montre": "La page d'accueil du site, avec un encart « Rechercher un JO ».",
+          "issues_possibles": [
+            {
+              "si": "L'accueil s'affiche.",
+              "signifie": "Vous y êtes.",
+              "faire": "Passez à l'étape suivante."
+            },
+            {
+              "si": "Une page d'attente « Just a moment... ».",
+              "signifie": "Contrôle automatique.",
+              "faire": "Patientez quelques secondes.",
+              "ecran": "legifrance-verification"
+            }
+          ],
+          "ecrans_communs": [
+            "legifrance-verification"
+          ],
+          "liens": [
+            "legifrance-accueil",
+            "sp-f33626"
+          ],
+          "verifie": false,
+          "appui": "page-officielle-lue",
+          "preuves": [
+            "data/samples/other-sources/servicepublic/F33626-trouver-decret.html",
+            "data/samples/other-sources/legifrance/jo-1955-01-01.html.headers",
+            "docs/research/sources-2026-11/other-sources.md § 1.1"
+          ],
+          "a_confirmer": "Étape recopiée de la fiche officielle F33626 de Service-Public (vérifiée par l'administration le 23 octobre 2026). Légifrance refuse les programmes : nous n'avons pas vu cet écran."
+        },
+        {
+          "id": "e2",
+          "titre": "Indiquer la date de publication",
+          "instruction": "Dans l'encart « Rechercher un JO », indiquez la date de publication du Journal officiel recherché.",
+          "ce_que_l_ecran_montre": "Une page consacrée au Journal officiel de ce jour.",
+          "issues_possibles": [
+            {
+              "si": "La page du jour s'affiche.",
+              "signifie": "Un numéro a paru ce jour-là.",
+              "faire": "Passez à l'étape suivante."
+            },
+            {
+              "si": "Aucun numéro à cette date.",
+              "signifie": "Le Journal officiel ne paraissait pas tous les jours, ou la date est inexacte.",
+              "faire": "Essayez les jours voisins."
+            },
+            {
+              "si": "Vous n'avez que la date du décret.",
+              "signifie": "Il faut chercher dans les jours et semaines qui suivent.",
+              "faire": "Essayez d'abord dix à douze jours après le décret (c'est le délai des deux seuls cas que nous connaissons, en 1927 et en 1936), puis élargissez."
+            }
+          ],
+          "ecrans_communs": [],
+          "liens": [],
+          "verifie": false,
+          "appui": "page-officielle-lue",
+          "preuves": [
+            "data/samples/other-sources/servicepublic/F33626-trouver-decret.html",
+            "docs/research/sources-2026-11/other-sources.md § 1.1",
+            "docs/research/sources-2026-11/verification.md § gallica"
+          ],
+          "a_confirmer": "Étape recopiée de la fiche officielle F33626 de Service-Public (vérifiée par l'administration le 23 octobre 2026). Légifrance refuse les programmes : nous n'avons pas vu cet écran."
+        },
+        {
+          "id": "e3",
+          "titre": "Choisir la version papier numérisée",
+          "instruction": "Sur la page qui s'affiche, cliquez sur le lien « Journal officiel de la République française. Lois et décrets (version papier numérisée) ». Pour un numéro de 1976 à 1984, le lien s'appelle « Journal officiel de la République française. Lois et décrets. Numéro complémentaire (version papier numérisée) ».",
+          "ce_que_l_ecran_montre": "Un lien portant exactement ce nom.",
+          "issues_possibles": [
+            {
+              "si": "Le lien est là.",
+              "signifie": "Le numéro est numérisé.",
+              "faire": "Cliquez."
+            },
+            {
+              "si": "Le lien n'apparaît pas.",
+              "signifie": "Le numéro n'est peut-être pas numérisé à cette date.",
+              "faire": "Vérifiez la date ; pour une date antérieure à 1924, passez par Gallica."
+            }
+          ],
+          "ecrans_communs": [],
+          "liens": [],
+          "verifie": false,
+          "appui": "page-officielle-lue",
+          "preuves": [
+            "data/samples/other-sources/servicepublic/F33626-trouver-decret.html",
+            "docs/research/sources-2026-11/other-sources.md § 1.1"
+          ],
+          "a_confirmer": "Étape recopiée de la fiche officielle F33626 de Service-Public (vérifiée par l'administration le 23 octobre 2026). Légifrance refuse les programmes : nous n'avons pas vu cet écran."
+        },
+        {
+          "id": "e4",
+          "titre": "Résoudre le petit calcul",
+          "instruction": "Le site demande de résoudre un captcha : « un petit calcul simple qui permet de sécuriser l'accès à la page ».",
+          "ce_que_l_ecran_montre": "Une opération à résoudre.",
+          "issues_possibles": [
+            {
+              "si": "Le calcul est accepté.",
+              "signifie": "L'accès est ouvert.",
+              "faire": "Passez à l'étape suivante."
+            },
+            {
+              "si": "Le calcul est refusé.",
+              "signifie": "Erreur de saisie.",
+              "faire": "Recommencez.",
+              "ecran": "legifrance-petit-calcul"
+            }
+          ],
+          "ecrans_communs": [
+            "legifrance-petit-calcul"
+          ],
+          "liens": [],
+          "verifie": false,
+          "appui": "page-officielle-lue",
+          "preuves": [
+            "data/samples/other-sources/servicepublic/F33626-trouver-decret.html",
+            "docs/research/sources-2026-11/other-sources.md § 1.1"
+          ],
+          "a_confirmer": "Étape recopiée de la fiche officielle F33626 de Service-Public (vérifiée par l'administration le 23 octobre 2026). Légifrance refuse les programmes : nous n'avons pas vu cet écran."
+        },
+        {
+          "id": "e5",
+          "titre": "Consulter le document et aller à la page",
+          "instruction": "Cliquez sur « Consulter le document ». Le numéro entier s'ouvre en PDF. Allez à la page voulue, ou parcourez le sommaire de la première page, à la rubrique du ministère de la Justice. Ne comptez pas sur une recherche par nom : ce sont des images du journal imprimé.",
+          "ce_que_l_ecran_montre": "Un fichier PDF : l'image du journal imprimé, en colonnes.",
+          "issues_possibles": [
+            {
+              "si": "Vous trouvez le décret et le nom.",
+              "signifie": "Vous tenez la publication.",
+              "faire": "Notez la date du numéro et la page ; conservez le fichier."
+            },
+            {
+              "si": "Le numéro ne contient pas de décret nominatif.",
+              "signifie": "Ce n'est pas le bon jour.",
+              "faire": "Essayez les numéros voisins."
+            },
+            {
+              "si": "Le fichier est très lourd ou ne s'ouvre pas.",
+              "signifie": "Fichier volumineux.",
+              "faire": "Enregistrez-le d'abord, puis ouvrez-le."
+            }
+          ],
+          "ecrans_communs": [],
+          "liens": [],
+          "verifie": false,
+          "appui": "page-officielle-lue",
+          "preuves": [
+            "data/samples/other-sources/servicepublic/F33626-trouver-decret.html",
+            "data/samples/other-sources/wikimedia/JORF-1947-12-31-page1.jpg",
+            "docs/research/sources-2026-11/other-sources.md § 1.3",
+            "docs/research/sources-2026-11/verification.md § other-sources"
+          ],
+          "a_confirmer": "Étape recopiée de la fiche officielle F33626 de Service-Public (vérifiée par l'administration le 23 octobre 2026). Légifrance refuse les programmes : nous n'avons pas vu cet écran."
+        }
+      ],
+      "resultat": "Le fac-similé de la page du Journal officiel où le décret a été publié.",
+      "limites": [
+        "La fiche officielle dit que les décrets de naturalisation sont publiés au Journal officiel de la République française depuis 1924. Nous n'avons pas pu constater nous-mêmes que les décrets d'admission d'Algériens s'y trouvent, ni sur Légifrance ni ailleurs.",
+        "Un fac-similé antérieur au 2 juin 2004 ne porte pas de signature électronique, précise la fiche officielle.",
+        "Nous connaissons un lien direct possible vers le journal d'une date ; il n'a jamais été essayé et n'est pas proposé."
+      ],
+      "suite": [
+        "attestation-ministere"
+      ]
+    },
+    {
+      "id": "dossier-pierrefitte",
+      "cas": "f",
+      "titre": "Consulter ou commander le dossier de la demande",
+      "pour_qui": "Vous avez trouvé le décret et vous voulez lire le dossier que l'administration avait constitué.",
+      "voie": "dossier-aux-archives-nationales",
+      "duree": "Deux semaines en moyenne pour une réservation sur place ; délai non connu pour une reproduction à distance.",
+      "ce_qu_il_vous_faut": [
+        "Le numéro du dossier (de la forme « 0000 X 12 » : un nombre, la lettre X, deux chiffres d'année ; ce numéro-ci est inventé).",
+        "Si possible sa cote : « BB/11/… », ou un numéro de versement à huit chiffres suivi d'une barre (« 19770872/3 »)."
+      ],
+      "etapes": [
+        {
+          "id": "f1",
+          "titre": "Savoir ce qu'est ce dossier, et ce qu'il n'est pas",
+          "instruction": "Les Archives nationales conservent à Pierrefitte-sur-Seine les dossiers de demande. Elles préviennent : « Les dossiers de demande de naturalisation conservés aux Archives nationales sont des dossiers d'instruction. Les pièces qu'ils contiennent ne sont pas des preuves de nationalité. » Le dossier éclaire l'histoire de la demande ; il ne remplace ni le décret ni sa publication.",
+          "ce_que_l_ecran_montre": "La page officielle « Dossiers de demande de naturalisation » des Archives nationales.",
+          "issues_possibles": [
+            {
+              "si": "Vous cherchez une preuve.",
+              "signifie": "Ce n'est pas le dossier qu'il vous faut, mais la publication du décret.",
+              "faire": "Revenez au guide de la publication."
+            },
+            {
+              "si": "Vous voulez connaître l'histoire de la demande.",
+              "signifie": "Le dossier est la bonne source.",
+              "faire": "Continuez."
+            }
+          ],
+          "ecrans_communs": [],
+          "liens": [
+            "an-page-dossiers"
+          ],
+          "verifie": true,
+          "appui": "ecran-vu",
+          "preuves": [
+            "data/samples/an-remote/an-dossiers-naturalisation.body",
+            "docs/research/sources-2026-11/an-remote.md § 7"
+          ],
+          "a_confirmer": null
+        },
+        {
+          "id": "f2",
+          "titre": "Réunir le numéro du dossier et sa cote",
+          "instruction": "Le numéro du dossier se lit sur la fiche de ce site, ou dans la marge du décret. La cote du carton figure souvent sur la fiche. Ne confondez pas : « BB/34 » désigne le décret, « BB/11 » ou un numéro de versement désigne le dossier.",
+          "ce_que_l_ecran_montre": "Sur la fiche de ce site : deux lignes, « numéro de dossier » et « cote du dossier ».",
+          "issues_possibles": [
+            {
+              "si": "Vous avez le numéro et la cote.",
+              "signifie": "Vous pouvez commander.",
+              "faire": "Passez à l'étape suivante."
+            },
+            {
+              "si": "Vous avez le numéro, mais pas la cote.",
+              "signifie": "C'est le cas d'environ une personne sur vingt dans l'index (par exemple en 1886, en 1894, début 1928).",
+              "faire": "Les Archives nationales expliquent comment passer du numéro à la cote dans leur fiche d'aide « Rechercher un dossier de demande de naturalisation » ; ne devinez pas la cote."
+            },
+            {
+              "si": "Vous n'avez ni l'un ni l'autre.",
+              "signifie": "Le décret vient d'une année en images seules.",
+              "faire": "Relevez d'abord le numéro dans la marge du décret."
+            },
+            {
+              "si": "Le numéro n'a pas la forme « nombre X année ».",
+              "signifie": "Des variantes existent (« x » minuscule, « BX », « bis », ou un commentaire ajouté).",
+              "faire": "Recopiez-le tel quel."
+            }
+          ],
+          "ecrans_communs": [],
+          "liens": [
+            "an-fiche-dossier",
+            "an-page-dossiers"
+          ],
+          "verifie": true,
+          "appui": "donnees-locales",
+          "preuves": [
+            "docs/research/sources-2026-11/verification.md § an-remote",
+            "docs/research/sources-2026-11/an-remote.md § 7",
+            "docs/research/sources-2026-11/legal-types.md § 4"
+          ],
+          "a_confirmer": null
+        },
+        {
+          "id": "f3",
+          "titre": "Créer un espace personnel sur le site des Archives nationales",
+          "instruction": "La commande d'un dossier, sur place ou à distance, passe par un espace personnel de la Salle de lecture virtuelle. L'inscription est « ouverte à toutes et tous à partir de 10 ans ».",
+          "ce_que_l_ecran_montre": "Nous n'avons pas vu l'écran d'inscription.",
+          "issues_possibles": [
+            {
+              "si": "Le formulaire d'inscription s'affiche.",
+              "signifie": "Remplissez-le.",
+              "faire": "Notez votre identifiant."
+            },
+            {
+              "si": "« Erreur 503 ».",
+              "signifie": "Site indisponible.",
+              "faire": "Réessayez plus tard.",
+              "ecran": "an-erreur-503"
+            },
+            {
+              "si": "Le site propose FranceConnect.",
+              "signifie": "C'est une autre façon de se connecter, réservée à qui a un compte administratif français.",
+              "faire": "Vous pouvez l'ignorer et créer un espace personnel ordinaire.",
+              "ecran": "an-ecran-de-connexion"
+            }
+          ],
+          "ecrans_communs": [
+            "an-erreur-503",
+            "an-ecran-de-connexion"
+          ],
+          "liens": [
+            "an-espace-personnel"
+          ],
+          "verifie": false,
+          "appui": "page-officielle-lue",
+          "preuves": [
+            "data/samples/an-remote/an-consulter-utiliser.body",
+            "data/samples/an-remote/an-reutilisation.body",
+            "docs/research/sources-2026-11/an-remote.md § 7"
+          ],
+          "a_confirmer": "Lien et conditions lus sur le portail des Archives nationales ; écran d'inscription non vu."
+        },
+        {
+          "id": "f4",
+          "titre": "Sur place : réserver le dossier « par extrait »",
+          "instruction": "Si vous pouvez aller à Pierrefitte-sur-Seine : commandez la cote dans la Salle de lecture virtuelle. Un message vous avertit qu'il s'agit d'une communication « par extrait ». Il faut alors, d'après les Archives nationales : retourner à la liste de cotes, cocher la cote, choisir « Consultation d'un extrait d'une cote », décrire précisément le dossier voulu (nom, numéro de dossier) et le motif, puis cliquer sur « Soumettre la demande ».",
+          "ce_que_l_ecran_montre": "Nous n'avons pas vu les écrans de commande.",
+          "issues_possibles": [
+            {
+              "si": "Un courriel vous annonce le jour de mise à disposition.",
+              "signifie": "Le délai moyen annoncé est de deux semaines.",
+              "faire": "Le dossier vous attend 21 jours en salle de lecture ; vous pouvez prolonger."
+            },
+            {
+              "si": "Vous voulez plus de cinq dossiers.",
+              "signifie": "La consultation est limitée à 5 dossiers par personne et par semaine.",
+              "faire": "Étalez vos demandes."
+            },
+            {
+              "si": "La cote est indiquée comme non communicable.",
+              "signifie": "Certains versements sont suspendus (une liste est publiée pour suspicion d'amiante ; les versements de 1931-1932 que nous connaissons n'y figuraient pas le 2026-11-11).",
+              "faire": "Demandez aux Archives nationales quand la communication reprendra."
+            },
+            {
+              "si": "« Erreur 503 ».",
+              "signifie": "Site indisponible.",
+              "faire": "Réessayez plus tard.",
+              "ecran": "an-erreur-503"
+            }
+          ],
+          "ecrans_communs": [
+            "an-erreur-503"
+          ],
+          "liens": [
+            "an-page-extraits"
+          ],
+          "verifie": false,
+          "appui": "page-officielle-lue",
+          "preuves": [
+            "data/samples/an-remote/an-extraits-de-cote.body",
+            "data/samples/an-remote/an-dossiers-naturalisation.body",
+            "data/samples/an-remote/mm-annexe-get.body",
+            "docs/research/sources-2026-11/an-remote.md § 7",
+            "docs/research/sources-2026-11/an-remote.md § 3.6"
+          ],
+          "a_confirmer": "Procédure recopiée de la page officielle ; aucun écran de commande n'a été vu."
+        },
+        {
+          "id": "f5",
+          "titre": "À distance : demander une reproduction",
+          "instruction": "Si vous ne pouvez pas vous déplacer : les Archives nationales proposent une reproduction à distance, payante, depuis l'espace personnel, « si vous connaissez la cote des documents ». Trois temps : vous donnez les informations précises qui identifient le dossier ; vous recevez une facture ; après paiement, vous recevez un lien de téléchargement.",
+          "ce_que_l_ecran_montre": "Nous n'avons pas vu les écrans de demande, ni lu le tarif.",
+          "issues_possibles": [
+            {
+              "si": "Vous recevez une facture.",
+              "signifie": "La demande a été instruite.",
+              "faire": "Le lien de téléchargement suit le paiement."
+            },
+            {
+              "si": "On vous demande des précisions.",
+              "signifie": "Le dossier n'a pas pu être identifié.",
+              "faire": "Donnez le nom complet, la date du décret, le numéro du dossier et la cote."
+            },
+            {
+              "si": "Le prix vous paraît élevé.",
+              "signifie": "Le tarif est fixé par les Archives nationales ; nous ne l'avons pas lu.",
+              "faire": "Consultez la page officielle sur la reproduction avant de vous engager."
+            }
+          ],
+          "ecrans_communs": [],
+          "liens": [
+            "an-page-reutilisation"
+          ],
+          "verifie": false,
+          "appui": "page-officielle-lue",
+          "preuves": [
+            "data/samples/an-remote/an-reutilisation.body",
+            "docs/research/sources-2026-11/an-remote.md § 7"
+          ],
+          "a_confirmer": "Procédure recopiée de la page officielle ; écrans et tarifs non vus."
+        }
+      ],
+      "resultat": "Le dossier d'instruction, lu sur place ou reçu en fichier.",
+      "limites": [
+        "Rien, dans les pages lues, ne dit que ces dossiers sont numérisés : la consultation sur place et la reproduction à la demande sont les seules voies décrites.",
+        "Le dossier n'est pas une preuve de nationalité : ce sont les Archives nationales qui l'écrivent."
+      ],
+      "suite": [
+        "attestation-ministere"
+      ]
+    },
+    {
+      "id": "attestation-ministere",
+      "cas": "g",
+      "titre": "Demander une attestation au ministère",
+      "pour_qui": "Vous tenez la citation d'un décret et vous voulez un document officiel qui l'atteste.",
+      "voie": "demande-au-ministere",
+      "duree": "Inconnue.",
+      "ce_qu_il_vous_faut": [
+        "La citation : date du décret, publication, page.",
+        "L'identité complète de l'ancêtre.",
+        "Les actes d'état civil qui montrent votre lien avec lui."
+      ],
+      "etapes": [
+        {
+          "id": "g1",
+          "titre": "Avoir la citation d'abord",
+          "instruction": "N'écrivez pas avant d'avoir la date du décret et sa publication. Une demande qui ne donne qu'un nom oblige le service à chercher dans ses fichiers ; et une recherche qui ne trouve rien ne produit aucun document.",
+          "ce_que_l_ecran_montre": "Rien à l'écran.",
+          "issues_possibles": [
+            {
+              "si": "Vous avez la citation.",
+              "signifie": "Vous pouvez écrire.",
+              "faire": "Passez à l'étape suivante."
+            },
+            {
+              "si": "Vous n'avez qu'un nom.",
+              "signifie": "La demande a peu de chances d'aboutir.",
+              "faire": "Revenez à la recherche."
+            }
+          ],
+          "ecrans_communs": [],
+          "liens": [
+            "cada-20183182"
+          ],
+          "verifie": true,
+          "appui": "page-officielle-lue",
+          "preuves": [
+            "data/samples/other-sources/divers/cada-20183182.html",
+            "docs/research/sources-2026-11/other-sources.md § 5.1"
+          ],
+          "a_confirmer": null
+        },
+        {
+          "id": "g2",
+          "titre": "Savoir à qui écrire",
+          "instruction": "Le service compétent est la Sous-direction de l'accès à la nationalité française, au ministère de l'Intérieur. D'après l'annuaire officiel (modifié le 28 septembre 2026) : adresse postale 12 rue Francis-le-Carval, 44404 Rezé Cedex ; adresse électronique sdanf-accueil@interieur.gouv.fr ; téléphone 02 40 84 46 00 ; « Ce service ne reçoit pas de public ».",
+          "ce_que_l_ecran_montre": "La fiche du service dans l'annuaire de l'administration.",
+          "issues_possibles": [
+            {
+              "si": "Vous trouvez ailleurs une autre rue (« 93 bis, rue de la Commune de 1871 ») ou une autre adresse électronique (sdanf-brupi-communications@interieur.gouv.fr).",
+              "signifie": "Ces variantes figurent sur d'autres pages officielles ; le code postal « 44404 Rezé Cedex » est le même.",
+              "faire": "Prenez celles de l'annuaire, les plus récentes, et vérifiez-les le jour où vous écrivez."
+            },
+            {
+              "si": "Vous voulez vous déplacer.",
+              "signifie": "Le service ne reçoit pas de public.",
+              "faire": "Écrivez."
+            }
+          ],
+          "ecrans_communs": [],
+          "liens": [
+            "sp-annuaire-sdanf",
+            "interieur-saisine"
+          ],
+          "verifie": true,
+          "appui": "ecran-vu",
+          "preuves": [
+            "data/samples/other-sources/servicepublic/annuaire-sdanf-167318.html",
+            "data/samples/other-sources/servicepublic/F33626-trouver-decret.html",
+            "data/samples/other-sources/anom/site-ce-que-vous-ne-trouverez-pas.html",
+            "docs/research/sources-2026-11/other-sources.md § 5.1",
+            "docs/research/sources-2026-11/verification.md § other-sources"
+          ],
+          "a_confirmer": null
+        },
+        {
+          "id": "g3",
+          "titre": "Écrire la demande",
+          "instruction": "Donnez : le nom, les prénoms et la filiation de l'ancêtre, sa date et son lieu de naissance ; la date du décret ; la publication et la page ; votre lien de parenté, avec les copies des actes qui l'établissent. Demandez une attestation du décret d'admission pris en application du sénatus-consulte du 14 juillet 1865. Appuyez-vous sur la phrase du ministère de la Justice : pour un tel décret, « une attestation peut être délivrée par le ministère chargé des naturalisations ».",
+          "ce_que_l_ecran_montre": "Rien à l'écran : c'est un courrier.",
+          "issues_possibles": [
+            {
+              "si": "Vous recevez l'attestation.",
+              "signifie": "La démarche a abouti.",
+              "faire": "Conservez l'original."
+            },
+            {
+              "si": "Le service répond qu'il n'a rien trouvé.",
+              "signifie": "Une recherche négative ne produit aucun document ; c'est ce qu'a constaté la commission d'accès aux documents administratifs dans un avis de 2018.",
+              "faire": "Vérifiez votre citation ; la page publiée reste, elle, consultable par tous."
+            },
+            {
+              "si": "On vous demande d'autres pièces.",
+              "signifie": "La liste des pièces n'est décrite nulle part à notre connaissance.",
+              "faire": "Fournissez-les."
+            },
+            {
+              "si": "Pas de réponse.",
+              "signifie": "Nous ne connaissons pas les délais.",
+              "faire": "Relancez par écrit."
+            }
+          ],
+          "ecrans_communs": [],
+          "liens": [
+            "senat-qe-17313"
+          ],
+          "verifie": false,
+          "appui": "page-officielle-lue",
+          "preuves": [
+            "data/samples/other-sources/senat/qSEQ050417313.html",
+            "data/samples/other-sources/divers/cada-20183182.html",
+            "docs/research/sources-2026-11/other-sources.md § 5.1",
+            "docs/research/sources-2026-11/verification.md § other-sources"
+          ],
+          "a_confirmer": "Aucune page officielle lue ne décrit la procédure ni les pièces pour l'attestation d'un décret ancien demandée par un descendant. Ce modèle de demande est une proposition, fondée sur une phrase d'une réponse ministérielle de 2006."
+        }
+      ],
+      "resultat": "Une attestation officielle du décret, si le ministère la délivre.",
+      "limites": [
+        "Les Archives nationales d'outre-mer renvoient à ce service pour toute demande de copie officielle d'un décret ; les Archives nationales renvoient, pour la copie authentifiée d'un décret, à la fiche officielle F33626.",
+        "Ce site ne délivre aucun document et n'intervient pas dans cette démarche."
+      ],
+      "suite": [
+        "certificat-nationalite"
+      ]
+    },
+    {
+      "id": "jugement-etat-civil-algerie",
+      "cas": "h",
+      "titre": "Jugement d'admission : la démarche se fait en Algérie",
+      "pour_qui": "L'ancêtre a pu être admis par jugement (à partir de 1919), ou un acte porte une mention de jugement.",
+      "voie": "etat-civil-en-algerie",
+      "duree": "Inconnue.",
+      "ce_qu_il_vous_faut": [
+        "La commune de naissance de l'ancêtre, et si possible celle de son mariage.",
+        "Une personne sur place peut aider."
+      ],
+      "etapes": [
+        {
+          "id": "h1",
+          "titre": "Demander la copie intégrale de l'acte, avec ses mentions en marge",
+          "instruction": "Demandez à la commune de naissance de l'ancêtre, en Algérie, une copie intégrale de son acte de naissance — et de son acte de mariage — avec toutes les mentions marginales. Sur place, ou par un proche. Insistez sur « copie intégrale avec mentions marginales » : c'est la marge qui compte.",
+          "ce_que_l_ecran_montre": "Rien à l'écran : c'est une démarche au guichet ou par courrier.",
+          "issues_possibles": [
+            {
+              "si": "Vous obtenez la copie intégrale.",
+              "signifie": "Vous pouvez lire la marge.",
+              "faire": "Passez à l'étape suivante."
+            },
+            {
+              "si": "On vous remet un extrait, sans la marge.",
+              "signifie": "Ce n'est pas le document utile ici.",
+              "faire": "Redemandez la copie intégrale avec les mentions."
+            },
+            {
+              "si": "L'acte est introuvable.",
+              "signifie": "Registre manquant, ou naissance déclarée ailleurs.",
+              "faire": "Essayez l'acte de mariage, ou la commune voisine."
+            },
+            {
+              "si": "L'ancêtre n'avait pas d'acte de naissance.",
+              "signifie": "La loi de 1919 prévoyait alors que la mention soit portée sur un acte de notoriété, déposé au greffe et à la mairie.",
+              "faire": "Demandez cet acte de notoriété."
+            }
+          ],
+          "ecrans_communs": [],
+          "liens": [],
+          "verifie": false,
+          "appui": "non-vu",
+          "preuves": [
+            "data/samples/legal-types/mjp-loi-1919-02-04.txt",
+            "docs/research/sources-2026-11/other-sources.md § 5.3",
+            "docs/research/sources-2026-11/verification.md § other-sources"
+          ],
+          "a_confirmer": "Aucun site officiel algérien n'a pu être lu : nous ne donnons donc aucune adresse en ligne, et nous ne savons pas comment la demande se fait aujourd'hui. Seul ce que prévoyait la loi de 1919 est vérifié."
+        },
+        {
+          "id": "h2",
+          "titre": "Lire la marge",
+          "instruction": "Cherchez dans la marge une mention d'admission à la qualité de citoyen français. La loi de 1919 disait : « Mention de cette déclaration sera faite en marge de l'acte de naissance et de l'acte de mariage du postulant. » Elle devrait indiquer le tribunal et la date du jugement.",
+          "ce_que_l_ecran_montre": "Nous n'avons vu aucun exemple de cette mention.",
+          "issues_possibles": [
+            {
+              "si": "Une mention cite un jugement, un tribunal, une date.",
+              "signifie": "Un jugement a existé.",
+              "faire": "Passez à l'étape suivante."
+            },
+            {
+              "si": "Aucune mention.",
+              "signifie": "Cela ne suffit pas à dire qu'il n'y a pas eu de jugement, mais c'était la seule trace prévue par la loi.",
+              "faire": "Vérifiez aussi l'acte de mariage."
+            },
+            {
+              "si": "La mention est illisible ou abrégée.",
+              "signifie": "Écriture ou photocopie défaillante.",
+              "faire": "Demandez une copie plus nette, ou la lecture par l'officier d'état civil."
+            }
+          ],
+          "ecrans_communs": [],
+          "liens": [],
+          "verifie": false,
+          "appui": "non-vu",
+          "preuves": [
+            "data/samples/legal-types/mjp-loi-1919-02-04.txt",
+            "docs/research/sources-2026-11/legal-types.md § 3 (T7)",
+            "docs/research/sources-2026-11/verification.md § legal-types"
+          ],
+          "a_confirmer": "Texte de la loi vérifié ; aucune mention réelle n'a été vue."
+        },
+        {
+          "id": "h3",
+          "titre": "Demander le jugement au tribunal",
+          "instruction": "Avec le tribunal et la date, demandez une expédition (une copie officielle) du jugement au tribunal qui l'a rendu, ou au service d'archives judiciaires dont il dépend, en Algérie. Les Archives nationales écrivent : « Il faut s'adresser aux services algériens en charge de la conservation des archives judiciaires. » Les Archives nationales d'outre-mer : « Il convient donc de s'adresser aux tribunaux ou aux services d'archives des pays concernés. »",
+          "ce_que_l_ecran_montre": "Rien à l'écran.",
+          "issues_possibles": [
+            {
+              "si": "Vous obtenez l'expédition du jugement.",
+              "signifie": "C'est le document que demandent les tribunaux français.",
+              "faire": "Conservez l'original."
+            },
+            {
+              "si": "Le tribunal ne retrouve pas le jugement.",
+              "signifie": "Le ministère de la Justice a reconnu que ces décisions n'avaient pas fait l'objet de mesures particulières de conservation.",
+              "faire": "Demandez une réponse écrite ; gardez la copie de l'acte avec sa mention."
+            },
+            {
+              "si": "Vous cherchez ce jugement en France.",
+              "signifie": "Il n'y est pas : les archives judiciaires sont restées en Algérie.",
+              "faire": "N'écrivez ni aux Archives nationales ni à Aix-en-Provence pour cela."
+            }
+          ],
+          "ecrans_communs": [],
+          "liens": [
+            "spplus-an-jugement",
+            "anom-ce-que-vous-ne-trouverez-pas",
+            "an-page-dossiers"
+          ],
+          "verifie": false,
+          "appui": "page-officielle-lue",
+          "preuves": [
+            "data/samples/other-sources/oups/algerie-ancetre-devenu.html",
+            "data/samples/other-sources/anom/site-ce-que-vous-ne-trouverez-pas.html",
+            "data/samples/an-remote/an-dossiers-naturalisation.body",
+            "data/samples/other-sources/senat/qSEQ910716358.html",
+            "docs/research/sources-2026-11/other-sources.md § 5.3"
+          ],
+          "a_confirmer": "Les renvois des administrations françaises sont vérifiés ; la démarche auprès des tribunaux algériens ne l'est pas. La page officielle française donne, pour leurs coordonnées, une adresse web qui n'existe plus."
+        },
+        {
+          "id": "h4",
+          "titre": "Savoir ce que vaut chaque pièce",
+          "instruction": "La mention en marge est un indice précieux : elle dit qu'un jugement a existé, où et quand. Mais d'après le ministère de la Justice, c'est le jugement lui-même qui est demandé : « La production de ce titre est essentielle et la mention en marge apposée sur une copie d'acte d'état civil ne saurait s'y substituer. »",
+          "ce_que_l_ecran_montre": "La réponse ministérielle, publiée au Journal officiel du Sénat du 9 mars 2006.",
+          "issues_possibles": [
+            {
+              "si": "Vous avez la mention mais pas le jugement.",
+              "signifie": "Vous savez qu'il a existé.",
+              "faire": "Continuez à le demander."
+            },
+            {
+              "si": "Vous avez le jugement.",
+              "signifie": "Vous tenez le titre.",
+              "faire": "Ce site ne peut rien dire de la suite : voyez la fiche officielle sur le certificat de nationalité."
+            }
+          ],
+          "ecrans_communs": [],
+          "liens": [
+            "senat-qe-17313"
+          ],
+          "verifie": true,
+          "appui": "ecran-vu",
+          "preuves": [
+            "data/samples/other-sources/senat/qSEQ050417313.html",
+            "data/samples/legal-types/senat-qe-17313-2005.txt"
+          ],
+          "a_confirmer": null
+        }
+      ],
+      "resultat": "La copie de l'acte avec sa mention, puis, si le tribunal le retrouve, l'expédition du jugement.",
+      "limites": [
+        "Ces jugements n'ont jamais été publiés : aucun site, aucune base ne peut les afficher.",
+        "Tout ce qui se passe en Algérie dans cette démarche est hors de ce que nous avons pu vérifier."
+      ],
+      "suite": [
+        "certificat-nationalite"
+      ]
+    },
+    {
+      "id": "declaration-recognitive",
+      "cas": "i",
+      "titre": "Déclaration de reconnaissance de la nationalité française (1962-1967)",
+      "pour_qui": "L'ancêtre vivait en France après l'indépendance et y a signé une déclaration.",
+      "voie": "declaration-recognitive",
+      "duree": "Inconnue.",
+      "ce_qu_il_vous_faut": [
+        "L'identité complète du déclarant.",
+        "La ville où il vivait entre 1962 et 1967, et l'année probable."
+      ],
+      "etapes": [
+        {
+          "id": "i1",
+          "titre": "Rassembler ce que vous savez",
+          "instruction": "Notez le nom, les prénoms, la date et le lieu de naissance du déclarant, la ville de France où il vivait entre 1962 et 1967, et l'année probable de la déclaration. Elle se signait devant le tribunal d'instance du domicile.",
+          "ce_que_l_ecran_montre": "Rien à l'écran.",
+          "issues_possibles": [
+            {
+              "si": "Vous connaissez la ville.",
+              "signifie": "Vous pouvez écrire aux deux services.",
+              "faire": "Passez à l'étape suivante."
+            },
+            {
+              "si": "Vous ne connaissez pas la ville.",
+              "signifie": "Seul le ministère pourra chercher.",
+              "faire": "Écrivez au ministère."
+            }
+          ],
+          "ecrans_communs": [],
+          "liens": [],
+          "verifie": true,
+          "appui": "page-officielle-lue",
+          "preuves": [
+            "data/samples/legal-types/senat-rapport-1966-1967-089.txt",
+            "data/samples/other-sources/divers/guichetdusavoir-q132950.html",
+            "docs/research/sources-2026-11/other-sources.md § 6.1"
+          ],
+          "a_confirmer": null
+        },
+        {
+          "id": "i2",
+          "titre": "Écrire à la Sous-direction de l'accès à la nationalité française",
+          "instruction": "Les Archives nationales indiquent que les dossiers de déclaration recognitive ouverts entre 1963 et 1971 sont conservés par ce service du ministère de l'Intérieur, et y renvoient. Adresse de l'annuaire officiel : 12 rue Francis-le-Carval, 44404 Rezé Cedex ; sdanf-accueil@interieur.gouv.fr.",
+          "ce_que_l_ecran_montre": "La fiche du service dans l'annuaire de l'administration.",
+          "issues_possibles": [
+            {
+              "si": "Le service retrouve la déclaration.",
+              "signifie": "Il vous dira ce qu'il peut délivrer.",
+              "faire": "Suivez ses indications."
+            },
+            {
+              "si": "Le service ne trouve rien.",
+              "signifie": "Une recherche négative ne produit aucun document.",
+              "faire": "Essayez les archives départementales (étape suivante)."
+            },
+            {
+              "si": "Pas de réponse.",
+              "signifie": "Délais inconnus.",
+              "faire": "Relancez par écrit."
+            }
+          ],
+          "ecrans_communs": [],
+          "liens": [
+            "sp-annuaire-sdanf",
+            "spplus-an-recognitive",
+            "an-page-dossiers"
+          ],
+          "verifie": true,
+          "appui": "ecran-vu",
+          "preuves": [
+            "data/samples/an-remote/an-dossiers-naturalisation.body",
+            "data/samples/other-sources/oups/algerie-ancetre-devenu-0.html",
+            "data/samples/other-sources/servicepublic/annuaire-sdanf-167318.html",
+            "data/samples/other-sources/divers/cada-20183182.html",
+            "docs/research/sources-2026-11/other-sources.md § 6.1"
+          ],
+          "a_confirmer": null
+        },
+        {
+          "id": "i3",
+          "titre": "Écrire aux archives du département",
+          "instruction": "Les Archives nationales d'outre-mer renvoient, elles, aux « Archives départementales du lieu où cette déclaration a été faite ». Ces déclarations se trouvent parfois dans les archives du tribunal d'instance. Un exemple : aux Archives du Rhône, un registre du tribunal d'instance de Lyon, « déclaration récognitive (indépendance de l'Algérie) », 1962-1968.",
+          "ce_que_l_ecran_montre": "Sur le site d'un service d'archives départementales : une notice d'inventaire, sans image.",
+          "issues_possibles": [
+            {
+              "si": "Le fonds existe et vous y avez accès.",
+              "signifie": "Vous pourrez le consulter ou en demander copie.",
+              "faire": "Suivez les indications du service."
+            },
+            {
+              "si": "Le fonds existe mais n'est pas encore communicable.",
+              "signifie": "Dans l'exemple du Rhône, l'inventaire indique « Communicable au bout de 75 ans à partir de 1968 ».",
+              "faire": "Demandez au service s'il existe une procédure pour les descendants."
+            },
+            {
+              "si": "Le service n'a rien.",
+              "signifie": "Toutes les archives départementales n'ont pas reçu ces registres.",
+              "faire": "Reste le ministère."
+            },
+            {
+              "si": "Aucune image en ligne.",
+              "signifie": "Ces registres ne sont pas numérisés.",
+              "faire": "Écrivez au service.",
+              "ecran": "document-non-numerise"
+            }
+          ],
+          "ecrans_communs": [
+            "document-non-numerise"
+          ],
+          "liens": [
+            "anom-ce-que-vous-ne-trouverez-pas",
+            "ad-rhone-exemple-declarations"
+          ],
+          "verifie": true,
+          "appui": "ecran-vu",
+          "preuves": [
+            "data/samples/other-sources/anom/site-ce-que-vous-ne-trouverez-pas.html",
+            "data/samples/other-sources/declarations/ad69-4977W27-declaration-recognitive.html",
+            "data/samples/other-sources/divers/guichetdusavoir-q132950.html",
+            "docs/research/sources-2026-11/other-sources.md § 6.1"
+          ],
+          "a_confirmer": null
+        }
+      ],
+      "resultat": "La trace de la déclaration, si l'un des deux services la retrouve.",
+      "limites": [
+        "Nous n'avons lu ni le décret de 1962 qui organisait ces déclarations, ni aucune déclaration réelle.",
+        "La procédure pour obtenir une copie n'est décrite par aucune page officielle que nous ayons lue.",
+        "La date limite est écrite « avant le 21 mars 1967 » dans un texte officiel et « avant le 22 mars 1967 » dans un autre."
+      ],
+      "suite": [
+        "certificat-nationalite"
+      ]
+    },
+    {
+      "id": "certificat-nationalite",
+      "cas": "j",
+      "titre": "Certificat de nationalité française : le formulaire officiel",
+      "pour_qui": "Vous voulez engager cette démarche. Ce site ne donne aucun conseil juridique : il vous montre seulement où sont les pages officielles.",
+      "voie": "certificat-de-nationalite",
+      "duree": "Hors de notre connaissance.",
+      "ce_qu_il_vous_faut": [
+        "Lire d'abord la fiche officielle et la notice du formulaire."
+      ],
+      "etapes": [
+        {
+          "id": "j1",
+          "titre": "Lire la fiche officielle et la notice",
+          "instruction": "La fiche F1051 de Service-Public décrit la démarche. Le formulaire est le cerfa n° 16237 ; sa notice (n° 52373) liste les pièces. La démarche est gratuite. Si vous êtes né à l'étranger et vivez à l'étranger, la fiche indique le tribunal judiciaire de Paris (service de la nationalité française).",
+          "ce_que_l_ecran_montre": "La fiche « Certificat de nationalité française (CNF) » sur Service-Public, et un formulaire PDF.",
+          "issues_possibles": [
+            {
+              "si": "Les pages s'ouvrent.",
+              "signifie": "Lisez-les en entier avant toute chose.",
+              "faire": "Passez à l'étape suivante."
+            },
+            {
+              "si": "La fiche a changé depuis notre lecture.",
+              "signifie": "Elle portait la mention « Vérifié le 20 juin 2025 ».",
+              "faire": "Fiez-vous à la fiche, pas à ce site."
+            }
+          ],
+          "ecrans_communs": [],
+          "liens": [
+            "sp-f1051",
+            "sp-formulaire-cnf",
+            "sp-notice-cnf"
+          ],
+          "verifie": true,
+          "appui": "ecran-vu",
+          "preuves": [
+            "data/samples/other-sources/servicepublic/F1051-cnf.html",
+            "data/samples/other-sources/servicepublic/R63143-cerfa16237.html",
+            "data/samples/other-sources/servicepublic/notice-16237-02.pdf",
+            "docs/research/sources-2026-11/other-sources.md § 5.2",
+            "docs/research/sources-2026-11/verification.md § other-sources"
+          ],
+          "a_confirmer": null
+        },
+        {
+          "id": "j2",
+          "titre": "Savoir ce que ce site apporte, et ce qu'il n'apporte pas",
+          "instruction": "Si un décret existe, ce site vous aide à en établir la citation et à retrouver la page publiée. Il ne délivre ni certificat ni attestation, et ne dit jamais si une personne est française. La notice demande des pièces en original et des actes d'état civil en copie intégrale (« les extraits d'acte ne sont pas admis ») ; la fiche F1051 demande les actes de naissance de tous les ascendants, jusqu'au premier ascendant français inclus. Pour toute question sur votre situation, adressez-vous au tribunal ou à un professionnel du droit.",
+          "ce_que_l_ecran_montre": "La notice du formulaire.",
+          "issues_possibles": [
+            {
+              "si": "Vous avez une question juridique.",
+              "signifie": "Ce site ne peut pas y répondre.",
+              "faire": "Posez-la au greffe du tribunal compétent, ou à un avocat."
+            },
+            {
+              "si": "Quelqu'un vous propose de s'en charger contre paiement.",
+              "signifie": "La démarche officielle est gratuite.",
+              "faire": "Vérifiez toujours sur la fiche officielle ce qui est réellement demandé."
+            }
+          ],
+          "ecrans_communs": [],
+          "liens": [
+            "sp-notice-cnf"
+          ],
+          "verifie": true,
+          "appui": "ecran-vu",
+          "preuves": [
+            "data/samples/other-sources/servicepublic/notice-16237-02.pdf",
+            "data/samples/other-sources/servicepublic/F1051-cnf.html"
+          ],
+          "a_confirmer": null
+        }
+      ],
+      "resultat": "Vous savez où sont le formulaire et la liste officielle des pièces.",
+      "limites": [
+        "Ce guide ne décrit pas la démarche : il y renvoie."
+      ],
+      "suite": []
+    },
+    {
+      "id": "numero-a-verifier",
+      "cas": "k",
+      "titre": "On vous a donné un numéro : comment reconnaître une citation",
+      "pour_qui": "Vous avez un papier, un message ou un souvenir qui donne un numéro ou une « référence » de décret.",
+      "voie": "verification-d-une-citation",
+      "duree": "Quelques minutes.",
+      "ce_qu_il_vous_faut": [
+        "Le papier ou le message, tel qu'il est."
+      ],
+      "etapes": [
+        {
+          "id": "k1",
+          "titre": "Chercher les trois éléments d'une citation",
+          "instruction": "Regardez si le papier donne : 1) la date du décret ; 2) le nom de la publication officielle (Bulletin officiel du Gouvernement général de l'Algérie, Journal officiel…) ; 3) la date et la page de cette publication. Avec ces trois éléments, n'importe qui peut ouvrir la page et lire le nom.",
+          "ce_que_l_ecran_montre": "Une citation vérifiable ressemble à ceci (exemple inventé, pour la forme) : « Décret du 12 mars 1903 — Bulletin officiel du Gouvernement général de l'Algérie, 1903, p. 412. »",
+          "issues_possibles": [
+            {
+              "si": "Les trois éléments y sont.",
+              "signifie": "C'est vérifiable.",
+              "faire": "Ouvrez la page avec le guide du bulletin imprimé ou celui de Gallica."
+            },
+            {
+              "si": "Il y a une date de décret, mais pas de publication.",
+              "signifie": "C'est un début, vérifiable en partie.",
+              "faire": "Passez à l'étape suivante."
+            },
+            {
+              "si": "Il n'y a qu'un numéro, du genre « 262-1412 ».",
+              "signifie": "Ce numéro ne correspond à rien que nous connaissions.",
+              "faire": "Passez à la troisième étape."
+            }
+          ],
+          "ecrans_communs": [],
+          "liens": [],
+          "verifie": true,
+          "appui": "donnees-locales",
+          "preuves": [
+            "CONTEXT.md",
+            "docs/research/sources-2026-11/internet-archive.md § 6.3",
+            "docs/research/sources-2026-11/gallica.md § 7"
+          ],
+          "a_confirmer": null
+        },
+        {
+          "id": "k2",
+          "titre": "Si vous avez une date de décret",
+          "instruction": "Les inventaires des Archives nationales listent tous les décrets de 1883 à 1948, jour par jour. Regardez, dans la liste de ce site ou dans l'inventaire de l'année, si un décret concernant l'Algérie porte cette date. S'il y en a un, ouvrez-le et cherchez le nom, comme dans les guides précédents.",
+          "ce_que_l_ecran_montre": "La liste des décrets de l'année, avec leurs dates et leurs titres.",
+          "issues_possibles": [
+            {
+              "si": "Un décret porte cette date et le nom s'y trouve.",
+              "signifie": "L'information était exacte.",
+              "faire": "Établissez la citation complète."
+            },
+            {
+              "si": "Un décret porte cette date, mais le nom n'y est pas.",
+              "signifie": "La date ne suffit pas.",
+              "faire": "Faites la recherche par nom sur toutes les années."
+            },
+            {
+              "si": "Aucun décret concernant l'Algérie à cette date.",
+              "signifie": "La date ne correspond à aucun décret de la collection.",
+              "faire": "Faites la recherche par nom ; ne retenez pas cette date."
+            },
+            {
+              "si": "La date est antérieure à 1883 ou postérieure à 1948.",
+              "signifie": "Hors de la collection des Archives nationales.",
+              "faire": "Cherchez dans le bulletin imprimé ou le Journal officiel de cette date."
+            }
+          ],
+          "ecrans_communs": [],
+          "liens": [
+            "an-inventaire"
+          ],
+          "verifie": true,
+          "appui": "donnees-locales",
+          "preuves": [
+            "docs/research/sources-2026-11/an-local.md § 1.5",
+            "docs/research/sources-2026-11/verification.md § an-local",
+            "docs/research/sources-2026-11/an-remote.md § 3.2"
+          ],
+          "a_confirmer": null
+        },
+        {
+          "id": "k3",
+          "titre": "Si vous n'avez qu'un numéro",
+          "instruction": "Les décrets de cette époque ne s'identifient pas par un numéro de ce genre. Les numéros qui existent dans les sources sont d'une autre nature : le numéro d'article du bulletin (« N° 350 »), le numéro de document dans une liasse des Archives nationales (« document 21 »), le numéro d'un dossier (de la forme « 0000 X 19 », numéro inventé), une cote (« BB/34/438 »). Un numéro isolé ne permet d'ouvrir aucune page : il ne se vérifie pas. Faites la recherche par nom comme si vous n'aviez rien.",
+          "ce_que_l_ecran_montre": "Rien à l'écran.",
+          "issues_possibles": [
+            {
+              "si": "Le numéro ressemble à l'une des formes ci-dessus.",
+              "signifie": "Il peut désigner un dossier ou un document réel.",
+              "faire": "Dites-vous de quelle forme il s'agit, puis vérifiez-le par la recherche par nom."
+            },
+            {
+              "si": "Il ne ressemble à aucune.",
+              "signifie": "Il ne peut pas être contrôlé.",
+              "faire": "Gardez le papier comme un indice sur ce que la famille a cherché, rien de plus."
+            }
+          ],
+          "ecrans_communs": [],
+          "liens": [],
+          "verifie": true,
+          "appui": "donnees-locales",
+          "preuves": [
+            "docs/research/sources-2026-11/internet-archive.md § 4.1",
+            "docs/research/sources-2026-11/an-local.md § 1.4",
+            "docs/research/sources-2026-11/legal-types.md § 4",
+            "docs/research/sources-2026-11/other-sources.md § 7"
+          ],
+          "a_confirmer": null
+        },
+        {
+          "id": "k4",
+          "titre": "Garder la mesure",
+          "instruction": "Nous ne savons pas qui a établi ce papier, ni pourquoi. Un numéro invérifiable ne prouve rien, ni qu'un décret existe, ni qu'il n'existe pas. Ce que disent les sources officielles : pour les Archives nationales, « Les décrets publiés au Journal officiel sont les seuls à avoir valeur de preuve » ; et elles rappellent qu'elles « ne prennent pas et ne traitent pas les dossiers de demande d'accès à la nationalité française ». Personne n'a besoin d'intermédiaire pour lire une page publiée.",
+          "ce_que_l_ecran_montre": "La page officielle des Archives nationales.",
+          "issues_possibles": [
+            {
+              "si": "Vous avez payé pour ce numéro.",
+              "signifie": "Nous ne pouvons rien en dire.",
+              "faire": "Demandez à la personne la date du décret et la page de publication : si elles existent, elle doit pouvoir les donner."
+            },
+            {
+              "si": "On vous promet un résultat.",
+              "signifie": "Aucune recherche ne peut le promettre : l'admission était rare.",
+              "faire": "Faites la recherche vous-même, gratuitement."
+            }
+          ],
+          "ecrans_communs": [],
+          "liens": [
+            "an-page-dossiers",
+            "spplus-an-decret",
+            "rfg-article-2023"
+          ],
+          "verifie": true,
+          "appui": "ecran-vu",
+          "preuves": [
+            "data/samples/an-remote/an-dossiers-naturalisation.body",
+            "data/samples/other-sources/oups/an-trouver-decret.html",
+            "data/samples/other-sources/presse/rfg-algeriens-en-quete.html",
+            "docs/research/sources-2026-11/other-sources.md § 7",
+            "docs/research/sources-2026-11/verification.md § other-sources"
+          ],
+          "a_confirmer": null
+        }
+      ],
+      "resultat": "Vous savez si l'information reçue peut être vérifiée, et comment.",
+      "limites": [
+        "Aucune source publique que nous ayons lue ne décrit la vente de numéros de ce genre : nous n'affirmons rien à ce sujet."
+      ],
+      "suite": [
+        "an-annee-indexee",
+        "bogga-internet-archive"
+      ]
+    }
+  ]
+}

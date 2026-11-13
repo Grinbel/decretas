@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/css' href='ead.css'?><ead xmlns:xlink="http://www.w3.org/1999/xlink">
+  <!-- Jeu d'essai SYNTHÉTIQUE : personnes, noms et dossiers inventés ; seul le format des exports XML-EAD est reproduit. -->
+  <eadheader countryencoding="iso3166-1" dateencoding="iso8601" langencoding="iso639-2b">
+    <eadid xlink:type="simple" xlink:href="http://www.siv.archives-nationales.culture.gouv.fr/siv/IR/FRAN_IR_900003">FRAN_IR_900003</eadid>
+    <filedesc>
+      <titlestmt>
+        <titleproper>Décrets de naturalisation de l’année 1905</titleproper>
+        <subtitle>Répertoire numérique détaillé (BB/34/424-BB/34/425)</subtitle>
+        <author>Jeu d'essai synthétique.</author>
+      </titlestmt>
+      <publicationstmt>
+        <publisher>Jeu d'essai</publisher>
+        <date calendar="gregorian" era="ce" normal="2018-07-13">13 juillet 2018</date>
+      </publicationstmt>
+    </filedesc>
+  </eadheader>
+  <frontmatter>
+    <div>
+      <p/>
+    </div>
+  </frontmatter>
+  <archdesc id="top" level="collection">
+    <did>
+      <unitid type="identifiant">BB/34/424-BB/34/425</unitid>
+      <unittitle>Décrets de naturalisation de l’année 1905</unittitle>
+      <unitdate calendar="gregorian" era="ce" normal="1905-01-14/1905-12-30">14 janvier 1905 - 30 décembre 1905</unitdate>
+      <repository>Archives nationales de France</repository>
+      <physloc>Pierrefitte</physloc>
+    </did>
+    <accessrestrict>
+      <p>Librement communicable en application de l'article L213-2 du code du patrimoine.</p>
+    </accessrestrict>
+    <userestrict>
+      <p>Les documents peuvent être librement reproduits dans le cadre d’un usage privé (usage strictement personnel dans le cercle de la famille), sous réserve des contraintes liées à leur état matériel et dans le respect des textes relatifs à la réutilisation des informations publiques.</p>
+    </userestrict>
+    <dsc>
+      <c id="idd_1905_01_09" xlink:type="simple" xlink:href="http://www.siv.archives-nationales.culture.gouv.fr/siv/UD/FRAN_IR_900003/idd_1905_01_09">
+        <did>
+          <unitid type="cote-de-consultation">BB/34/424</unitid>
+          <unitid type="pieces">document 9</unitid>
+          <unittitle>Décret de naturalisations algériennes du 21 janvier 1905</unittitle>
+          <unitdate calendar="gregorian" era="ce" normal="1905-01-21">21 janvier 1905</unitdate>
+        </did>
+        <daogrp>
+          <daoloc href="http://www.siv.archives-nationales.culture.gouv.fr/siv/media/FRAN_IR_900003/idd_1905_01_09/"/>
+        </daogrp>
+        <c id="id_1905_01_0140" xlink:type="simple" xlink:href="http://www.siv.archives-nationales.culture.gouv.fr/siv/UD/FRAN_IR_900003/id_1905_01_0140">
+          <did>
+            <unitid type="pieces">90020 X 04</unitid>
+            <unittitle>TESTAOUI, Akli Ben Modèle</unittitle>
+          </did>
+          <scopecontent>
+            <p>Naissance : 1867, Beni Fictif, département d'Alger, Algérie.</p>
+            <p>Profession : auxiliaire indigène de gendarmerie.</p>
+            <p>Résidence : Fictiveville, département d'Alger, Algérie.</p>
+            <p>Enfant(s) : Ali (3 mai 1899)</p>
+          </scopecontent>
+        </c>
+        <c id="c-list1" xlink:type="simple" xlink:href="http://www.siv.archives-nationales.culture.gouv.fr/siv/UD/FRAN_IR_900003/c-list1">
+          <did>
+            <unitid type="pieces">90021 X 04 (numéro du dossier à consulter en sous-série BB/11)</unitid>
+            <unittitle>
+       <persname>Exempli, Lounis ben Akli</persname>
+      </unittitle>
+          </did>
+          <scopecontent>
+            <p>Né(e) le 1 janvier 1870 (Aït Fictif (Aïn Exemple mixte) (Alger))</p>
+            <p>Lieu de résidence : Douar des Beni Exemple (Alger)</p>
+            <p>Profession : Cultivateur</p>
+            <list>
+              <item>Épouse</item>
+              <item>Specimen, Fatma bent Ali</item>
+              <item>Née le 25 mai 1875 (Aït Fictif (Alger))</item>
+              <item>Lieu de résidence : Douar des Beni Exemple</item>
+              <item>Enfants</item>
+              <item>Omar ; Zohra né(e)(s) le 12 septembre 1899 ; 23 octobre 1901</item>
+            </list>
+          </scopecontent>
+          <daogrp>
+            <daoloc href="http://www.siv.archives-nationales.culture.gouv.fr/siv/media/FRAN_IR_900003/c-list1/"/>
+          </daogrp>
+        </c>
+        <c id="c-empty1" xlink:type="simple" xlink:href="http://www.siv.archives-nationales.culture.gouv.fr/siv/UD/FRAN_IR_900003/c-empty1">
+          <did>
+            <unitid type="pieces">90022 X 04 (numéro du dossier à consulter en sous-série BB/11)</unitid>
+            <unittitle/>
+          </did>
+          <scopecontent>
+            <p>Né(e) le 21 mars 1858 (Valence, Espagne)</p>
+          </scopecontent>
+          <daogrp>
+            <daoloc href="http://www.siv.archives-nationales.culture.gouv.fr/siv/media/FRAN_IR_900003/c-empty1/"/>
+          </daogrp>
+        </c>
+      </c>
+      <c id="AP001236" xlink:type="simple" xlink:href="http://www.siv.archives-nationales.culture.gouv.fr/siv/UD/FRAN_IR_900003/AP001236">
+        <did>
+          <unitid type="cote-de-consultation">BB/34/424</unitid>
+          <unitid type="pieces">document 21</unitid>
+          <unittitle>Décret de naturalisations algériennes du 5 février 1905.</unittitle>
+          <unitdate calendar="gregorian" era="ce" normal="1905-02-05">5 février 1905</unitdate>
+        </did>
+        <daogrp>
+          <daoloc href="http://www.siv.archives-nationales.culture.gouv.fr/siv/media/FRAN_IR_900003/AP001236/"/>
+        </daogrp>
+        <controlaccess>
+          <persname/>
+        </controlaccess>
+      </c>
+      <c id="AP001237" xlink:type="simple" xlink:href="http://www.siv.archives-nationales.culture.gouv.fr/siv/UD/FRAN_IR_900003/AP001237">
+        <did>
+          <unitid type="cote-de-consultation">BB/34/424</unitid>
+          <unitid type="pieces">document 22</unitid>
+          <unittitle>Décret de rejet de naturalisations en France et en Algérie du 6 février 1905.</unittitle>
+          <unitdate calendar="gregorian" era="ce" normal="1905-02-06">6 février 1905</unitdate>
+        </did>
+        <daogrp>
+          <daoloc href="http://www.siv.archives-nationales.culture.gouv.fr/siv/media/FRAN_IR_900003/AP001237/"/>
+        </daogrp>
+      </c>
+      <c id="AP001238" xlink:type="simple" xlink:href="http://www.siv.archives-nationales.culture.gouv.fr/siv/UD/FRAN_IR_900003/AP001238">
+        <did>
+          <unitid type="cote-de-consultation">BB/34/424</unitid>
+          <unitid type="pieces">document 23</unitid>
+          <unittitle>Décret de naturalisations du 7 février 1905.</unittitle>
+          <unitdate calendar="gregorian" era="ce" normal="1905-02-07">7 février 1905</unitdate>
+        </did>
+        <daogrp>
+          <daoloc href="http://www.siv.archives-nationales.culture.gouv.fr/siv/media/FRAN_IR_900003/AP001238/"/>
+        </daogrp>
+      </c>
+    </dsc>
+  </archdesc>
+</ead>

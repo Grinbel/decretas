@@ -1,0 +1,462 @@
+nom	n_algerie	n_ailleurs	n_seul	part_algerie	statut
+alger	3154	16	2088	0.995	sur
+oran	2037	13	1089	0.994	sur
+bone	1850	3	96	0.998	sur
+philippeville	1068	29	65	0.974	sur
+sidi bel abbes	728	0	54	1.000	sur
+constantine	627	10	748	0.984	sur
+la calle	513	1	40	0.998	sur
+mustapha	393	0	7	1.000	sur
+mers el kebir	359	1	9	0.997	sur
+mostaganem	313	1	25	0.997	sur
+bougie	250	0	20	1.000	sur
+mascara	244	0	15	1.000	sur
+souk ahras	222	1	21	0.996	sur
+blida	220	3	22	0.987	sur
+arzew	218	1	20	0.995	sur
+maison carree	216	2	14	0.991	sur
+hussein dey	211	1	33	0.995	sur
+setif	199	0	15	1.000	sur
+guelma	172	0	15	1.000	sur
+stora	168	0	7	1.000	sur
+tlemcen	165	1	15	0.994	sur
+saida	141	9	15	0.940	sur
+beni saf	124	1	5	0.992	sur
+tenes	122	0	6	1.000	sur
+guyotville	107	0	22	1.000	sur
+boufarik	106	0	8	1.000	sur
+saint denis du sig	102	0	11	1.000	sur
+saint eugene	102	0	16	1.000	sur
+batna	93	0	11	1.000	sur
+el biar	87	1	12	0.989	sur
+castiglione	86	31	7	0.735	ambigu
+nemours	79	20	3	0.798	ambigu
+miliana	77	0	10	1.000	sur
+kouba	72	0	11	1.000	sur
+ain temouchent	71	0	7	1.000	sur
+perregaux	68	0	3	1.000	sur
+cherchell	67	0	2	1.000	sur
+medea	67	2	9	0.971	sur
+relizane	66	0	11	1.000	sur
+fort de l eau	64	0	8	1.000	sur
+kolea	62	0	7	1.000	sur
+douera	61	0	8	1.000	sur
+orleansville	61	0	7	1.000	sur
+dellys	57	0	3	1.000	sur
+tiaret	56	0	10	1.000	sur
+biskra	54	0	4	1.000	sur
+collo	51	2	4	0.962	sur
+djidjeli	48	0	0	1.000	sur
+birmandreis	47	0	6	1.000	sur
+staoueli	47	1	9	0.979	sur
+zeralda	46	0	12	1.000	sur
+djidjelli	43	0	5	1.000	sur
+fort national	43	0	2	1.000	sur
+tizi ouzou	41	0	5	1.000	sur
+ain beida	37	0	4	1.000	sur
+ain taya	36	0	0	1.000	sur
+ghardaia	36	0	2	1.000	sur
+oran algerie	36	0	0	1.000	sur
+tebessa	36	0	7	1.000	sur
+l arba	35	0	1	1.000	sur
+akbou	34	0	0	1.000	sur
+alger algerie	34	0	0	1.000	sur
+aumale	34	5	2	0.872	ambigu
+misserghin	34	0	4	1.000	sur
+bouzarea	32	0	0	1.000	sur
+stidia	32	0	0	1.000	sur
+la stidia	31	0	1	1.000	sur
+menerville	31	0	0	1.000	sur
+rouiba	31	0	1	1.000	sur
+affreville	30	0	2	1.000	sur
+bordj bou arreridj	30	0	2	1.000	sur
+sidi lhassen	30	0	1	1.000	sur
+cheragas	29	0	4	1.000	sur
+mirabeau	28	4	0	0.875	ambigu
+bouira	27	0	3	1.000	sur
+saoula	27	0	2	1.000	sur
+lourmel	26	0	4	1.000	sur
+tefeschoun	26	0	3	1.000	sur
+boukanefis	25	0	2	1.000	sur
+el arrouch	25	0	3	1.000	sur
+la senia	25	1	0	0.962	sur
+laghouat	25	0	1	1.000	sur
+marengo	25	1	5	0.962	sur
+douaouda	23	0	2	1.000	sur
+el affroun	23	0	3	1.000	sur
+ain el hadjar	22	0	2	1.000	sur
+annaba	22	0	40	1.000	sur
+bou saada	22	0	2	1.000	sur
+draria	22	0	0	1.000	sur
+lamoriciere	22	0	1	1.000	sur
+nechmeya	22	0	0	1.000	sur
+djelfa	21	0	3	1.000	sur
+duzerville	21	0	1	1.000	sur
+khenchela	21	0	0	1.000	sur
+kleber	21	0	0	1.000	sur
+soukahras	21	0	1	1.000	sur
+ain m lila	20	0	0	1.000	sur
+bugeaud	20	0	0	1.000	sur
+jemmapes	20	17	3	0.541	ambigu
+mecheria	20	0	1	1.000	sur
+sainte barbe du tlelat	20	0	3	1.000	sur
+ain el turck	19	0	1	1.000	sur
+arzen	19	0	0	1.000	sur
+birkadem	19	0	4	1.000	sur
+duperre	19	0	1	1.000	sur
+geryville	19	0	0	1.000	sur
+mazagran	19	1	1	0.950	sur
+meggane annexe de chellala	19	0	0	1.000	sur
+oued zenati	19	0	0	1.000	sur
+saint cloud	19	70	25	0.213	surtout-ailleurs
+guelaat bou sba	18	0	0	1.000	sur
+inkermann	18	1	0	0.947	sur
+palestro	18	0	2	1.000	sur
+skikda	18	0	15	1.000	sur
+teniet el haad	18	0	0	1.000	sur
+birtouta	17	0	4	1.000	sur
+bordj menaiel	17	0	2	1.000	sur
+cherchel	17	0	0	1.000	sur
+conde smendou	17	0	0	1.000	sur
+saint arnaud	17	0	3	1.000	sur
+saint louis	17	175	50	0.089	surtout-ailleurs
+boghari	16	0	4	1.000	sur
+bone constantine	16	0	3	1.000	sur
+bouhira	16	0	2	1.000	sur
+bouzareah	16	0	2	1.000	sur
+dra el mizan	16	0	2	1.000	sur
+herbillon	16	0	8	1.000	sur
+ain benian	15	0	30	1.000	sur
+baba hassen	15	0	0	1.000	sur
+cassaigne	15	1	0	0.938	sur
+fleurus	15	6	0	0.714	ambigu
+mondovi	15	207	7	0.068	surtout-ailleurs
+morris	15	0	0	1.000	sur
+saint lucien	15	0	0	1.000	sur
+sainte leonie	15	0	1	1.000	sur
+bouinan	14	0	10	1.000	sur
+sidi moussa	14	1	1	0.933	sur
+azazga	13	0	2	1.000	sur
+chebli	13	0	0	1.000	sur
+djurdjura	13	0	1	1.000	sur
+duvivier	13	0	1	1.000	sur
+m sila	13	0	0	1.000	sur
+montenotte	13	0	0	1.000	sur
+mouzaiaville	13	0	0	1.000	sur
+rivet	13	0	0	1.000	sur
+zemmora	13	0	5	1.000	sur
+ain mokra	12	0	2	1.000	sur
+ain sefra	12	0	2	1.000	sur
+cap matifou	12	0	6	1.000	sur
+dublineau	12	0	0	1.000	sur
+ighil ali	12	0	0	1.000	sur
+oran: algerie	12	0	0	1.000	sur
+rio salado	12	0	2	1.000	sur
+saint leu	12	5	2	0.706	ambigu
+souma	12	0	1	1.000	sur
+telagh	12	0	3	1.000	sur
+ain el arba	11	0	1	1.000	sur
+bel abbes	11	0	6	1.000	sur
+berrouaghia	11	0	2	1.000	sur
+blidah	11	0	1	1.000	sur
+burdeau	11	0	2	1.000	sur
+heliopolis	11	4	1	0.733	ambigu
+mercier lacombe	11	0	0	1.000	sur
+oued fodda	11	0	0	1.000	sur
+saint charles	11	5	1	0.688	ambigu
+sidi chami	11	0	1	1.000	sur
+ain bessem	10	0	3	1.000	sur
+ameur el ain	10	0	1	1.000	sur
+annaba anciennement bone	10	0	1	1.000	sur
+boghar	10	0	0	1.000	sur
+felix faure	10	0	0	1.000	sur
+fondouk	10	0	3	1.000	sur
+ouled fayet	10	0	0	1.000	sur
+philippeville constantine	10	0	3	1.000	sur
+bou medfa	9	0	0	1.000	sur
+bou sfer	9	0	1	1.000	sur
+chateaudun du rhumel	9	0	0	1.000	sur
+colomb bechar	9	0	0	1.000	sur
+l alma	9	0	0	1.000	sur
+marnia	9	0	1	1.000	sur
+ouenza	9	0	1	1.000	sur
+rebeval	9	0	3	1.000	sur
+renault	9	0	0	1.000	sur
+tamzourah	9	0	0	1.000	sur
+tassin	9	1	1	0.900	sur
+ain arnat	8	0	0	1.000	sur
+ain benian anciennement guyotville	8	0	0	1.000	sur
+ain kercha	8	0	0	1.000	sur
+beni yenni	8	0	0	1.000	sur
+bou haroun	8	0	0	1.000	sur
+bou khalfa	8	0	0	1.000	sur
+chanzy	8	0	0	1.000	sur
+el achour	8	0	2	1.000	sur
+el milia	8	0	3	1.000	sur
+frenda	8	0	0	1.000	sur
+hammam bou hadjar	8	0	0	1.000	sur
+hennaya	8	0	1	1.000	sur
+isserville	8	0	0	1.000	sur
+khroub	8	0	0	1.000	sur
+lambese	8	2	0	0.800	ambigu
+laverdure	8	0	1	1.000	sur
+mekla	8	0	0	1.000	sur
+ouadhia	8	0	0	1.000	sur
+ouaghzen	8	0	1	1.000	sur
+oued imbert	8	0	0	1.000	sur
+penthievre	8	0	0	1.000	sur
+reghaia	8	0	0	1.000	sur
+rovigo	8	5	0	0.615	ambigu
+sidi m hamed	8	0	1	1.000	sur
+agouni bou afir	7	0	1	1.000	sur
+ain fekan	7	0	1	1.000	sur
+ain fezza	7	0	0	1.000	sur
+ain sultan	7	0	0	1.000	sur
+ammi moussa	7	0	1	1.000	sur
+barral	7	0	4	1.000	sur
+beni menguellet	7	0	0	1.000	sur
+beni saf oran	7	0	0	1.000	sur
+bou tlelis	7	0	0	1.000	sur
+camp du marechal	7	0	1	1.000	sur
+courbet	7	0	1	1.000	sur
+detrie	7	0	0	1.000	sur
+djebel kouif	7	0	2	1.000	sur
+el ancor	7	0	0	1.000	sur
+er rahel	7	0	3	1.000	sur
+fouka	7	0	0	1.000	sur
+haussonvillers	7	0	0	1.000	sur
+les attafs	7	0	0	1.000	sur
+les trembles	7	0	0	1.000	sur
+oued el alleug	7	0	0	1.000	sur
+palikao	7	0	0	1.000	sur
+port aux poules	7	0	1	1.000	sur
+saida oran	7	0	0	1.000	sur
+sidi bel abbes oran	7	0	1	1.000	sur
+tipaza	7	1	0	0.875	ambigu
+ahmed ben ali	6	0	0	1.000	sur
+arcole	6	10	0	0.375	surtout-ailleurs
+azouza	6	0	4	1.000	sur
+beni mered	6	0	0	1.000	sur
+beni oughlis	6	0	1	1.000	sur
+berkana	6	0	0	1.000	sur
+bessombourg	6	0	0	1.000	sur
+bir mourad rais	6	0	2	1.000	sur
+blad guitoun	6	0	0	1.000	sur
+chellala	6	0	0	1.000	sur
+constantine algerie	6	0	0	1.000	sur
+djemaa saharidj	6	0	2	1.000	sur
+dombasle	6	368	23	0.016	surtout-ailleurs
+el kala	6	0	1	1.000	sur
+eugene etienne hennaya	6	0	0	1.000	sur
+hammam righa	6	0	0	1.000	sur
+mahelma	6	0	1	1.000	sur
+saint andre de mers el kebir	6	0	0	1.000	sur
+saint ferdinand	6	0	0	1.000	sur
+saint maur	6	38	18	0.136	surtout-ailleurs
+sidi brahim	6	0	0	1.000	sur
+skikda anciennement philippeville	6	0	0	1.000	sur
+tabia	6	0	0	1.000	sur
+taher	6	0	0	1.000	sur
+tazmalt	6	0	0	1.000	sur
+tizi	6	0	0	1.000	sur
+tunis	6	5640	2372	0.001	surtout-ailleurs
+valmy	6	5	9	0.545	ambigu
+yakouren	6	0	0	1.000	sur
+zarouria	6	0	0	1.000	sur
+ain abid	5	0	1	1.000	sur
+arba	5	4	4	0.556	ambigu
+bordj el kiffan	5	0	3	1.000	sur
+bou henni	5	0	1	1.000	sur
+cacherou	5	0	0	1.000	sur
+duquesne	5	0	0	1.000	sur
+fondouck	5	0	1	1.000	sur
+gastonville	5	0	0	1.000	sur
+guergour	5	0	1	1.000	sur
+koleah	5	0	1	1.000	sur
+l hillil	5	0	0	1.000	sur
+lamartine	5	0	0	1.000	sur
+le hamma	5	0	0	1.000	sur
+maillot	5	1	0	0.833	ambigu
+maison blanche	5	1	1	0.833	ambigu
+maison carre	5	0	1	1.000	sur
+mansourah	5	4	0	0.556	ambigu
+mila	5	0	1	1.000	sur
+mustapha alger	5	0	1	1.000	sur
+negrier	5	0	0	1.000	sur
+pelissier	5	0	1	1.000	sur
+randon	5	0	0	1.000	sur
+redjas	5	0	3	1.000	sur
+rivoli	5	34	1	0.128	surtout-ailleurs
+robertville	5	0	1	1.000	sur
+sahouria	5	0	0	1.000	sur
+saint cyprien des attafs	5	0	0	1.000	sur
+sedrata	5	0	3	1.000	sur
+tablat	5	2	2	0.714	ambigu
+tafaraoui	5	0	0	1.000	sur
+teniet el had	5	0	0	1.000	sur
+theniet el had	5	0	0	1.000	sur
+touggourt	5	0	2	1.000	sur
+zemmorah	5	0	0	1.000	sur
+ain abessa	4	0	1	1.000	sur
+ain tedeles	4	0	0	1.000	sur
+ait zellal	4	0	0	1.000	sur
+alma	4	12	1	0.250	surtout-ailleurs
+arour douar des beni khelifa	4	0	0	1.000	sur
+baba ali	4	0	0	1.000	sur
+bedeau	4	0	0	1.000	sur
+beni abbes	4	0	0	1.000	sur
+berard	4	0	0	1.000	sur
+berbessa	4	0	0	1.000	sur
+biskra constantine	4	0	1	1.000	sur
+blida alger	4	0	4	1.000	sur
+bologhine ibnou ziri	4	0	0	1.000	sur
+bones	4	0	0	1.000	sur
+boufarik alger	4	0	0	1.000	sur
+bounouah	4	0	0	1.000	sur
+colea	4	0	0	1.000	sur
+constantine: algerie	4	0	0	1.000	sur
+contantine	4	0	3	1.000	sur
+damiette	4	1	0	0.800	ambigu
+dar beida	4	2	1	0.667	ambigu
+dely ibrahim	4	0	0	1.000	sur
+donera	4	0	0	1.000	sur
+drariah	4	0	0	1.000	sur
+el anasser	4	0	0	1.000	sur
+el harrach	4	0	24	1.000	sur
+el ouricia	4	0	0	1.000	sur
+gar rouban	4	0	0	1.000	sur
+gastu	4	0	0	1.000	sur
+gouraya	4	0	4	1.000	sur
+guyotville alger	4	0	2	1.000	sur
+hamma	4	0	0	1.000	sur
+haussonviller	4	0	0	1.000	sur
+haut sebaou	4	0	0	1.000	sur
+hora	4	0	0	1.000	sur
+hussen dey	4	0	1	1.000	sur
+la calle constantine	4	1	0	0.800	ambigu
+la chiffa	4	0	1	1.000	sur
+la mechta el kharba	4	0	0	1.000	sur
+la meskiana	4	0	2	1.000	sur
+la mina	4	0	0	1.000	sur
+lamtar	4	0	0	1.000	sur
+lannoy	4	39	13	0.093	surtout-ailleurs
+larbaa	4	0	10	1.000	sur
+larbaa nath irathen	4	0	0	1.000	sur
+le telagh	4	0	0	1.000	sur
+legrand	4	0	0	1.000	sur
+menacera douar des beni arif	4	0	0	1.000	sur
+michelet	4	0	0	1.000	sur
+milianah	4	0	0	1.000	sur
+montagnac	4	21	21	0.160	surtout-ailleurs
+orleanville	4	0	2	1.000	sur
+orzen	4	0	0	1.000	sur
+ouargla	4	0	0	1.000	sur
+oued athmenia	4	0	0	1.000	sur
+oued atmenia	4	0	0	1.000	sur
+oued cham	4	0	0	1.000	sur
+oued marsa	4	0	0	1.000	sur
+parmentier	4	0	0	1.000	sur
+perregaux oran	4	0	0	1.000	sur
+phillippeville	4	0	0	1.000	sur
+pointe pescade	4	0	0	1.000	sur
+procida	4	1385	18	0.003	surtout-ailleurs
+prudon	4	0	0	1.000	sur
+saint denis du sig oran	4	0	1	1.000	sur
+setif constantine	4	0	0	1.000	sur
+sidi khaled	4	0	0	1.000	sur
+sidi merouan	4	0	0	1.000	sur
+souk ahras constantine	4	0	2	1.000	sur
+soummam	4	0	0	1.000	sur
+taourirt	4	0	1	1.000	sur
+tessala	4	0	1	1.000	sur
+tlemcen oran	4	0	0	1.000	sur
+vialar	4	0	0	1.000	sur
+zeraia	4	0	0	1.000	sur
+ain affra	3	0	0	1.000	sur
+ain frass	3	0	0	1.000	sur
+ait ali ou mohand	3	0	0	1.000	sur
+ait el merdja	3	0	0	1.000	sur
+ait yahia	3	0	0	1.000	sur
+azeffoun	3	0	0	1.000	sur
+bejaia anciennement bougie	3	0	0	1.000	sur
+beni aissi	3	0	0	1.000	sur
+beni ittourar	3	0	0	1.000	sur
+berkana douar des ben arif	3	0	0	1.000	sur
+berkana douar des beni arif	3	0	0	1.000	sur
+boghni	3	0	1	1.000	sur
+bordj el kiffan anciennement fort de l eau	3	0	0	1.000	sur
+bousaada	3	0	0	1.000	sur
+braz	3	3	0	0.500	ambigu
+cap matifon	3	0	3	1.000	sur
+carnot	3	0	0	1.000	sur
+charon	3	0	2	1.000	sur
+charrier	3	0	0	1.000	sur
+chlef	3	0	5	1.000	sur
+crescia	3	0	0	1.000	sur
+dalmatie	3	0	0	1.000	sur
+el bayadh anciennement geryville	3	0	0	1.000	sur
+el harrach anciennement maison carre	3	0	0	1.000	sur
+el kelaa	3	0	0	1.000	sur
+el kseur	3	0	0	1.000	sur
+fesdis	3	0	0	1.000	sur
+guelma constantine	3	0	1	1.000	sur
+guyoville	3	0	0	1.000	sur
+hussein dey alger	3	0	2	1.000	sur
+inkerman	3	0	0	1.000	sur
+isserbourg	3	0	0	1.000	sur
+joinville	3	49	16	0.058	surtout-ailleurs
+kerba	3	0	0	1.000	sur
+kerrata	3	0	0	1.000	sur
+khemisti	3	0	1	1.000	sur
+la ferme	3	0	0	1.000	sur
+la perouse	3	0	0	1.000	sur
+la senia oran	3	0	0	1.000	sur
+lafayette	3	0	0	1.000	sur
+laferriere	3	1	0	0.750	ambigu
+larbaa nath irathen anciennement fort national	3	0	0	1.000	sur
+maison carree alger	3	0	0	1.000	sur
+mascara oran	3	0	0	1.000	sur
+mers el kebir oran	3	0	0	1.000	sur
+metlili	3	0	0	1.000	sur
+millesimo	3	17	0	0.150	surtout-ailleurs
+mizrana	3	0	0	1.000	sur
+mohammadia	3	0	3	1.000	sur
+morsott	3	0	1	1.000	sur
+mouka	3	0	0	1.000	sur
+moussa	3	0	0	1.000	sur
+moustapha	3	0	0	1.000	sur
+nechemeya	3	0	0	1.000	sur
+nedroma	3	0	0	1.000	sur
+nedromah	3	0	0	1.000	sur
+nesmoth	3	0	0	1.000	sur
+novi	3	3	0	0.500	ambigu
+oued amizour	3	0	0	1.000	sur
+oued el hammam	3	0	0	1.000	sur
+oued touta	3	0	0	1.000	sur
+ouizert	3	0	0	1.000	sur
+oum theboul	3	0	0	1.000	sur
+palissy	3	0	0	1.000	sur
+phlippeville	3	0	0	1.000	sur
+rilda	3	0	0	1.000	sur
+rouina	3	0	1	1.000	sur
+sahel	3	0	0	1.000	sur
+saint barbe du tlelat	3	0	0	1.000	sur
+saint cloud oran	3	0	0	1.000	sur
+saint pierre saint paul	3	0	0	1.000	sur
+salamandre	3	1	0	0.750	ambigu
+sebdou	3	0	0	1.000	sur
+sid bel abbes	3	0	0	1.000	sur
+siddi bel abbes	3	0	0	1.000	sur
+sig	3	0	1	1.000	sur
+soumah	3	0	0	1.000	sur
+tatfaman	3	0	0	1.000	sur
+taza	3	8	5	0.273	surtout-ailleurs
+tclemcen	3	0	0	1.000	sur
+tenira	3	0	0	1.000	sur
+tipasa	3	0	0	1.000	sur
+tirman	3	0	0	1.000	sur
+toudja	3	0	0	1.000	sur
+villars	3	3	9	0.500	ambigu
+zaarouria	3	0	0	1.000	sur
+zerizer	3	0	0	1.000	sur
+zouggara	3	0	0	1.000	sur

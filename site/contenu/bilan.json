@@ -1,0 +1,600 @@
+{
+  "schema": "decretas.contenu.bilan/1",
+  "langue": "fr",
+  "maj": "2026-11-11",
+  "titre": "Bilan de recherche",
+  "principe": "Un bilan accompagne toute recherche. Il dit ce qui a été fouillé, ce qui ne l'a pas été et pourquoi, et ce qu'il reste à faire. Quand rien n'est trouvé, c'est lui le résultat.",
+  "variables": {
+    "termes": "Les termes saisis, tels que l'utilisateur les a tapés, séparés par des virgules.",
+    "nb_variantes": "Nombre total de variantes saisies, tous termes confondus.",
+    "annees_an": "Années de l'index des Archives nationales réellement lues par la recherche par nom (donnée de couverture).",
+    "date_donnees_an": "Date à laquelle les inventaires des Archives nationales ont été téléchargés (donnée de couverture).",
+    "annees_bulletin": "Années du Bulletin officiel imprimé réellement lues par la recherche par nom (donnée de couverture).",
+    "annees_images_seules": "Années où les décrets sont numérisés sans noms saisis.",
+    "annees_noms_non_repris": "Années dont les noms existent aux Archives nationales mais ne sont pas repris sur ce site.",
+    "nb_correspondances": "Nombre de correspondances.",
+    "nb_partielles": "Nombre de correspondances partielles.",
+    "terme_absent": "Le terme qui manque dans une correspondance partielle.",
+    "annee_naissance": "Année de naissance approximative saisie.",
+    "annee_min": "Première année où un décret était possible : année de naissance la plus ancienne gardée par la recherche (année indiquée moins la tolérance) + 21.",
+    "partielles": "Le nombre de correspondances partielles, écrit avec son nom au singulier ou au pluriel (« 1 correspondance partielle », « 70 correspondances partielles »).",
+    "an_notices_reprises": "Nombre de notices de personnes de l'index des Archives nationales reprises par ce site (la partie qui peut concerner l'Algérie) (donnée de couverture).",
+    "an_notices_index": "Nombre de notices de personnes de tout l'index des Archives nationales (donnée de couverture).",
+    "tolerance_naissance": "Tolérance, en années, appliquée à l'année de naissance par la recherche (cinq ans si l'utilisateur n'en a pas choisi)."
+  },
+  "resume": {
+    "une_correspondance": "Une correspondance pour {termes}. Lisez-la avant de conclure : une correspondance n'est pas encore une identité.",
+    "plusieurs_correspondances": "{nb_correspondances} correspondances pour {termes}. Plusieurs personnes peuvent porter le même nom : comparez la naissance, le père et le lieu.",
+    "partielles_seulement": "Aucune correspondance complète pour {termes}, mais {partielles} : il y manque un terme, indiqué à chaque fois.",
+    "partielle": "Correspondance partielle : le terme « {terme_absent} » n'y figure pas.",
+    "aucune": "Nous n'avons trouvé aucune correspondance dans les sources fouillées. C'est le résultat le plus fréquent : de 1865 à 1962, d'après le décompte de l'historien Patrick Weil, un peu plus de 6 000 Algériens musulmans seulement ont été admis à la qualité de citoyen français, par décret ou par jugement, pour une population de plusieurs millions de personnes. Ne rien trouver ne dit donc rien de défavorable sur votre ancêtre, et ne dit pas non plus qu'aucun acte n'existe. Voici ce qui a été fouillé, ce qui ne l'a pas été, et les démarches qui restent."
+  },
+  "ce_qui_a_ete_fouille": {
+    "titre": "Ce qui a été fouillé",
+    "lignes": [
+      {
+        "id": "an-index",
+        "source_id": "archives-nationales",
+        "gabarit": "L'index des noms des décrets conservés aux Archives nationales, pour les années {annees_an} (inventaires relevés le {date_donnees_an}). Seule la partie de l'index qui peut concerner l'Algérie est reprise : décrets dont le titre nomme l'Algérie, ou personnes nées ou demeurant en Algérie d'après la notice ({an_notices_reprises} notices de personnes sur {an_notices_index} dans tout l'index). Une personne dont le lieu de naissance est mal écrit dans l'inventaire peut manquer : cherchez aussi dans l'inventaire de l'année.",
+        "variables": [
+          "annees_an",
+          "date_donnees_an",
+          "an_notices_reprises",
+          "an_notices_index"
+        ]
+      },
+      {
+        "id": "bulletin",
+        "source_id": "internet-archive",
+        "gabarit": "Le Bulletin officiel du Gouvernement général de l'Algérie, lu par une machine sur les exemplaires d'Internet Archive, pour les années {annees_bulletin}.",
+        "variables": [
+          "annees_bulletin"
+        ]
+      },
+      {
+        "id": "maniere",
+        "source_id": null,
+        "gabarit": "Termes cherchés : {termes}, sous {nb_variantes} variante(s) en tout. Les majuscules, les accents et les traits d'union ont été ignorés. Les particules (ben, bent, bel, ould, b.) n'ont pas été exigées.",
+        "variables": [
+          "termes",
+          "nb_variantes"
+        ]
+      },
+      {
+        "id": "fenetre-naissance",
+        "source_id": null,
+        "gabarit": "Année de naissance indiquée : {annee_naissance}, à {tolerance_naissance} ans près. Un décret n'était possible qu'à partir de {annee_min} (21 ans, comptés depuis la plus ancienne de ces années).",
+        "variables": [
+          "annee_naissance",
+          "tolerance_naissance",
+          "annee_min"
+        ]
+      }
+    ],
+    "note": "La recherche s'est faite dans votre navigateur : les noms que vous avez saisis n'ont été envoyés nulle part."
+  },
+  "ce_qui_n_est_pas_couvert": {
+    "titre": "Ce qui n'a pas été fouillé, et pourquoi",
+    "lignes": [
+      {
+        "id": "an-images-seules",
+        "titre": "Les années en images seules : {annees_images_seules}",
+        "texte": "Pour ces années, les décrets sont numérisés aux Archives nationales, mais personne n'a encore saisi les noms.",
+        "pourquoi": "Presque aucun nom n'est saisi : il faut lire les images. Les quelques noms saisis sont sur le site des Archives nationales (ligne suivante).",
+        "que_faire": "Ce site vous donne la liste datée des décrets à lire et l'ordre dans lequel les lire.",
+        "voie": "recherche-guidee-images",
+        "guides": [
+          "an-annee-en-images"
+        ],
+        "verification": {
+          "etat": "verifie",
+          "preuves": [
+            "docs/research/sources-2026-11/an-local.md § 5",
+            "docs/research/sources-2026-11/verification.md § an-local",
+            "docs/research/sources-2026-11/verification.md § legal-types"
+          ],
+          "note": ""
+        }
+      },
+      {
+        "id": "an-noms-non-repris",
+        "titre": "Des noms saisis aux Archives nationales, mais non repris ici : {annees_noms_non_repris}",
+        "texte": "Ces noms existent dans les inventaires des Archives nationales. Nous ne les publions pas pour l'instant.",
+        "pourquoi": "L'inventaire général de la collection soumet à l'autorisation de la société Filae la publication en ligne, à des fins de recherche par nom, de plus de 1 000 personnes pour les années qu'elle a indexées. Nous ne les publierons pas sans une réponse écrite des Archives nationales sur ce point.",
+        "que_faire": "Cherchez directement dans l'inventaire de l'année, sur le site des Archives nationales.",
+        "voie": "recherche-sur-le-site-des-an",
+        "guides": [
+          "an-noms-sur-le-site-des-an"
+        ],
+        "verification": {
+          "etat": "partiel",
+          "preuves": [
+            "docs/research/sources-2026-11/an-remote.md § 6.4",
+            "docs/research/sources-2026-11/verification.md § an-remote",
+            "docs/research/sources-2026-11/verification.md § an-local"
+          ],
+          "note": "Texte de la clause vérifié ; sa portée exacte et l'identité de qui a saisi chaque année ne sont pas établies. La demande écrite aux Archives nationales reste à envoyer par le responsable du site."
+        }
+      },
+      {
+        "id": "avant-1883",
+        "titre": "Les décrets d'avant 1883",
+        "texte": "Les inventaires de décrets des Archives nationales utilisés ici commencent en 1883 ; pour 1865-1882, la source que ce site lit est le bulletin imprimé.",
+        "pourquoi": "Les volumes du bulletin ne sont pas tous lus par ce site : voyez plus haut, dans « Ce qui a été fouillé », les années du Bulletin lues par ce site.",
+        "que_faire": "Pour une année non lue, ouvrez le volume et consultez sa table alphabétique, à l'entrée « NATURALISATION ».",
+        "voie": "bulletin-imprime",
+        "guides": [
+          "bogga-internet-archive"
+        ],
+        "verification": {
+          "etat": "verifie",
+          "preuves": [
+            "docs/research/sources-2026-11/legal-types.md § 3 (T2)",
+            "docs/research/sources-2026-11/internet-archive.md § 2",
+            "docs/research/sources-2026-11/verification.md § internet-archive"
+          ],
+          "note": ""
+        }
+      },
+      {
+        "id": "bulletin-apres-1888",
+        "titre": "Les bulletins et journaux officiels imprimés après 1888",
+        "texte": "Le Bulletin officiel (jusqu'en 1926), le Journal officiel de l'Algérie et le Journal officiel de la République française ne sont pas lus par ce site.",
+        "pourquoi": "Ils sont sur Gallica et sur Légifrance, deux sites qui refusent les programmes : nous ne pouvons pas y lire le texte à votre place, et nous ne contournons pas ce refus.",
+        "que_faire": "Avec une date de décret, cherchez la page vous-même.",
+        "voie": "bulletin-imprime",
+        "guides": [
+          "gallica-a-la-main",
+          "legifrance-jorf"
+        ],
+        "verification": {
+          "etat": "verifie",
+          "preuves": [
+            "docs/research/sources-2026-11/gallica.md § 1",
+            "docs/research/sources-2026-11/other-sources.md § 1",
+            "docs/research/sources-2026-11/verification.md § gallica",
+            "docs/research/sources-2026-11/verification.md § other-sources"
+          ],
+          "note": ""
+        }
+      },
+      {
+        "id": "bulletin-annees-manquantes",
+        "titre": "Des années manquantes dans le bulletin imprimé",
+        "texte": "Les volumes de 1862 et de 1887 n'ont pas été trouvés sur Internet Archive ; le catalogue de la Bibliothèque nationale de France signale l'année 1907 comme manquante et 1890 comme incomplète sur Gallica.",
+        "pourquoi": "Les collections numérisées ont des lacunes.",
+        "que_faire": "Pour 1862, un exemplaire existe sur HathiTrust ; pour 1887, le catalogue de la BnF annonce le volume sur Gallica.",
+        "voie": "bulletin-imprime",
+        "guides": [
+          "bogga-internet-archive",
+          "gallica-a-la-main"
+        ],
+        "verification": {
+          "etat": "partiel",
+          "preuves": [
+            "docs/research/sources-2026-11/internet-archive.md § 2",
+            "data/samples/gallica/cat-bogga-notice.html",
+            "docs/research/sources-2026-11/verification.md § gallica",
+            "docs/research/sources-2026-11/verification.md § internet-archive"
+          ],
+          "note": "Lacunes relevées dans les catalogues ; l'état réel en ligne sur Gallica n'a pas pu être vu."
+        }
+      },
+      {
+        "id": "jugements",
+        "titre": "Les jugements d'admission (à partir de 1919) et de renonciation (après 1946)",
+        "texte": "Ils ne sont publiés nulle part.",
+        "pourquoi": "La loi ne prévoyait aucune publication, seulement une mention en marge de l'acte de naissance et de l'acte de mariage ; les archives des tribunaux sont restées en Algérie.",
+        "que_faire": "Demandez en Algérie la copie intégrale de l'acte avec ses mentions en marge.",
+        "voie": "etat-civil-en-algerie",
+        "guides": [
+          "jugement-etat-civil-algerie"
+        ],
+        "verification": {
+          "etat": "verifie",
+          "preuves": [
+            "data/samples/legal-types/mjp-loi-1919-02-04.txt",
+            "data/samples/other-sources/senat/qSEQ910716358.html",
+            "data/samples/other-sources/anom/site-ce-que-vous-ne-trouverez-pas.html"
+          ],
+          "note": "Pour les jugements de renonciation d'après 1946, l'existence d'une mention en marge n'est pas établie."
+        }
+      },
+      {
+        "id": "apres-1948",
+        "titre": "Les décrets postérieurs à 1948",
+        "texte": "La collection que nous utilisons s'arrête en 1948.",
+        "pourquoi": "Nous ne savons pas si des décrets d'admission d'Algériens ont encore été pris de 1949 à 1962.",
+        "que_faire": "Avec une date, cherchez dans le Journal officiel.",
+        "voie": "legifrance",
+        "guides": [
+          "legifrance-jorf",
+          "gallica-a-la-main"
+        ],
+        "verification": {
+          "etat": "non-verifie",
+          "preuves": [
+            "docs/research/sources-2026-11/legal-types.md § 3 (T13)",
+            "docs/research/sources-2026-11/other-sources.md § 10"
+          ],
+          "note": ""
+        }
+      },
+      {
+        "id": "declarations",
+        "titre": "Les déclarations de 1962 à 1967",
+        "texte": "Les déclarations de reconnaissance de la nationalité française signées en France après l'indépendance ne sont pas des décrets.",
+        "pourquoi": "Elles ne sont pas publiées.",
+        "que_faire": "Écrivez au ministère et aux archives du département.",
+        "voie": "declaration-recognitive",
+        "guides": [
+          "declaration-recognitive"
+        ],
+        "verification": {
+          "etat": "partiel",
+          "preuves": [
+            "docs/research/sources-2026-11/other-sources.md § 6.1",
+            "docs/research/sources-2026-11/verification.md § other-sources"
+          ],
+          "note": ""
+        }
+      },
+      {
+        "id": "sans-acte",
+        "titre": "Les voies sans acte nominatif",
+        "texte": "Le décret Crémieux de 1870, la loi de 1889, l'ordonnance de 1944, la loi de 1946 et la loi de 1961 se sont appliqués à des catégories entières, sans nommer personne.",
+        "pourquoi": "Il n'existe aucun acte au nom de la personne.",
+        "que_faire": "Voyez la page « Les actes qui ont existé ».",
+        "voie": "hors-perimetre",
+        "guides": [],
+        "verification": {
+          "etat": "verifie",
+          "preuves": [
+            "docs/research/sources-2026-11/legal-types.md § 2"
+          ],
+          "note": ""
+        }
+      }
+    ]
+  },
+  "rappel_jugement": {
+    "titre": "Rappel : un jugement a pu exister",
+    "texte": "Ce site ne cherche que des décrets. À partir de 1919, l'admission pouvait aussi se faire par un jugement du tribunal ; de 1919 à 1930, les jugements ont même été plus nombreux que les décrets. Ces jugements n'ont été publiés nulle part : aucun site ne peut les trouver. Ils se signalent par une mention en marge de l'acte de naissance ou de mariage, et se demandent en Algérie.",
+    "court": "Un jugement d'admission (à partir de 1919) n'est publié nulle part : il se demande en Algérie.",
+    "guides": [
+      "jugement-etat-civil-algerie"
+    ],
+    "verification": {
+      "etat": "verifie",
+      "preuves": [
+        "data/samples/legal-types/mjp-loi-1919-02-04.txt",
+        "data/samples/legal-types/weil-2003-HEC03-03.txt",
+        "data/samples/other-sources/senat/qSEQ910716358.html",
+        "data/samples/an-remote/an-dossiers-naturalisation.body",
+        ".scratch/retrouver-un-decret/map.md"
+      ],
+      "note": "Décision du 2026-10-16 : ce rappel figure dans tout bilan."
+    }
+  },
+  "echelle": {
+    "titre": "Un acte rare",
+    "texte": "De 1865 à 1962, d'après le décompte de l'historien Patrick Weil, un peu plus de 6 000 Algériens musulmans ont été admis à la qualité de citoyen français, par décret ou par jugement. Pour toute l'Algérie, cela fait quelques dizaines de personnes par an. La très grande majorité des familles n'ont donc aucun décret à trouver, et cela ne retire rien à leur histoire.",
+    "chiffres": [
+      {
+        "id": "total",
+        "valeur": "un peu plus de 6 000",
+        "libelle": "admissions individuelles d'Algériens musulmans de 1865 à 1962, par décret ou par jugement",
+        "detail": "3 572 par décret (2 396 de 1865 à 1915, 1 176 de 1919 à 1942) et 2 395 par jugement ; les décrets des années 1915-1919 et 1943-1962 ne sont pas comptés.",
+        "reserve": "Une historienne, Laure Blévis, a recompté les décrets publiés au Bulletin officiel et trouve nettement moins pour la période antérieure à 1919 (ligne suivante).",
+        "source": "Patrick Weil, « Le statut des musulmans en Algérie coloniale », EUI Working Paper HEC n° 2003/3, note 77",
+        "preuves": [
+          "data/samples/legal-types/weil-2003-HEC03-03.txt",
+          "docs/research/sources-2026-11/legal-types.md § 7",
+          "docs/research/sources-2026-11/verification.md § legal-types"
+        ],
+        "etat": "verifie"
+      },
+      {
+        "id": "blevis",
+        "valeur": "1 453",
+        "libelle": "Algériens musulmans admis par décret de 1870 à 1919, d'après un dépouillement du Bulletin officiel — une trentaine par an",
+        "detail": "Sur 31 496 naturalisations prononcées en Algérie pendant la même période, toutes origines confondues.",
+        "reserve": "Chiffre connu par la citation qu'en fait une autre historienne ; l'article d'origine n'a pas été lu.",
+        "source": "Laure Blévis, citée par Florence Renucci (2004, note 10)",
+        "preuves": [
+          "data/samples/legal-types/renucci-2004-accession-indigenes.txt",
+          "docs/research/sources-2026-11/legal-types.md § 7"
+        ],
+        "etat": "partiel"
+      },
+      {
+        "id": "1919-1930",
+        "valeur": "1 204 jugements et 760 décrets",
+        "libelle": "admissions de 1919 à 1930 (pour 1 547 demandes par jugement)",
+        "detail": "",
+        "reserve": "",
+        "source": "Patrick Weil, 2003, p. 12 et note 77",
+        "preuves": [
+          "data/samples/legal-types/weil-2003-HEC03-03.txt",
+          "docs/research/sources-2026-11/legal-types.md § 3 (T7)"
+        ],
+        "etat": "verifie"
+      },
+      {
+        "id": "1875",
+        "valeur": "250",
+        "libelle": "Algériens musulmans admis au total entre 1865 et 1875, pour une population musulmane estimée alors à 2 500 000 personnes",
+        "detail": "",
+        "reserve": "Chiffre cumulé sur dix ans, donné par un auteur de l'époque.",
+        "source": "Roussel, Revue des Deux Mondes, 1875 (transcription Wikisource)",
+        "preuves": [
+          "data/samples/legal-types/wikisource-condition-naturalisation-indigenes.txt",
+          "docs/research/sources-2026-11/verification.md § legal-types"
+        ],
+        "etat": "verifie"
+      },
+      {
+        "id": "1944",
+        "valeur": "1 210 000 et 60 000",
+        "libelle": "hommes musulmans de 21 ans et plus devenus électeurs du second collège en 1944, et électeurs musulmans du premier collège",
+        "detail": "Les 60 000 sont les citoyens « à titre personnel » de l'ordonnance de 1944, qui n'ont pas eu de décret.",
+        "reserve": "L'auteur ne dit pas si le premier nombre comprend le second.",
+        "source": "Patrick Weil, 2003, p. 14",
+        "preuves": [
+          "data/samples/legal-types/weil-2003-HEC03-03.txt",
+          "docs/research/sources-2026-11/legal-types.md § 7"
+        ],
+        "etat": "verifie"
+      },
+      {
+        "id": "1962",
+        "valeur": "environ 10 000",
+        "libelle": "musulmans d'Algérie que le même auteur dit « pleinement français » en 1962 : les personnes admises et leurs descendants",
+        "detail": "",
+        "reserve": "Ordre de grandeur et expression de l'auteur (« quelques dix mille »).",
+        "source": "Patrick Weil, 2003",
+        "preuves": [
+          "data/samples/legal-types/weil-2003-HEC03-03.txt",
+          "docs/research/sources-2026-11/verification.md § legal-types"
+        ],
+        "etat": "verifie"
+      },
+      {
+        "id": "nos-lectures",
+        "valeur": "35 sur 846, et 30 sur 1 561",
+        "libelle": "entrées où notre lecture automatique a relevé le mot « indigène », parmi les personnes relevées dans le Bulletin officiel de 1873, puis de 1888",
+        "detail": "La plupart des autres sont des étrangers naturalisés ou des femmes réintégrées. Une entrée sans ce mot ne permet pas de conclure pour une personne : la machine a pu le mal lire.",
+        "reserve": "Lecture par une machine, qui oublie des personnes : environ une sur dix en 1873, et au moins une entrée de 1873 portant ce mot lui a échappé.",
+        "source": "Nos propres comptages sur les volumes d'Internet Archive",
+        "preuves": [
+          "data/samples/internet-archive/derived/bogga-1873-decrees.json",
+          "data/samples/internet-archive/derived/bogga-1888-decrees.json",
+          "docs/research/sources-2026-11/internet-archive.md § 5",
+          "docs/research/sources-2026-11/verification.md § internet-archive"
+        ],
+        "etat": "verifie"
+      }
+    ]
+  },
+  "citations_officielles": {
+    "titre": "Ce que disent les administrations",
+    "note": "Citations exactes, avec leur source et leur date. Ce site les rapporte ; il n'en tire aucune conclusion sur la situation d'une personne.",
+    "principales": [
+      {
+        "id": "an-valeur-de-preuve",
+        "texte": "Les décrets publiés au Journal officiel sont les seuls à avoir valeur de preuve.",
+        "auteur": "Archives nationales",
+        "source": "Page « Dossiers de demande de naturalisation », tableau « Preuves de nationalité », ligne « Un décret de naturalisation. Y compris, pour l'Algérie, un ancêtre devenu français par décret pris en application du sénatus-consulte du 14 juillet 1865 »",
+        "date": "Page sans date, lue le 11 novembre 2026",
+        "a_quoi_sert": "À comprendre pourquoi ce site cherche toujours la page publiée, et pas seulement le décret original.",
+        "precaution": "Les Archives nationales ne disent pas ce qu'il en est du Bulletin officiel du Gouvernement général de l'Algérie, où paraissaient les décrets d'admission jusqu'en 1926 ; ce site relève la page publiée, quel que soit le journal.",
+        "lien": "an-page-dossiers",
+        "preuves": [
+          "data/samples/an-remote/an-dossiers-naturalisation.body",
+          "docs/research/sources-2026-11/an-remote.md § 7"
+        ]
+      },
+      {
+        "id": "justice-1991-decrets-publies",
+        "texte": "Les décisions des tribunaux n'ont pas fait l'objet de mesures particulières tendant à leur conservation. Il appartient aux personnes qui s'en prévalent d'en produire les expéditions. En revanche, les décrets ont été régulièrement publiés et la preuve peut en être aisément rapportée. A défaut d'une telle preuve, l'appartenance au statut civil de droit local des personnes originaires d'Algérie doit être présumée.",
+        "auteur": "Ministère de la Justice",
+        "source": "Réponse à la question écrite n° 16358, Journal officiel du Sénat, p. 2352",
+        "date": "24 octobre 1991",
+        "a_quoi_sert": "À savoir comment l'administration française raisonne : un décret se retrouve dans une publication ; un jugement doit être produit par celui qui l'invoque.",
+        "precaution": "C'est la règle de preuve que l'administration applique, citée telle quelle. Ce site n'en tire aucune conclusion sur une personne ou sur ses descendants.",
+        "lien": "senat-qe-16358",
+        "preuves": [
+          "data/samples/other-sources/senat/qSEQ910716358.html",
+          "data/samples/legal-types/senat-qe-16358-1991.txt"
+        ]
+      },
+      {
+        "id": "justice-2006-mention-marginale",
+        "texte": "L'accession au statut de droit commun résultant de la loi du 4 février 1919 se prouve, quant à elle, par la production du jugement d'admission à la qualité de citoyen français. La production de ce titre est essentielle et la mention en marge apposée sur une copie d'acte d'état civil ne saurait s'y substituer.",
+        "auteur": "Ministère de la Justice",
+        "source": "Réponse à la question écrite n° 17313, Journal officiel du Sénat, p. 723",
+        "date": "9 mars 2006",
+        "a_quoi_sert": "À ne pas confondre la mention en marge, qui signale le jugement, avec le jugement lui-même.",
+        "precaution": "",
+        "lien": "senat-qe-17313",
+        "preuves": [
+          "data/samples/other-sources/senat/qSEQ050417313.html",
+          "data/samples/legal-types/senat-qe-17313-2005.txt"
+        ]
+      }
+    ],
+    "autres": [
+      {
+        "id": "anom-pas-d-archives-probantes",
+        "texte": "Les Archives nationales d'outre-mer ne sont pas compétentes en matière de naturalisation et ne conservent pas d'archives probantes dans ce domaine, que la naturalisation ait été demandée par décret, par jugement ou par déclaration recognitive après l'accès à l'indépendance.",
+        "auteur": "Archives nationales d'outre-mer",
+        "source": "Fiche « Algérie française », rubrique « Rechercher une preuve de nationalité »",
+        "date": "Page sans date, lue le 11 novembre 2026",
+        "a_quoi_sert": "À éviter un voyage ou un courrier inutile à Aix-en-Provence.",
+        "precaution": "",
+        "lien": "anom-algerie-francaise",
+        "preuves": [
+          "data/samples/other-sources/anom/site-algerie-francaise.html",
+          "docs/research/sources-2026-11/verification.md § other-sources"
+        ]
+      },
+      {
+        "id": "an-dossiers-pas-des-preuves",
+        "texte": "Les dossiers de demande de naturalisation conservés aux Archives nationales sont des dossiers d'instruction. Les pièces qu'ils contiennent ne sont pas des preuves de nationalité.",
+        "auteur": "Archives nationales",
+        "source": "Page « Dossiers de demande de naturalisation »",
+        "date": "Page sans date, lue le 11 novembre 2026",
+        "a_quoi_sert": "À savoir ce qu'on peut attendre d'un dossier commandé à Pierrefitte-sur-Seine.",
+        "precaution": "",
+        "lien": "an-page-dossiers",
+        "preuves": [
+          "data/samples/an-remote/an-dossiers-naturalisation.body",
+          "docs/research/sources-2026-11/an-remote.md § 7"
+        ]
+      },
+      {
+        "id": "an-jugements-en-algerie",
+        "texte": "Archives conservées en Algérie.",
+        "auteur": "Archives nationales",
+        "source": "Même page, ligne « (Algérie) Un ancêtre devenu français par jugement d'admission à la citoyenneté française délivré par les tribunaux en Algérie de 1919 à 1962 (loi du 4 février 1919) »",
+        "date": "Page sans date, lue le 11 novembre 2026",
+        "a_quoi_sert": "À savoir où se trouvent les jugements.",
+        "precaution": "",
+        "lien": "an-page-dossiers",
+        "preuves": [
+          "data/samples/an-remote/an-dossiers-naturalisation.body",
+          "docs/research/sources-2026-11/an-remote.md § 7"
+        ]
+      }
+    ]
+  },
+  "mises_en_garde": {
+    "titre": "Un nom absent n'est pas une absence de décret",
+    "texte": "Ce site lit des textes saisis à la main ou lus par une machine. Les uns et les autres contiennent des fautes. Ne rien trouver veut dire : rien dans ce qui a été lu, sous les graphies que vous avez saisies.",
+    "points": [
+      {
+        "id": "graphies",
+        "texte": "Un même nom arabe ou berbère s'écrivait de plusieurs façons en français (Belkacem, Belkassem, Belgacem). Saisissez toutes les variantes que vous connaissez.",
+        "preuves": [
+          "CONTEXT.md",
+          "docs/research/sources-2026-11/an-local.md § 9.2"
+        ]
+      },
+      {
+        "id": "saisie-manuelle",
+        "texte": "L'index des Archives nationales a été saisi à la main, en partie par des bénévoles : fautes de frappe, noms tronqués, quelques notices sans nom.",
+        "preuves": [
+          "docs/research/sources-2026-11/verification.md § an-local",
+          "docs/research/sources-2026-11/verification.md § an-remote",
+          "docs/research/sources-2026-11/an-local.md § 7"
+        ]
+      },
+      {
+        "id": "lecture-machine",
+        "texte": "Le bulletin imprimé a été lu par une machine : le chiffre 1 est souvent lu 4, « ben » devient « bon », des noms sont déformés. Dans le volume de 1873, environ une personne sur dix lui a échappé ; sur une page mal imprimée, une sur quatre.",
+        "preuves": [
+          "docs/research/sources-2026-11/internet-archive.md § 4.4",
+          "docs/research/sources-2026-11/internet-archive.md § 5",
+          "docs/research/sources-2026-11/verification.md § internet-archive"
+        ]
+      },
+      {
+        "id": "sans-nom-de-famille",
+        "texte": "Dans le bulletin imprimé des années 1860-1870, un Algérien musulman est souvent désigné par son prénom et celui de son père, sans nom de famille (forme vue dans les volumes de 1869 et de 1873) : pour un acte d'avant les années 1880, cherchez-le ainsi.",
+        "preuves": [
+          "docs/research/sources-2026-11/internet-archive.md § 4.3"
+        ]
+      },
+      {
+        "id": "epouse-enfants",
+        "texte": "Une épouse ou un enfant peut n'être cité que dans la notice du mari ou du père.",
+        "preuves": [
+          "docs/research/sources-2026-11/an-local.md § 2.4",
+          "docs/research/sources-2026-11/legal-types.md § 4"
+        ]
+      },
+      {
+        "id": "homonymes",
+        "texte": "Une correspondance n'est pas une identité : deux personnes peuvent porter le même nom. Comparez toujours la naissance, le père, le lieu.",
+        "preuves": [
+          "docs/research/sources-2026-11/an-local.md § 6"
+        ]
+      },
+      {
+        "id": "dates",
+        "texte": "Les dates de naissance étaient souvent estimées ; « 1 janvier » est une date de convention. Ne rejetez pas une correspondance pour un écart de quelques années.",
+        "preuves": [
+          "docs/research/sources-2026-11/verification.md § an-local"
+        ]
+      },
+      {
+        "id": "plusieurs-decrets",
+        "texte": "La même personne peut figurer dans plusieurs décrets (une demande rejetée, puis une admission ; un décret republié ou rectifié).",
+        "preuves": [
+          "docs/research/sources-2026-11/verification.md § an-local",
+          "docs/research/sources-2026-11/verification.md § internet-archive"
+        ]
+      },
+      {
+        "id": "fraicheur",
+        "texte": "Les inventaires ont été relevés à la date indiquée ; les Archives nationales ont pu ajouter des noms depuis.",
+        "preuves": [
+          "docs/research/sources-2026-11/an-remote.md § 10"
+        ]
+      }
+    ]
+  },
+  "demarches_restantes": {
+    "titre": "Ce qu'il reste à faire",
+    "lignes": [
+      {
+        "id": "variantes",
+        "texte": "Reprendre la recherche avec d'autres graphies du prénom, du nom du père et du nom de famille.",
+        "guides": []
+      },
+      {
+        "id": "images",
+        "texte": "Parcourir les décrets des années en images seules qui correspondent à sa vie d'adulte.",
+        "guides": [
+          "an-annee-en-images"
+        ]
+      },
+      {
+        "id": "site-an",
+        "texte": "Chercher dans les inventaires des Archives nationales pour les années dont les noms ne sont pas repris ici.",
+        "guides": [
+          "an-noms-sur-le-site-des-an"
+        ]
+      },
+      {
+        "id": "bulletin",
+        "texte": "Pour un acte d'avant 1889, consulter la table alphabétique du Bulletin officiel de chaque année possible.",
+        "guides": [
+          "bogga-internet-archive"
+        ]
+      },
+      {
+        "id": "jugement",
+        "texte": "Pour un acte à partir de 1919, demander en Algérie la copie intégrale de l'acte de naissance et de l'acte de mariage, avec leurs mentions en marge.",
+        "guides": [
+          "jugement-etat-civil-algerie"
+        ]
+      },
+      {
+        "id": "dossier",
+        "texte": "Si vous connaissez un numéro de dossier, demander le dossier aux Archives nationales.",
+        "guides": [
+          "dossier-pierrefitte"
+        ]
+      },
+      {
+        "id": "ministere",
+        "texte": "Si vous tenez une citation, demander une attestation au ministère.",
+        "guides": [
+          "attestation-ministere"
+        ]
+      }
+    ]
+  },
+  "ce_que_ce_bilan_n_est_pas": "Ce bilan n'est ni un certificat, ni une attestation, ni un avis juridique. Il ne dit rien de la nationalité d'une personne vivante. Vous pouvez l'imprimer pour garder la trace de votre recherche : il n'a aucune valeur officielle."
+}

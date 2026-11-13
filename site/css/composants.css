@@ -1,0 +1,678 @@
+/*
+ * Decretas — shared components: buttons, fields, notice, card, external link, guide steps,
+ * loading bar, disclosure, table. Class names follow the component files of js/composants/.
+ */
+
+/* ----- buttons -------------------------------------------------------------------------------- */
+
+.bouton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--e2);
+  min-block-size: var(--cible);
+  padding: var(--e2) var(--e5);
+  border: 1px solid transparent;
+  border-radius: var(--rayon);
+  font: inherit;
+  font-weight: 650;
+  line-height: 1.2;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.bouton--principal {
+  background: var(--accent);
+  color: var(--accent-contraste);
+}
+
+.bouton--principal:hover {
+  background: var(--accent-survol);
+  color: var(--accent-contraste);
+}
+
+.bouton--secondaire {
+  background: transparent;
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.bouton--secondaire:hover {
+  background: var(--accent-doux);
+  color: var(--accent);
+}
+
+.bouton--lien {
+  min-block-size: var(--cible);
+  padding-inline: 0;
+  background: none;
+  color: var(--accent);
+  font-weight: 600;
+  text-decoration: underline;
+  text-decoration-thickness: from-font;
+  text-underline-offset: 0.18em;
+}
+
+.bouton--lien:hover { text-decoration-thickness: 2px; }
+
+.bouton:disabled,
+.bouton[aria-disabled="true"] {
+  opacity: 0.55;
+  cursor: progress;
+}
+
+.bouton:active:not(:disabled) { transform: translateY(1px); }
+
+@media (prefers-reduced-motion: no-preference) {
+  .bouton,
+  .graphie {
+    transition: background-color 140ms ease-out, border-color 140ms ease-out, color 140ms ease-out;
+  }
+}
+
+/* ----- fields --------------------------------------------------------------------------------- */
+
+.champ { display: grid; gap: var(--e1); }
+
+.champ__libelle {
+  font-weight: 650;
+}
+
+.champ__saisie {
+  inline-size: 100%;
+  min-block-size: 3rem;
+  padding: var(--e2) var(--e3);
+  background: var(--feuille);
+  color: var(--encre);
+  border: 1px solid var(--bord-champ);
+  border-radius: var(--rayon);
+  font: inherit;
+  font-size: var(--t-l);
+}
+
+.champ__saisie:hover { border-color: var(--encre); }
+
+.champ__saisie:focus-visible {
+  outline-offset: 1px;
+  border-color: var(--accent);
+}
+
+.champ__saisie[aria-invalid="true"] {
+  border-color: var(--erreur);
+  border-width: 2px;
+}
+
+.champ__saisie[lang="ar"] {
+  font-size: 1.35rem;
+  line-height: 1.6;
+}
+
+.champ__aide {
+  font-size: var(--t-s);
+  color: var(--encre-douce);
+}
+
+.champ__erreur {
+  font-size: var(--t-s);
+  font-weight: 650;
+  color: var(--erreur);
+}
+
+.champ__erreur:empty { display: none; }
+
+/* ----- notice --------------------------------------------------------------------------------- */
+
+.avis {
+  display: flex;
+  gap: var(--e3);
+  padding: var(--e3) var(--e4);
+  border: 1px solid var(--info-bord);
+  border-radius: var(--rayon-carte);
+  background: var(--info-fond);
+}
+
+.avis .icone {
+  margin-block-start: 0.15em;
+  color: var(--accent);
+}
+
+.avis__corps { min-inline-size: 0; }
+.avis__corps > * + * { margin-block-start: var(--e2); }
+.avis__titre { font-weight: 650; }
+
+.avis--attention {
+  border-color: var(--alerte-bord);
+  background: var(--alerte-fond);
+  color: var(--alerte-encre);
+}
+
+.avis--attention .icone { color: var(--alerte-encre); }
+.avis--attention .note { color: var(--alerte-encre); }
+
+.avis--neutre {
+  border-color: var(--filet);
+  background: transparent;
+}
+
+/* The hint about a person sits inside a card: a tinted block, not a second frame. */
+.avis.indice {
+  border: 0;
+  background: var(--creux);
+}
+
+/* ----- card ----------------------------------------------------------------------------------- */
+
+.carte {
+  padding: var(--e4);
+  background: var(--feuille);
+  border: 1px solid var(--filet);
+  border-radius: var(--rayon-carte);
+  box-shadow: var(--ombre);
+}
+
+.carte > * + * { margin-block-start: var(--e3); }
+
+.carte__titre {
+  font-size: var(--t-xl);
+  line-height: 1.25;
+}
+
+.nom { font-family: var(--serif); }
+.nom[lang="ar"] { font-size: 1.15em; }
+
+.champs { display: grid; gap: var(--e2); }
+
+.champs__ligne {
+  display: grid;
+  gap: 0 var(--e4);
+}
+
+.champs dt {
+  font-size: var(--t-s);
+  color: var(--encre-douce);
+}
+
+.champs dd {
+  margin: 0;
+  min-inline-size: 0;
+}
+
+@media (min-width: 34rem) {
+  .champs__ligne { grid-template-columns: 11rem minmax(0, 1fr); }
+  .champs dt { padding-block-start: 0.1em; }
+}
+
+.source-brute {
+  font-family: var(--serif);
+}
+
+.source-brute--longue {
+  display: block;
+  padding: var(--e2) var(--e3);
+  background: var(--creux);
+  border-radius: var(--rayon);
+}
+
+.liste-simple {
+  padding: 0;
+  list-style: none;
+}
+
+/* ----- external link -------------------------------------------------------------------------- */
+
+.liens {
+  display: grid;
+  gap: var(--e3);
+  padding: 0;
+  list-style: none;
+}
+
+.lien-externe {
+  display: grid;
+  gap: 0.1rem;
+  justify-items: start;
+}
+
+.lien-externe__a {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--e2);
+  min-block-size: var(--cible);
+  font-weight: 650;
+}
+
+.lien-externe__hote,
+.lien-externe__note,
+.lien-externe__repli {
+  font-size: var(--t-s);
+  color: var(--encre-douce);
+}
+
+.lien-externe__domaine { font-family: var(--mono); font-size: 0.92em; }
+
+.lien-externe__note { max-inline-size: 38rem; }
+
+.lien-externe__etiquette,
+.a-confirmer__etiquette {
+  font-weight: 650;
+  color: var(--encre);
+}
+
+.lien-externe__repli .lien-externe { margin-block-start: var(--e1); }
+
+.lien-externe--vide .lien-externe__libelle { font-weight: 650; }
+
+.liens-internes {
+  padding: 0;
+  list-style: none;
+}
+
+.liens-internes--liste > li + li {
+  margin-block-start: var(--e3);
+  padding-block-start: var(--e3);
+  border-block-start: 1px solid var(--filet);
+}
+
+/* ----- disclosure ----------------------------------------------------------------------------- */
+
+details > summary {
+  display: flex;
+  align-items: center;
+  gap: var(--e2);
+  min-block-size: var(--cible);
+  color: var(--accent);
+  font-weight: 650;
+  cursor: pointer;
+  list-style: none;
+}
+
+details > summary::-webkit-details-marker { display: none; }
+
+details > summary::before {
+  content: "";
+  flex: none;
+  inline-size: 0.5rem;
+  block-size: 0.5rem;
+  margin-inline: 0.15rem 0.25rem;
+  border-inline-end: 2px solid currentColor;
+  border-block-end: 2px solid currentColor;
+  transform: rotate(-45deg);
+}
+
+[dir="rtl"] details > summary::before { transform: rotate(135deg); }
+
+details[open] > summary::before { transform: rotate(45deg); }
+
+@media (prefers-reduced-motion: no-preference) {
+  details > summary::before { transition: transform 160ms cubic-bezier(0.2, 0.8, 0.2, 1); }
+}
+
+details > summary:hover { color: var(--accent-survol); }
+
+.repli > * + * { margin-block-start: var(--e3); }
+.repli__sous-titre { font-weight: 650; }
+
+/* ----- guide steps ---------------------------------------------------------------------------- */
+
+.etapes {
+  display: grid;
+  gap: var(--e5);
+  padding: 0;
+  list-style: none;
+  counter-reset: etape;
+}
+
+.etape { counter-increment: etape; }
+
+/* Narrow: the numeral sits beside the title and the text keeps the whole width. */
+.etape__titre {
+  display: flex;
+  align-items: baseline;
+  gap: var(--e3);
+}
+
+.etape__titre::before {
+  content: counter(etape);
+  flex: none;
+  font-family: var(--serif);
+  font-size: var(--t-xl);
+  font-weight: 600;
+  line-height: 1;
+  color: var(--accent);
+  font-variant-numeric: lining-nums;
+}
+
+/* Wide: a hanging numeral in the margin of the step. */
+@media (min-width: 34rem) {
+  .etape {
+    position: relative;
+    padding-inline-start: 2.6rem;
+  }
+
+  .etape__titre { display: block; }
+  .etape__titre::before { content: none; }
+
+  .etape::before {
+    content: counter(etape);
+    position: absolute;
+    inset-inline-start: 0;
+    inset-block-start: -0.2rem;
+    inline-size: 2rem;
+    font-family: var(--serif);
+    font-size: var(--t-2xl);
+    font-weight: 600;
+    line-height: 1;
+    color: var(--accent);
+    font-variant-numeric: lining-nums;
+  }
+}
+
+.etape > * + * { margin-block-start: var(--e2); }
+
+.etape__titre {
+  font-family: var(--sans);
+  font-size: var(--t-m);
+  font-weight: 650;
+  line-height: 1.35;
+}
+
+.etape__suite > * + *,
+.etape__ecran > * + * { margin-block-start: var(--e2); }
+
+.etape__suite,
+.etape__ecran { font-size: var(--t-s); }
+
+.etape__ecran {
+  margin-inline-start: var(--e3);
+}
+
+.issues { display: grid; gap: var(--e3); }
+
+.issues dt { font-weight: 650; }
+
+.issues dd { margin: 0; }
+
+/* Discreet on purpose: an honest caveat, not an alarm. */
+.a-confirmer {
+  padding: var(--e2) var(--e3);
+  background: var(--creux);
+  border-radius: var(--rayon);
+  font-size: var(--t-xs);
+  line-height: 1.5;
+  color: var(--encre-douce);
+}
+
+/* ----- loading -------------------------------------------------------------------------------- */
+
+.chargement {
+  display: grid;
+  gap: var(--e2);
+  font-size: var(--t-s);
+  color: var(--encre-douce);
+}
+
+.chargement[data-phase="erreur"] {
+  padding: var(--e3) var(--e4);
+  border: 1px solid var(--alerte-bord);
+  border-radius: var(--rayon-carte);
+  background: var(--alerte-fond);
+  color: var(--alerte-encre);
+  font-size: var(--t-m);
+}
+
+.chargement__ligne {
+  display: flex;
+  align-items: center;
+  gap: var(--e3);
+}
+
+.chargement__ligne:has(> [hidden] + [hidden]) { display: none; }
+
+.chargement__barre {
+  flex: 1;
+  block-size: 0.5rem;
+  appearance: none;
+  border: 0;
+  border-radius: 999px;
+  background: var(--creux);
+  overflow: hidden;
+}
+
+.chargement__barre::-webkit-progress-bar { background: var(--creux); border-radius: 999px; }
+.chargement__barre::-webkit-progress-value { background: var(--accent); border-radius: 999px; }
+.chargement__barre::-moz-progress-bar { background: var(--accent); border-radius: 999px; }
+
+.chargement__pourcent {
+  min-inline-size: 3.2rem;
+  text-align: end;
+  font-variant-numeric: tabular-nums;
+  color: var(--encre);
+}
+
+.chargement__actions:empty { display: none; }
+
+/* ----- table ---------------------------------------------------------------------------------- */
+
+.tableau {
+  inline-size: 100%;
+  border-collapse: collapse;
+  font-size: var(--t-s);
+  font-variant-numeric: tabular-nums;
+  overflow-wrap: normal; /* cells wrap between words, never inside one */
+}
+
+.tableau caption {
+  padding-block-end: var(--e2);
+  text-align: start;
+  font-weight: 650;
+}
+
+.tableau th,
+.tableau td {
+  padding: var(--e2) var(--e2);
+  border-block-end: 1px solid var(--filet);
+  text-align: end;
+  vertical-align: top;
+}
+
+.tableau th:first-child { text-align: start; }
+
+.tableau thead th {
+  font-weight: 600;
+  color: var(--encre-douce);
+}
+
+.tableau tbody th { font-weight: 400; }
+
+/* ----- quoted official statement, credit --------------------------------------------------------- */
+
+.citation-officielle blockquote {
+  margin: 0;
+  font-family: var(--serif);
+  font-size: var(--t-l);
+  line-height: 1.4;
+}
+
+.citation-officielle figcaption {
+  margin-block-start: var(--e2);
+  font-size: var(--t-s);
+  color: var(--encre-douce);
+}
+
+.credit {
+  padding-block-start: var(--e3);
+  border-block-start: 1px solid var(--filet);
+  font-size: var(--t-s);
+  color: var(--encre-douce);
+}
+
+.credit__etiquette { font-weight: 650; }
+
+/* ----- a word linked to its definition --------------------------------------------------------- */
+
+.mot {
+  color: inherit;
+  text-decoration-style: dotted;
+  text-decoration-color: var(--bord-champ);
+}
+
+.mot:hover { color: var(--accent); text-decoration-style: solid; }
+
+/* ----- chips: a choice among a few periods or families ------------------------------------------ */
+
+.pastilles {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--e2);
+  padding: 0;
+  list-style: none;
+}
+
+.pastille {
+  display: inline-flex;
+  align-items: center;
+  min-block-size: var(--cible);
+  padding: var(--e1) var(--e4);
+  border: 1px solid var(--bord-champ);
+  border-radius: 999px;
+  color: var(--encre);
+  font-size: var(--t-s);
+  text-decoration: none;
+}
+
+.pastille:hover { border-color: var(--accent); color: var(--accent); }
+
+.pastille[aria-current="true"] {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--accent-contraste);
+  font-weight: 650;
+}
+
+/* ----- check boxes ------------------------------------------------------------------------------ */
+
+.liste-cases {
+  display: grid;
+  gap: var(--e1);
+  padding: 0;
+  list-style: none;
+}
+
+.liste-cases li,
+.etape__fait,
+.decret__lu {
+  display: flex;
+  align-items: center;
+  gap: var(--e2);
+}
+
+.liste-cases label,
+.etape__fait label,
+.decret__lu label {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  column-gap: var(--e1); /* the count never sticks to the words: « algériennes » (803) */
+  min-block-size: var(--cible);
+  cursor: pointer;
+}
+
+input[type="checkbox"] {
+  flex: none;
+  /* at least 24 px (WCAG 2.5.8); the label next to it is the large target */
+  inline-size: max(1.5rem, 24px);
+  block-size: max(1.5rem, 24px);
+  margin: 0;
+  cursor: pointer;
+}
+
+fieldset {
+  min-inline-size: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+legend { padding: 0; }
+
+.champ__saisie--choix {
+  inline-size: auto;
+  min-inline-size: 5.75rem;
+  font-size: var(--t-m);
+}
+
+.champ__saisie--texte {
+  font-family: var(--mono);
+  font-size: var(--t-m);
+  line-height: 1.5;
+  resize: vertical;
+}
+
+/* ----- tables that become stacked rows on a phone ------------------------------------------------ */
+
+.tableau-cadre {
+  max-inline-size: 100%;
+  overflow-x: auto;
+}
+
+/* The table of the bilan (classes by source): narrow cells on a phone, and it scrolls inside
+   its own frame rather than pushing the page sideways when the text is enlarged. */
+.bilan .tableau th,
+.bilan .tableau td { padding-inline: var(--e1); }
+
+.bilan .tableau thead th { font-size: var(--t-xs); }
+
+@media (max-width: 24rem) {
+  .bilan .tableau th,
+  .bilan .tableau td { padding-inline: 0.15rem; }
+} /* « Archives » / « nationales » on two lines, never cut inside a word */
+
+.tableau-cadre:focus-visible { outline-offset: 4px; }
+
+.tableau .tableau__texte,
+.tableau--texte td,
+.tableau--texte th { text-align: start; }
+
+@media (max-width: 40rem) {
+  .tableau--empile thead { display: none; }
+
+  .tableau--empile,
+  .tableau--empile tbody,
+  .tableau--empile tr,
+  .tableau--empile th,
+  .tableau--empile td { display: block; }
+
+  .tableau--empile tr {
+    padding-block: var(--e2);
+    border-block-end: 1px solid var(--filet);
+  }
+
+  .tableau--empile th,
+  .tableau--empile td {
+    padding: 0.1rem 0;
+    border: 0;
+    text-align: start;
+  }
+
+  .tableau--empile tbody th {
+    font-family: var(--serif);
+    font-size: var(--t-m);
+    font-weight: 600;
+  }
+
+  .tableau--empile td[data-libelle]::before {
+    content: attr(data-libelle) " : ";
+    color: var(--encre-douce);
+  }
+}
+
+/* ----- quoted statements with their source ------------------------------------------------------ */
+
+.enonces {
+  display: grid;
+  gap: var(--e3);
+  padding: 0;
+  list-style: none;
+}
+
+.enonces > li > * + * { margin-block-start: var(--e1); }

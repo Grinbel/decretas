@@ -1,0 +1,8 @@
+# Raw downloads (archive exports with personal data) — never committed
+/data/
+
+# Python caches
+__pycache__/
+
+# Research notes quoting real persons from the archives — kept local until anonymised
+/docs/research/sources-2026-11/

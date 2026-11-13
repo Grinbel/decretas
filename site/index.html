@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="fr" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!--
+    Strict policy: scripts, styles, fonts and data from this site only; no inline script or
+    style; no form posting; no framing of other sites. The single exception is img-src:
+    the image of a printed page is loaded from archive.org, and only after an explicit click
+    on « Afficher la page imprimée ». (frame-ancestors cannot be set in a meta tag: set it in
+    the HTTP headers of the host.)
+  -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self' https://archive.org https://*.archive.org; connect-src 'self'; worker-src 'self'; font-src 'self'; manifest-src 'self'; base-uri 'none'; form-action 'none'; object-src 'none'">
+  <meta name="referrer" content="no-referrer">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#f5f0e6" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#171512" media="(prefers-color-scheme: dark)">
+  <meta name="description" content="Site gratuit et indépendant : retrouver, dans les sources officielles publiques, le décret par lequel un ancêtre algérien a été admis à la citoyenneté française (1865-1962). La recherche se fait sur votre appareil.">
+  <title>Decretas — retrouver le décret d'un ancêtre algérien</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/composants.css">
+  <link rel="stylesheet" href="css/vues.css">
+  <link rel="stylesheet" href="css/impression.css" media="print">
+  <!-- Every module of the page (the static imports of js/app.js), fetched in parallel instead of
+       being discovered one after the other. tests/js/ui-coquille.test.mjs checks this list. -->
+  <link rel="modulepreload" href="js/app.js">
+  <link rel="modulepreload" href="js/composants/avis.js">
+  <link rel="modulepreload" href="js/composants/bilan.js">
+  <link rel="modulepreload" href="js/composants/carte-resultat.js">
+  <link rel="modulepreload" href="js/composants/carte.js">
+  <link rel="modulepreload" href="js/composants/chargement-leger.js">
+  <link rel="modulepreload" href="js/composants/chargement.js">
+  <link rel="modulepreload" href="js/composants/dom.js">
+  <link rel="modulepreload" href="js/composants/echec.js">
+  <link rel="modulepreload" href="js/composants/etapes-guide.js">
+  <link rel="modulepreload" href="js/composants/fiche.js">
+  <link rel="modulepreload" href="js/composants/formulaire-recherche.js">
+  <link rel="modulepreload" href="js/composants/lien-externe.js">
+  <link rel="modulepreload" href="js/composants/variantes.js">
+  <link rel="modulepreload" href="js/donnees/carnet.js">
+  <link rel="modulepreload" href="js/donnees/client.js">
+  <link rel="modulepreload" href="js/donnees/contenu.js">
+  <link rel="modulepreload" href="js/donnees/legeres.js">
+  <link rel="modulepreload" href="js/donnees/modele.js">
+  <link rel="modulepreload" href="js/logique/aiguillage.js">
+  <link rel="modulepreload" href="js/logique/bilan.js">
+  <link rel="modulepreload" href="js/logique/decrets.js">
+  <link rel="modulepreload" href="js/logique/explications.js">
+  <link rel="modulepreload" href="js/logique/fenetre-annees.js">
+  <link rel="modulepreload" href="js/logique/formats.js">
+  <link rel="modulepreload" href="js/logique/liens.js">
+  <link rel="modulepreload" href="js/logique/menage.js">
+  <link rel="modulepreload" href="js/logique/numero.js">
+  <link rel="modulepreload" href="js/logique/parametres-guide.js">
+  <link rel="modulepreload" href="js/logique/position.js">
+  <link rel="modulepreload" href="js/logique/requete.js">
+  <link rel="modulepreload" href="js/logique/verification.js">
+  <link rel="modulepreload" href="js/recherche/arabe.js">
+  <link rel="modulepreload" href="js/recherche/chercher.js">
+  <link rel="modulepreload" href="js/recherche/index.js">
+  <link rel="modulepreload" href="js/recherche/normaliser.js">
+  <link rel="modulepreload" href="js/routeur.js">
+  <link rel="modulepreload" href="js/textes/fr.js">
+  <link rel="modulepreload" href="js/textes/index.js">
+  <link rel="modulepreload" href="js/textes/nombres.js">
+  <link rel="modulepreload" href="js/textes/typographie.js">
+  <link rel="modulepreload" href="js/vues/a-propos.js">
+  <link rel="modulepreload" href="js/vues/accueil.js">
+  <link rel="modulepreload" href="js/vues/actes.js">
+  <link rel="modulepreload" href="js/vues/decrets.js">
+  <link rel="modulepreload" href="js/vues/guides.js">
+  <link rel="modulepreload" href="js/vues/methode.js">
+  <link rel="modulepreload" href="js/vues/notice.js">
+  <link rel="modulepreload" href="js/vues/numero.js">
+  <link rel="modulepreload" href="js/vues/quel-acte.js">
+  <link rel="modulepreload" href="js/vues/recherche.js">
+  <link rel="modulepreload" href="js/vues/registre.js">
+  <link rel="modulepreload" href="js/vues/vocabulaire.js">
+  <!-- A classic script, run by every browser: it watches the start of the page and says so
+       plainly when the modules cannot run (an old browser, a file that did not come). -->
+  <script src="js/demarrage.js" defer></script>
+  <script type="module" src="js/app.js"></script>
+</head>
+<body>
+  <a class="evitement" href="#contenu">Aller au contenu</a>
+  <header class="entete" id="entete">
+    <a class="marque" href="#/"><span class="marque__nom">Decretas</span></a>
+  </header>
+  <main id="contenu" tabindex="-1">
+    <!-- First screen, shown while the modules arrive; js/app.js replaces it. The two sentences of
+         js/demarrage.js are kept here, with the page, so that every text of the shell is in one place. -->
+    <div class="vue demarrage">
+      <h1>Retrouver le décret d'un ancêtre algérien</h1>
+      <p>Site gratuit et indépendant : il cherche le nom d'un ancêtre dans les décrets d'admission à la citoyenneté française (1865-1962) et dit, à chaque fois, ce qui n'a pas pu être fouillé.</p>
+      <p class="demarrage__etat" role="status" data-lent="Le chargement est lent. Si rien ne s'affiche, vérifiez votre connexion, puis rechargez la page." data-echec="La page n'a pas pu se charger complètement. Vérifiez votre connexion, puis rechargez la page." data-ancien="Votre navigateur est trop ancien pour ce site. Essayez avec une version récente de Firefox, Chrome, Edge ou Safari.">Chargement de la page…</p>
+    </div>
+    <noscript>
+      <div class="vue">
+        <h1>Retrouver le décret d'un ancêtre algérien</h1>
+        <p>La recherche se fait entièrement dans votre navigateur, sans rien envoyer à un serveur : elle a besoin de JavaScript. Activez-le pour ce site, puis rechargez la page.</p>
+      </div>
+    </noscript>
+  </main>
+  <footer class="pied" id="pied">
+    <p class="pied__independance">Site indépendant et gratuit, sans lien avec l'administration française ni avec l'administration algérienne. Il ne délivre aucun certificat, aucune attestation, aucun document officiel.</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,132 @@
+/*
+ * Decretas — print. Families take the results and the bilan to an office or to a relative:
+ * black on white, no controls, the address of every external link written out, the bilan on
+ * its own page. Only what is open on screen is printed (an opened notice prints in full).
+ */
+
+@page { margin: 16mm 15mm; }
+
+:root {
+  --papier: #fff;
+  --feuille: #fff;
+  --creux: #f1f1f1;
+  --encre: #000;
+  --encre-douce: #333;
+  --filet: #999;
+  --bord-champ: #666;
+  --accent: #000;
+  --accent-doux: #fff;
+  --surlignage: #e6e6e6;
+  --alerte-fond: #fff;
+  --alerte-encre: #000;
+  --alerte-bord: #000;
+  --info-fond: #fff;
+  --info-bord: #666;
+  --ombre: none;
+}
+
+html { font-size: 10pt; }
+
+body { display: block; background: #fff; color: #000; }
+
+.evitement,
+.nav,
+.nav__bascule,
+.pied nav,
+.recherche,
+.chargement,
+.variantes,
+.filtre-annee__choix,
+.resultats__vers-bilan,
+.groupe__plus,
+.groupe__retour,
+.bilan__imprimer,
+.page-imprimee .bouton,
+.page-imprimee__avant,
+.carte__permalien,
+.retour,
+.bouton {
+  display: none !important;
+}
+
+.entete { border-block-end: 1px solid #000; padding-inline: 0; }
+main { padding: 0; }
+.vue { max-inline-size: none; }
+.recherche-tete { border: 0; padding: 0; }
+
+.carte,
+.avis,
+.citation,
+.a-confirmer,
+.etape,
+.non-couvert__ligne,
+.a-faire-liste > li,
+.publication {
+  break-inside: avoid;
+}
+
+h1, h2, h3, h4 { break-after: avoid; }
+
+.carte { border: 1px solid #666; box-shadow: none; }
+
+details:not([open]) > summary { display: none; }
+details[open] > summary { color: #000; }
+details[open] > summary::before { display: none; }
+
+.bilan {
+  border: 0;
+  padding: 0;
+}
+
+/* After a list of notices the bilan starts its own page; alone, it follows the summary. */
+.resultats:has(.groupe) ~ .bilan-zone .bilan { break-before: page; }
+
+.bilan__aide-ecran,
+.variantes { display: none !important; }
+
+mark { background: none; font-weight: 700; text-decoration: underline; }
+
+a { color: #000; }
+
+/* The address of an external link, written out: on paper a link cannot be clicked. */
+.lien-externe__a::after {
+  content: " — " attr(href);
+  font-weight: 400;
+  font-size: 8.5pt;
+  overflow-wrap: anywhere;
+}
+
+.lien-externe__a .icone { display: none; }
+
+.pied { border-block-start: 1px solid #000; padding-inline: 0; }
+
+/* Stage 2: guides, decree lists, the checklist, the citation checker. */
+.entete__actions,
+.entete__chercher,
+.guide__actions,
+.guide__cases,
+.etape__fait input,
+.filtres-decrets,
+.carnet__actions,
+.annees-nav,
+.numero__formulaire,
+.quel-acte__navigation,
+.pastilles,
+.decret__lu input,
+.annees-choix,
+.guide__avancement {
+  display: none !important;
+}
+
+.etape--faite .etape__fait { display: block; }
+.etape__fait { display: none; }
+.decret,
+.forme,
+.terme,
+.acte,
+.decret-bref { break-inside: avoid; }
+.decret--lu { background: none; }
+.decret__lu { display: none; }
+.decret--lu .decret__lu { display: flex; font-weight: 700; }
+.tableau-cadre { overflow: visible; }
+.reponse { border: 1px solid #666; }

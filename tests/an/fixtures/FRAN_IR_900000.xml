@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/css' href='ead.css'?><ead xmlns:xlink="http://www.w3.org/1999/xlink">
+  <!-- Jeu d'essai SYNTHÉTIQUE : personnes, noms et dossiers inventés ; seul le format des exports XML-EAD est reproduit. -->
+  <eadheader countryencoding="iso3166-1" dateencoding="iso8601" langencoding="iso639-2b">
+    <eadid xlink:type="simple" xlink:href="http://www.siv.archives-nationales.culture.gouv.fr/siv/IR/FRAN_IR_900000">FRAN_IR_900000</eadid>
+    <filedesc>
+      <titlestmt>
+        <titleproper>Décrets de naturalisation 1883-1948</titleproper>
+        <subtitle>Répertoire numérique détaillé (BB/34/387-BB/34/511)</subtitle>
+        <author>Jeu d'essai synthétique.</author>
+      </titlestmt>
+      <publicationstmt>
+        <publisher>Jeu d'essai</publisher>
+        <date calendar="gregorian" era="ce" normal="2018-07-13">13 juillet 2018</date>
+      </publicationstmt>
+    </filedesc>
+  </eadheader>
+  <frontmatter>
+    <div>
+      <p/>
+    </div>
+  </frontmatter>
+  <archdesc id="top" level="collection">
+    <did>
+      <unitid type="identifiant">BB/34/387-BB/34/511</unitid>
+      <unittitle>Décrets de naturalisation 1883-1948</unittitle>
+      <unitdate calendar="gregorian" era="ce" normal="1883-01-01 / 1948-12-31">1883-1948</unitdate>
+      <repository>Archives nationales de France</repository>
+      <physloc>Pierrefitte</physloc>
+    </did>
+    <accessrestrict>
+      <p>Librement communicable en application de l'article L213-2 du code du patrimoine.</p>
+    </accessrestrict>
+    <userestrict>
+      <p>Reproduction et réutilisation selon le règlement des salles de consulation en vigueur aux Archives nationales. Pour les années indexées par Filae, toute publication sur internet à des fins de recherche nominative, patronymique, ou généalogique, d’un corpus concernant plus de 1000 individus devra faire l’objet d’une autorisation préalable de la société Filae.</p>
+    </userestrict>
+    <dsc>
+      <c id="c-root-1883" xlink:type="simple" xlink:href="http://www.siv.archives-nationales.culture.gouv.fr/siv/UD/FRAN_IR_900000/c-root-1883">
+        <did>
+          <unitid type="identifiant">BB/34/387</unitid>
+          <unittitle>Décrets de naturalisation de l'année 1883 (indexés)</unittitle>
+        </did>
+        <scopecontent>
+          <p altrender="links">
+            <ref role="IR">Consulter l'instrument de recherche :<archref href="FRAN_IR_900001">Décrets de naturalisation de l’année 1883</archref>
+            </ref>
+          </p>
+        </scopecontent>
+      </c>
+      <c id="c-root-1926" xlink:type="simple" xlink:href="http://www.siv.archives-nationales.culture.gouv.fr/siv/UD/FRAN_IR_900000/c-root-1926">
+        <did>
+          <unitid type="identifiant">BB/34/456-BB/34/457</unitid>
+          <unittitle>Décrets de naturalisation de l'année 1926 (indexés)</unittitle>
+        </did>
+        <c id="c-root-1926-2" xlink:type="simple" xlink:href="http://www.siv.archives-nationales.culture.gouv.fr/siv/UD/FRAN_IR_900000/c-root-1926-2">
+          <did>
+            <unitid type="identifiant">BB/34/456</unitid>
+            <unittitle>Avril à juin 1926</unittitle>
+          </did>
+          <scopecontent>
+            <p altrender="links">
+              <ref role="IR">Consulter l'instrument de recherche :<archref href="FRAN_IR_900007">Décrets de naturalisation de l'année 1926 (avril à juin)</archref>
+              </ref>
+            </p>
+          </scopecontent>
+        </c>
+      </c>
+    </dsc>
+  </archdesc>
+</ead>

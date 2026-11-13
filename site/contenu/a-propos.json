@@ -1,0 +1,274 @@
+{
+  "schema": "decretas.contenu.a-propos/1",
+  "langue": "fr",
+  "maj": "2026-11-11",
+  "titre": "À propos",
+  "objet": "Ce site aide à retrouver, dans les sources officielles publiques, le décret par lequel un ancêtre algérien a été admis à la qualité de citoyen français entre 1865 et 1962. Quand il ne peut pas l'afficher, il donne le lien et la marche à suivre pour le trouver. Il est gratuit et d'intérêt public.",
+  "promesse": "Chaque information porte sa source. Ce que nous n'avons pas pu vérifier est signalé comme tel.",
+  "sources": [
+    {
+      "id": "archives-nationales",
+      "nom": "Archives nationales (France)",
+      "ce_que_nous_utilisons": "Les inventaires des décrets de la sous-série BB/34 (1883-1948) : pour chaque décret, sa date, son titre, sa cote ; pour les années saisies, le nom des personnes. Nous ne copions aucune image : nous renvoyons vers leur site.",
+      "date_des_donnees": "Inventaires téléchargés le 16 octobre 2026.",
+      "licence": [
+        {
+          "texte": "Les Archives nationales pratiquent la libre et gratuite réutilisation des informations publiques contenues dans les documents produits ou reçus par les Archives nationales, selon la décision 2017-11. […] La seule obligation est de mentionner l'origine des documents.",
+          "source": "Portail des Archives nationales, « Quelles sont les modalités de reproduction et de réutilisation ? », lu le 11 novembre 2026",
+          "lien": "an-page-reutilisation",
+          "preuves": [
+            "data/samples/an-remote/an-reutilisation.body",
+            "docs/research/sources-2026-11/an-remote.md § 6.1"
+          ]
+        },
+        {
+          "texte": "Les inventaires des Archives nationales sont librement réutilisables (hors introduction) et téléchargeables unitairement (formats XML-EAD ou PDF) depuis la Salle de lecture virtuelle.",
+          "source": "Portail des Archives nationales, « Ouverture des données », lu le 11 novembre 2026",
+          "lien": "an-page-ouverture-donnees",
+          "preuves": [
+            "data/samples/an-remote/an-ouverture-donnees.body",
+            "docs/research/sources-2026-11/an-remote.md § 6.3"
+          ]
+        },
+        {
+          "texte": "Si le document comporte des données à caractère personnel, vous êtes tenu au respect du Règlement général de la protection des données personnelles (RGPD).",
+          "source": "Même page que la première citation",
+          "lien": "an-page-reutilisation",
+          "preuves": [
+            "data/samples/an-remote/an-reutilisation.body",
+            "docs/research/sources-2026-11/an-remote.md § 6.1"
+          ]
+        }
+      ],
+      "credit": "Archives nationales de France ; cote ; lieu de conservation ; date",
+      "credit_exemple": "Archives nationales de France ; BB/34/438 ; Pierrefitte-sur-Seine ; décret du 11 janvier 1913 (inventaire relevé le 16 octobre 2026)",
+      "credit_regle": "Cette mention accompagne chaque fiche tirée des inventaires : le nom de l'institution, la cote du décret, le lieu de conservation (Pierrefitte-sur-Seine), puis la date. Les Archives nationales écrivent « la date des informations » sans préciser davantage : nous donnons donc les deux, la date du décret et la date à laquelle l'inventaire a été relevé.",
+      "liens": [
+        "an-page-reutilisation",
+        "an-page-ouverture-donnees",
+        "an-page-mentions-legales"
+      ],
+      "verification": {
+        "etat": "verifie",
+        "preuves": [
+          "data/samples/an-remote/an-reutilisation.body",
+          "data/samples/an-remote/an-mentions-legales.body",
+          "data/samples/an-remote/an-ouverture-donnees.body",
+          "docs/research/sources-2026-11/verification.md § an-remote"
+        ],
+        "note": "Citations vérifiées mot pour mot. La décision 2017-11 elle-même n'a pas été lue."
+      }
+    },
+    {
+      "id": "gallica",
+      "nom": "Gallica, Bibliothèque nationale de France",
+      "ce_que_nous_utilisons": "Rien n'est copié depuis Gallica : le site refuse les programmes. Nous donnons seulement des liens, que votre navigateur ouvre. Nous utilisons les notices du catalogue de la BnF pour connaître les titres et les années.",
+      "date_des_donnees": "Catalogue consulté le 11 novembre 2026.",
+      "licence": [
+        {
+          "texte": "La BnF a, depuis le 1er janvier 2014, placé ses métadonnées descriptives (données bibliographiques et d'autorité) sous la « Licence Ouverte / Open Licence » de l'État élaborée par la mission Etalab. L'utilisation de ces métadonnées est libre et gratuite sous réserve du maintien de la mention de leur source et de l'indication de leur date de récupération.",
+          "source": "BnF, « Conditions de réutilisations des données de la BnF », lu le 11 novembre 2026",
+          "lien": "bnf-conditions-metadonnees",
+          "preuves": [
+            "data/samples/gallica/bnf-www-conditions-reutilisations.html",
+            "docs/research/sources-2026-11/gallica.md § 8"
+          ]
+        }
+      ],
+      "credit": "Source gallica.bnf.fr / BnF",
+      "credit_exemple": "Source gallica.bnf.fr / BnF",
+      "credit_regle": "Cette mention accompagne tout lien ou toute citation d'une page de Gallica.",
+      "liens": [
+        "bnf-conditions-metadonnees",
+        "gallica-conditions",
+        "bnf-captcha-gallica"
+      ],
+      "verification": {
+        "etat": "partiel",
+        "preuves": [
+          "data/samples/gallica/bnf-www-conditions-reutilisations.html",
+          "docs/research/sources-2026-11/gallica.md § 8",
+          "docs/research/sources-2026-11/verification.md § gallica"
+        ],
+        "note": "La licence des métadonnées est vérifiée. Les conditions d'utilisation des contenus de Gallica (réutilisation non commerciale libre et gratuite avec la mention de source) n'ont pas pu être relues ce jour : la page est sur Gallica, qui refuse les programmes."
+      }
+    },
+    {
+      "id": "internet-archive",
+      "nom": "Internet Archive",
+      "ce_que_nous_utilisons": "Le texte, lu par une machine, de volumes du Bulletin officiel du Gouvernement général de l'Algérie (1861-1888), et des liens vers les pages scannées. Les images restent sur Internet Archive.",
+      "date_des_donnees": "Volumes consultés le 11 novembre 2026.",
+      "licence": [
+        {
+          "texte": "Le volume de 1873 est déposé avec la marque du domaine public (Public Domain Mark 1.0). Le dépôt qui réunit vingt-deux autres années ne déclare aucune licence. D'autres exemplaires sont des numérisations de Google faites à Harvard, signalées comme hors droits d'auteur, accompagnées d'une consigne d'usage non commercial.",
+          "source": "Notices des dépôts sur Internet Archive, relevées le 11 novembre 2026",
+          "lien": null,
+          "preuves": [
+            "data/samples/internet-archive/raw/metadata/algeria_bogga_13_1873.json",
+            "data/samples/internet-archive/raw/metadata/1922-t.-62.json",
+            "docs/research/sources-2026-11/internet-archive.md § 2",
+            "docs/research/sources-2026-11/verification.md § internet-archive"
+          ]
+        }
+      ],
+      "credit": "Bulletin officiel du Gouvernement général de l'Algérie, année, page — exemplaire numérisé consulté sur Internet Archive (archive.org), avec l'identifiant du dépôt",
+      "credit_exemple": "Bulletin officiel du Gouvernement général de l'Algérie, 1873, p. 495 — Internet Archive, algeria_bulletinofficieldugouvernementgeneraldelalgerie_13_1873",
+      "credit_regle": "La citation porte d'abord sur la publication elle-même (un texte officiel du XIXe siècle) ; Internet Archive est indiqué comme le lieu où l'exemplaire a été consulté.",
+      "liens": [],
+      "verification": {
+        "etat": "partiel",
+        "preuves": [
+          "docs/research/sources-2026-11/internet-archive.md § 2",
+          "docs/research/sources-2026-11/verification.md § internet-archive"
+        ],
+        "note": "Les mentions de droits sont celles que portent les dépôts ; aucune n'a valeur de licence pour le dépôt principal."
+      }
+    },
+    {
+      "id": "textes-et-etudes",
+      "nom": "Textes officiels et travaux d'historiens",
+      "ce_que_nous_utilisons": "Pour expliquer les types d'actes : le texte des lois et décrets, des réponses ministérielles publiées au Journal officiel, des documents du Conseil constitutionnel, des fiches de Service-Public, et les travaux de Patrick Weil et de Florence Renucci. Nous les citons ; nous ne les reproduisons pas.",
+      "date_des_donnees": "Lus le 11 novembre 2026.",
+      "licence": [],
+      "credit": "Chaque citation porte sa source et sa date.",
+      "credit_exemple": "Réponse du ministère de la Justice à la question écrite n° 16358, Journal officiel du Sénat du 24 octobre 1991, p. 2352",
+      "credit_regle": "Une citation est toujours donnée avec son auteur, sa publication et sa date.",
+      "liens": [
+        "senat-qe-16358",
+        "senat-qe-17313",
+        "an-qe-6380",
+        "cc-2012-259-dossier",
+        "cc-2012-259-commentaire",
+        "sp-f33626",
+        "sp-f1051"
+      ],
+      "verification": {
+        "etat": "verifie",
+        "preuves": [
+          "docs/research/sources-2026-11/legal-types.md § 10",
+          "docs/research/sources-2026-11/other-sources.md § 5",
+          "docs/research/sources-2026-11/verification.md § legal-types",
+          "docs/research/sources-2026-11/verification.md § other-sources"
+        ],
+        "note": ""
+      }
+    }
+  ],
+  "ce_que_le_site_ne_fait_pas": [
+    {
+      "id": "pas-de-certificat",
+      "texte": "Ce site ne délivre aucun certificat, aucune attestation, aucun document officiel."
+    },
+    {
+      "id": "pas-de-conseil",
+      "texte": "Il ne donne aucun conseil juridique et ne dit jamais si une personne, vivante ou non, est ou était de telle nationalité."
+    },
+    {
+      "id": "pas-de-conclusion",
+      "texte": "Il ne conclut jamais qu'un ancêtre a été écarté : ne rien trouver veut dire que rien ne figure dans ce qui a été lu."
+    },
+    {
+      "id": "pas-d-intermediaire",
+      "texte": "Il n'effectue aucune démarche à votre place et ne demande rien en échange : il est gratuit."
+    },
+    {
+      "id": "pas-de-donnees-gardees",
+      "texte": "Il ne garde rien de vos recherches : pas de compte, pas d'historique sur un serveur. La recherche se fait dans votre navigateur, à partir d'un index téléchargé une fois ; les noms que vous tapez ne sont envoyés à aucun serveur. Les adresses de recherche contiennent le nom cherché : votre navigateur les garde dans son historique, comme toute page visitée. Utilisez une fenêtre de navigation privée si l'appareil est partagé."
+    },
+    {
+      "id": "pas-de-contournement",
+      "texte": "Il ne contourne aucune protection : quand un site refuse les programmes, nous n'y lisons rien, et c'est vous qui ouvrez la page."
+    },
+    {
+      "id": "pas-de-depot",
+      "texte": "Il n'accepte aucun dépôt de documents."
+    }
+  ],
+  "vie_privee": {
+    "texte": "La recherche se fait sur votre appareil. Votre navigateur télécharge l'index une fois, puis cherche dedans sans rien envoyer : ni les noms saisis, ni les résultats. Comme pour tout site, l'hébergeur voit seulement que des pages et des fichiers ont été demandés.",
+    "verification": {
+      "etat": "non-verifie",
+      "preuves": [],
+      "note": "Engagement de conception, tiré de l'architecture décidée. À contrôler sur le site construit (aucune requête réseau pendant une recherche) avant de publier cette phrase."
+    }
+  },
+  "points_ouverts": [
+    {
+      "id": "usage-prive",
+      "titre": "La mention « usage privé » des inventaires",
+      "texte": "Presque tous les inventaires de décrets portent cette phrase : « Les documents peuvent être librement reproduits dans le cadre d'un usage privé (usage strictement personnel dans le cercle de la famille), sous réserve des contraintes liées à leur état matériel et dans le respect des textes relatifs à la réutilisation des informations publiques. » Elle porte sur la reproduction des documents et renvoie elle-même aux règles de réutilisation, qui sont libres d'après le portail des Archives nationales. Nous lisons donc que publier un index tiré des inventaires est permis ; mais seules les Archives nationales peuvent le confirmer, et cette confirmation écrite reste à obtenir.",
+      "etat": "ouvert",
+      "preuves": [
+        "data/samples/an-remote/IR-057268-consultation.body",
+        "docs/research/sources-2026-11/an-remote.md § 6.4",
+        "docs/research/sources-2026-11/verification.md § an-remote"
+      ]
+    },
+    {
+      "id": "clause-filae",
+      "titre": "La clause Filae : les noms de 1898 à 1912 et de 1928 ne sont pas publiés ici",
+      "texte": "L'inventaire général de la collection porte cette condition : « Pour les années indexées par Filae, toute publication sur internet à des fins de recherche nominative, patronymique, ou généalogique, d'un corpus concernant plus de 1000 individus devra faire l'objet d'une autorisation préalable de la société Filae. » Il indique que l'indexation des années 1898 à 1912 et 1928 a été engagée avec cette société en 2021. Nous ne savons pas avec certitude qui a saisi chacune de ces années. Sans réponse écrite des Archives nationales, nous ne publions aucun nom de 1898 à 1912 ni de 1928 ; ces noms restent consultables sur leur site, et nous vous y conduisons.",
+      "etat": "ouvert",
+      "preuves": [
+        "data/raw/an/FRAN_IR_057397.xml",
+        "data/raw/an/FRAN_IR_057213.xml",
+        "docs/research/sources-2026-11/an-remote.md § 6.4",
+        "docs/research/sources-2026-11/verification.md § an-remote",
+        "docs/research/sources-2026-11/verification.md § an-local"
+      ]
+    },
+    {
+      "id": "donnees-personnelles",
+      "titre": "Des noms de personnes",
+      "texte": "L'index contient les noms de personnes nommées dans des décrets publics de 1883 à 1932, donc anciens de plus de quatre-vingt-dix ans. Les Archives nationales rappellent que la réutilisation doit respecter les personnes mentionnées et la réglementation sur les données personnelles. Des enfants cités dans les décrets les plus récents peuvent être encore en vie. Nous n'ajoutons rien à ce que disent les sources, et nous ne rapprochons ces noms d'aucune personne vivante.",
+      "etat": "ouvert",
+      "preuves": [
+        "data/samples/an-remote/an-reutilisation.body",
+        "docs/research/sources-2026-11/an-remote.md § 6.1",
+        "docs/research/sources-2026-11/verification.md § an-local"
+      ]
+    },
+    {
+      "id": "gallica-conditions",
+      "titre": "Les conditions de Gallica n'ont pas pu être relues",
+      "texte": "Gallica refuse aujourd'hui tous les programmes. Nous n'y copions rien ; nous n'avons donc pas pu relire ses conditions d'utilisation, ni essayer nos liens. Un humain doit les ouvrir une fois pour les valider.",
+      "etat": "ouvert",
+      "preuves": [
+        "docs/research/sources-2026-11/gallica.md § 1",
+        "docs/research/sources-2026-11/gallica.md § 8",
+        "docs/research/sources-2026-11/verification.md § gallica"
+      ]
+    },
+    {
+      "id": "robots",
+      "titre": "Des sites qui découragent les programmes",
+      "texte": "Le site des inventaires des Archives nationales demande aux robots de ne rien y lire. Les inventaires ont été téléchargés une seule fois, le 16 octobre 2026, par un programme qui se nomme, à raison d'un fichier toutes les trois secondes environ — plus vite que ce que nous nous imposons désormais. Les Archives nationales déclarent par ailleurs ces inventaires librement réutilisables. Le responsable du projet accepte une automatisation lente et déclarée là où un site la décourage ; nous ne contournons jamais un blocage actif, et nous arrêtons dès qu'un site répond par une erreur.",
+      "etat": "assume",
+      "preuves": [
+        "data/samples/an-remote/siv-robots.body",
+        "docs/research/sources-2026-11/an-remote.md § 1.1",
+        ".scratch/retrouver-un-decret/map.md",
+        "docs/research/sources-2026-11/verification.md § an-local"
+      ]
+    },
+    {
+      "id": "ecrans-non-vus",
+      "titre": "Des étapes de guides pas encore vues",
+      "texte": "Le jour où nous avons préparé ces guides, le site des Archives nationales était en panne, et Gallica comme Légifrance refusent les programmes. Plusieurs étapes décrivent donc des écrans que nous n'avons pas vus. Elles portent la mention « à confirmer ».",
+      "etat": "ouvert",
+      "preuves": [
+        "docs/research/sources-2026-11/an-remote.md § 2",
+        "docs/research/sources-2026-11/verification.md § an-remote",
+        "docs/research/sources-2026-11/verification.md § gallica",
+        "docs/research/sources-2026-11/verification.md § other-sources"
+      ]
+    }
+  ],
+  "methode": {
+    "texte": "Les textes de ce site ont été établis le 11 novembre 2026 à partir de six rapports de recherche, relus par un vérificateur chargé de les réfuter. Quand le vérificateur contredit un rapport, c'est lui que nous suivons. Les pages officielles citées ont été enregistrées ; leur date de lecture est indiquée.",
+    "preuves": [
+      "docs/research/sources-2026-11/verification.md",
+      "docs/contenu-sources.md"
+    ]
+  }
+}

@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/css' href='ead.css'?><ead xmlns:xlink="http://www.w3.org/1999/xlink">
+  <!-- Jeu d'essai SYNTHÉTIQUE : personnes, noms et dossiers inventés ; seul le format des exports XML-EAD est reproduit. -->
+  <eadheader countryencoding="iso3166-1" dateencoding="iso8601" langencoding="iso639-2b">
+    <eadid xlink:type="simple" xlink:href="http://www.siv.archives-nationales.culture.gouv.fr/siv/IR/FRAN_IR_900004">FRAN_IR_900004</eadid>
+    <filedesc>
+      <titlestmt>
+        <titleproper>Décrets de naturalisation de l'année 1931</titleproper>
+        <subtitle>Répertoire numérique détaillé (BB/34/475-BB/34/478)</subtitle>
+        <author>Jeu d'essai synthétique.</author>
+      </titlestmt>
+      <publicationstmt>
+        <publisher>Jeu d'essai</publisher>
+        <date calendar="gregorian" era="ce" normal="2018-07-13">13 juillet 2018</date>
+      </publicationstmt>
+    </filedesc>
+  </eadheader>
+  <frontmatter>
+    <div>
+      <p/>
+    </div>
+  </frontmatter>
+  <archdesc id="top" level="collection">
+    <did>
+      <unitid type="identifiant">BB/34/475-BB/34/478</unitid>
+      <unittitle>Décrets de naturalisation de l'année 1931</unittitle>
+      <unitdate calendar="gregorian" era="ce" normal="1931-01-18/1931-12-28">18 janvier 1931-28 décembre 1931</unitdate>
+      <repository>Archives nationales de France</repository>
+      <physloc>Pierrefitte</physloc>
+    </did>
+    <accessrestrict>
+      <p>Librement communicable en application de l'article L213-2 du code du patrimoine.</p>
+    </accessrestrict>
+    <userestrict>
+      <p>Les documents peuvent être librement reproduits dans le cadre d’un usage privé (usage strictement personnel dans le cercle de la famille), sous réserve des contraintes liées à leur état matériel et dans le respect des textes relatifs à la réutilisation des informations publiques.</p>
+    </userestrict>
+    <dsc>
+      <c id="idd_1931_11_469_1" xlink:type="simple" xlink:href="http://www.siv.archives-nationales.culture.gouv.fr/siv/UD/FRAN_IR_900004/idd_1931_11_469_1">
+        <did>
+          <unitid type="identifiant">BB/11/477</unitid>
+          <unittitle>Décret d’admission aux droits de citoyen français (Algérie) du 18 novembre 1931</unittitle>
+          <unitdate calendar="gregorian" era="ce" normal="1931-11-18">18 novembre 1931</unitdate>
+        </did>
+        <daogrp>
+          <daoloc href="http://www.siv.archives-nationales.culture.gouv.fr/siv/media/FRAN_IR_900004/idd_1931_11_469_1/"/>
+        </daogrp>
+        <c id="id_1931_11_1301" xlink:type="simple" xlink:href="http://www.siv.archives-nationales.culture.gouv.fr/siv/UD/FRAN_IR_900004/id_1931_11_1301">
+          <did>
+            <unitid type="cote-de-consultation"> 19770873/9001 </unitid>
+            <unitid type="pieces">90030 X 31</unitid>
+            <unittitle>
+              <persname>BEN FICTIF BEN EXEMPLE,</persname>
+            </unittitle>
+          </did>
+          <scopecontent>
+            <p>Naissance : 1898, Oued Fictif, département d'Alger, Algérie.</p>
+            <p>Profession : sergent.</p>
+            <p>Résidence : Alger, département d'Alger, Algérie.</p>
+          </scopecontent>
+        </c>
+      </c>
+      <c id="D490" xlink:type="simple" xlink:href="http://www.siv.archives-nationales.culture.gouv.fr/siv/UD/FRAN_IR_900004/D490">
+        <did>
+          <unitid type="identifiant">BB/34/477</unitid>
+          <unittitle>Décret d'admission aux droits de citoyen français du 14 octobre 1931</unittitle>
+          <unitdate calendar="gregorian" era="ce" normal="1931-10-14">14 octobre 1931</unitdate>
+        </did>
+        <daogrp>
+          <daoloc href="http://www.siv.archives-nationales.culture.gouv.fr/siv/media/FRAN_IR_900004/D490/"/>
+        </daogrp>
+        <c id="A_19166" xlink:type="simple" xlink:href="http://www.siv.archives-nationales.culture.gouv.fr/siv/UD/FRAN_IR_900004/A_19166">
+          <did>
+            <unitid type="cote-de-consultation"> 19770874/9002 </unitid>
+            <unitid type="pieces"> 90031 X 31 </unitid>
+            <unittitle>
+              <persname> TESTAOUI BEN MOHAMED </persname>
+            </unittitle>
+          </did>
+          <scopecontent>
+            <p>Naissance : 29/08/1895 (El-Fictif Constantine, Algérie)</p>
+            <p/>
+            <p>Profession : caporal</p>
+            <p>Lieu de résidence : Alger (Alger)</p>
+            <p>Épouse : MODELE, Lucette Anne</p>
+            <p>Naissance : 13/11/1898 (Valence, Espagne)</p>
+            <p>Origine(s) des parents : espagnole</p>
+            <p>Enfant(s) : Aldo (07/10/1921), Remo Luc (19/02/1925)</p>
+            <p>Mention de retrait : Décret du 05 mai 1942, J.O. du 15 mai 1942</p>
+          </scopecontent>
+          <daogrp>
+            <daoloc href="http://www.siv.archives-nationales.culture.gouv.fr/siv/media/FRAN_IR_900004/A_19166/"/>
+          </daogrp>
+        </c>
+      </c>
+      <c id="D491" xlink:type="simple" xlink:href="http://www.siv.archives-nationales.culture.gouv.fr/siv/UD/FRAN_IR_900004/D491">
+        <did>
+          <unitid type="identifiant">BB/34/477</unitid>
+          <unittitle>Décret d'admission aux droits de citoyen français (colonies) du 15 octobre 1931</unittitle>
+          <unitdate calendar="gregorian" era="ce" normal="1931-10-15">15 octobre 1931</unitdate>
+        </did>
+        <daogrp>
+          <daoloc href="http://www.siv.archives-nationales.culture.gouv.fr/siv/media/FRAN_IR_900004/D491/"/>
+        </daogrp>
+        <c id="A_19200" xlink:type="simple" xlink:href="http://www.siv.archives-nationales.culture.gouv.fr/siv/UD/FRAN_IR_900004/A_19200">
+          <did>
+            <unitid type="pieces">90032 X 31</unitid>
+            <unittitle>
+              <persname>RAFICTIF</persname>
+            </unittitle>
+          </did>
+          <scopecontent>
+            <p>Naissance : 24/11/1884 (Tananarive Madagascar)</p>
+            <p>Profession : médecin de l'assistance médicale indigène</p>
+          </scopecontent>
+        </c>
+      </c>
+      <c id="D492" xlink:type="simple" xlink:href="http://www.siv.archives-nationales.culture.gouv.fr/siv/UD/FRAN_IR_900004/D492">
+        <did>
+          <unitid type="identifiant">BB/11/478</unitid>
+          <unittitle>Décret de rejet de demandes de naturalisation (France, Algérie, Tunisie) d'admission aux droits de citoyen français du 12 janvier 1931</unittitle>
+          <unitdate calendar="gregorian" era="ce" normal="1931-01-12">12 janvier 1931</unitdate>
+        </did>
+        <daogrp>
+          <daoloc href="http://www.siv.archives-nationales.culture.gouv.fr/siv/media/FRAN_IR_900004/D492/"/>
+        </daogrp>
+        <c id="A_19300" xlink:type="simple" xlink:href="http://www.siv.archives-nationales.culture.gouv.fr/siv/UD/FRAN_IR_900004/A_19300">
+          <did>
+            <unitid type="pieces">90033 X 31</unitid>
+            <unittitle>
+              <persname>EXEMPLI, Ahmed</persname>
+            </unittitle>
+          </did>
+          <scopecontent>
+            <p>Naissance : non précisée.</p>
+            <p>Lieu de résidence : Tunis, Tunisie.</p>
+          </scopecontent>
+        </c>
+      </c>
+      <c id="D493" xlink:type="simple" xlink:href="http://www.siv.archives-nationales.culture.gouv.fr/siv/UD/FRAN_IR_900004/D493">
+        <did>
+          <unitid type="identifiant">BB/34/476</unitid>
+          <unittitle>Décret de naturalisations à l’étranger du 24 mai 1931</unittitle>
+          <unitdate calendar="gregorian" era="ce" normal="1931-05-24">24 mai 1931</unitdate>
+        </did>
+        <daogrp>
+          <daoloc href="http://www.siv.archives-nationales.culture.gouv.fr/siv/media/FRAN_IR_900004/D493/"/>
+        </daogrp>
+        <c id="A_19400" xlink:type="simple" xlink:href="http://www.siv.archives-nationales.culture.gouv.fr/siv/UD/FRAN_IR_900004/A_19400">
+          <did>
+            <unitid type="pieces">90034 X 31</unitid>
+            <unittitle>
+              <persname>Décretin née Modèle, Jeanne Lucie</persname>
+            </unittitle>
+          </did>
+          <scopecontent>
+            <p>Naissance : 3 mai 1861 (Lille, Nord, France)</p>
+          </scopecontent>
+        </c>
+      </c>
+      <c id="D494" xlink:type="simple" xlink:href="http://www.siv.archives-nationales.culture.gouv.fr/siv/UD/FRAN_IR_900004/D494">
+        <did>
+          <unitid type="identifiant">BB/34/478</unitid>
+          <unittitle>Décrets, arrêtés et rapports divers de 1931</unittitle>
+          <unitdate calendar="gregorian" era="ce" normal="1931-01-01/1931-12-31">1931</unitdate>
+        </did>
+        <daogrp>
+          <daoloc href="http://www.siv.archives-nationales.culture.gouv.fr/siv/media/FRAN_IR_900004/D494/"/>
+        </daogrp>
+      </c>
+    </dsc>
+  </archdesc>
+</ead>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/css' href='ead.css'?><ead xmlns:ns0="http://www.w3.org/1999/xlink">
+  <!-- Jeu d'essai SYNTHÉTIQUE : personnes, noms et dossiers inventés ; seul le format des exports XML-EAD est reproduit. -->
+  <eadheader countryencoding="iso3166-1" dateencoding="iso8601" langencoding="iso639-2b">
+    <eadid ns0:type="simple" ns0:href="http://www.siv.archives-nationales.culture.gouv.fr/siv/IR/FRAN_IR_900007">FRAN_IR_900007</eadid>
+    <filedesc>
+      <titlestmt>
+        <titleproper>Décrets de naturalisation de l'année 1926 (avril à juin)</titleproper>
+        <subtitle>Répertoire numérique détaillé (BB/34/456)</subtitle>
+        <author>Jeu d'essai synthétique.</author>
+      </titlestmt>
+      <publicationstmt>
+        <publisher>Jeu d'essai</publisher>
+        <date calendar="gregorian" era="ce" normal="2018-07-13">13 juillet 2018</date>
+      </publicationstmt>
+    </filedesc>
+  </eadheader>
+  <frontmatter>
+    <div>
+      <p/>
+    </div>
+  </frontmatter>
+  <archdesc id="top" level="collection">
+    <did>
+      <unitid type="identifiant">BB/34/456</unitid>
+      <unittitle>Décrets de naturalisation de l'année 1926 (avril à juin)</unittitle>
+      <unitdate calendar="gregorian" era="ce" normal="1926-04-07/1926-04-29">7 avril 1926 - 29 juin 1926</unitdate>
+      <repository>Archives nationales de France</repository>
+      <physloc>Pierrefitte</physloc>
+    </did>
+    <accessrestrict>
+      <p>Librement communicable en application de l'article L213-2 du code du patrimoine.</p>
+    </accessrestrict>
+    <userestrict>
+      <p>Les documents peuvent être librement reproduits dans le cadre d’un usage privé (usage strictement personnel dans le cercle de la famille), sous réserve des contraintes liées à leur état matériel et dans le respect des textes relatifs à la réutilisation des informations publiques.</p>
+    </userestrict>
+    <dsc>
+      <c id="D1" ns0:type="simple" ns0:href="http://www.siv.archives-nationales.culture.gouv.fr/siv/UD/FRAN_IR_900007/D1">
+        <did>
+          <unitid type="identifiant">BB/34/456</unitid>
+          <unitid type="pieces">document 12</unitid>
+          <unittitle>Décret de naturalisation algérienne du 7avril 1926.</unittitle>
+          <unitdate calendar="gregorian" era="ce" normal="1926-04-07">7 avril 1926</unitdate>
+        </did>
+        <daogrp>
+          <daoloc href="http://www.siv.archives-nationales.culture.gouv.fr/siv/media/FRAN_IR_900007/D1/"/>
+        </daogrp>
+        <c id="c-q1" ns0:type="simple" ns0:href="http://www.siv.archives-nationales.culture.gouv.fr/siv/UD/FRAN_IR_900007/c-q1">
+          <did>
+            <unitid type="cote-de-consultation">BB/11/90050</unitid>
+            <unitid type="pieces">90050 X 21</unitid>
+            <unittitle>
+              <persname>Bachir Testaoui, Mohammed Salah</persname>
+            </unittitle>
+          </did>
+          <scopecontent>
+            <p>Naissance : 1 janvier 1880 (Fictiveville)</p>
+            <p>Lieu de résidence : Exempleville</p>
+            <p>Profession : Jardinier</p>
+            <p>Enfants : Djilali né(e)(s) le 5 juin 1920</p>
+          </scopecontent>
+          <daogrp>
+            <daoloc href="http://www.siv.archives-nationales.culture.gouv.fr/siv/media/FRAN_IR_900007/c-q1/"/>
+          </daogrp>
+        </c>
+      </c>
+    </dsc>
+  </archdesc>
+</ead>

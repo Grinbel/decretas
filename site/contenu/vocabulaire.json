@@ -1,0 +1,641 @@
+{
+  "schema": "decretas.contenu.vocabulaire/1",
+  "langue": "fr",
+  "maj": "2026-11-11",
+  "titre": "Les mots de ce site",
+  "chapeau": "Ce site emploie toujours les mêmes mots pour les mêmes choses. Les mots de l'époque sont cités entre guillemets.",
+  "familles": {
+    "recherche": "La recherche",
+    "actes": "Les actes",
+    "droit": "Les mots du droit",
+    "documents": "Les pièces",
+    "archives": "Les archives",
+    "publications": "Les publications"
+  },
+  "termes": [
+    {
+      "id": "decret-d-admission",
+      "terme": "Décret d'admission",
+      "definition": "Décret qui donnait à un Algérien, déjà de nationalité française, la qualité de citoyen français. Dans les sources antérieures à 1931, il est rangé sous le mot « naturalisation ».",
+      "a_eviter": [
+        "naturalisation",
+        "décret de naturalisation"
+      ],
+      "voir": [
+        "naturalisations-algeriennes",
+        "qualite-de-citoyen"
+      ],
+      "famille": "actes",
+      "origine": "CONTEXT.md"
+    },
+    {
+      "id": "jugement-d-admission",
+      "terme": "Jugement d'admission",
+      "definition": "Jugement d'un tribunal qui, au titre de la loi du 4 février 1919, admettait un Algérien à la qualité de citoyen français. Jamais publié ; il ne se signale que par une mention en marge de l'acte de naissance ou de mariage.",
+      "a_eviter": [
+        "décret (pour cette voie)",
+        "naturalisation"
+      ],
+      "voir": [
+        "mention-marginale",
+        "expedition"
+      ],
+      "famille": "actes",
+      "origine": "CONTEXT.md"
+    },
+    {
+      "id": "source-primaire",
+      "terme": "Source primaire",
+      "definition": "Document officiel publié à l'époque (Journal officiel, Bulletin officiel du Gouvernement général de l'Algérie) ou conservé dans des archives publiques, que chacun peut consulter.",
+      "a_eviter": [
+        "preuve",
+        "document",
+        "attestation"
+      ],
+      "voir": [
+        "citation"
+      ],
+      "famille": "recherche",
+      "origine": "CONTEXT.md"
+    },
+    {
+      "id": "citation",
+      "terme": "Citation",
+      "definition": "Ce qui permet à n'importe qui de retrouver un décret : sa date, puis la publication où il a paru, avec la date et la page.",
+      "a_eviter": [
+        "référence",
+        "numéro de décret"
+      ],
+      "voir": [
+        "source-primaire",
+        "indice"
+      ],
+      "famille": "recherche",
+      "origine": "CONTEXT.md"
+    },
+    {
+      "id": "indice",
+      "terme": "Indice",
+      "definition": "Information sur un ancêtre qui ne vient pas d'une source primaire : un souvenir de famille, un papier rédigé par un tiers. Un indice oriente la recherche ; il ne la conclut jamais.",
+      "a_eviter": [
+        "preuve",
+        "référence"
+      ],
+      "voir": [
+        "citation"
+      ],
+      "famille": "recherche",
+      "origine": "CONTEXT.md"
+    },
+    {
+      "id": "ancetre-recherche",
+      "terme": "Ancêtre recherché",
+      "definition": "La personne dont on cherche le décret d'admission, décrite par ses noms connus, sa filiation et sa date de naissance approximative.",
+      "a_eviter": [
+        "client",
+        "cible"
+      ],
+      "voir": [],
+      "famille": "recherche",
+      "origine": "CONTEXT.md"
+    },
+    {
+      "id": "terme",
+      "terme": "Terme",
+      "definition": "Un élément du nom de l'ancêtre recherché — prénom, nom du père, nom de famille — saisi dans une case à part.",
+      "a_eviter": [
+        "mot-clé",
+        "champ"
+      ],
+      "voir": [
+        "variante"
+      ],
+      "famille": "recherche",
+      "origine": "CONTEXT.md"
+    },
+    {
+      "id": "variante",
+      "terme": "Variante",
+      "definition": "Une façon d'écrire un terme (Belkacem, Belkassem, Belgacem). Un terme a une ou plusieurs variantes.",
+      "a_eviter": [
+        "alias",
+        "orthographe"
+      ],
+      "voir": [
+        "terme"
+      ],
+      "famille": "recherche",
+      "origine": "CONTEXT.md"
+    },
+    {
+      "id": "correspondance",
+      "terme": "Correspondance",
+      "definition": "Un endroit d'une source primaire où l'on trouve au moins une variante de chaque terme, dans n'importe quel ordre, dans une même notice ou à peu de mots de distance. Une correspondance n'est pas encore une identité.",
+      "a_eviter": [
+        "résultat",
+        "hit",
+        "match"
+      ],
+      "voir": [
+        "correspondance-partielle",
+        "fenetre"
+      ],
+      "famille": "recherche",
+      "origine": "CONTEXT.md"
+    },
+    {
+      "id": "correspondance-partielle",
+      "terme": "Correspondance partielle",
+      "definition": "Une correspondance à laquelle il manque exactement un terme. Elle est présentée à part, et le terme absent est nommé.",
+      "a_eviter": [
+        "résultat approchant"
+      ],
+      "voir": [
+        "correspondance"
+      ],
+      "famille": "recherche",
+      "origine": "CONTEXT.md"
+    },
+    {
+      "id": "fenetre",
+      "terme": "Fenêtre",
+      "definition": "Le nombre maximal de mots qui peuvent séparer les termes d'une même correspondance : à peu près la longueur d'une notice de décret.",
+      "a_eviter": [
+        "distance",
+        "proximité"
+      ],
+      "voir": [
+        "correspondance"
+      ],
+      "famille": "recherche",
+      "origine": "CONTEXT.md"
+    },
+    {
+      "id": "particule",
+      "terme": "Particule",
+      "definition": "Petit mot de filiation ou article (ben, bent, bel, ould, b.). Trop fréquent pour distinguer une personne : la recherche ne l'exige jamais.",
+      "a_eviter": [
+        "préfixe"
+      ],
+      "voir": [],
+      "famille": "recherche",
+      "origine": "CONTEXT.md"
+    },
+    {
+      "id": "bilan-de-recherche",
+      "terme": "Bilan de recherche",
+      "definition": "Le relevé de ce qui a été fouillé — sources, années, variantes — qui accompagne toute recherche. Quand rien n'est trouvé, c'est lui le résultat.",
+      "a_eviter": [
+        "rapport",
+        "aucun résultat"
+      ],
+      "voir": [],
+      "famille": "recherche",
+      "origine": "CONTEXT.md"
+    },
+    {
+      "id": "indigene",
+      "terme": "« Indigène »",
+      "definition": "Mot du droit colonial, toujours cité entre guillemets. Il désignait, dans les textes de l'époque, les habitants de l'Algérie restés sous leur statut personnel (« indigène musulman », « indigène israélite »). Tous étaient de nationalité française depuis 1865. Ce site cite le mot parce qu'il figure dans les sources ; il ne l'emploie pas à son compte.",
+      "a_eviter": [
+        "indigène (sans guillemets)",
+        "autochtone",
+        "sujet"
+      ],
+      "voir": [
+        "statut-local"
+      ],
+      "famille": "droit",
+      "origine": "docs/research/sources-2026-11/legal-types.md § 5"
+    },
+    {
+      "id": "naturalisations-algeriennes",
+      "terme": "« Naturalisations algériennes »",
+      "definition": "Titre sous lequel les Archives nationales rangent, de 1883 à 1930, tous les décrets pris pour l'Algérie : étrangers naturalisés et Algériens admis à la qualité de citoyen, ensemble. Pour un Algérien, déjà français, le mot est impropre ; mais c'est sous ce mot que vous trouverez l'acte.",
+      "a_eviter": [
+        "décret de naturalisation (pour un Algérien musulman)"
+      ],
+      "voir": [
+        "decret-d-admission",
+        "naturalisation"
+      ],
+      "famille": "droit",
+      "origine": "docs/research/sources-2026-11/legal-types.md § 5"
+    },
+    {
+      "id": "naturalisation",
+      "terme": "Naturalisation",
+      "definition": "Au sens exact : décision qui donne la nationalité française à un étranger. Le mot convient pour un Marocain, un Tunisien, un Espagnol, un Italien. Pour un Algérien, déjà français, les textes parlent d'admission à la qualité de citoyen.",
+      "a_eviter": [
+        "naturalisé (pour un Algérien musulman)"
+      ],
+      "voir": [
+        "naturalisations-algeriennes"
+      ],
+      "famille": "droit",
+      "origine": "docs/research/sources-2026-11/legal-types.md § 5"
+    },
+    {
+      "id": "qualite-de-citoyen",
+      "terme": "Qualité de citoyen français",
+      "definition": "Ce que le décret ou le jugement donnait : les droits politiques, et le passage aux lois civiles françaises. Les textes disent « admis à jouir des droits de citoyen français » (1865) ou « admis à la qualité de citoyen français » (1919).",
+      "a_eviter": [
+        "a obtenu la nationalité française"
+      ],
+      "voir": [
+        "statut-commun"
+      ],
+      "famille": "droit",
+      "origine": "docs/research/sources-2026-11/legal-types.md § 5"
+    },
+    {
+      "id": "statut-commun",
+      "terme": "Statut civil de droit commun",
+      "definition": "Le fait d'être régi, pour la famille et les successions, par le Code civil français.",
+      "a_eviter": [
+        "Français de plein droit",
+        "vrai Français"
+      ],
+      "voir": [
+        "statut-local"
+      ],
+      "famille": "droit",
+      "origine": "docs/research/sources-2026-11/legal-types.md § 5"
+    },
+    {
+      "id": "statut-local",
+      "terme": "Statut civil de droit local (statut personnel)",
+      "definition": "Le fait d'être régi, pour la famille et les successions, par le droit musulman, les coutumes berbères ou le droit mosaïque. C'était le statut de presque tous les Algériens, qui n'en étaient pas moins de nationalité française.",
+      "a_eviter": [
+        "non-Français"
+      ],
+      "voir": [
+        "statut-commun",
+        "indigene"
+      ],
+      "famille": "droit",
+      "origine": "docs/research/sources-2026-11/legal-types.md § 5"
+    },
+    {
+      "id": "citoyen-a-titre-personnel",
+      "terme": "Citoyen « à titre personnel »",
+      "definition": "Expression de l'ordonnance du 7 mars 1944 : des droits politiques donnés à certaines catégories d'hommes, sans changement de statut civil et sans décret individuel.",
+      "a_eviter": [
+        "naturalisé en 1944"
+      ],
+      "voir": [
+        "statut-local"
+      ],
+      "famille": "droit",
+      "origine": "docs/research/sources-2026-11/legal-types.md § 5"
+    },
+    {
+      "id": "jugement-de-renonciation",
+      "terme": "Jugement de renonciation",
+      "definition": "Après 1946, jugement constatant qu'une personne renonçait à son statut personnel. Jamais publié.",
+      "a_eviter": [
+        "décret (pour cette voie)"
+      ],
+      "voir": [
+        "jugement-d-admission"
+      ],
+      "famille": "actes",
+      "origine": "docs/research/sources-2026-11/legal-types.md § 5"
+    },
+    {
+      "id": "declaration-de-reconnaissance",
+      "terme": "Déclaration de reconnaissance (déclaration recognitive)",
+      "definition": "Démarche ouverte de juillet 1962 à mars 1967 aux personnes de statut civil de droit local établies en France, pour se faire reconnaître la nationalité française.",
+      "a_eviter": [
+        "réintégration (pour cette démarche)"
+      ],
+      "voir": [
+        "reintegration"
+      ],
+      "famille": "actes",
+      "origine": "docs/research/sources-2026-11/legal-types.md § 5"
+    },
+    {
+      "id": "reintegration",
+      "terme": "Réintégration",
+      "definition": "Décret qui rend la nationalité française à une personne qui l'a perdue.",
+      "a_eviter": [],
+      "voir": [
+        "declaration-de-reconnaissance"
+      ],
+      "famille": "actes",
+      "origine": "docs/research/sources-2026-11/legal-types.md § 5"
+    },
+    {
+      "id": "decret-cremieux",
+      "terme": "Décret Crémieux",
+      "definition": "Décret du 24 octobre 1870 qui a déclaré citoyens français, collectivement, les Juifs des départements d'Algérie. Il ne nomme personne.",
+      "a_eviter": [],
+      "voir": [],
+      "famille": "actes",
+      "origine": "docs/research/sources-2026-11/legal-types.md § 3 (T4)"
+    },
+    {
+      "id": "mention-marginale",
+      "terme": "Mention en marge (mention marginale)",
+      "definition": "Note ajoutée dans la marge d'un acte d'état civil pour signaler un événement postérieur : ici, un jugement d'admission. Elle signale le jugement ; elle ne le remplace pas.",
+      "a_eviter": [],
+      "voir": [
+        "copie-integrale",
+        "jugement-d-admission"
+      ],
+      "famille": "documents",
+      "origine": "docs/research/sources-2026-11/other-sources.md § 5.3"
+    },
+    {
+      "id": "copie-integrale",
+      "terme": "Copie intégrale",
+      "definition": "Reproduction complète d'un acte d'état civil, avec ses mentions en marge — à la différence d'un extrait, qui n'en reprend qu'une partie.",
+      "a_eviter": [],
+      "voir": [
+        "mention-marginale"
+      ],
+      "famille": "documents",
+      "origine": "docs/research/sources-2026-11/other-sources.md § 5.2"
+    },
+    {
+      "id": "expedition",
+      "terme": "Expédition (d'un jugement)",
+      "definition": "Copie officielle d'un jugement, délivrée par le tribunal.",
+      "a_eviter": [],
+      "voir": [
+        "jugement-d-admission"
+      ],
+      "famille": "documents",
+      "origine": "docs/research/sources-2026-11/other-sources.md § 5.3"
+    },
+    {
+      "id": "attestation",
+      "terme": "Attestation, ampliation",
+      "definition": "Document par lequel l'administration certifie qu'un décret existe. Seul le ministère peut la délivrer ; ce site n'en délivre aucune.",
+      "a_eviter": [],
+      "voir": [],
+      "famille": "documents",
+      "origine": "docs/research/sources-2026-11/other-sources.md § 5.1"
+    },
+    {
+      "id": "certificat-de-nationalite",
+      "terme": "Certificat de nationalité française",
+      "definition": "Document délivré par un tribunal français, sur demande, à partir d'un formulaire officiel. Hors du champ de ce site.",
+      "a_eviter": [],
+      "voir": [],
+      "famille": "documents",
+      "origine": "docs/research/sources-2026-11/other-sources.md § 5.2"
+    },
+    {
+      "id": "inventaire",
+      "terme": "Inventaire",
+      "definition": "Liste descriptive d'un ensemble d'archives. Aux Archives nationales, il y a un inventaire des décrets par année ou par trimestre, de 1883 à 1948.",
+      "a_eviter": [],
+      "voir": [
+        "notice",
+        "cote"
+      ],
+      "famille": "archives",
+      "origine": "docs/research/sources-2026-11/an-remote.md § 3.2"
+    },
+    {
+      "id": "notice",
+      "terme": "Notice",
+      "definition": "Une ligne d'un inventaire : la description d'un décret, ou d'une personne nommée dans ce décret.",
+      "a_eviter": [],
+      "voir": [
+        "inventaire"
+      ],
+      "famille": "archives",
+      "origine": "docs/research/sources-2026-11/an-local.md § 1"
+    },
+    {
+      "id": "cote",
+      "terme": "Cote",
+      "definition": "L'adresse d'un document dans un dépôt d'archives. « BB/34/438 » désigne une liasse de décrets ; « BB/11/5594 » ou « 19770872/3 », un carton de dossiers.",
+      "a_eviter": [
+        "numéro de décret"
+      ],
+      "voir": [
+        "numero-de-dossier"
+      ],
+      "famille": "archives",
+      "origine": "docs/research/sources-2026-11/an-remote.md § 7"
+    },
+    {
+      "id": "numero-de-document",
+      "terme": "Numéro de document",
+      "definition": "Le rang d'un décret dans sa liasse (« document 21 »). Les inventaires le donnent pour 1883 à 1891 (pas toujours) et pour 1899 à 1930 ; ils ne le donnent pas pour 1892 à 1897, presque jamais pour 1898, et jamais à partir de 1931.",
+      "a_eviter": [
+        "numéro de décret"
+      ],
+      "voir": [
+        "cote"
+      ],
+      "famille": "archives",
+      "origine": "docs/research/sources-2026-11/an-local.md § 5.1"
+    },
+    {
+      "id": "numero-de-dossier",
+      "terme": "Numéro de dossier",
+      "definition": "Le numéro du dossier de la demande, de la forme « 0000 X 12 » (numéro inventé) : un numéro d'ordre, la lettre X, puis les deux derniers chiffres de l'année d'ouverture du dossier, ici 1912. Il est écrit dans la marge du décret.",
+      "a_eviter": [
+        "numéro de décret"
+      ],
+      "voir": [
+        "dossier-d-instruction",
+        "cote"
+      ],
+      "famille": "archives",
+      "origine": "docs/research/sources-2026-11/an-remote.md § 7"
+    },
+    {
+      "id": "dossier-d-instruction",
+      "terme": "Dossier d'instruction",
+      "definition": "Le dossier que l'administration a constitué pour examiner la demande. Il se consulte aux Archives nationales ; ce n'est pas une preuve de nationalité.",
+      "a_eviter": [],
+      "voir": [
+        "numero-de-dossier"
+      ],
+      "famille": "archives",
+      "origine": "docs/research/sources-2026-11/an-remote.md § 7"
+    },
+    {
+      "id": "annee-indexee",
+      "terme": "Année dont les noms sont saisis",
+      "definition": "Année pour laquelle quelqu'un a recopié, dans l'inventaire, le nom de chaque personne des décrets : on peut y chercher par nom.",
+      "a_eviter": [],
+      "voir": [
+        "annee-en-images-seules"
+      ],
+      "famille": "archives",
+      "origine": "docs/research/sources-2026-11/an-local.md § 1.8"
+    },
+    {
+      "id": "annee-en-images-seules",
+      "terme": "Année en images seules",
+      "definition": "Année pour laquelle les décrets sont photographiés mais où les noms n'ont pas été recopiés : il faut lire les images.",
+      "a_eviter": [],
+      "voir": [
+        "annee-indexee"
+      ],
+      "famille": "archives",
+      "origine": "docs/research/sources-2026-11/an-local.md § 5"
+    },
+    {
+      "id": "livraison",
+      "terme": "Livraison, numéro",
+      "definition": "Un fascicule d'un bulletin ou d'un journal officiel. Le Bulletin officiel de l'Algérie numérote ses livraisons en continu et les réunit en un volume par an.",
+      "a_eviter": [],
+      "voir": [
+        "page-et-vue"
+      ],
+      "famille": "publications",
+      "origine": "docs/research/sources-2026-11/internet-archive.md § 4.1"
+    },
+    {
+      "id": "page-et-vue",
+      "terme": "Page imprimée et vue",
+      "definition": "La page imprimée est le numéro écrit sur la page. La vue est le rang de l'image dans le fichier numérisé. Les deux diffèrent presque toujours : une citation donne la page imprimée.",
+      "a_eviter": [],
+      "voir": [
+        "livraison"
+      ],
+      "famille": "publications",
+      "origine": "docs/research/sources-2026-11/gallica.md § 5.1"
+    },
+    {
+      "id": "fac-simile",
+      "terme": "Fac-similé",
+      "definition": "Image fidèle d'une page imprimée.",
+      "a_eviter": [],
+      "voir": [],
+      "famille": "publications",
+      "origine": "docs/research/sources-2026-11/other-sources.md § 1"
+    },
+    {
+      "id": "captcha",
+      "terme": "Captcha",
+      "definition": "Petit test (case à cocher, calcul) par lequel un site vérifie qu'il a affaire à une personne et non à un programme.",
+      "a_eviter": [],
+      "voir": [],
+      "famille": "publications",
+      "origine": "docs/research/sources-2026-11/gallica.md § 3.3"
+    }
+  ],
+  "sigles": [
+    {
+      "sigle": "AD",
+      "developpe": "Archives départementales",
+      "explication": "Le service d'archives de chaque département français."
+    },
+    {
+      "sigle": "AN",
+      "developpe": "Archives nationales",
+      "explication": "Elles conservent à Pierrefitte-sur-Seine les décrets originaux (1883-1948) et les dossiers des demandes."
+    },
+    {
+      "sigle": "ANOM",
+      "developpe": "Archives nationales d'outre-mer",
+      "explication": "À Aix-en-Provence. Elles écrivent elles-mêmes ne pas conserver d'archives probantes sur ces questions."
+    },
+    {
+      "sigle": "ARK",
+      "developpe": "Archival Resource Key",
+      "explication": "Identifiant permanent d'un document numérisé, par exemple sur Gallica."
+    },
+    {
+      "sigle": "BB/11",
+      "developpe": "Sous-série BB/11 des Archives nationales",
+      "explication": "Les dossiers des demandes."
+    },
+    {
+      "sigle": "BB/34",
+      "developpe": "Sous-série BB/34 des Archives nationales",
+      "explication": "Les décrets originaux, de 1883 à 1948."
+    },
+    {
+      "sigle": "BnF",
+      "developpe": "Bibliothèque nationale de France",
+      "explication": "Elle publie Gallica."
+    },
+    {
+      "sigle": "BOGGA",
+      "developpe": "Bulletin officiel du Gouvernement général de l'Algérie",
+      "explication": "Publication officielle d'Alger, de 1861 à 1926, où paraissaient les décrets d'admission."
+    },
+    {
+      "sigle": "CADA",
+      "developpe": "Commission d'accès aux documents administratifs",
+      "explication": "Elle donne un avis quand une administration refuse de communiquer un document."
+    },
+    {
+      "sigle": "CNF",
+      "developpe": "Certificat de nationalité française",
+      "explication": "Délivré par un tribunal ; hors du champ de ce site."
+    },
+    {
+      "sigle": "JO",
+      "developpe": "Journal officiel",
+      "explication": "Mot courant pour le Journal officiel de la République française."
+    },
+    {
+      "sigle": "JORF",
+      "developpe": "Journal officiel de la République française",
+      "explication": "Le journal où paraissent les lois et les décrets."
+    },
+    {
+      "sigle": "OCR",
+      "developpe": "Reconnaissance optique de caractères",
+      "explication": "Lecture d'un texte imprimé par une machine, à partir de son image. Elle fait des fautes."
+    },
+    {
+      "sigle": "RGPD",
+      "developpe": "Règlement général sur la protection des données",
+      "explication": "Règle européenne sur les données personnelles."
+    },
+    {
+      "sigle": "SCEC",
+      "developpe": "Service central d'état civil",
+      "explication": "À Nantes ; il détient l'état civil européen d'Algérie de moins de cent ans."
+    },
+    {
+      "sigle": "SDANF",
+      "developpe": "Sous-direction de l'accès à la nationalité française",
+      "explication": "Service du ministère de l'Intérieur, à Rezé, près de Nantes."
+    },
+    {
+      "sigle": "SLV",
+      "developpe": "Salle de lecture virtuelle",
+      "explication": "Le site des Archives nationales où l'on consulte les inventaires et les images (son adresse contient encore « siv »)."
+    }
+  ],
+  "formulations": [
+    {
+      "dire": "admis à la qualité de citoyen français",
+      "ne_pas_dire": "a obtenu la nationalité française",
+      "pourquoi": "L'ancêtre était déjà français depuis 1865."
+    },
+    {
+      "dire": "aucune correspondance dans les sources fouillées",
+      "ne_pas_dire": "votre ancêtre n'a pas été admis ; il n'était pas français",
+      "pourquoi": "L'absence dans des sources incomplètes ne prouve rien, et tous les Algériens étaient français."
+    },
+    {
+      "dire": "citation (date du décret, publication, date et page)",
+      "ne_pas_dire": "référence ; numéro de décret",
+      "pourquoi": "Seule une citation permet à chacun d'ouvrir la page."
+    },
+    {
+      "dire": "jugement d'admission, jugement de renonciation",
+      "ne_pas_dire": "décret, pour ces voies",
+      "pourquoi": "Un jugement ne se trouve dans aucun bulletin."
+    },
+    {
+      "dire": "Algérien musulman, ancêtre algérien, votre ancêtre",
+      "ne_pas_dire": "sujet ; indigène, sans guillemets",
+      "pourquoi": "Le mot du droit colonial se cite ; il ne s'emploie pas."
+    }
+  ]
+}

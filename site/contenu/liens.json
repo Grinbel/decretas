@@ -1,0 +1,1243 @@
+{
+  "schema": "decretas.contenu.liens/1",
+  "langue": "fr",
+  "maj": "2026-11-11",
+  "regle": "L'interface ne fabrique aucune adresse externe : elle prend un gabarit dans cette table, remplace les variables entre accolades, et affiche le statut. Un lien dont « proposer » vaut false n'est pas montré au public tant qu'un humain ne l'a pas ouvert avec succès.",
+  "statuts": {
+    "teste-200": "Notre programme a demandé cette adresse (ou un exemple de ce gabarit) et a reçu une réponse normale (200). La date du test est indiquée.",
+    "bloque-pour-les-robots-attendu-ok-pour-un-humain": "Le site refuse les programmes (page de blocage ou contrôle anti-robot), mais l'adresse vient d'une source officielle ou a la forme attendue : elle devrait s'ouvrir dans un navigateur. Aucun humain ne l'a encore confirmé pour nous.",
+    "non-teste": "Personne, ni programme ni humain, n'a encore vu cette adresse répondre correctement pour ce projet."
+  },
+  "origines": {
+    "teste-par-nous": "Adresse demandée par notre programme ; la réponse est enregistrée (voir « preuves »).",
+    "recopie-d-une-page-officielle": "Adresse recopiée telle quelle d'une page officielle que nous avons lue.",
+    "forme-ecrite-par-la-source": "Forme d'adresse écrite par la source elle-même dans ses fichiers ou dans le code de ses pages.",
+    "deduction": "Forme déduite de l'usage, d'une documentation ou d'un lien voisin : à confirmer."
+  },
+  "variables": {
+    "inventaire": "Identifiant d'un inventaire des Archives nationales, de la forme FRAN_IR_ suivi de six chiffres. Se recopie tel quel.",
+    "notice": "Identifiant d'une notice dans cet inventaire (décret ou personne), tel qu'il figure dans l'export des Archives nationales. Peut contenir des tirets et des tirets bas ; se recopie tel quel, sans encodage ni « nettoyage ».",
+    "cb": "Identifiant ARK d'un périodique sur Gallica (voir « periodiques »), par exemple cb32732402r.",
+    "ark": "Identifiant ARK d'un numéro ou d'un volume sur Gallica, par exemple bd6t543303701.",
+    "vue": "Rang de l'image dans le numéro (1, 2, 3…). Ce n'est pas le numéro de page imprimé.",
+    "annee": "Année sur quatre chiffres.",
+    "mois": "Mois sur deux chiffres.",
+    "jour": "Jour sur deux chiffres.",
+    "date": "Date sans séparateur, AAAAMMJJ.",
+    "mot": "Mot cherché, encodé pour une adresse web (encodeURIComponent).",
+    "identifiant": "Identifiant d'un dépôt d'Internet Archive, recopié tel quel.",
+    "volume": "Nom exact d'un volume à l'intérieur d'un dépôt d'Internet Archive, encodé pour une adresse (espace → %20).",
+    "feuillet": "Rang de l'image dans le volume d'Internet Archive (« leaf »), à partir de 0 ou de 1 selon le volume ; fourni par l'index, jamais calculé à la main.",
+    "htid": "Identifiant d'un volume sur HathiTrust (voir « volumes_hathitrust »).",
+    "seq": "Rang de l'image dans le volume sur HathiTrust."
+  },
+  "periodiques": [
+    {
+      "cb": "cb32732402r",
+      "titre": "Bulletin officiel du Gouvernement général de l'Algérie",
+      "sigle": "BOGGA",
+      "parution": "n° 1 (janvier 1861) – n° 2796 (décembre 1926)",
+      "etat_gallica": "Le catalogue de la BnF annonce toute la collection numérisée, sauf 1907 (manquante) et 1890 (incomplète).",
+      "granularite": "Sur Gallica, un numéro par fichier, daté de l'année seule (constaté sur deux numéros, 1861 et 1890).",
+      "preuves": [
+        "data/samples/gallica/cat-bogga-notice.html",
+        "docs/research/sources-2026-11/gallica.md § 6",
+        "docs/research/sources-2026-11/verification.md § gallica"
+      ],
+      "etat": "partiel"
+    },
+    {
+      "cb": "cb328020266",
+      "titre": "Journal officiel de l'Algérie",
+      "sigle": null,
+      "parution": "n° 1 (7 janvier 1927) – n° 59 (25 juillet 1958), en trois parties",
+      "etat_gallica": "Numérisé ; les années réellement en ligne n'ont pas pu être relevées.",
+      "granularite": "Le plus souvent un numéro par fichier, parfois deux numéros consécutifs, rarement un volume de six mois.",
+      "preuves": [
+        "data/samples/gallica/cat-cb328020266.html",
+        "docs/research/sources-2026-11/gallica.md § 6",
+        "docs/research/sources-2026-11/verification.md § gallica"
+      ],
+      "etat": "partiel"
+    },
+    {
+      "cb": "cb34378481r",
+      "titre": "Journal officiel de la République française. Lois et décrets",
+      "sigle": "JORF",
+      "parution": "n° 1 (1er janvier 1881) – n° 303 (31 décembre 2015)",
+      "etat_gallica": "Le catalogue de la BnF annonce 1880-1946 en ligne ; un numéro de 1950 existe pourtant dans l'entrepôt public. La dernière année en ligne n'est pas établie.",
+      "granularite": "Un numéro daté par fichier.",
+      "preuves": [
+        "data/samples/gallica/cat-cb34378481r.html",
+        "data/samples/gallica/oai-getrecord-bpt6k1574154f.xml",
+        "docs/research/sources-2026-11/gallica.md § 6",
+        "docs/research/sources-2026-11/verification.md § gallica"
+      ],
+      "etat": "partiel"
+    },
+    {
+      "cb": "cb32726274t",
+      "titre": "Bulletin des lois de la République française",
+      "sigle": null,
+      "parution": "n° 1 (12 juin 1794) – nouvelle série, n° 529 (31 janvier 1931) ; partie supplémentaire depuis 1848",
+      "etat_gallica": "Le catalogue annonce 1794-1931. La présence des admissions d'Algériens musulmans dans la partie supplémentaire n'est pas établie.",
+      "granularite": "Volumes de six mois, volumes par section, volumes de tables : mélangé.",
+      "preuves": [
+        "data/samples/gallica/cat-cb32726274t.html",
+        "docs/research/sources-2026-11/gallica.md § 6",
+        "docs/research/sources-2026-11/verification.md § gallica",
+        "docs/research/sources-2026-11/internet-archive.md § 2.3"
+      ],
+      "etat": "partiel"
+    }
+  ],
+  "volumes_hathitrust": {
+    "note": "Notice HathiTrust 100349311 : dix-sept volumes du Bulletin officiel (1861-1877), exemplaires de Harvard, déclarés en « Full view ». Utile surtout pour 1862, absente d'Internet Archive.",
+    "preuves": [
+      "data/samples/internet-archive/raw/hathitrust/api-full-oclc-236226172.json",
+      "docs/research/sources-2026-11/internet-archive.md § 3.1"
+    ],
+    "volumes": {
+      "1861": "hvd.hl11dm",
+      "1862": "hvd.32044075298414",
+      "1863": "hvd.hl11dl",
+      "1864": "hvd.hl11dk",
+      "1865": "hvd.hl11if",
+      "1866": "hvd.hl11ig",
+      "1867": "hvd.hl11ih",
+      "1868": "hvd.hl11ii",
+      "1869": "hvd.hl11ij",
+      "1870": "hvd.hl11ik",
+      "1871": "hvd.hl11il",
+      "1872": "hvd.hl11e8",
+      "1873": "hvd.hl11eu",
+      "1874": "hvd.hl11ie",
+      "1875": "hvd.hl10vk",
+      "1876": "hvd.hl11e6",
+      "1877": "hvd.hl11e7"
+    }
+  },
+  "liens": [
+    {
+      "id": "an-inventaire",
+      "libelle": "Archives nationales — inventaire d'une année de décrets",
+      "hote": "www.siv.archives-nationales.culture.gouv.fr",
+      "gabarit": "https://www.siv.archives-nationales.culture.gouv.fr/siv/IR/{inventaire}",
+      "variables": [
+        "inventaire"
+      ],
+      "exemple": "https://www.siv.archives-nationales.culture.gouv.fr/siv/IR/FRAN_IR_057268",
+      "statut": "teste-200",
+      "date_test": "2026-11-11",
+      "origine": "teste-par-nous",
+      "preuves": [
+        "data/samples/an-remote/probe-1.hdr",
+        "data/samples/an-remote/IR-057268-consultation.body",
+        "docs/research/sources-2026-11/an-remote.md § 3.1",
+        "docs/research/sources-2026-11/verification.md § an-remote"
+      ],
+      "observation": "Testé une fois, sur un inventaire (1913) : redirection 302 puis page 200. C'est aussi la forme que publient les Archives nationales dans leur liste d'inventaires sur data.gouv.fr. Le même jour, le site a souvent répondu « Erreur 503 » (panne) : le lien peut échouer sans être faux.",
+      "proposer": true,
+      "avertissement": null,
+      "repli": null
+    },
+    {
+      "id": "an-notice",
+      "libelle": "Archives nationales — notice d'un décret ou d'une personne",
+      "hote": "www.siv.archives-nationales.culture.gouv.fr",
+      "gabarit": "https://www.siv.archives-nationales.culture.gouv.fr/siv/UD/{inventaire}/{notice}",
+      "variables": [
+        "inventaire",
+        "notice"
+      ],
+      "exemple": "https://www.siv.archives-nationales.culture.gouv.fr/siv/UD/FRAN_IR_057220/AP001236",
+      "statut": "non-teste",
+      "date_test": null,
+      "origine": "forme-ecrite-par-la-source",
+      "preuves": [
+        "docs/research/sources-2026-11/an-remote.md § 3.1",
+        "docs/research/sources-2026-11/an-remote.md § 11",
+        "docs/research/sources-2026-11/verification.md § an-remote",
+        "docs/research/sources-2026-11/verification.md § an-local",
+        "data/samples/an-remote/A-ud-https.hdr",
+        "data/samples/an-local/verify/net1-ud.hdr"
+      ],
+      "observation": "Forme recopiée des exports XML des Archives nationales (attribut xlink:href de chaque notice). Demandée 8 fois le 2026-11-11 : toujours « Erreur 503 » (panne du site). Jamais vue fonctionner. Les identifiants {inventaire} et {notice} se recopient tels quels, sans les modifier ni les encoder.",
+      "proposer": true,
+      "avertissement": "Ce lien a la forme que les Archives nationales écrivent elles-mêmes dans leurs inventaires, mais nous ne l'avons pas encore vu fonctionner : le jour de nos essais, leur site était en panne. S'il n'ouvre pas la bonne page, utilisez le lien de l'inventaire de l'année, plus bas.",
+      "repli": "an-inventaire"
+    },
+    {
+      "id": "an-images-notice",
+      "libelle": "Archives nationales — images rattachées à une notice",
+      "hote": "www.siv.archives-nationales.culture.gouv.fr",
+      "gabarit": "https://www.siv.archives-nationales.culture.gouv.fr/siv/media/{inventaire}/{notice}/",
+      "variables": [
+        "inventaire",
+        "notice"
+      ],
+      "exemple": "https://www.siv.archives-nationales.culture.gouv.fr/siv/media/FRAN_IR_057220/AP001236/",
+      "statut": "non-teste",
+      "date_test": null,
+      "origine": "forme-ecrite-par-la-source",
+      "preuves": [
+        "docs/research/sources-2026-11/an-remote.md § 11",
+        "docs/research/sources-2026-11/verification.md § an-remote",
+        "data/samples/an-remote/A-media-https.hdr"
+      ],
+      "observation": "Forme recopiée des exports XML (élément daoloc, barre finale comprise). Demandée 1 fois le 2026-11-11 : « Erreur 503 ». On ne sait pas ce qu'elle ouvre : la notice, une visionneuse, ou autre chose.",
+      "proposer": true,
+      "avertissement": "Ce lien a la forme que les Archives nationales écrivent elles-mêmes dans leurs inventaires, mais nous ne l'avons pas encore vu fonctionner : le jour de nos essais, leur site était en panne. S'il n'ouvre pas la bonne page, utilisez le lien de l'inventaire de l'année, plus bas.",
+      "repli": "an-notice"
+    },
+    {
+      "id": "an-inventaire-detail",
+      "libelle": "Archives nationales — onglet « Détail du contenu » d'un inventaire",
+      "hote": "www.siv.archives-nationales.culture.gouv.fr",
+      "gabarit": "https://www.siv.archives-nationales.culture.gouv.fr/siv/rechercheconsultation/consultation/ir/consultationIR.action?irId={inventaire}&details=true&gotoArchivesNums=false&udId=root&auSeinIR=true",
+      "variables": [
+        "inventaire"
+      ],
+      "exemple": "https://www.siv.archives-nationales.culture.gouv.fr/siv/rechercheconsultation/consultation/ir/consultationIR.action?irId=FRAN_IR_057220&details=true&gotoArchivesNums=false&udId=root&auSeinIR=true",
+      "statut": "non-teste",
+      "date_test": null,
+      "origine": "forme-ecrite-par-la-source",
+      "preuves": [
+        "data/samples/an-remote/IR-057268-consultation.body",
+        "docs/research/sources-2026-11/an-remote.md § 3.3",
+        "docs/research/sources-2026-11/verification.md § an-remote"
+      ],
+      "observation": "Adresse construite par le script de la page d'inventaire elle-même (bouton de l'onglet). Sa réponse n'a pas été vue.",
+      "proposer": false,
+      "avertissement": null,
+      "repli": "an-inventaire"
+    },
+    {
+      "id": "an-inventaire-archives-numerisees",
+      "libelle": "Archives nationales — onglet « Archives numérisées » d'un inventaire",
+      "hote": "www.siv.archives-nationales.culture.gouv.fr",
+      "gabarit": "https://www.siv.archives-nationales.culture.gouv.fr/siv/rechercheconsultation/recherche/ir/rechercheConsultationGlobal.action?irId={inventaire}&details=false&gotoArchivesNums=true&searchUdOnly=true",
+      "variables": [
+        "inventaire"
+      ],
+      "exemple": "https://www.siv.archives-nationales.culture.gouv.fr/siv/rechercheconsultation/recherche/ir/rechercheConsultationGlobal.action?irId=FRAN_IR_058673&details=false&gotoArchivesNums=true&searchUdOnly=true",
+      "statut": "non-teste",
+      "date_test": null,
+      "origine": "forme-ecrite-par-la-source",
+      "preuves": [
+        "data/samples/an-remote/IR-057268-consultation.body",
+        "docs/research/sources-2026-11/an-remote.md § 3.3",
+        "docs/research/sources-2026-11/verification.md § an-remote"
+      ],
+      "observation": "Adresse construite par le script de la page d'inventaire. Demandée 9 fois le 2026-11-11 pour l'année 1936 : 503 ou 502 (panne). Réponse jamais vue.",
+      "proposer": false,
+      "avertissement": null,
+      "repli": "an-inventaire"
+    },
+    {
+      "id": "an-espace-personnel",
+      "libelle": "Archives nationales — créer un espace personnel",
+      "hote": "www.siv.archives-nationales.culture.gouv.fr",
+      "gabarit": "https://www.siv.archives-nationales.culture.gouv.fr/siv/compte/espaceperso/creerEspacePerso.action",
+      "variables": [],
+      "exemple": "https://www.siv.archives-nationales.culture.gouv.fr/siv/compte/espaceperso/creerEspacePerso.action",
+      "statut": "non-teste",
+      "date_test": null,
+      "origine": "recopie-d-une-page-officielle",
+      "preuves": [
+        "data/samples/an-remote/an-reutilisation.body",
+        "docs/research/sources-2026-11/an-remote.md § 7"
+      ],
+      "observation": "Lien donné par le portail des Archives nationales (page sur la reproduction). Écran non vu.",
+      "proposer": true,
+      "avertissement": null,
+      "repli": null
+    },
+    {
+      "id": "an-fiche-algerie",
+      "libelle": "Archives nationales — fiche d'aide sur les cas liés à l'Algérie",
+      "hote": "www.siv.archives-nationales.culture.gouv.fr",
+      "gabarit": "https://www.siv.archives-nationales.culture.gouv.fr/siv/cms/content/helpGuide.action?uuid=8dc87e75-c0f2-4b5b-be8e-a6999f19bb6a&version=1&preview=false&typeSearch=&searchString=",
+      "variables": [],
+      "exemple": "https://www.siv.archives-nationales.culture.gouv.fr/siv/cms/content/helpGuide.action?uuid=8dc87e75-c0f2-4b5b-be8e-a6999f19bb6a&version=1&preview=false&typeSearch=&searchString=",
+      "statut": "non-teste",
+      "date_test": null,
+      "origine": "recopie-d-une-page-officielle",
+      "preuves": [
+        "data/samples/an-remote/an-dossiers-naturalisation.body",
+        "data/samples/other-sources/anom/site-algerie-francaise.html",
+        "docs/research/sources-2026-11/an-remote.md § 7",
+        "docs/research/sources-2026-11/verification.md § other-sources"
+      ],
+      "observation": "Adresse recopiée du portail des Archives nationales et du site des ANOM. Demandée 2 fois le 2026-11-11 : « Erreur 503 » (panne). Contenu non lu par nous.",
+      "proposer": true,
+      "avertissement": null,
+      "repli": null
+    },
+    {
+      "id": "an-fiche-dossier",
+      "libelle": "Archives nationales — fiche « Rechercher un dossier de demande de naturalisation »",
+      "hote": "www.siv.archives-nationales.culture.gouv.fr",
+      "gabarit": "https://www.siv.archives-nationales.culture.gouv.fr/siv/cms/content/helpGuide.action?uuid=804c95a9-6550-4b00-b97b-78b0d52816cd&version=6&preview=false&typeSearch=&searchString=",
+      "variables": [],
+      "exemple": "https://www.siv.archives-nationales.culture.gouv.fr/siv/cms/content/helpGuide.action?uuid=804c95a9-6550-4b00-b97b-78b0d52816cd&version=6&preview=false&typeSearch=&searchString=",
+      "statut": "non-teste",
+      "date_test": null,
+      "origine": "recopie-d-une-page-officielle",
+      "preuves": [
+        "data/samples/other-sources/anom/site-ce-que-vous-ne-trouverez-pas.html",
+        "docs/research/sources-2026-11/an-remote.md § 7",
+        "docs/research/sources-2026-11/verification.md § an-remote"
+      ],
+      "observation": "Adresse recopiée du site des ANOM (le portail des Archives nationales donne la même fiche sous une adresse contenant un identifiant de session, que nous ne reprenons pas). Contenu non lu par nous.",
+      "proposer": true,
+      "avertissement": null,
+      "repli": null
+    },
+    {
+      "id": "an-page-dossiers",
+      "libelle": "Archives nationales — « Dossiers de demande de naturalisation » (dont le tableau des preuves)",
+      "hote": "www.archives-nationales.culture.gouv.fr",
+      "gabarit": "https://www.archives-nationales.culture.gouv.fr/dossiers-de-demande-de-naturalisation",
+      "variables": [],
+      "exemple": "https://www.archives-nationales.culture.gouv.fr/dossiers-de-demande-de-naturalisation",
+      "statut": "teste-200",
+      "date_test": "2026-11-11",
+      "origine": "teste-par-nous",
+      "preuves": [
+        "data/samples/an-remote/an-dossiers-naturalisation.body",
+        "docs/research/sources-2026-11/an-remote.md § 7"
+      ],
+      "observation": "",
+      "proposer": true,
+      "avertissement": null,
+      "repli": null
+    },
+    {
+      "id": "an-page-extraits",
+      "libelle": "Archives nationales — consultation d'extraits de dossiers",
+      "hote": "www.archives-nationales.culture.gouv.fr",
+      "gabarit": "https://www.archives-nationales.culture.gouv.fr/consultation-dextraits-de-dossiers-darchives",
+      "variables": [],
+      "exemple": "https://www.archives-nationales.culture.gouv.fr/consultation-dextraits-de-dossiers-darchives",
+      "statut": "teste-200",
+      "date_test": "2026-11-11",
+      "origine": "teste-par-nous",
+      "preuves": [
+        "data/samples/an-remote/an-extraits-de-cote.body",
+        "docs/research/sources-2026-11/an-remote.md § 7"
+      ],
+      "observation": "",
+      "proposer": true,
+      "avertissement": null,
+      "repli": null
+    },
+    {
+      "id": "an-page-reutilisation",
+      "libelle": "Archives nationales — reproduction et réutilisation",
+      "hote": "www.archives-nationales.culture.gouv.fr",
+      "gabarit": "https://www.archives-nationales.culture.gouv.fr/quelles-sont-les-modalites-de-reproduction-et-de-reutilisation",
+      "variables": [],
+      "exemple": "https://www.archives-nationales.culture.gouv.fr/quelles-sont-les-modalites-de-reproduction-et-de-reutilisation",
+      "statut": "teste-200",
+      "date_test": "2026-11-11",
+      "origine": "teste-par-nous",
+      "preuves": [
+        "data/samples/an-remote/an-reutilisation.body",
+        "docs/research/sources-2026-11/an-remote.md § 6.1"
+      ],
+      "observation": "",
+      "proposer": true,
+      "avertissement": null,
+      "repli": null
+    },
+    {
+      "id": "an-page-ouverture-donnees",
+      "libelle": "Archives nationales — ouverture des données",
+      "hote": "www.archives-nationales.culture.gouv.fr",
+      "gabarit": "https://www.archives-nationales.culture.gouv.fr/ouverture-des-donnees-des-archives-nationales",
+      "variables": [],
+      "exemple": "https://www.archives-nationales.culture.gouv.fr/ouverture-des-donnees-des-archives-nationales",
+      "statut": "teste-200",
+      "date_test": "2026-11-11",
+      "origine": "teste-par-nous",
+      "preuves": [
+        "data/samples/an-remote/an-ouverture-donnees.body",
+        "docs/research/sources-2026-11/an-remote.md § 6.3"
+      ],
+      "observation": "",
+      "proposer": true,
+      "avertissement": null,
+      "repli": null
+    },
+    {
+      "id": "an-page-mentions-legales",
+      "libelle": "Archives nationales — mentions légales",
+      "hote": "www.archives-nationales.culture.gouv.fr",
+      "gabarit": "https://www.archives-nationales.culture.gouv.fr/mentions-legales",
+      "variables": [],
+      "exemple": "https://www.archives-nationales.culture.gouv.fr/mentions-legales",
+      "statut": "teste-200",
+      "date_test": "2026-11-11",
+      "origine": "teste-par-nous",
+      "preuves": [
+        "data/samples/an-remote/an-mentions-legales.body",
+        "docs/research/sources-2026-11/an-remote.md § 6.2"
+      ],
+      "observation": "",
+      "proposer": true,
+      "avertissement": null,
+      "repli": null
+    },
+    {
+      "id": "an-girophares-devenir-francais",
+      "libelle": "Archives nationales — projet d'indexation « Devenir français » (1932-1948)",
+      "hote": "girophares.archives-nationales.culture.gouv.fr",
+      "gabarit": "https://girophares.archives-nationales.culture.gouv.fr/devenir-francais",
+      "variables": [],
+      "exemple": "https://girophares.archives-nationales.culture.gouv.fr/devenir-francais",
+      "statut": "teste-200",
+      "date_test": "2026-11-11",
+      "origine": "teste-par-nous",
+      "preuves": [
+        "data/samples/an-remote/giro-devenir-francais.body",
+        "docs/research/sources-2026-11/an-remote.md § 10"
+      ],
+      "observation": "",
+      "proposer": true,
+      "avertissement": null,
+      "repli": null
+    },
+    {
+      "id": "gallica-titre",
+      "libelle": "Gallica — page d'un périodique, liste des années",
+      "hote": "gallica.bnf.fr",
+      "gabarit": "https://gallica.bnf.fr/ark:/12148/{cb}/date",
+      "variables": [
+        "cb"
+      ],
+      "exemple": "https://gallica.bnf.fr/ark:/12148/cb32732402r/date",
+      "statut": "bloque-pour-les-robots-attendu-ok-pour-un-humain",
+      "date_test": "2026-11-11",
+      "origine": "recopie-d-une-page-officielle",
+      "preuves": [
+        "data/samples/gallica/10-human-date-page.html",
+        "data/samples/other-sources/anom/site-ce-que-vous-ne-trouverez-pas.html",
+        "docs/research/sources-2026-11/gallica.md § 5.1",
+        "docs/research/sources-2026-11/verification.md § gallica"
+      ],
+      "observation": "Demandé par notre programme pour le Bulletin officiel (cb32732402r) : refus 403 de Cloudflare, comme tout Gallica. Le site officiel des ANOM donne un lien de cette forme vers ce bulletin (écrit « …/cb32732402r/date.item ») et vers le Journal officiel de l'Algérie (cb328020266).",
+      "proposer": true,
+      "avertissement": null,
+      "repli": null
+    },
+    {
+      "id": "gallica-annee",
+      "libelle": "Gallica — une année d'un périodique",
+      "hote": "gallica.bnf.fr",
+      "gabarit": "https://gallica.bnf.fr/ark:/12148/{cb}/date{annee}",
+      "variables": [
+        "cb",
+        "annee"
+      ],
+      "exemple": "https://gallica.bnf.fr/ark:/12148/cb32732402r/date1903",
+      "statut": "non-teste",
+      "date_test": null,
+      "origine": "deduction",
+      "preuves": [
+        "docs/research/sources-2026-11/gallica.md § 5.1",
+        "docs/research/sources-2026-11/verification.md § gallica"
+      ],
+      "observation": "Forme connue seulement par des adresses vues dans un moteur de recherche, non enregistrées. Aucune réponse 200 obtenue.",
+      "proposer": true,
+      "avertissement": "Lien non encore contrôlé par un humain : Gallica refuse les programmes, nous n'avons donc pas pu l'ouvrir nous-mêmes. S'il n'ouvre pas la bonne page, repartez de la page du titre.",
+      "repli": "gallica-titre"
+    },
+    {
+      "id": "gallica-jour",
+      "libelle": "Gallica — le numéro d'un jour donné",
+      "hote": "gallica.bnf.fr",
+      "gabarit": "https://gallica.bnf.fr/ark:/12148/{cb}/date{date}",
+      "variables": [
+        "cb",
+        "date"
+      ],
+      "exemple": "https://gallica.bnf.fr/ark:/12148/cb34378481r/date19270207",
+      "statut": "non-teste",
+      "date_test": null,
+      "origine": "deduction",
+      "preuves": [
+        "docs/research/sources-2026-11/gallica.md § 5.1",
+        "docs/research/sources-2026-11/gallica.md § 5.4",
+        "docs/research/sources-2026-11/verification.md § gallica"
+      ],
+      "observation": "{date} s'écrit AAAAMMJJ. Jamais testé. Sans objet pour le Bulletin officiel de l'Algérie, dont les numéros ne sont datés que de l'année.",
+      "proposer": false,
+      "avertissement": null,
+      "repli": "gallica-titre"
+    },
+    {
+      "id": "gallica-vue",
+      "libelle": "Gallica — une vue (image) d'un numéro",
+      "hote": "gallica.bnf.fr",
+      "gabarit": "https://gallica.bnf.fr/ark:/12148/{ark}/f{vue}.item",
+      "variables": [
+        "ark",
+        "vue"
+      ],
+      "exemple": "https://gallica.bnf.fr/ark:/12148/bd6t543303701/f1.item",
+      "statut": "non-teste",
+      "date_test": null,
+      "origine": "deduction",
+      "preuves": [
+        "docs/research/sources-2026-11/gallica.md § 5.1",
+        "docs/research/sources-2026-11/verification.md § gallica"
+      ],
+      "observation": "{vue} est le rang de l'image dans le numéro, pas le numéro de page imprimé. Forme connue par l'usage, jamais ouverte par nous.",
+      "proposer": true,
+      "avertissement": "Lien non encore contrôlé par un humain : Gallica refuse les programmes, nous n'avons donc pas pu l'ouvrir nous-mêmes. S'il n'ouvre pas la bonne page, repartez de la page du titre.",
+      "repli": "gallica-titre"
+    },
+    {
+      "id": "gallica-recherche-dans-numero",
+      "libelle": "Gallica — chercher un mot dans un numéro",
+      "hote": "gallica.bnf.fr",
+      "gabarit": "https://gallica.bnf.fr/ark:/12148/{ark}/f1.item.r={mot}",
+      "variables": [
+        "ark",
+        "mot"
+      ],
+      "exemple": "https://gallica.bnf.fr/ark:/12148/bd6t543303701/f1.item.r=naturalisation",
+      "statut": "non-teste",
+      "date_test": null,
+      "origine": "deduction",
+      "preuves": [
+        "docs/research/sources-2026-11/gallica.md § 5.2",
+        "docs/research/sources-2026-11/verification.md § gallica"
+      ],
+      "observation": "Jamais testé sous cette forme.",
+      "proposer": false,
+      "avertissement": null,
+      "repli": "gallica-vue"
+    },
+    {
+      "id": "gallica-recherche-dans-titre-a",
+      "libelle": "Gallica — chercher un mot dans tout un périodique (variante A)",
+      "hote": "gallica.bnf.fr",
+      "gabarit": "https://gallica.bnf.fr/services/engine/search/sru?operation=searchRetrieve&version=1.2&collapsing=false&query=%28gallica%20all%20%22{mot}%22%29%20and%20arkPress%20all%20%22{cb}_date%22",
+      "variables": [
+        "mot",
+        "cb"
+      ],
+      "exemple": "https://gallica.bnf.fr/services/engine/search/sru?operation=searchRetrieve&version=1.2&collapsing=false&query=%28gallica%20all%20%22naturalisation%22%29%20and%20arkPress%20all%20%22cb32732402r_date%22",
+      "statut": "non-teste",
+      "date_test": null,
+      "origine": "deduction",
+      "preuves": [
+        "docs/research/sources-2026-11/gallica.md § 5.2",
+        "docs/research/sources-2026-11/gallica.md § 5.4",
+        "docs/research/sources-2026-11/verification.md § gallica"
+      ],
+      "observation": "Le critère « arkPress » ne figure pas dans la documentation de la BnF. Jamais testé.",
+      "proposer": false,
+      "avertissement": null,
+      "repli": "gallica-titre"
+    },
+    {
+      "id": "gallica-recherche-dans-titre-b",
+      "libelle": "Gallica — chercher un mot dans tout un périodique (variante B)",
+      "hote": "gallica.bnf.fr",
+      "gabarit": "https://gallica.bnf.fr/services/engine/search/sru?operation=searchRetrieve&version=1.2&collapsing=false&query=%28gallica%20all%20%22{mot}%22%29%20and%20%28dc.relation%20all%20%22{cb}%22%29",
+      "variables": [
+        "mot",
+        "cb"
+      ],
+      "exemple": "https://gallica.bnf.fr/services/engine/search/sru?operation=searchRetrieve&version=1.2&collapsing=false&query=%28gallica%20all%20%22naturalisation%22%29%20and%20%28dc.relation%20all%20%22cb32732402r%22%29",
+      "statut": "non-teste",
+      "date_test": null,
+      "origine": "deduction",
+      "preuves": [
+        "docs/research/sources-2026-11/gallica.md § 5.2",
+        "docs/research/sources-2026-11/gallica.md § 5.4",
+        "docs/research/sources-2026-11/verification.md § gallica"
+      ],
+      "observation": "Fondée sur le champ « dc:relation » des notices de numéros (vérifié) ; la recherche elle-même n'a jamais été testée.",
+      "proposer": false,
+      "avertissement": null,
+      "repli": "gallica-titre"
+    },
+    {
+      "id": "gallica-conditions",
+      "libelle": "Gallica — conditions d'utilisation des contenus",
+      "hote": "gallica.bnf.fr",
+      "gabarit": "https://gallica.bnf.fr/edit/und/conditions-dutilisation-des-contenus-de-gallica",
+      "variables": [],
+      "exemple": "https://gallica.bnf.fr/edit/und/conditions-dutilisation-des-contenus-de-gallica",
+      "statut": "non-teste",
+      "date_test": null,
+      "origine": "recopie-d-une-page-officielle",
+      "preuves": [
+        "docs/research/sources-2026-11/gallica.md § 8",
+        "data/samples/gallica/api-bnf-iiif.html"
+      ],
+      "observation": "Adresse donnée par les pages de la BnF comme licence des contenus de Gallica. Non ouverte par nous (Gallica refuse les programmes).",
+      "proposer": true,
+      "avertissement": null,
+      "repli": null
+    },
+    {
+      "id": "bnf-captcha-gallica",
+      "libelle": "BnF — annonce du CAPTCHA de Gallica",
+      "hote": "www.bnf.fr",
+      "gabarit": "https://www.bnf.fr/fr/actualites/un-captcha-pour-gallica",
+      "variables": [],
+      "exemple": "https://www.bnf.fr/fr/actualites/un-captcha-pour-gallica",
+      "statut": "teste-200",
+      "date_test": "2026-11-11",
+      "origine": "teste-par-nous",
+      "preuves": [
+        "data/samples/gallica/bnf-www-captcha-gallica.html",
+        "docs/research/sources-2026-11/gallica.md § 3.3"
+      ],
+      "observation": "",
+      "proposer": true,
+      "avertissement": null,
+      "repli": null
+    },
+    {
+      "id": "bnf-conditions-metadonnees",
+      "libelle": "BnF — conditions de réutilisation des données",
+      "hote": "www.bnf.fr",
+      "gabarit": "https://www.bnf.fr/fr/conditions-de-reutilisations-des-donnees-de-la-bnf",
+      "variables": [],
+      "exemple": "https://www.bnf.fr/fr/conditions-de-reutilisations-des-donnees-de-la-bnf",
+      "statut": "teste-200",
+      "date_test": "2026-11-11",
+      "origine": "teste-par-nous",
+      "preuves": [
+        "data/samples/gallica/bnf-www-conditions-reutilisations.html",
+        "docs/research/sources-2026-11/gallica.md § 8"
+      ],
+      "observation": "",
+      "proposer": true,
+      "avertissement": null,
+      "repli": null
+    },
+    {
+      "id": "bnf-trouver-decret",
+      "libelle": "BnF — « Trouver un décret de naturalisation »",
+      "hote": "www.bnf.fr",
+      "gabarit": "https://www.bnf.fr/fr/trouver-un-decret-de-naturalisation",
+      "variables": [],
+      "exemple": "https://www.bnf.fr/fr/trouver-un-decret-de-naturalisation",
+      "statut": "non-teste",
+      "date_test": null,
+      "origine": "recopie-d-une-page-officielle",
+      "preuves": [
+        "data/samples/other-sources/oups/an-trouver-decret.html",
+        "data/samples/an-remote/an-dossiers-naturalisation.body"
+      ],
+      "observation": "Adresse donnée par les Archives nationales à qui cherche un décret publié. Non ouverte par nous.",
+      "proposer": true,
+      "avertissement": null,
+      "repli": null
+    },
+    {
+      "id": "bnf-guide-avant-1924",
+      "libelle": "BnF — guide de recherche des décrets antérieurs à 1924",
+      "hote": "bnf.libguides.com",
+      "gabarit": "https://bnf.libguides.com/c.php?g=659907&p=4659608",
+      "variables": [],
+      "exemple": "https://bnf.libguides.com/c.php?g=659907&p=4659608",
+      "statut": "non-teste",
+      "date_test": null,
+      "origine": "recopie-d-une-page-officielle",
+      "preuves": [
+        "data/samples/other-sources/servicepublic/F33626-trouver-decret.html"
+      ],
+      "observation": "Adresse donnée par la fiche officielle F33626 pour les décrets d'avant 1924. Non ouverte par nous.",
+      "proposer": true,
+      "avertissement": null,
+      "repli": null
+    },
+    {
+      "id": "legifrance-accueil",
+      "libelle": "Légifrance — accueil (encart « Rechercher un JO »)",
+      "hote": "www.legifrance.gouv.fr",
+      "gabarit": "https://www.legifrance.gouv.fr/",
+      "variables": [],
+      "exemple": "https://www.legifrance.gouv.fr/",
+      "statut": "bloque-pour-les-robots-attendu-ok-pour-un-humain",
+      "date_test": "2026-11-11",
+      "origine": "recopie-d-une-page-officielle",
+      "preuves": [
+        "data/samples/other-sources/servicepublic/F33626-trouver-decret.html",
+        "data/samples/other-sources/legifrance/jo-1955-01-01.html.headers",
+        "docs/research/sources-2026-11/other-sources.md § 1.1",
+        "docs/research/sources-2026-11/verification.md § other-sources"
+      ],
+      "observation": "Adresse donnée par la fiche officielle F33626. Notre programme a demandé une autre page de ce site : refus 403 avec un contrôle anti-robot (« Just a moment... »). L'accueil lui-même n'a pas été demandé.",
+      "proposer": true,
+      "avertissement": null,
+      "repli": null
+    },
+    {
+      "id": "legifrance-jorf-par-date",
+      "libelle": "Légifrance — Journal officiel d'une date (lien direct candidat)",
+      "hote": "www.legifrance.gouv.fr",
+      "gabarit": "https://www.legifrance.gouv.fr/search/jorf?tab_selection=jorf&searchField=ALL&query=&page=1&init=true&datePublication={jour}%2F{mois}%2F{annee}",
+      "variables": [
+        "jour",
+        "mois",
+        "annee"
+      ],
+      "exemple": "https://www.legifrance.gouv.fr/search/jorf?tab_selection=jorf&searchField=ALL&query=&page=1&init=true&datePublication=07%2F02%2F1927",
+      "statut": "non-teste",
+      "date_test": null,
+      "origine": "deduction",
+      "preuves": [
+        "docs/research/sources-2026-11/other-sources.md § 1.1",
+        "docs/research/sources-2026-11/verification.md § other-sources"
+      ],
+      "observation": "Les noms de paramètres sont attestés dans quatre liens de Wikimedia Commons ; le chemin « /search/jorf » est une déduction. Ne doit pas être proposé avant d'avoir été ouvert par un humain.",
+      "proposer": false,
+      "avertissement": null,
+      "repli": "legifrance-accueil"
+    },
+    {
+      "id": "sp-f33626",
+      "libelle": "Service-Public — « Comment trouver son décret de naturalisation publié au Journal officiel ? » (fiche F33626)",
+      "hote": "www.service-public.gouv.fr",
+      "gabarit": "https://www.service-public.gouv.fr/particuliers/vosdroits/F33626",
+      "variables": [],
+      "exemple": "https://www.service-public.gouv.fr/particuliers/vosdroits/F33626",
+      "statut": "teste-200",
+      "date_test": "2026-11-11",
+      "origine": "teste-par-nous",
+      "preuves": [
+        "data/samples/other-sources/servicepublic/F33626-trouver-decret.html",
+        "docs/research/sources-2026-11/other-sources.md § 1",
+        "docs/research/sources-2026-11/verification.md § other-sources"
+      ],
+      "observation": "",
+      "proposer": true,
+      "avertissement": null,
+      "repli": null
+    },
+    {
+      "id": "sp-f1051",
+      "libelle": "Service-Public — certificat de nationalité française (fiche F1051)",
+      "hote": "www.service-public.gouv.fr",
+      "gabarit": "https://www.service-public.gouv.fr/particuliers/vosdroits/F1051",
+      "variables": [],
+      "exemple": "https://www.service-public.gouv.fr/particuliers/vosdroits/F1051",
+      "statut": "teste-200",
+      "date_test": "2026-11-11",
+      "origine": "teste-par-nous",
+      "preuves": [
+        "data/samples/other-sources/servicepublic/F1051-cnf.html",
+        "docs/research/sources-2026-11/other-sources.md § 5.2"
+      ],
+      "observation": "",
+      "proposer": true,
+      "avertissement": null,
+      "repli": null
+    },
+    {
+      "id": "sp-formulaire-cnf",
+      "libelle": "Service-Public — formulaire cerfa n° 16237 de demande de certificat",
+      "hote": "www.service-public.gouv.fr",
+      "gabarit": "https://www.service-public.gouv.fr/particuliers/vosdroits/R63143",
+      "variables": [],
+      "exemple": "https://www.service-public.gouv.fr/particuliers/vosdroits/R63143",
+      "statut": "teste-200",
+      "date_test": "2026-11-11",
+      "origine": "teste-par-nous",
+      "preuves": [
+        "data/samples/other-sources/servicepublic/R63143-cerfa16237.html",
+        "docs/research/sources-2026-11/other-sources.md § 5.2"
+      ],
+      "observation": "",
+      "proposer": true,
+      "avertissement": null,
+      "repli": null
+    },
+    {
+      "id": "sp-notice-cnf",
+      "libelle": "Service-Public — notice n° 52373*02 du formulaire (PDF, 17 pages)",
+      "hote": "www.formulaires.service-public.gouv.fr",
+      "gabarit": "https://www.formulaires.service-public.gouv.fr/gf/getNotice.do?cerfaFormulaire=16237*02&cerfaNotice=16237-02",
+      "variables": [],
+      "exemple": "https://www.formulaires.service-public.gouv.fr/gf/getNotice.do?cerfaFormulaire=16237*02&cerfaNotice=16237-02",
+      "statut": "teste-200",
+      "date_test": "2026-11-11",
+      "origine": "teste-par-nous",
+      "preuves": [
+        "data/samples/other-sources/servicepublic/notice-16237-02.pdf",
+        "docs/research/sources-2026-11/other-sources.md § 5.2"
+      ],
+      "observation": "",
+      "proposer": true,
+      "avertissement": null,
+      "repli": null
+    },
+    {
+      "id": "sp-annuaire-sdanf",
+      "libelle": "Annuaire de l'administration — Sous-direction de l'accès à la nationalité française",
+      "hote": "lannuaire.service-public.gouv.fr",
+      "gabarit": "https://lannuaire.service-public.gouv.fr/gouvernement/administration-centrale-ou-ministere_167318",
+      "variables": [],
+      "exemple": "https://lannuaire.service-public.gouv.fr/gouvernement/administration-centrale-ou-ministere_167318",
+      "statut": "teste-200",
+      "date_test": "2026-11-11",
+      "origine": "teste-par-nous",
+      "preuves": [
+        "data/samples/other-sources/servicepublic/annuaire-sdanf-167318.html",
+        "docs/research/sources-2026-11/other-sources.md § 5.1"
+      ],
+      "observation": "",
+      "proposer": true,
+      "avertissement": null,
+      "repli": null
+    },
+    {
+      "id": "interieur-saisine",
+      "libelle": "Ministère de l'Intérieur — saisine par voie électronique",
+      "hote": "contacts-demarches.interieur.gouv.fr",
+      "gabarit": "https://contacts-demarches.interieur.gouv.fr",
+      "variables": [],
+      "exemple": "https://contacts-demarches.interieur.gouv.fr",
+      "statut": "non-teste",
+      "date_test": null,
+      "origine": "recopie-d-une-page-officielle",
+      "preuves": [
+        "data/samples/other-sources/servicepublic/annuaire-sdanf-167318.html"
+      ],
+      "observation": "Adresse donnée par l'annuaire officiel à la ligne « Saisine par voie électronique ». Non ouverte par nous.",
+      "proposer": true,
+      "avertissement": null,
+      "repli": null
+    },
+    {
+      "id": "spplus-an-decret",
+      "libelle": "Services Publics + — « Je m'adresse aux Archives nationales pour trouver un décret de naturalisation »",
+      "hote": "www.plus.transformation.gouv.fr",
+      "gabarit": "https://www.plus.transformation.gouv.fr/j-ai-droit-a-l-erreur/je-madresse-aux-archives-nationales-pour-trouver-un-decret-de-naturalisation",
+      "variables": [],
+      "exemple": "https://www.plus.transformation.gouv.fr/j-ai-droit-a-l-erreur/je-madresse-aux-archives-nationales-pour-trouver-un-decret-de-naturalisation",
+      "statut": "teste-200",
+      "date_test": "2026-11-11",
+      "origine": "teste-par-nous",
+      "preuves": [
+        "data/samples/other-sources/oups/an-trouver-decret.html",
+        "docs/research/sources-2026-11/other-sources.md § 7"
+      ],
+      "observation": "",
+      "proposer": true,
+      "avertissement": null,
+      "repli": null
+    },
+    {
+      "id": "spplus-an-jugement",
+      "libelle": "Services Publics + — ancêtre admis par jugement (1919-1962)",
+      "hote": "www.plus.transformation.gouv.fr",
+      "gabarit": "https://www.plus.transformation.gouv.fr/j-ai-droit-a-l-erreur/algerie-je-madresse-aux-archives-nationales-pour-trouver-un-ancetre-devenu",
+      "variables": [],
+      "exemple": "https://www.plus.transformation.gouv.fr/j-ai-droit-a-l-erreur/algerie-je-madresse-aux-archives-nationales-pour-trouver-un-ancetre-devenu",
+      "statut": "teste-200",
+      "date_test": "2026-11-11",
+      "origine": "teste-par-nous",
+      "preuves": [
+        "data/samples/other-sources/oups/algerie-ancetre-devenu.html",
+        "docs/research/sources-2026-11/other-sources.md § 5.3"
+      ],
+      "observation": "La page renvoie vers une adresse d'« archives judiciaires » qui n'existe plus (nom de domaine introuvable).",
+      "proposer": true,
+      "avertissement": null,
+      "repli": null
+    },
+    {
+      "id": "spplus-an-recognitive",
+      "libelle": "Services Publics + — déclaration recognitive (1962-1967)",
+      "hote": "www.plus.transformation.gouv.fr",
+      "gabarit": "https://www.plus.transformation.gouv.fr/j-ai-droit-a-l-erreur/algerie-je-madresse-aux-archives-nationales-pour-trouver-un-ancetre-devenu-0",
+      "variables": [],
+      "exemple": "https://www.plus.transformation.gouv.fr/j-ai-droit-a-l-erreur/algerie-je-madresse-aux-archives-nationales-pour-trouver-un-ancetre-devenu-0",
+      "statut": "teste-200",
+      "date_test": "2026-11-11",
+      "origine": "teste-par-nous",
+      "preuves": [
+        "data/samples/other-sources/oups/algerie-ancetre-devenu-0.html",
+        "docs/research/sources-2026-11/other-sources.md § 6.1"
+      ],
+      "observation": "",
+      "proposer": true,
+      "avertissement": null,
+      "repli": null
+    },
+    {
+      "id": "anom-ce-que-vous-ne-trouverez-pas",
+      "libelle": "ANOM — « Ce que vous ne trouverez pas aux Archives nationales d'outre-mer »",
+      "hote": "archives-nationales-outre-mer.culture.gouv.fr",
+      "gabarit": "https://archives-nationales-outre-mer.culture.gouv.fr/faire-une-recherche/ce-que-vous-ne-trouverez-pas-aux-archives-nationales-d-outre-mer",
+      "variables": [],
+      "exemple": "https://archives-nationales-outre-mer.culture.gouv.fr/faire-une-recherche/ce-que-vous-ne-trouverez-pas-aux-archives-nationales-d-outre-mer",
+      "statut": "teste-200",
+      "date_test": "2026-11-11",
+      "origine": "teste-par-nous",
+      "preuves": [
+        "data/samples/other-sources/anom/site-ce-que-vous-ne-trouverez-pas.html",
+        "docs/research/sources-2026-11/other-sources.md § 2"
+      ],
+      "observation": "",
+      "proposer": true,
+      "avertissement": null,
+      "repli": null
+    },
+    {
+      "id": "anom-algerie-francaise",
+      "libelle": "ANOM — fiche « Algérie française »",
+      "hote": "archives-nationales-outre-mer.culture.gouv.fr",
+      "gabarit": "https://archives-nationales-outre-mer.culture.gouv.fr/faire-une-recherche/algerie-francaise",
+      "variables": [],
+      "exemple": "https://archives-nationales-outre-mer.culture.gouv.fr/faire-une-recherche/algerie-francaise",
+      "statut": "teste-200",
+      "date_test": "2026-11-11",
+      "origine": "teste-par-nous",
+      "preuves": [
+        "data/samples/other-sources/anom/site-algerie-francaise.html",
+        "docs/research/sources-2026-11/other-sources.md § 2",
+        "docs/research/sources-2026-11/verification.md § other-sources"
+      ],
+      "observation": "",
+      "proposer": true,
+      "avertissement": null,
+      "repli": null
+    },
+    {
+      "id": "senat-qe-16358",
+      "libelle": "Sénat — question écrite n° 16358, réponse du ministère de la Justice (24 octobre 1991)",
+      "hote": "www.senat.fr",
+      "gabarit": "https://www.senat.fr/questions/base/1991/qSEQ910716358.html",
+      "variables": [],
+      "exemple": "https://www.senat.fr/questions/base/1991/qSEQ910716358.html",
+      "statut": "teste-200",
+      "date_test": "2026-11-11",
+      "origine": "teste-par-nous",
+      "preuves": [
+        "data/samples/other-sources/senat/qSEQ910716358.html",
+        "data/samples/legal-types/senat-qe-16358-1991.txt"
+      ],
+      "observation": "",
+      "proposer": true,
+      "avertissement": null,
+      "repli": null
+    },
+    {
+      "id": "senat-qe-17313",
+      "libelle": "Sénat — question écrite n° 17313, réponse du ministère de la Justice (9 mars 2006)",
+      "hote": "www.senat.fr",
+      "gabarit": "https://www.senat.fr/questions/base/2005/qSEQ050417313.html",
+      "variables": [],
+      "exemple": "https://www.senat.fr/questions/base/2005/qSEQ050417313.html",
+      "statut": "teste-200",
+      "date_test": "2026-11-11",
+      "origine": "teste-par-nous",
+      "preuves": [
+        "data/samples/other-sources/senat/qSEQ050417313.html",
+        "data/samples/legal-types/senat-qe-17313-2005.txt"
+      ],
+      "observation": "",
+      "proposer": true,
+      "avertissement": null,
+      "repli": null
+    },
+    {
+      "id": "an-qe-6380",
+      "libelle": "Assemblée nationale — question écrite n° 6380, réponse du ministère de l'Intérieur (18 septembre 2018)",
+      "hote": "www.assemblee-nationale.fr",
+      "gabarit": "https://www.assemblee-nationale.fr/dyn/15/questions/QANR5L15QE6380",
+      "variables": [],
+      "exemple": "https://www.assemblee-nationale.fr/dyn/15/questions/QANR5L15QE6380",
+      "statut": "teste-200",
+      "date_test": "2026-11-11",
+      "origine": "teste-par-nous",
+      "preuves": [
+        "data/samples/other-sources/an-questions/QANR5L15QE6380.html",
+        "docs/research/sources-2026-11/other-sources.md § 6.1"
+      ],
+      "observation": "",
+      "proposer": true,
+      "avertissement": null,
+      "repli": null
+    },
+    {
+      "id": "cc-2012-259-dossier",
+      "libelle": "Conseil constitutionnel — décision n° 2012-259 QPC, dossier documentaire (PDF)",
+      "hote": "www.conseil-constitutionnel.fr",
+      "gabarit": "https://www.conseil-constitutionnel.fr/sites/default/files/as/root/bank_mm/decisions/2012259qpc/doc.pdf",
+      "variables": [],
+      "exemple": "https://www.conseil-constitutionnel.fr/sites/default/files/as/root/bank_mm/decisions/2012259qpc/doc.pdf",
+      "statut": "teste-200",
+      "date_test": "2026-11-11",
+      "origine": "teste-par-nous",
+      "preuves": [
+        "data/samples/legal-types/cc-2012-259-qpc-dossier-documentaire.txt",
+        "docs/research/sources-2026-11/legal-types.md § 3"
+      ],
+      "observation": "",
+      "proposer": true,
+      "avertissement": null,
+      "repli": null
+    },
+    {
+      "id": "cc-2012-259-commentaire",
+      "libelle": "Conseil constitutionnel — décision n° 2012-259 QPC, commentaire (PDF)",
+      "hote": "www.conseil-constitutionnel.fr",
+      "gabarit": "https://www.conseil-constitutionnel.fr/sites/default/files/as/root/bank_mm/decisions/2012259qpc/ccc_259qpc.pdf",
+      "variables": [],
+      "exemple": "https://www.conseil-constitutionnel.fr/sites/default/files/as/root/bank_mm/decisions/2012259qpc/ccc_259qpc.pdf",
+      "statut": "teste-200",
+      "date_test": "2026-11-11",
+      "origine": "teste-par-nous",
+      "preuves": [
+        "data/samples/legal-types/cc-2012-259-qpc-commentaire.txt",
+        "docs/research/sources-2026-11/legal-types.md § 3"
+      ],
+      "observation": "",
+      "proposer": true,
+      "avertissement": null,
+      "repli": null
+    },
+    {
+      "id": "cada-20183182",
+      "libelle": "CADA — avis n° 20183182",
+      "hote": "cada.data.gouv.fr",
+      "gabarit": "https://cada.data.gouv.fr/20183182/",
+      "variables": [],
+      "exemple": "https://cada.data.gouv.fr/20183182/",
+      "statut": "teste-200",
+      "date_test": "2026-11-11",
+      "origine": "teste-par-nous",
+      "preuves": [
+        "data/samples/other-sources/divers/cada-20183182.html",
+        "docs/research/sources-2026-11/other-sources.md § 5.1"
+      ],
+      "observation": "",
+      "proposer": true,
+      "avertissement": null,
+      "repli": null
+    },
+    {
+      "id": "rfg-article-2023",
+      "libelle": "La Revue française de Généalogie — « Des Algériens en quête de nationalité française » (20 novembre 2023)",
+      "hote": "www.rfgenealogie.com",
+      "gabarit": "https://www.rfgenealogie.com/dossiers/des-algeriens-en-quete-de-nationalite-francaise",
+      "variables": [],
+      "exemple": "https://www.rfgenealogie.com/dossiers/des-algeriens-en-quete-de-nationalite-francaise",
+      "statut": "teste-200",
+      "date_test": "2026-11-11",
+      "origine": "teste-par-nous",
+      "preuves": [
+        "data/samples/other-sources/presse/rfg-algeriens-en-quete.html",
+        "docs/research/sources-2026-11/other-sources.md § 7"
+      ],
+      "observation": "",
+      "proposer": true,
+      "avertissement": null,
+      "repli": null
+    },
+    {
+      "id": "diplomatie-acte-etat-civil",
+      "libelle": "Ministère des Affaires étrangères — demander un acte d'état civil (Service central d'état civil)",
+      "hote": "www.diplomatie.gouv.fr",
+      "gabarit": "https://www.diplomatie.gouv.fr/fr/services-aux-francaises-et-aux-francais/vie-administrative-et-elections/etat-civil/demander-un-acte-d-etat-civil",
+      "variables": [],
+      "exemple": "https://www.diplomatie.gouv.fr/fr/services-aux-francaises-et-aux-francais/vie-administrative-et-elections/etat-civil/demander-un-acte-d-etat-civil",
+      "statut": "teste-200",
+      "date_test": "2026-11-11",
+      "origine": "teste-par-nous",
+      "preuves": [
+        "data/samples/other-sources/diplomatie/scec-demander-acte.html",
+        "docs/research/sources-2026-11/other-sources.md § 5.4"
+      ],
+      "observation": "",
+      "proposer": true,
+      "avertissement": null,
+      "repli": null
+    },
+    {
+      "id": "ad-rhone-exemple-declarations",
+      "libelle": "Archives du Rhône — exemple de fonds de déclarations (tribunal d'instance de Lyon, 1962-1968)",
+      "hote": "archives.rhone.fr",
+      "gabarit": "https://archives.rhone.fr/ark:/28729/4q0j78x6plwd",
+      "variables": [],
+      "exemple": "https://archives.rhone.fr/ark:/28729/4q0j78x6plwd",
+      "statut": "teste-200",
+      "date_test": "2026-11-11",
+      "origine": "teste-par-nous",
+      "preuves": [
+        "data/samples/other-sources/declarations/ad69-4977W27-declaration-recognitive.html",
+        "docs/research/sources-2026-11/other-sources.md § 6.1"
+      ],
+      "observation": "",
+      "proposer": true,
+      "avertissement": null,
+      "repli": null
+    },
+    {
+      "id": "ia-page",
+      "libelle": "Internet Archive — une page d'un volume",
+      "hote": "archive.org",
+      "gabarit": "https://archive.org/details/{identifiant}/page/n{feuillet}/mode/1up",
+      "variables": [
+        "identifiant",
+        "feuillet"
+      ],
+      "exemple": "https://archive.org/details/algeria_bulletinofficieldugouvernementgeneraldelalgerie_13_1873/page/n530/mode/1up",
+      "statut": "teste-200",
+      "date_test": "2026-11-11",
+      "origine": "teste-par-nous",
+      "preuves": [
+        "data/samples/internet-archive/raw/tests/details-1873-n530.html",
+        "data/samples/internet-archive/raw/tests/1873-n530_w1000.jpg",
+        "docs/research/sources-2026-11/internet-archive.md § 6.2",
+        "docs/research/sources-2026-11/verification.md § internet-archive"
+      ],
+      "observation": "Réponse 200, et l'image de la page demandée a été regardée (c'est bien la page attendue). {feuillet} est le rang de l'image dans le volume, pas le numéro de page imprimé. La liseuse elle-même n'a pas été regardée dans un navigateur.",
+      "proposer": true,
+      "avertissement": null,
+      "repli": null
+    },
+    {
+      "id": "ia-page-volume",
+      "libelle": "Internet Archive — une page d'un volume, dans un dépôt qui en contient plusieurs",
+      "hote": "archive.org",
+      "gabarit": "https://archive.org/details/{identifiant}/{volume}/page/n{feuillet}/mode/1up",
+      "variables": [
+        "identifiant",
+        "volume",
+        "feuillet"
+      ],
+      "exemple": "https://archive.org/details/1922-t.-62/1888%20T.28/page/n116/mode/1up",
+      "statut": "teste-200",
+      "date_test": "2026-11-11",
+      "origine": "teste-par-nous",
+      "preuves": [
+        "data/samples/internet-archive/raw/tests/details-1888-T28-n116.html",
+        "data/samples/internet-archive/raw/tests/1888-T28-n116_w1000.jpg",
+        "docs/research/sources-2026-11/internet-archive.md § 6.2",
+        "docs/research/sources-2026-11/verification.md § internet-archive"
+      ],
+      "observation": "Testé sur le dépôt « 1922-t.-62 », qui réunit 22 années. {volume} est le nom exact du volume dans le dépôt, encodé pour une adresse (espace → %20) ; il se recopie, il ne se reconstruit pas (certains portent un suffixe irrégulier).",
+      "proposer": true,
+      "avertissement": null,
+      "repli": null
+    },
+    {
+      "id": "ia-volume",
+      "libelle": "Internet Archive — ouvrir un volume",
+      "hote": "archive.org",
+      "gabarit": "https://archive.org/details/{identifiant}",
+      "variables": [
+        "identifiant"
+      ],
+      "exemple": "https://archive.org/details/algeria_bulletinofficieldugouvernementgeneraldelalgerie_13_1873",
+      "statut": "non-teste",
+      "date_test": null,
+      "origine": "deduction",
+      "preuves": [
+        "docs/research/sources-2026-11/internet-archive.md § 6.2"
+      ],
+      "observation": "Début des adresses testées (« ia-page »), sans la partie qui désigne la page. Non demandé tel quel.",
+      "proposer": true,
+      "avertissement": "Ce lien ouvre le volume à sa première page. Non contrôlé tel quel ; le lien vers une page précise, lui, l'a été.",
+      "repli": "ia-page"
+    },
+    {
+      "id": "ia-recherche-dans-volume",
+      "libelle": "Internet Archive — chercher un mot dans un volume",
+      "hote": "archive.org",
+      "gabarit": "https://archive.org/details/{identifiant}?q={mot}",
+      "variables": [
+        "identifiant",
+        "mot"
+      ],
+      "exemple": "https://archive.org/details/algeria_bulletinofficieldugouvernementgeneraldelalgerie_13_1873?q=naturalisation",
+      "statut": "non-teste",
+      "date_test": null,
+      "origine": "deduction",
+      "preuves": [
+        "docs/research/sources-2026-11/internet-archive.md § 6.2",
+        "docs/research/sources-2026-11/verification.md § internet-archive"
+      ],
+      "observation": "Forme connue par l'usage ; page animée par JavaScript, jamais testée. Pour un programme, la recherche dans un volume passe par une autre adresse, elle vérifiée.",
+      "proposer": false,
+      "avertissement": null,
+      "repli": "ia-volume"
+    },
+    {
+      "id": "hathitrust-page",
+      "libelle": "HathiTrust — une page d'un volume (années 1861-1877)",
+      "hote": "babel.hathitrust.org",
+      "gabarit": "https://babel.hathitrust.org/cgi/pt?id={htid}&seq={seq}",
+      "variables": [
+        "htid",
+        "seq"
+      ],
+      "exemple": "https://babel.hathitrust.org/cgi/pt?id=hvd.hl11eu&seq=530",
+      "statut": "bloque-pour-les-robots-attendu-ok-pour-un-humain",
+      "date_test": "2026-11-11",
+      "origine": "teste-par-nous",
+      "preuves": [
+        "data/samples/internet-archive/raw/hathitrust/babel-pt-hvd.hl11eu-seq530.html",
+        "data/samples/internet-archive/raw/hathitrust/api-full-oclc-236226172.json",
+        "docs/research/sources-2026-11/internet-archive.md § 3.1",
+        "docs/research/sources-2026-11/verification.md § internet-archive"
+      ],
+      "observation": "Notre programme a reçu un contrôle anti-robot (403, « Just a moment... ») ; un navigateur le passe en principe tout seul. Le rapport entre {seq} et la page imprimée n'est pas connu : commencez à seq=1 et feuilletez. L'affichage intégral depuis la France n'a pas été constaté à l'écran.",
+      "proposer": true,
+      "avertissement": null,
+      "repli": null
+    },
+    {
+      "id": "gamt-accueil",
+      "libelle": "Association GAMT (Généalogie Algérie Maroc Tunisie) — compteur gratuit par nom de famille",
+      "hote": "www.genealogie-gamt.org",
+      "gabarit": "https://www.genealogie-gamt.org/",
+      "variables": [],
+      "exemple": "https://www.genealogie-gamt.org/",
+      "statut": "teste-200",
+      "date_test": "2026-11-11",
+      "origine": "teste-par-nous",
+      "preuves": [
+        "data/samples/other-sources/portails/gamt-home.html",
+        "data/samples/other-sources/portails/gamt-fonds-releves.html",
+        "docs/research/sources-2026-11/other-sources.md § 4"
+      ],
+      "observation": "Site d'une association, sans lien avec nous. Le compteur est gratuit ; le détail est réservé aux adhérents.",
+      "proposer": true,
+      "avertissement": null,
+      "repli": null
+    },
+    {
+      "id": "cgj-sc1865",
+      "libelle": "Cercle de généalogie juive — relevé des admissions de 1865-1870",
+      "hote": "www.genealoj.org",
+      "gabarit": "https://www.genealoj.org/fr/ressources/regions-et-pays/algerie/algerie-juifs-naturalises-senatus-consulte-1865",
+      "variables": [],
+      "exemple": "https://www.genealoj.org/fr/ressources/regions-et-pays/algerie/algerie-juifs-naturalises-senatus-consulte-1865",
+      "statut": "teste-200",
+      "date_test": "2026-11-11",
+      "origine": "teste-par-nous",
+      "preuves": [
+        "data/samples/other-sources/portails/genealoj-juifs-naturalises-sc1865.html",
+        "docs/research/sources-2026-11/other-sources.md § 4"
+      ],
+      "observation": "Site d'une association, sans lien avec nous. Page de présentation libre ; le relevé est réservé aux adhérents.",
+      "proposer": true,
+      "avertissement": null,
+      "repli": null
+    }
+  ]
+}

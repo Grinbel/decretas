@@ -1,0 +1,1126 @@
+{
+  "schema": "decretas.contenu.aiguillage/1",
+  "langue": "fr",
+  "maj": "2026-11-11",
+  "titre": "Quel acte chercher ?",
+  "chapeau": "Trois questions au plus. Elles servent à vous dire ce que ce site peut chercher pour vous, et ce qui se demande ailleurs.",
+  "regle": "« Je ne sais pas » est toujours une réponse possible : elle ne ferme aucune piste.",
+  "depart": "q-demande",
+  "questions": [
+    {
+      "id": "q-demande",
+      "question": "Qu'est-ce qui vous amène ?",
+      "aide": "Choisissez la phrase la plus proche de votre situation. Vous pourrez revenir en arrière.",
+      "reponses": [
+        {
+          "id": "d-ancetre",
+          "libelle": "Je cherche si un ancêtre algérien a été admis à la qualité de citoyen français avant 1962",
+          "vers": {
+            "type": "question",
+            "id": "q-famille"
+          }
+        },
+        {
+          "id": "d-numero",
+          "libelle": "On m'a donné, ou vendu, un numéro ou une « référence » de décret",
+          "vers": {
+            "type": "issue",
+            "id": "numero-a-verifier"
+          }
+        },
+        {
+          "id": "d-date",
+          "libelle": "Je connais déjà la date d'un décret et je cherche où il a été publié",
+          "vers": {
+            "type": "issue",
+            "id": "publication-a-trouver"
+          }
+        },
+        {
+          "id": "d-mention",
+          "libelle": "L'acte de naissance ou de mariage de l'ancêtre porte une mention de jugement dans la marge",
+          "vers": {
+            "type": "issue",
+            "id": "jugement-signale-par-une-mention"
+          }
+        },
+        {
+          "id": "d-declaration",
+          "libelle": "Il a signé une déclaration en France après l'indépendance, entre 1962 et 1967",
+          "vers": {
+            "type": "issue",
+            "id": "declaration-apres-1962"
+          }
+        },
+        {
+          "id": "d-apres-1962",
+          "libelle": "Il a fait l'objet d'un décret après 1962 (réintégration, ou naturalisation d'un étranger)",
+          "vers": {
+            "type": "issue",
+            "id": "decret-apres-1962"
+          }
+        },
+        {
+          "id": "d-certificat",
+          "libelle": "Je veux demander un certificat de nationalité française",
+          "vers": {
+            "type": "issue",
+            "id": "certificat"
+          }
+        },
+        {
+          "id": "d-ne-sait-pas",
+          "libelle": "Je ne sais pas par où commencer",
+          "vers": {
+            "type": "question",
+            "id": "q-famille"
+          }
+        }
+      ]
+    },
+    {
+      "id": "q-famille",
+      "question": "Quelle était la situation de la famille à l'époque ?",
+      "aide": "Cette question sert seulement à trouver le bon type d'acte : les règles n'étaient pas les mêmes pour tous.",
+      "reponses": [
+        {
+          "id": "f-musulmane",
+          "libelle": "Une famille musulmane d'Algérie",
+          "vers": {
+            "type": "question",
+            "id": "q-indices"
+          }
+        },
+        {
+          "id": "f-juive-nord",
+          "libelle": "Une famille juive du nord de l'Algérie",
+          "vers": {
+            "type": "issue",
+            "id": "famille-juive-du-nord"
+          }
+        },
+        {
+          "id": "f-juive-sud",
+          "libelle": "Une famille juive du M'zab ou du Sahara",
+          "vers": {
+            "type": "issue",
+            "id": "famille-juive-du-mzab"
+          }
+        },
+        {
+          "id": "f-maroc-tunisie",
+          "libelle": "Une famille venue du Maroc ou de Tunisie",
+          "vers": {
+            "type": "issue",
+            "id": "famille-du-maroc-ou-de-tunisie"
+          }
+        },
+        {
+          "id": "f-europe",
+          "libelle": "Une famille venue d'Europe (Espagne, Italie, Malte…)",
+          "vers": {
+            "type": "issue",
+            "id": "famille-europeenne"
+          }
+        },
+        {
+          "id": "f-ne-sait-pas",
+          "libelle": "Je ne sais pas",
+          "vers": {
+            "type": "question",
+            "id": "q-indices"
+          },
+          "precision": "Aucune piste n'est fermée : la recherche par nom lit les mêmes décrets pour tout le monde."
+        }
+      ]
+    },
+    {
+      "id": "q-indices",
+      "question": "Que sait-on de précis sur cette personne ?",
+      "aide": "Un souvenir de famille est un indice : il oriente la recherche, il ne la conclut pas.",
+      "reponses": [
+        {
+          "id": "i-acte-plausible",
+          "libelle": "On disait qu'il était « naturalisé », ou il avait l'état civil et le vote des Européens avant 1944",
+          "vers": {
+            "type": "issue",
+            "id": "admission-individuelle-plausible"
+          },
+          "precision": "« Naturalisé » est le mot que l'on employait alors, y compris dans les bulletins officiels."
+        },
+        {
+          "id": "i-notable-1944",
+          "libelle": "Il était caïd, décoré, instituteur, fonctionnaire ou ancien officier, et votait au premier collège après 1944",
+          "vers": {
+            "type": "issue",
+            "id": "citoyen-a-titre-personnel"
+          }
+        },
+        {
+          "id": "i-militaire",
+          "libelle": "Il a fait la guerre ou son service militaire, ou il avait une carte d'identité française — rien d'autre",
+          "vers": {
+            "type": "issue",
+            "id": "service-militaire-seul"
+          }
+        },
+        {
+          "id": "i-pere",
+          "libelle": "C'est son père qui aurait été admis, quand lui-même était enfant",
+          "vers": {
+            "type": "issue",
+            "id": "enfant-d-un-admis"
+          }
+        },
+        {
+          "id": "i-rien",
+          "libelle": "Rien de précis, ou je ne sais pas",
+          "vers": {
+            "type": "issue",
+            "id": "recherche-sans-indice"
+          }
+        }
+      ]
+    }
+  ],
+  "issues": [
+    {
+      "id": "admission-individuelle-plausible",
+      "titre": "Un acte individuel est plausible : cherchez d'abord un décret",
+      "message": "Lancez la recherche par nom. Elle lit les décrets des années où les noms ont été saisis. Le bilan de recherche vous dira lesquelles, et vous guidera pour les autres années. Gardez une chose en tête : à partir de 1919, l'admission a pu se faire par jugement, et dans ce cas aucun décret n'existe.",
+      "points": [
+        "Saisissez plusieurs variantes de chaque terme : le même nom s'écrit de bien des façons dans les sources.",
+        "Une femme a pu être admise par décret dès les années 1880.",
+        "L'épouse d'un homme admis ne l'était pas d'office : cherchez-la à son propre nom, et aussi sous le nom de son mari."
+      ],
+      "types": [
+        "T1",
+        "T7",
+        "T8"
+      ],
+      "voie": "recherche-par-nom",
+      "voies_secondaires": [
+        "recherche-guidee-images",
+        "recherche-sur-le-site-des-an",
+        "bulletin-imprime",
+        "etat-civil-en-algerie"
+      ],
+      "guides": [
+        "an-annee-indexee",
+        "an-annee-en-images",
+        "an-noms-sur-le-site-des-an",
+        "bogga-internet-archive",
+        "jugement-etat-civil-algerie"
+      ],
+      "liens": [],
+      "montrer_epoques": true,
+      "montrer_echelle": false,
+      "rappel_jugement": true,
+      "verification": {
+        "etat": "partiel",
+        "preuves": [
+          "docs/research/sources-2026-11/legal-types.md § 6",
+          "docs/research/sources-2026-11/verification.md § legal-types"
+        ],
+        "note": "Arbre de décision proposé par la recherche juridique ; les années couvertes sont corrigées par la vérification."
+      }
+    },
+    {
+      "id": "recherche-sans-indice",
+      "titre": "Vous pouvez chercher, en sachant que l'acte était rare",
+      "message": "De 1865 à 1962, d'après le décompte de l'historien Patrick Weil, un peu plus de 6 000 Algériens musulmans seulement ont été admis à la qualité de citoyen français, par décret ou par jugement. La plupart des recherches ne trouvent donc rien, et cela ne dit rien de défavorable sur votre ancêtre. D'après le sénatus-consulte du 14 juillet 1865, les Algériens musulmans étaient déjà de nationalité française : le décret ou le jugement leur donnait en plus la qualité de citoyen. La recherche par nom vaut tout de même d'être faite : elle est gratuite et ne prend que quelques instants.",
+      "points": [],
+      "types": [
+        "T1",
+        "T7"
+      ],
+      "voie": "recherche-par-nom",
+      "voies_secondaires": [
+        "recherche-guidee-images",
+        "recherche-sur-le-site-des-an",
+        "bulletin-imprime",
+        "etat-civil-en-algerie"
+      ],
+      "guides": [
+        "an-annee-indexee",
+        "an-annee-en-images",
+        "an-noms-sur-le-site-des-an",
+        "bogga-internet-archive",
+        "jugement-etat-civil-algerie"
+      ],
+      "liens": [],
+      "montrer_epoques": true,
+      "montrer_echelle": true,
+      "rappel_jugement": true,
+      "verification": {
+        "etat": "verifie",
+        "preuves": [
+          "data/samples/legal-types/weil-2003-HEC03-03.txt",
+          "docs/research/sources-2026-11/legal-types.md § 7",
+          "docs/research/sources-2026-11/verification.md § legal-types"
+        ],
+        "note": "Chiffre de Patrick Weil (2003, note 77), lu dans le fichier enregistré."
+      }
+    },
+    {
+      "id": "citoyen-a-titre-personnel",
+      "titre": "Probablement l'ordonnance de 1944 : aucun décret à son nom pour cette voie",
+      "message": "Ce que vous décrivez correspond le plus souvent à l'ordonnance du 7 mars 1944, qui a déclaré citoyens « à titre personnel » des hommes de certaines catégories (diplômés, fonctionnaires, élus, caïds, décorés, anciens officiers…). Cette voie n'a produit aucun décret au nom de chacun : pour elle, il n'y a rien à trouver. Mais la même personne a pu, en plus, demander son admission par décret ou par jugement. Pour le savoir, lancez la recherche par nom.",
+      "points": [
+        "D'après la Cour de cassation, ces citoyens de 1944 restaient soumis au statut civil de droit local, sauf démarche expresse de leur part."
+      ],
+      "types": [
+        "T11",
+        "T1",
+        "T7"
+      ],
+      "voie": "recherche-par-nom",
+      "voies_secondaires": [
+        "etat-civil-en-algerie"
+      ],
+      "guides": [
+        "an-annee-indexee",
+        "an-annee-en-images",
+        "jugement-etat-civil-algerie"
+      ],
+      "liens": [
+        "cc-2012-259-dossier"
+      ],
+      "montrer_epoques": true,
+      "montrer_echelle": false,
+      "rappel_jugement": true,
+      "verification": {
+        "etat": "verifie",
+        "preuves": [
+          "data/samples/legal-types/mjp-ordonnances-cfln-1944.txt",
+          "data/samples/legal-types/cc-2012-259-qpc-dossier-documentaire.txt",
+          "docs/research/sources-2026-11/legal-types.md § 3 (T11)"
+        ],
+        "note": ""
+      }
+    },
+    {
+      "id": "service-militaire-seul",
+      "titre": "Le service militaire, à lui seul, n'a produit aucun acte",
+      "message": "Tous les Algériens étaient de nationalité française, et beaucoup ont servi dans l'armée : ni le service, ni la guerre, ni une carte d'identité française ne changeaient le statut d'une personne (son statut personnel : statut civil de droit local ou de droit commun). En revanche, avoir servi était l'une des conditions qui permettaient, après 1919, de demander l'admission par jugement. Si l'ancêtre a fait cette demande et qu'elle a été acceptée, il existe un jugement ou un décret à son nom ; sans demande, il n'y a pas d'acte à trouver. La recherche par nom permet de vérifier la piste du décret.",
+      "points": [
+        "Les registres matricules militaires mis en ligne par les Archives nationales d'outre-mer ne concernent, d'après elles, que « les personnes disposant du statut de citoyen français » (classes jusqu'en 1940). Y trouver l'ancêtre serait un indice, pas la source du décret."
+      ],
+      "types": [
+        "T1",
+        "T7"
+      ],
+      "voie": "recherche-par-nom",
+      "voies_secondaires": [
+        "etat-civil-en-algerie"
+      ],
+      "guides": [
+        "an-annee-indexee",
+        "an-annee-en-images",
+        "jugement-etat-civil-algerie"
+      ],
+      "liens": [
+        "anom-algerie-francaise"
+      ],
+      "montrer_epoques": true,
+      "montrer_echelle": false,
+      "rappel_jugement": true,
+      "verification": {
+        "etat": "verifie",
+        "preuves": [
+          "data/samples/legal-types/mjp-loi-1919-02-04.txt",
+          "data/samples/legal-types/cc-2012-259-qpc-dossier-documentaire.txt",
+          "data/samples/other-sources/anom/site-algerie-francaise.html",
+          "docs/research/sources-2026-11/legal-types.md § 3 (Situations particulières)"
+        ],
+        "note": ""
+      },
+      "vocabulaire": [
+        "statut-local",
+        "statut-commun"
+      ]
+    },
+    {
+      "id": "enfant-d-un-admis",
+      "titre": "Cherchez le décret du père",
+      "message": "Quand un père était admis, ses enfants encore mineurs suivaient sa condition, d'après la jurisprudence que citent les historiens. Il n'y a donc pas de décret au nom de l'enfant : c'est le décret du père qu'il faut chercher. Dans les notices des Archives nationales, les enfants sont souvent cités à la ligne « Enfants ». Les enfants déjà majeurs, eux, devaient faire leur propre demande.",
+      "points": [],
+      "types": [
+        "T1",
+        "T7"
+      ],
+      "voie": "recherche-par-nom",
+      "voies_secondaires": [
+        "etat-civil-en-algerie"
+      ],
+      "guides": [
+        "an-annee-indexee",
+        "an-annee-en-images",
+        "jugement-etat-civil-algerie"
+      ],
+      "liens": [],
+      "montrer_epoques": true,
+      "montrer_echelle": false,
+      "rappel_jugement": true,
+      "verification": {
+        "etat": "partiel",
+        "preuves": [
+          "data/samples/legal-types/weil-2003-HEC03-03.txt",
+          "docs/research/sources-2026-11/legal-types.md § 3 (T1)",
+          "docs/research/sources-2026-11/an-local.md § 2.4"
+        ],
+        "note": "Règle connue par une source secondaire (Patrick Weil, note 77 : Cour de cassation, 30 décembre 1907) ; l'arrêt lui-même n'a pas été lu."
+      }
+    },
+    {
+      "id": "famille-juive-du-nord",
+      "titre": "Le plus souvent, aucun décret à son nom : le décret Crémieux de 1870",
+      "message": "Le décret du 24 octobre 1870, dit décret Crémieux, a déclaré citoyens français tous les Juifs des départements d'Algérie, d'un seul coup et sans nommer personne. Il n'existe donc pas de décret au nom de votre ancêtre, et une recherche par nom ne peut rien donner pour cette voie. Une exception : entre 1865 et 1870, moins de trois cents personnes avaient été admises individuellement, par décret ; ces décrets-là sont dans le bulletin imprimé, que la recherche par nom de ce site lit pour ces années.",
+      "points": [
+        "Pour l'état civil d'une famille juive ou européenne d'Algérie, les Archives nationales d'outre-mer expliquent ce qu'elles conservent et ce qu'elles ne conservent pas.",
+        "L'association Cercle de généalogie juive a relevé les admissions de 1865-1870 ; le détail est réservé à ses adhérents."
+      ],
+      "types": [
+        "T4",
+        "T2",
+        "T5",
+        "T10"
+      ],
+      "voie": "hors-perimetre",
+      "voies_secondaires": [
+        "recherche-par-nom",
+        "bulletin-imprime"
+      ],
+      "guides": [
+        "bogga-internet-archive"
+      ],
+      "liens": [
+        "anom-ce-que-vous-ne-trouverez-pas",
+        "cgj-sc1865"
+      ],
+      "montrer_epoques": false,
+      "montrer_echelle": false,
+      "rappel_jugement": false,
+      "verification": {
+        "etat": "verifie",
+        "preuves": [
+          "data/samples/legal-types/mjp-decrets-1870-10-24.txt",
+          "data/samples/an-remote/an-dossiers-naturalisation.body",
+          "docs/research/sources-2026-11/legal-types.md § 3 (T4)",
+          "docs/research/sources-2026-11/other-sources.md § 4"
+        ],
+        "note": ""
+      }
+    },
+    {
+      "id": "famille-juive-du-mzab",
+      "titre": "M'zab et Sahara : un décret individuel est possible, sinon la loi de 1961",
+      "message": "Les Juifs du M'zab n'étaient pas concernés par le décret Crémieux, leur région ayant été annexée plus tard. Un ancêtre a pu être admis individuellement, par décret, comme un Algérien musulman : la recherche par nom lit ces décrets. Sinon, c'est la loi du 28 juillet 1961 qui s'est appliquée, collectivement et sans décret nominatif.",
+      "points": [],
+      "types": [
+        "T2",
+        "T14"
+      ],
+      "voie": "recherche-par-nom",
+      "voies_secondaires": [
+        "recherche-guidee-images"
+      ],
+      "guides": [
+        "an-annee-indexee",
+        "an-annee-en-images"
+      ],
+      "liens": [],
+      "montrer_epoques": true,
+      "montrer_echelle": false,
+      "rappel_jugement": false,
+      "verification": {
+        "etat": "partiel",
+        "preuves": [
+          "data/samples/legal-types/hal-00599296-decret-cremieux.txt",
+          "data/samples/legal-types/mjp-loi-1961-805.txt",
+          "docs/research/sources-2026-11/legal-types.md § 3 (T2)",
+          "docs/research/sources-2026-11/legal-types.md § 3 (T14)",
+          "docs/research/sources-2026-11/verification.md § legal-types"
+        ],
+        "note": "Aucun décret d'admission d'un Juif du M'zab n'a été contrôlé par nous dans les inventaires."
+      }
+    },
+    {
+      "id": "famille-du-maroc-ou-de-tunisie",
+      "titre": "Un décret de naturalisation, dans les mêmes listes",
+      "message": "Les Marocains et les Tunisiens étaient des étrangers en Algérie : pour eux, le mot naturalisation est exact. Leurs décrets sont rangés avec ceux des Algériens admis, sous le même titre jusqu'en 1930. La recherche par nom les lit donc de la même façon.",
+      "points": [],
+      "types": [
+        "T3"
+      ],
+      "voie": "recherche-par-nom",
+      "voies_secondaires": [
+        "recherche-guidee-images",
+        "bulletin-imprime"
+      ],
+      "guides": [
+        "an-annee-indexee",
+        "an-annee-en-images",
+        "bogga-internet-archive"
+      ],
+      "liens": [],
+      "montrer_epoques": true,
+      "montrer_echelle": false,
+      "rappel_jugement": false,
+      "verification": {
+        "etat": "verifie",
+        "preuves": [
+          "data/samples/legal-types/wikisource-sc-1865.txt",
+          "data/samples/legal-types/local-an-title-families.json",
+          "docs/research/sources-2026-11/legal-types.md § 3 (T3)"
+        ],
+        "note": ""
+      }
+    },
+    {
+      "id": "famille-europeenne",
+      "titre": "Souvent aucun décret, parfois un décret de naturalisation",
+      "message": "Un ancêtre né en Algérie de parents européens est le plus souvent devenu français par l'effet de la loi du 26 juin 1889, sans aucun décret. S'il était né à l'étranger, il a pu être naturalisé par décret : ces décrets sont dans les mêmes listes que les admissions d'Algériens, et la recherche par nom les lit. Pour le reste (état civil, registres), ce site n'est pas le bon outil.",
+      "points": [
+        "Les Archives nationales d'outre-mer conservent les images, incomplètes, de l'état civil européen d'Algérie de plus de cent ans.",
+        "Pour un acte de moins de cent ans, c'est le Service central d'état civil, à Nantes.",
+        "L'association GAMT propose un compteur gratuit par nom de famille ; le détail est réservé à ses adhérents. C'est un indice."
+      ],
+      "types": [
+        "T6",
+        "T3"
+      ],
+      "voie": "recherche-par-nom",
+      "voies_secondaires": [
+        "hors-perimetre"
+      ],
+      "guides": [
+        "an-annee-indexee",
+        "an-annee-en-images",
+        "bogga-internet-archive"
+      ],
+      "liens": [
+        "anom-algerie-francaise",
+        "anom-ce-que-vous-ne-trouverez-pas",
+        "diplomatie-acte-etat-civil",
+        "gamt-accueil"
+      ],
+      "montrer_epoques": false,
+      "montrer_echelle": false,
+      "rappel_jugement": false,
+      "verification": {
+        "etat": "partiel",
+        "preuves": [
+          "data/samples/legal-types/weil-2003-HEC03-03.txt",
+          "docs/research/sources-2026-11/legal-types.md § 3 (T6)",
+          "docs/research/sources-2026-11/other-sources.md § 2",
+          "docs/research/sources-2026-11/other-sources.md § 5.4",
+          "docs/research/sources-2026-11/verification.md § legal-types"
+        ],
+        "note": "La loi de 1889 est connue par une source secondaire ; son texte n'a pas été relu."
+      }
+    },
+    {
+      "id": "numero-a-verifier",
+      "titre": "Un numéro seul ne se vérifie pas : voici ce qu'est une citation",
+      "message": "Une citation vérifiable tient en trois éléments : la date du décret, le nom de la publication officielle, et la date et la page de cette publication. Avec cela, n'importe qui peut ouvrir la page et lire le nom. Un numéro isolé, du genre « 262-1412 », ne correspond à rien que nous connaissions dans ces sources : il ne permet d'ouvrir aucune page. Cela ne dit pas qui a établi ce papier, ni dans quelle intention ; cela dit seulement qu'il ne prouve rien, ni dans un sens ni dans l'autre. Le mieux est de faire la recherche par nom comme si vous n'aviez rien.",
+      "points": [],
+      "types": [
+        "T1"
+      ],
+      "voie": "verification-d-une-citation",
+      "voies_secondaires": [
+        "recherche-par-nom"
+      ],
+      "guides": [
+        "numero-a-verifier",
+        "an-annee-indexee"
+      ],
+      "liens": [],
+      "montrer_epoques": false,
+      "montrer_echelle": false,
+      "rappel_jugement": true,
+      "verification": {
+        "etat": "verifie",
+        "preuves": [
+          "data/samples/an-remote/an-dossiers-naturalisation.body",
+          "data/samples/other-sources/senat/qSEQ910716358.html",
+          "docs/research/sources-2026-11/other-sources.md § 7",
+          "docs/research/sources-2026-11/verification.md § other-sources",
+          "CONTEXT.md"
+        ],
+        "note": "Aucune source publique lue ne décrit la vente de tels numéros : nous n'affirmons rien à ce sujet."
+      }
+    },
+    {
+      "id": "publication-a-trouver",
+      "titre": "De la date du décret à la page publiée",
+      "message": "Avec la date du décret, il reste à trouver la page où il a été publié : c'est elle qui complète la citation. Jusqu'en 1888, le bulletin imprimé est sur Internet Archive (sauf 1862 et 1887). De 1889 à 1926, il est sur Gallica (sauf 1907, que le catalogue de la Bibliothèque nationale de France signale comme manquante). À partir de 1927, cherchez dans le Journal officiel de l'Algérie (Gallica) et dans le Journal officiel de la République française (Gallica, et Légifrance à partir de 1924). Un décret paraît quelques jours à quelques mois après sa date.",
+      "points": [],
+      "types": [
+        "T1",
+        "T3"
+      ],
+      "voie": "bulletin-imprime",
+      "voies_secondaires": [
+        "legifrance"
+      ],
+      "guides": [
+        "bogga-internet-archive",
+        "gallica-a-la-main",
+        "legifrance-jorf"
+      ],
+      "liens": [],
+      "montrer_epoques": false,
+      "montrer_echelle": false,
+      "rappel_jugement": false,
+      "verification": {
+        "etat": "partiel",
+        "preuves": [
+          "docs/research/sources-2026-11/internet-archive.md § 4",
+          "docs/research/sources-2026-11/gallica.md § 6",
+          "docs/research/sources-2026-11/other-sources.md § 1",
+          "docs/research/sources-2026-11/verification.md § gallica",
+          "docs/research/sources-2026-11/verification.md § legal-types",
+          ".scratch/retrouver-un-decret/map.md"
+        ],
+        "note": "Le périodique de publication est vérifié pour 1869, 1873 et 1888 (bulletin lu). Pour les années suivantes, il vient des recherches antérieures du projet et n'a pas été contrôlé sur les pages."
+      }
+    },
+    {
+      "id": "jugement-signale-par-une-mention",
+      "titre": "Un jugement : il se demande en Algérie",
+      "message": "Une mention de jugement en marge de l'acte indique une admission par jugement (loi du 4 février 1919). Ces jugements n'ont été publiés nulle part : aucun site ne peut les afficher, et ce site ne les cherche pas. La mention vous donne l'essentiel pour la suite : le tribunal et la date. Le jugement lui-même se demande en Algérie.",
+      "points": [
+        "Le ministère de la Justice a écrit que la mention en marge ne remplace pas le jugement."
+      ],
+      "types": [
+        "T7",
+        "T13"
+      ],
+      "voie": "etat-civil-en-algerie",
+      "voies_secondaires": [],
+      "guides": [
+        "jugement-etat-civil-algerie"
+      ],
+      "liens": [
+        "senat-qe-17313",
+        "an-page-dossiers"
+      ],
+      "montrer_epoques": false,
+      "montrer_echelle": false,
+      "rappel_jugement": false,
+      "verification": {
+        "etat": "verifie",
+        "preuves": [
+          "data/samples/legal-types/mjp-loi-1919-02-04.txt",
+          "data/samples/other-sources/senat/qSEQ050417313.html",
+          "data/samples/an-remote/an-dossiers-naturalisation.body",
+          "docs/research/sources-2026-11/other-sources.md § 5.3"
+        ],
+        "note": "Ce que dit la loi et ce que disent les administrations françaises est vérifié ; la démarche en Algérie ne l'est pas."
+      }
+    },
+    {
+      "id": "declaration-apres-1962",
+      "titre": "Une déclaration de reconnaissance : elle n'est pas publiée",
+      "message": "Entre juillet 1962 et mars 1967, une personne de statut civil de droit local établie en France pouvait se faire reconnaître la nationalité française par une déclaration. Ces déclarations ne sont pas des décrets et ce site ne les cherche pas. Les Archives nationales renvoient, pour elles, à la Sous-direction de l'accès à la nationalité française ; les Archives nationales d'outre-mer, aux archives du département où la déclaration a été faite.",
+      "points": [],
+      "types": [
+        "T15"
+      ],
+      "voie": "declaration-recognitive",
+      "voies_secondaires": [],
+      "guides": [
+        "declaration-recognitive"
+      ],
+      "liens": [
+        "spplus-an-recognitive",
+        "anom-ce-que-vous-ne-trouverez-pas"
+      ],
+      "montrer_epoques": false,
+      "montrer_echelle": false,
+      "rappel_jugement": false,
+      "verification": {
+        "etat": "partiel",
+        "preuves": [
+          "data/samples/an-remote/an-dossiers-naturalisation.body",
+          "data/samples/other-sources/oups/algerie-ancetre-devenu-0.html",
+          "data/samples/other-sources/anom/site-ce-que-vous-ne-trouverez-pas.html",
+          "docs/research/sources-2026-11/other-sources.md § 6.1",
+          "docs/research/sources-2026-11/verification.md § other-sources"
+        ],
+        "note": "Les deux renvois officiels sont vérifiés ; la procédure pour obtenir une copie ne l'est pas."
+      }
+    },
+    {
+      "id": "decret-apres-1962",
+      "titre": "Après 1962 : le Journal officiel, sur Légifrance",
+      "message": "Ce site s'arrête à 1962. Les décrets nominatifs postérieurs paraissent au Journal officiel de la République française, dont les pages numérisées se consultent sur Légifrance quand on connaît la date du numéro. La fiche officielle F33626 décrit la marche à suivre.",
+      "points": [],
+      "types": [
+        "T16"
+      ],
+      "voie": "legifrance",
+      "voies_secondaires": [],
+      "guides": [
+        "legifrance-jorf"
+      ],
+      "liens": [
+        "sp-f33626"
+      ],
+      "montrer_epoques": false,
+      "montrer_echelle": false,
+      "rappel_jugement": false,
+      "verification": {
+        "etat": "partiel",
+        "preuves": [
+          "data/samples/other-sources/servicepublic/F33626-trouver-decret.html",
+          "docs/research/sources-2026-11/other-sources.md § 1",
+          "docs/research/sources-2026-11/verification.md § other-sources"
+        ],
+        "note": "Marche à suivre recopiée de la fiche officielle ; les écrans de Légifrance n'ont pas été vus."
+      }
+    },
+    {
+      "id": "certificat",
+      "titre": "Le certificat de nationalité française : une démarche officielle, hors de ce site",
+      "message": "Le certificat de nationalité française se demande à un tribunal, avec le formulaire officiel cerfa n° 16237 ; la démarche est gratuite. Ce site ne donne aucun conseil juridique et ne délivre aucun document. Tout ce qu'il peut apporter, c'est la citation d'un décret publié, si ce décret existe. Lisez la fiche officielle et la notice du formulaire : elles disent quelles pièces sont demandées.",
+      "points": [],
+      "types": [],
+      "voie": "certificat-de-nationalite",
+      "voies_secondaires": [],
+      "guides": [
+        "certificat-nationalite"
+      ],
+      "liens": [
+        "sp-f1051",
+        "sp-formulaire-cnf",
+        "sp-notice-cnf"
+      ],
+      "montrer_epoques": false,
+      "montrer_echelle": false,
+      "rappel_jugement": false,
+      "verification": {
+        "etat": "verifie",
+        "preuves": [
+          "data/samples/other-sources/servicepublic/F1051-cnf.html",
+          "data/samples/other-sources/servicepublic/notice-16237-02.pdf",
+          "docs/research/sources-2026-11/other-sources.md § 5.2"
+        ],
+        "note": ""
+      }
+    }
+  ],
+  "voies": [
+    {
+      "id": "recherche-par-nom",
+      "libelle": "Chercher par nom sur ce site",
+      "sur_ce_site": true,
+      "description": "Vous saisissez les noms de l'ancêtre et leurs variantes ; le site cherche dans les décrets dont les noms ont été saisis et dans le bulletin imprimé lu par la machine. La recherche se fait dans votre navigateur.",
+      "guides": [
+        "an-annee-indexee",
+        "bogga-internet-archive"
+      ]
+    },
+    {
+      "id": "recherche-guidee-images",
+      "libelle": "Recherche guidée dans les années en images seules",
+      "sur_ce_site": true,
+      "description": "Pour les années où les décrets sont numérisés mais où personne n'a encore saisi les noms, le site donne la liste datée des décrets à lire, et vous lisez les images vous-même.",
+      "guides": [
+        "an-annee-en-images"
+      ]
+    },
+    {
+      "id": "recherche-sur-le-site-des-an",
+      "libelle": "Chercher sur le site des Archives nationales",
+      "sur_ce_site": false,
+      "description": "Pour quelques années, les noms existent dans les inventaires des Archives nationales mais ne sont pas repris ici : la recherche se fait chez elles, année par année.",
+      "guides": [
+        "an-noms-sur-le-site-des-an"
+      ]
+    },
+    {
+      "id": "bulletin-imprime",
+      "libelle": "Lire le bulletin ou le journal officiel imprimé",
+      "sur_ce_site": false,
+      "description": "Retrouver la page publiée : sur Internet Archive jusqu'en 1888, sur Gallica ensuite.",
+      "guides": [
+        "bogga-internet-archive",
+        "gallica-a-la-main"
+      ]
+    },
+    {
+      "id": "legifrance",
+      "libelle": "Journal officiel sur Légifrance",
+      "sur_ce_site": false,
+      "description": "Ouvrir les pages numérisées du Journal officiel de la République française, à partir de 1924, quand on connaît la date du numéro.",
+      "guides": [
+        "legifrance-jorf"
+      ]
+    },
+    {
+      "id": "demande-au-ministere",
+      "libelle": "Écrire au ministère (Sous-direction de l'accès à la nationalité française)",
+      "sur_ce_site": false,
+      "description": "Demander une attestation d'un décret dont on tient déjà la citation.",
+      "guides": [
+        "attestation-ministere"
+      ]
+    },
+    {
+      "id": "etat-civil-en-algerie",
+      "libelle": "Acte d'état civil avec mentions en marge, en Algérie",
+      "sur_ce_site": false,
+      "description": "Pour un jugement : demander la copie intégrale de l'acte de naissance ou de mariage, lire la mention en marge, puis demander le jugement au tribunal.",
+      "guides": [
+        "jugement-etat-civil-algerie"
+      ]
+    },
+    {
+      "id": "declaration-recognitive",
+      "libelle": "Déclaration de reconnaissance (1962-1967)",
+      "sur_ce_site": false,
+      "description": "Écrire au ministère et aux archives du département où la déclaration a été signée.",
+      "guides": [
+        "declaration-recognitive"
+      ]
+    },
+    {
+      "id": "dossier-aux-archives-nationales",
+      "libelle": "Consulter le dossier de la demande aux Archives nationales",
+      "sur_ce_site": false,
+      "description": "Le dossier d'instruction, conservé à Pierrefitte-sur-Seine : utile à l'histoire familiale, mais ce n'est pas une preuve.",
+      "guides": [
+        "dossier-pierrefitte"
+      ]
+    },
+    {
+      "id": "certificat-de-nationalite",
+      "libelle": "Certificat de nationalité française",
+      "sur_ce_site": false,
+      "description": "Démarche officielle devant un tribunal ; ce site ne fait que renvoyer au formulaire.",
+      "guides": [
+        "certificat-nationalite"
+      ]
+    },
+    {
+      "id": "verification-d-une-citation",
+      "libelle": "Vérifier un numéro ou une citation",
+      "sur_ce_site": true,
+      "description": "Distinguer une citation vérifiable d'un simple numéro.",
+      "guides": [
+        "numero-a-verifier"
+      ]
+    },
+    {
+      "id": "hors-perimetre",
+      "libelle": "Hors du champ de ce site",
+      "sur_ce_site": false,
+      "description": "Il n'existe pas d'acte nominatif publié à chercher, ou la question relève d'un autre service.",
+      "guides": []
+    }
+  ],
+  "age_minimal": {
+    "decret": 21,
+    "jugement": 25,
+    "texte": "Il fallait avoir 21 ans pour demander l'admission par décret, et 25 ans pour la demander par jugement. Un ancêtre né en 1880 n'a donc pas pu être admis par décret avant 1901.",
+    "preuves": [
+      "data/samples/legal-types/mjp-decrets-1870-10-24.txt",
+      "data/samples/legal-types/wikisource-sc-1865.txt",
+      "data/samples/legal-types/mjp-loi-1919-02-04.txt"
+    ]
+  },
+  "epoques_intro": "Selon l'année où l'acte a pu être pris, la recherche ne se fait pas au même endroit. Les années exactes lues par ce site figurent dans le bilan de recherche.",
+  "epoques": [
+    {
+      "id": "e-1865-1882",
+      "annees": {
+        "debut": 1865,
+        "fin": 1882
+      },
+      "libelle": "De 1865 à 1882",
+      "texte": "Admission par décret seulement. Les inventaires de décrets des Archives nationales utilisés ici commencent en 1883 ; pour 1865-1882, la source est le bulletin imprimé, que la recherche par nom de ce site lit. Un Algérien musulman y est souvent désigné par son prénom et celui de son père, sans nom de famille : cherchez-le aussi ainsi.",
+      "actes_possibles": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "voie": "recherche-par-nom",
+      "guides": [
+        "bogga-internet-archive"
+      ],
+      "verification": {
+        "etat": "partiel",
+        "preuves": [
+          "docs/research/sources-2026-11/internet-archive.md § 2",
+          "docs/research/sources-2026-11/internet-archive.md § 4.3",
+          "docs/research/sources-2026-11/verification.md § internet-archive"
+        ],
+        "note": "Forme des notices vue pour 1869 et 1873 seulement."
+      }
+    },
+    {
+      "id": "e-1883-1897",
+      "annees": {
+        "debut": 1883,
+        "fin": 1897
+      },
+      "libelle": "De 1883 à 1897",
+      "texte": "Les noms ont été saisis par les Archives nationales : la recherche par nom de ce site les lit.",
+      "actes_possibles": [
+        "T1",
+        "T3",
+        "T8",
+        "T9"
+      ],
+      "voie": "recherche-par-nom",
+      "guides": [
+        "an-annee-indexee"
+      ],
+      "verification": {
+        "etat": "verifie",
+        "preuves": [
+          "docs/research/sources-2026-11/an-local.md § 1.8",
+          "docs/research/sources-2026-11/verification.md § an-local",
+          "docs/research/sources-2026-11/verification.md § legal-types"
+        ],
+        "note": ""
+      }
+    },
+    {
+      "id": "e-1898",
+      "annees": {
+        "debut": 1898,
+        "fin": 1898
+      },
+      "libelle": "1898",
+      "texte": "Les noms ont été saisis aux Archives nationales, mais nous ne les reprenons pas ici sans leur réponse écrite sur les conditions de réutilisation. Cherchez directement dans leur inventaire de 1898.",
+      "actes_possibles": [
+        "T1",
+        "T3",
+        "T9"
+      ],
+      "voie": "recherche-sur-le-site-des-an",
+      "guides": [
+        "an-noms-sur-le-site-des-an"
+      ],
+      "verification": {
+        "etat": "partiel",
+        "preuves": [
+          "docs/research/sources-2026-11/an-local.md § 1.8",
+          "docs/research/sources-2026-11/verification.md § an-local",
+          "docs/research/sources-2026-11/verification.md § legal-types",
+          "docs/research/sources-2026-11/an-remote.md § 6.4",
+          "docs/research/sources-2026-11/verification.md § an-remote"
+        ],
+        "note": "Le formulaire de recherche de l'inventaire a été vu ; son résultat, non."
+      }
+    },
+    {
+      "id": "e-1899-1912",
+      "annees": {
+        "debut": 1899,
+        "fin": 1912
+      },
+      "libelle": "De 1899 à 1912",
+      "texte": "Les décrets sont numérisés, mais les noms n'ont presque pas été saisis : il faut lire les images, décret par décret. Quelques noms existent sur le site des Archives nationales pour certaines de ces années : le bilan de recherche dit lesquelles, essayez-les d'abord.",
+      "actes_possibles": [
+        "T1",
+        "T3",
+        "T9"
+      ],
+      "voie": "recherche-guidee-images",
+      "guides": [
+        "an-annee-en-images",
+        "an-noms-sur-le-site-des-an"
+      ],
+      "verification": {
+        "etat": "partiel",
+        "preuves": [
+          "docs/research/sources-2026-11/an-local.md § 1.8",
+          "docs/research/sources-2026-11/verification.md § an-local",
+          "docs/research/sources-2026-11/verification.md § legal-types",
+          "docs/research/sources-2026-11/an-local.md § 5"
+        ],
+        "note": "Comptages vérifiés ; aucune image de ces années n'a encore été vue."
+      }
+    },
+    {
+      "id": "e-1913-1927",
+      "annees": {
+        "debut": 1913,
+        "fin": 1927
+      },
+      "libelle": "De 1913 à 1927",
+      "texte": "Les noms ont été saisis : la recherche par nom de ce site les lit. À partir de 1919, l'admission a aussi pu se faire par jugement.",
+      "actes_possibles": [
+        "T1",
+        "T3",
+        "T7",
+        "T8",
+        "T9"
+      ],
+      "voie": "recherche-par-nom",
+      "guides": [
+        "an-annee-indexee"
+      ],
+      "verification": {
+        "etat": "verifie",
+        "preuves": [
+          "docs/research/sources-2026-11/an-local.md § 1.8",
+          "docs/research/sources-2026-11/verification.md § an-local",
+          "docs/research/sources-2026-11/verification.md § legal-types"
+        ],
+        "note": ""
+      }
+    },
+    {
+      "id": "e-1928",
+      "annees": {
+        "debut": 1928,
+        "fin": 1928
+      },
+      "libelle": "1928",
+      "texte": "Année coupée en deux. Pour une partie de l'année, les noms ont été saisis aux Archives nationales, mais nous ne les reprenons pas ici : cherchez dans leur inventaire. Pour le reste de l'année, les décrets sont en images seules : il faut les lire. Le bilan de recherche et la liste des décrets à lire disent quels mois.",
+      "actes_possibles": [
+        "T1",
+        "T3",
+        "T7",
+        "T9"
+      ],
+      "voie": "recherche-sur-le-site-des-an",
+      "guides": [
+        "an-noms-sur-le-site-des-an",
+        "an-annee-en-images"
+      ],
+      "verification": {
+        "etat": "partiel",
+        "preuves": [
+          "docs/research/sources-2026-11/an-local.md § 1.8",
+          "docs/research/sources-2026-11/verification.md § an-local",
+          "docs/research/sources-2026-11/verification.md § legal-types",
+          "docs/research/sources-2026-11/an-remote.md § 6.4"
+        ],
+        "note": "Corrigé par la vérification : 1928 n'est indexée que pour le premier trimestre."
+      }
+    },
+    {
+      "id": "e-1929-1932",
+      "annees": {
+        "debut": 1929,
+        "fin": 1932
+      },
+      "libelle": "De 1929 à 1932",
+      "texte": "Les noms ont été saisis : la recherche par nom de ce site les lit. En 1931 et 1932, les Algériens admis sont sous le titre « Décret d'admission aux droits de citoyen français », le plus souvent sans la mention « (Algérie) ».",
+      "actes_possibles": [
+        "T1",
+        "T3",
+        "T7",
+        "T8",
+        "T9"
+      ],
+      "voie": "recherche-par-nom",
+      "guides": [
+        "an-annee-indexee"
+      ],
+      "verification": {
+        "etat": "verifie",
+        "preuves": [
+          "docs/research/sources-2026-11/an-local.md § 1.8",
+          "docs/research/sources-2026-11/verification.md § an-local",
+          "docs/research/sources-2026-11/verification.md § legal-types",
+          "docs/research/sources-2026-11/legal-types.md § 4"
+        ],
+        "note": ""
+      }
+    },
+    {
+      "id": "e-1933-1948",
+      "annees": {
+        "debut": 1933,
+        "fin": 1948
+      },
+      "libelle": "De 1933 à 1948",
+      "texte": "Les décrets sont numérisés, mais aucun nom n'a encore été versé dans les inventaires : il faut lire les images. Le site vous dit dans quel ordre.",
+      "actes_possibles": [
+        "T1",
+        "T3",
+        "T7",
+        "T9",
+        "T11"
+      ],
+      "voie": "recherche-guidee-images",
+      "guides": [
+        "an-annee-en-images"
+      ],
+      "verification": {
+        "etat": "partiel",
+        "preuves": [
+          "docs/research/sources-2026-11/an-local.md § 1.8",
+          "docs/research/sources-2026-11/verification.md § an-local",
+          "docs/research/sources-2026-11/verification.md § legal-types",
+          "docs/research/sources-2026-11/an-local.md § 5",
+          "docs/research/sources-2026-11/an-remote.md § 10"
+        ],
+        "note": "Comptages vérifiés ; aucune image d'un décret de ces années n'a encore été vue."
+      }
+    },
+    {
+      "id": "e-1949-1962",
+      "annees": {
+        "debut": 1949,
+        "fin": 1962
+      },
+      "libelle": "De 1949 à 1962",
+      "texte": "La collection de décrets originaux que nous utilisons s'arrête en 1948. Nous ne savons pas si des décrets d'admission d'Algériens ont encore été pris ensuite. D'après le ministère de la Justice, la procédure était alors celle du jugement. Si vous avez une date de décret, cherchez-la dans le Journal officiel.",
+      "actes_possibles": [
+        "T7",
+        "T13",
+        "T12"
+      ],
+      "voie": "etat-civil-en-algerie",
+      "guides": [
+        "jugement-etat-civil-algerie",
+        "gallica-a-la-main",
+        "legifrance-jorf"
+      ],
+      "verification": {
+        "etat": "non-verifie",
+        "preuves": [
+          "docs/research/sources-2026-11/legal-types.md § 3 (T13)",
+          "docs/research/sources-2026-11/other-sources.md § 10",
+          "docs/research/sources-2026-11/verification.md § other-sources"
+        ],
+        "note": "La présence de décrets d'admission d'Algériens au Journal officiel de 1947 à 1962 n'a pas été constatée."
+      }
+    },
+    {
+      "id": "e-jugements",
+      "annees": {
+        "debut": 1919,
+        "fin": 1962
+      },
+      "libelle": "En parallèle, de 1919 à 1962 : les jugements",
+      "texte": "Pendant toute cette période, l'admission a pu se faire par jugement du tribunal, sans décret. Ces jugements ne sont publiés nulle part ; ils se signalent par une mention en marge de l'acte de naissance ou de mariage, et se demandent en Algérie.",
+      "actes_possibles": [
+        "T7",
+        "T13"
+      ],
+      "voie": "etat-civil-en-algerie",
+      "guides": [
+        "jugement-etat-civil-algerie"
+      ],
+      "verification": {
+        "etat": "verifie",
+        "preuves": [
+          "data/samples/legal-types/mjp-loi-1919-02-04.txt",
+          "data/samples/legal-types/senat-qe-16358-1991.txt",
+          "docs/research/sources-2026-11/legal-types.md § 3 (T7)"
+        ],
+        "note": ""
+      }
+    }
+  ]
+}
